@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="22487660-bf90-4041-82fe-4e0ea6c80515" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASAPregunta" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASAPregunta.xsd" MetadataType="Schema" ID="af0b8228-95e6-4faf-b277-d061fb11c337" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAPregunta?xsd=xsd0" />
+    <MetadataFile FileName="ASAPregunta.disco" MetadataType="Disco" ID="5f9e5e7e-f4a2-4539-8154-9cb09b1ec3ed" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAPregunta?disco" />
+    <MetadataFile FileName="ASAPregunta1.xsd" MetadataType="Schema" ID="a743dc6e-5e5c-468d-9bc6-8578f5a61c6b" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAPregunta?xsd=xsd1" />
+    <MetadataFile FileName="ASAPregunta2.xsd" MetadataType="Schema" ID="4d359b17-39cf-46ff-9bb7-49e5a092ce85" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAPregunta?xsd=xsd2" />
+    <MetadataFile FileName="ASAPreguntaClass.wsdl" MetadataType="Wsdl" ID="8f8c5a8b-931f-4874-a3d7-515def7c8298" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAPregunta?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

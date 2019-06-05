@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6715c2c-8ebf-4d83-9b66-4a88b80da632" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASAConfiguracion" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASAConfiguracion.xsd" MetadataType="Schema" ID="f597982f-33ad-441d-9855-89c1bd85003a" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAConfiguracion?xsd=xsd0" />
+    <MetadataFile FileName="ASAConfiguracionClass.wsdl" MetadataType="Wsdl" ID="d85b4339-b38e-4f18-ac67-ae2d6622d900" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAConfiguracion?wsdl" />
+    <MetadataFile FileName="ASAConfiguracion1.xsd" MetadataType="Schema" ID="776e83d0-1077-4c4b-9ae8-98d739df037a" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAConfiguracion?xsd=xsd1" />
+    <MetadataFile FileName="ASAConfiguracion2.xsd" MetadataType="Schema" ID="7f0b40a1-ee38-400d-a7ba-bcc23efb7edc" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAConfiguracion?xsd=xsd2" />
+    <MetadataFile FileName="ASAConfiguracion.disco" MetadataType="Disco" ID="ad4905b5-6c05-403f-be18-be31f104a049" SourceId="1" SourceUrl="http://alejandroasus:8901/ASAConfiguracion?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

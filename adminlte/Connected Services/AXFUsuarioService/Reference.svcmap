@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c543003c-eae8-49fe-b8c5-e52755c7a869" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/AXFUsuario" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AXFUsuario.disco" MetadataType="Disco" ID="35cdb9a5-d1a1-47c3-90a9-ec880f7273fc" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFUsuario?disco" />
+    <MetadataFile FileName="AXFUsuario.xsd" MetadataType="Schema" ID="1b236c50-3c0c-4400-a64a-f8092616bf79" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFUsuario?xsd=xsd2" />
+    <MetadataFile FileName="AXFUsuario1.xsd" MetadataType="Schema" ID="9f7a0a99-7629-49c6-82d3-50e5a347fcf4" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFUsuario?xsd=xsd1" />
+    <MetadataFile FileName="AXFUsuario2.xsd" MetadataType="Schema" ID="8026b1b9-abf1-498a-98fe-97ee89da957c" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFUsuario?xsd=xsd0" />
+    <MetadataFile FileName="AXFUsuarioClass.wsdl" MetadataType="Wsdl" ID="d4ee4d6a-ac44-461b-93c2-4ccf3bacf21b" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFUsuario?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

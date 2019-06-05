@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://alejandroasus:8901/AXFUsuario?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+  <xs:element name="WebAXFUsuarioSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioSeleccionarTodoResult" nillable="true" type="q1:ArrayOfAXFUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioSeleccionarResult" nillable="true" type="q2:ArrayOfAXFUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioSeleccionarXSubCompaniaResult" nillable="true" type="q3:ArrayOfAXFUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q4:AXFUsuarioSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFUsuario" nillable="true" type="q5:AXFUsuarioSet" />
+        <xs:element minOccurs="0" name="EsNuevo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebGuardarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFUsuario" nillable="true" type="q6:AXFUsuarioSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebEliminarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q7:AXFUsuarioSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFUsuario" nillable="true" type="q8:AXFUsuarioSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q9:AXFUsuarioSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioBloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioBloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFUsuarioBloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioDesbloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioDesbloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFUsuarioDesbloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsBloqueadoPor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsBloqueadoPorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFUsuarioEsBloqueadoPorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsBloqueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsBloqueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFUsuarioEsBloqueadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioClaseUsuarioSeleccionarTodoResult" nillable="true" type="q10:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClaseUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioClaseUsuarioSeleccionarResult" nillable="true" type="q11:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarKeyAXFUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarKeyAXFUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioClaseUsuarioSeleccionarKeyAXFUsuarioResult" nillable="true" type="q12:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioClaseUsuarioSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioClaseUsuarioSeleccionarXSubCompaniaResult" nillable="true" type="q13:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioPropiedadSeleccionarTodoResult" nillable="true" type="q14:ArrayOfAXFUsuarioPropiedadEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Propiedad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioPropiedadSeleccionarResult" nillable="true" type="q15:ArrayOfAXFUsuarioPropiedadEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarKeyAXFUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarKeyAXFUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioPropiedadSeleccionarKeyAXFUsuarioResult" nillable="true" type="q16:ArrayOfAXFUsuarioPropiedadEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioPropiedadSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioPropiedadSeleccionarXSubCompaniaResult" nillable="true" type="q17:ArrayOfAXFUsuarioPropiedadEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsValido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioEsValidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFUsuarioEsValidoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

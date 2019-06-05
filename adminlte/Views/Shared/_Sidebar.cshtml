@@ -1,0 +1,78 @@
+﻿    <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="@Url.Content(@ViewBag.Ruta)" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>@((string)Session["Nombre"])</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MENU DE NAVEGACION</li>
+
+            @{
+                List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenu = ViewBag.ltAXFWebMenu;
+                if (ltAXFWebMenu != null)
+                {
+                    var grpAXFWebMenu = ltAXFWebMenu.GroupBy(grp => grp.Grupo).ToList();
+                    foreach (var item in grpAXFWebMenu)
+                    {
+                        var key = item.Key;
+                        <li class="@Html.IsSelected(controller: key) treeview">
+                            <a href="@Url.Action("", "")">
+                                <i class="fa @item.First().Estilo"></i>
+                                <span>@item.First().Modulo</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                @foreach (var i in item)
+                                {
+                                    <li class="@Html.IsSelected(action: i.WebVista)">
+                                        <a href="@Url.Action(i.WebVista, i.WebControlador)">
+                                            <i class="fa fa-circle-o"></i> @i.Rotulo
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+
+
+                    }
+
+                    @*foreach (adminlte.AXFWebMenuService.AXFWebMenuEntity etAXFWebMenu in (List<adminlte.AXFWebMenuService.AXFWebMenuEntity>)ViewBag.ltAXFWebMenu)
+                        {
+                            <li class="@Html.IsSelected(controller: etAXFWebMenu.WebControlador) treeview">
+                                <a href="@Url.Action(etAXFWebMenu.WebVista, etAXFWebMenu.WebControlador)">
+                                    <i class="fa @etAXFWebMenu.Estilo"></i> <span>@etAXFWebMenu.Rotulo</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li class="@Html.IsSelected(action: etAXFWebMenu.WebVista)">
+                                        <a href="@Url.Action(etAXFWebMenu.WebVista, etAXFWebMenu.WebControlador)">
+                                            <i class="fa fa-circle-o"></i> @etAXFWebMenu.Rotulo
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }*@
+                }
+            }
+
+
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

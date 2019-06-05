@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a251331a-e2b4-4bb8-b14b-92dd04b6ce16" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASATransaccion" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASATransaccionClass.wsdl" MetadataType="Wsdl" ID="5b915160-46eb-4802-9f3a-3d850aa4ad5b" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATransaccion?wsdl" />
+    <MetadataFile FileName="ASATransaccion.xsd" MetadataType="Schema" ID="707fb229-872c-4fa1-8a56-36bdf098ebfa" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATransaccion?xsd=xsd2" />
+    <MetadataFile FileName="ASATransaccion1.xsd" MetadataType="Schema" ID="1dd6625f-641a-4cf9-b7b0-b3f1c55412fc" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATransaccion?xsd=xsd0" />
+    <MetadataFile FileName="ASATransaccion2.xsd" MetadataType="Schema" ID="e6665fad-a161-4bce-bd19-abbf3b35acd1" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATransaccion?xsd=xsd1" />
+    <MetadataFile FileName="ASATransaccion.disco" MetadataType="Disco" ID="5a17b86a-d8fb-48c3-921b-f2188f5e79f5" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATransaccion?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

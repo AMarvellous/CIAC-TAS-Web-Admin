@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://alejandroasus:8901/ASATRespuesta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+  <xs:element name="WebASATRespuestaSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATRespuestaSeleccionarTodoResult" nillable="true" type="q1:ArrayOfASATRespuestaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATRespuestaSeleccionarResult" nillable="true" type="q2:ArrayOfASATRespuestaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q3:ASATRespuestaSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASATRespuesta" nillable="true" type="q4:ASATRespuestaSet" />
+        <xs:element minOccurs="0" name="EsNuevo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebGuardarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASATRespuesta" nillable="true" type="q5:ASATRespuestaSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebEliminarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q6:ASATRespuestaSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASATRespuesta" nillable="true" type="q7:ASATRespuestaSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q8:ASATRespuestaSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaBloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaBloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaBloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaDesbloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaDesbloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaDesbloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaEsBloqueadoPor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaEsBloqueadoPorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaEsBloqueadoPorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaEsBloqueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaEsBloqueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaEsBloqueadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardarRespuesta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroPregunta" type="xs:long" />
+        <xs:element minOccurs="0" name="Opcion" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardarRespuestaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebGuardarRespuestaResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaExiste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaExisteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaExisteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSiCumpleHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSiCumpleHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaSiCumpleHorarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaCerrarCuestionario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaCerrarCuestionarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaCerrarCuestionarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaTiempoRestante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiempoMaximo" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaTiempoRestanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebASATRespuestaTiempoRestanteResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

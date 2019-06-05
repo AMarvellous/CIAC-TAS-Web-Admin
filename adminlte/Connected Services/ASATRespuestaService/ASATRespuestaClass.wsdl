@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ASATRespuestaClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATRespuesta?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATRespuesta?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATRespuesta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaBloquear" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardarRespuesta_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardarRespuesta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarRespuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaExiste" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSiCumpleHorario_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSiCumpleHorario" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSiCumpleHorario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSiCumpleHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaCerrarCuestionario_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaCerrarCuestionario" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaCerrarCuestionario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaCerrarCuestionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaTiempoRestante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaTiempoRestante" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaTiempoRestante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaTiempoRestanteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ASATRespuestaInterface">
+    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodoResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevo" message="tns:ASATRespuestaInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevoResponse" message="tns:ASATRespuestaInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardar" message="tns:ASATRespuestaInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarResponse" message="tns:ASATRespuestaInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminar" message="tns:ASATRespuestaInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminarResponse" message="tns:ASATRespuestaInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebSeleccionar" message="tns:ASATRespuestaInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebSeleccionarResponse" message="tns:ASATRespuestaInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebRecalcular" message="tns:ASATRespuestaInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebRecalcularResponse" message="tns:ASATRespuestaInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaBloquear" message="tns:ASATRespuestaInterface_WebASATRespuestaBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaBloquearResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaDesbloquear" message="tns:ASATRespuestaInterface_WebASATRespuestaDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaDesbloquearResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueadoPor" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueadoPorResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueado" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueadoResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarRespuesta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuesta" message="tns:ASATRespuestaInterface_WebGuardarRespuesta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuestaResponse" message="tns:ASATRespuestaInterface_WebGuardarRespuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExiste" message="tns:ASATRespuestaInterface_WebASATRespuestaExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExisteResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaExiste_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSiCumpleHorario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorario" message="tns:ASATRespuestaInterface_WebASATRespuestaSiCumpleHorario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSiCumpleHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaCerrarCuestionario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaCerrarCuestionario" message="tns:ASATRespuestaInterface_WebASATRespuestaCerrarCuestionario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaCerrarCuestionarioResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaCerrarCuestionario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaTiempoRestante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestante" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestante_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ASATRespuestaInterface" type="tns:ASATRespuestaInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaBloquear">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarRespuesta">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaExiste">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSiCumpleHorario">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaCerrarCuestionario">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaCerrarCuestionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaTiempoRestante">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ASATRespuestaClass">
+    <wsdl:port name="BasicHttpBinding_ASATRespuestaInterface" binding="tns:BasicHttpBinding_ASATRespuestaInterface">
+      <soap:address location="http://alejandroasus:8901/ASATRespuesta" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://alejandroasus:8901/AXFWebMenu?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+  <xs:element name="WebAXFWebMenuSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebMenuSeleccionarTodoResult" nillable="true" type="q1:ArrayOfAXFWebMenuEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebMenuSeleccionarResult" nillable="true" type="q2:ArrayOfAXFWebMenuEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebMenuSeleccionarXSubCompaniaResult" nillable="true" type="q3:ArrayOfAXFWebMenuEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebNuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q4:AXFWebMenuSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebMenu" nillable="true" type="q5:AXFWebMenuSet" />
+        <xs:element minOccurs="0" name="EsNuevo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebGuardarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebMenu" nillable="true" type="q6:AXFWebMenuSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebEliminarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q7:AXFWebMenuSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebMenu" nillable="true" type="q8:AXFWebMenuSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebRecalcularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q9:AXFWebMenuSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuBloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuBloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFWebMenuBloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuDesbloquear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuDesbloquearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFWebMenuDesbloquearResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuEsBloqueadoPor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuEsBloqueadoPorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFWebMenuEsBloqueadoPorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuEsBloqueado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuEsBloqueadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebAXFWebMenuEsBloqueadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarXUsuarioSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebMenuSeleccionarXUsuarioSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebMenuSeleccionarXUsuarioSubCompaniaResult" nillable="true" type="q10:ArrayOfAXFWebMenuEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

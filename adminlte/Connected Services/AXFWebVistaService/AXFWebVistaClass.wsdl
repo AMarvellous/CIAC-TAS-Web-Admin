@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AXFWebVistaClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFWebVista?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFWebVista?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFWebVista?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarKeyAXFWebVistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebVistaColumnaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AXFWebVistaInterface">
+    <wsdl:operation name="WebAXFWebVistaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodoResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompaniaResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebNuevo" message="tns:AXFWebVistaInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebNuevoResponse" message="tns:AXFWebVistaInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebGuardar" message="tns:AXFWebVistaInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebGuardarResponse" message="tns:AXFWebVistaInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebEliminar" message="tns:AXFWebVistaInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebEliminarResponse" message="tns:AXFWebVistaInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebSeleccionar" message="tns:AXFWebVistaInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebSeleccionarResponse" message="tns:AXFWebVistaInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebRecalcular" message="tns:AXFWebVistaInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebRecalcularResponse" message="tns:AXFWebVistaInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaBloquear" message="tns:AXFWebVistaInterface_WebAXFWebVistaBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaBloquearResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaDesbloquear" message="tns:AXFWebVistaInterface_WebAXFWebVistaDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaDesbloquearResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueadoPor" message="tns:AXFWebVistaInterface_WebAXFWebVistaEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueadoPorResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueado" message="tns:AXFWebVistaInterface_WebAXFWebVistaEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueadoResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarTodo" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarTodoResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionar" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarKeyAXFWebVistaResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarXSubCompania" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarXSubCompaniaResponse" message="tns:AXFWebVistaInterface_WebAXFWebVistaColumnaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AXFWebVistaInterface" type="tns:AXFWebVistaInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebAXFWebVistaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaBloquear">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarKeyAXFWebVista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebVistaColumnaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AXFWebVistaClass">
+    <wsdl:port name="BasicHttpBinding_AXFWebVistaInterface" binding="tns:BasicHttpBinding_AXFWebVistaInterface">
+      <soap:address location="http://alejandroasus:8901/AXFWebVista" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

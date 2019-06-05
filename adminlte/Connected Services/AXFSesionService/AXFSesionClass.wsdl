@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AXFSesionClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFSesion?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFSesion?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFSesion?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AXFSesion?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarKeyAXFSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarKeyAXFSesion" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarKeyAXFSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarKeyAXFSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionMensajeSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionMensajeSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebLimpiarMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebLimpiarMensajes" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebLimpiarMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebLimpiarMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValido_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValido" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValidoEjecucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValidoEjecucion" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValidoEjecucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValidoEjecucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebValidarSesionNA_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebValidarSesionNA" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebValidarSesionNA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebValidarSesionNAResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesion" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionXUsuarioSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionXUsuarioSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionXUsuarioSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionXUsuarioSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarXUsuarioSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarXUsuarioSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarXUsuarioSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarXUsuarioSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionExterna_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionExterna" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionExterna_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionExternaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionTodoSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionTodoSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebEliminarSesionTodoSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarSesionTodoSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarSinSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarSinSesion" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAXFSesionSeleccionarSinSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFSesionSeleccionarSinSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerLlaveServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerLlaveServicio" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerLlaveServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerLlaveServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerListaBaseDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerListaBaseDatos" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerListaBaseDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerListaBaseDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerHoraServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerHoraServidor" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebObtenerHoraServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebObtenerHoraServidorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AXFSesionInterface">
+    <wsdl:operation name="WebAXFSesionSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodoResponse" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar" message="tns:AXFSesionInterface_WebAXFSesionSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarResponse" message="tns:AXFSesionInterface_WebAXFSesionSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompaniaResponse" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebNuevo" message="tns:AXFSesionInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebNuevoResponse" message="tns:AXFSesionInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebGuardar" message="tns:AXFSesionInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebGuardarResponse" message="tns:AXFSesionInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminar" message="tns:AXFSesionInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarResponse" message="tns:AXFSesionInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebSeleccionar" message="tns:AXFSesionInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebSeleccionarResponse" message="tns:AXFSesionInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebRecalcular" message="tns:AXFSesionInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebRecalcularResponse" message="tns:AXFSesionInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionBloquear" message="tns:AXFSesionInterface_WebAXFSesionBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionBloquearResponse" message="tns:AXFSesionInterface_WebAXFSesionBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionDesbloquear" message="tns:AXFSesionInterface_WebAXFSesionDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionDesbloquearResponse" message="tns:AXFSesionInterface_WebAXFSesionDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueadoPor" message="tns:AXFSesionInterface_WebAXFSesionEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueadoPorResponse" message="tns:AXFSesionInterface_WebAXFSesionEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueado" message="tns:AXFSesionInterface_WebAXFSesionEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueadoResponse" message="tns:AXFSesionInterface_WebAXFSesionEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarTodo" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarTodoResponse" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionar" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarResponse" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarKeyAXFSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarKeyAXFSesion" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarKeyAXFSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarKeyAXFSesionResponse" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarKeyAXFSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarXSubCompania" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarXSubCompaniaResponse" message="tns:AXFSesionInterface_WebAXFSesionMensajeSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebLimpiarMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebLimpiarMensajes" message="tns:AXFSesionInterface_WebLimpiarMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebLimpiarMensajesResponse" message="tns:AXFSesionInterface_WebLimpiarMensajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValido">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValido" message="tns:AXFSesionInterface_WebAccesoValido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoResponse" message="tns:AXFSesionInterface_WebAccesoValido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValidoEjecucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucion" message="tns:AXFSesionInterface_WebAccesoValidoEjecucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucionResponse" message="tns:AXFSesionInterface_WebAccesoValidoEjecucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebValidarSesionNA">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebValidarSesionNA" message="tns:AXFSesionInterface_WebValidarSesionNA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebValidarSesionNAResponse" message="tns:AXFSesionInterface_WebValidarSesionNA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesion" message="tns:AXFSesionInterface_WebEliminarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionResponse" message="tns:AXFSesionInterface_WebEliminarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionXUsuarioSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionXUsuarioSubCompania" message="tns:AXFSesionInterface_WebEliminarSesionXUsuarioSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionXUsuarioSubCompaniaResponse" message="tns:AXFSesionInterface_WebEliminarSesionXUsuarioSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarXUsuarioSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXUsuarioSubCompania" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarXUsuarioSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXUsuarioSubCompaniaResponse" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarXUsuarioSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionExterna">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExterna" message="tns:AXFSesionInterface_WebEliminarSesionExterna_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExternaResponse" message="tns:AXFSesionInterface_WebEliminarSesionExterna_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionTodoSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionTodoSubCompania" message="tns:AXFSesionInterface_WebEliminarSesionTodoSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionTodoSubCompaniaResponse" message="tns:AXFSesionInterface_WebEliminarSesionTodoSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarSinSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarSinSesion" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarSinSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarSinSesionResponse" message="tns:AXFSesionInterface_WebAXFSesionSeleccionarSinSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerLlaveServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerLlaveServicio" message="tns:AXFSesionInterface_WebObtenerLlaveServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerLlaveServicioResponse" message="tns:AXFSesionInterface_WebObtenerLlaveServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerListaBaseDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerListaBaseDatos" message="tns:AXFSesionInterface_WebObtenerListaBaseDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerListaBaseDatosResponse" message="tns:AXFSesionInterface_WebObtenerListaBaseDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerHoraServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerHoraServidor" message="tns:AXFSesionInterface_WebObtenerHoraServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebObtenerHoraServidorResponse" message="tns:AXFSesionInterface_WebObtenerHoraServidor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AXFSesionInterface" type="tns:AXFSesionInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebAXFSesionSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionBloquear">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarKeyAXFSesion">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarKeyAXFSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionMensajeSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebLimpiarMensajes">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebLimpiarMensajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValido">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAccesoValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValidoEjecucion">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebValidarSesionNA">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebValidarSesionNA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesion">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionXUsuarioSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionXUsuarioSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarXUsuarioSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXUsuarioSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionExterna">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExterna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarSesionTodoSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionTodoSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFSesionSeleccionarSinSesion">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarSinSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerLlaveServicio">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebObtenerLlaveServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerListaBaseDatos">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebObtenerListaBaseDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebObtenerHoraServidor">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebObtenerHoraServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AXFSesionClass">
+    <wsdl:port name="BasicHttpBinding_AXFSesionInterface" binding="tns:BasicHttpBinding_AXFSesionInterface">
+      <soap:address location="http://alejandroasus:8901/AXFSesion" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

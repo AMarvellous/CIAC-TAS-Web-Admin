@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8149fde-5ac9-452c-9d69-063d42765ace" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASATRespuesta" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASATRespuestaClass.wsdl" MetadataType="Wsdl" ID="994cb632-c303-4f1a-988a-5fd37559f6e1" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATRespuesta?wsdl" />
+    <MetadataFile FileName="ASATRespuesta.xsd" MetadataType="Schema" ID="0a1d172c-cc39-49df-acfa-f272cbc077fd" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATRespuesta?xsd=xsd0" />
+    <MetadataFile FileName="ASATRespuesta1.xsd" MetadataType="Schema" ID="953d4189-d2ba-412d-b1ca-9d3055ee66c7" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATRespuesta?xsd=xsd2" />
+    <MetadataFile FileName="ASATRespuesta2.xsd" MetadataType="Schema" ID="f227bd08-dfc0-42eb-9bda-06dd5bbb5c76" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATRespuesta?xsd=xsd1" />
+    <MetadataFile FileName="ASATRespuesta.disco" MetadataType="Disco" ID="646e89fa-5d4e-457f-89eb-ed92d7fbecc0" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATRespuesta?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6309554-08ea-4cc9-bf74-9264e1e24138" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/AXFWebVista" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AXFWebVistaClass.wsdl" MetadataType="Wsdl" ID="bb5ff1e2-c5bc-4847-9d8d-5d6ad7393571" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebVista?wsdl" />
+    <MetadataFile FileName="AXFWebVista.xsd" MetadataType="Schema" ID="b743c616-9f35-441d-8e72-02169a749eb9" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebVista?xsd=xsd2" />
+    <MetadataFile FileName="AXFWebVista1.xsd" MetadataType="Schema" ID="fe25bccd-c9b6-4e8e-bce6-e8e263930ef9" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebVista?xsd=xsd1" />
+    <MetadataFile FileName="AXFWebVista.disco" MetadataType="Disco" ID="682c7161-84cc-49fd-b8e3-e7620fdd1149" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebVista?disco" />
+    <MetadataFile FileName="AXFWebVista2.xsd" MetadataType="Schema" ID="b206d01f-c395-4588-94d2-3a7de16488f4" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebVista?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

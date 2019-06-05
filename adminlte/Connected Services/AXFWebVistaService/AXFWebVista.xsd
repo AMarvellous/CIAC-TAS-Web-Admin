@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAXFWebVistaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AXFWebVistaEntity" nillable="true" type="tns:AXFWebVistaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAXFWebVistaEntity" nillable="true" type="tns:ArrayOfAXFWebVistaEntity" />
+  <xs:complexType name="AXFWebVistaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decimal1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Decimal2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Entero1" type="xs:long" />
+      <xs:element minOccurs="0" name="Entero2" type="xs:long" />
+      <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PermisoContabilizar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoDescontabilizar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoEjecutar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoEliminar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoExplorar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoGuardar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoNuevo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermisoRecontabilizar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TituloCorto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="USel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebControlador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebVista" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AXFWebVistaEntity" nillable="true" type="tns:AXFWebVistaEntity" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Added" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="AXFWebVistaSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltAXFWebVista" nillable="true" type="tns:ArrayOfAXFWebVistaEntity" />
+      <xs:element minOccurs="0" name="ltAXFWebVistaColumna" nillable="true" type="tns:ArrayOfAXFWebVistaColumnaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AXFWebVistaSet" nillable="true" type="tns:AXFWebVistaSet" />
+  <xs:complexType name="ArrayOfAXFWebVistaColumnaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AXFWebVistaColumnaEntity" nillable="true" type="tns:AXFWebVistaColumnaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAXFWebVistaColumnaEntity" nillable="true" type="tns:ArrayOfAXFWebVistaColumnaEntity" />
+  <xs:complexType name="AXFWebVistaColumnaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Columna" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Formato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Largo" type="xs:long" />
+      <xs:element minOccurs="0" name="Orden" type="xs:long" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tabla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WebControlador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebVista" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AXFWebVistaColumnaEntity" nillable="true" type="tns:AXFWebVistaColumnaEntity" />
+</xs:schema>

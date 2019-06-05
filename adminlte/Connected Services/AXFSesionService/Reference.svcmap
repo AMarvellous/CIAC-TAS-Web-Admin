@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="de3d9cc7-a019-47e6-bfb2-eb8577791791" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/AXFSesion" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AXFSesion.disco" MetadataType="Disco" ID="304c2e70-be98-4ed4-a5a6-6f8c97c3ea70" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?disco" />
+    <MetadataFile FileName="AXFSesion.xsd" MetadataType="Schema" ID="2ddc67e0-59ee-454b-bdab-f6e80baf370e" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?xsd=xsd0" />
+    <MetadataFile FileName="AXFSesion1.xsd" MetadataType="Schema" ID="59c5ccf2-065e-4425-9d85-6ce40b1beffa" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?xsd=xsd1" />
+    <MetadataFile FileName="AXFSesion3.xsd" MetadataType="Schema" ID="8ff441fc-463c-4fa7-9faf-8f3cc2cba0c4" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?xsd=xsd3" />
+    <MetadataFile FileName="AXFSesionClass.wsdl" MetadataType="Wsdl" ID="a3fda1ea-7d61-4a07-b90c-b0ec9e293222" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?wsdl" />
+    <MetadataFile FileName="AXFSesion2.xsd" MetadataType="Schema" ID="b74a921b-b9bd-428e-874a-4b41f30acdee" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFSesion?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

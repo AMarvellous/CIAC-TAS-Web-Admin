@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2d22d6f7-4f84-4554-aa72-f7a9e5b65dc1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/AXFWebMenu" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AXFWebMenu.xsd" MetadataType="Schema" ID="12bb3947-58a4-4fe3-b2f1-1ee67b8059e0" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebMenu?xsd=xsd2" />
+    <MetadataFile FileName="AXFWebMenu.disco" MetadataType="Disco" ID="7bcab64a-4d69-47e1-b320-a12dea5cf22a" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebMenu?disco" />
+    <MetadataFile FileName="AXFWebMenuClass.wsdl" MetadataType="Wsdl" ID="758893a6-9ff2-4c0b-b2ae-f066da9aaeea" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebMenu?wsdl" />
+    <MetadataFile FileName="AXFWebMenu1.xsd" MetadataType="Schema" ID="75071983-d036-49ba-9a89-e1100e6b52f8" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebMenu?xsd=xsd1" />
+    <MetadataFile FileName="AXFWebMenu2.xsd" MetadataType="Schema" ID="7b309975-da93-4ba9-86f4-c3cc5dfac11c" SourceId="1" SourceUrl="http://alejandroasus:8901/AXFWebMenu?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
