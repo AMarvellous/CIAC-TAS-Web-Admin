@@ -15,6 +15,131 @@ namespace adminlte.AXFUsuarioService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AXFUsuarioSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class AXFUsuarioSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuarioEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuarioEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedadEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuario {
+            get {
+                return this.ltAXFUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioField, value) != true)) {
+                    this.ltAXFUsuarioField = value;
+                    this.RaisePropertyChanged("ltAXFUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuario {
+            get {
+                return this.ltAXFUsuarioClaseUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioClaseUsuarioField, value) != true)) {
+                    this.ltAXFUsuarioClaseUsuarioField = value;
+                    this.RaisePropertyChanged("ltAXFUsuarioClaseUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuarioEliminado {
+            get {
+                return this.ltAXFUsuarioClaseUsuarioEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioClaseUsuarioEliminadoField, value) != true)) {
+                    this.ltAXFUsuarioClaseUsuarioEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFUsuarioClaseUsuarioEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuarioEliminado {
+            get {
+                return this.ltAXFUsuarioEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioEliminadoField, value) != true)) {
+                    this.ltAXFUsuarioEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFUsuarioEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedad {
+            get {
+                return this.ltAXFUsuarioPropiedadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioPropiedadField, value) != true)) {
+                    this.ltAXFUsuarioPropiedadField = value;
+                    this.RaisePropertyChanged("ltAXFUsuarioPropiedad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedadEliminado {
+            get {
+                return this.ltAXFUsuarioPropiedadEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFUsuarioPropiedadEliminadoField, value) != true)) {
+                    this.ltAXFUsuarioPropiedadEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFUsuarioPropiedadEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFUsuarioEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class AXFUsuarioEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -410,100 +535,6 @@ namespace adminlte.AXFUsuarioService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    public enum Estado : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Added = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unchanged = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Modified = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Deleted = 3,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AXFUsuarioSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class AXFUsuarioSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedadField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> ltAXFUsuario {
-            get {
-                return this.ltAXFUsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFUsuarioField, value) != true)) {
-                    this.ltAXFUsuarioField = value;
-                    this.RaisePropertyChanged("ltAXFUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuario {
-            get {
-                return this.ltAXFUsuarioClaseUsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFUsuarioClaseUsuarioField, value) != true)) {
-                    this.ltAXFUsuarioClaseUsuarioField = value;
-                    this.RaisePropertyChanged("ltAXFUsuarioClaseUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioPropiedadEntity> ltAXFUsuarioPropiedad {
-            get {
-                return this.ltAXFUsuarioPropiedadField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFUsuarioPropiedadField, value) != true)) {
-                    this.ltAXFUsuarioPropiedadField = value;
-                    this.RaisePropertyChanged("ltAXFUsuarioPropiedad");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFUsuarioClaseUsuarioEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
@@ -706,29 +737,26 @@ namespace adminlte.AXFUsuarioService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    public enum Estado : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Added = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unchanged = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Modified = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AXFUsuarioService.AXFUsuarioInterface")]
     public interface AXFUsuarioInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaRespon" +
-            "se")]
-        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaRespon" +
-            "se")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebNuevo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebNuevoResponse")]
         adminlte.AXFUsuarioService.AXFUsuarioSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -747,6 +775,12 @@ namespace adminlte.AXFUsuarioService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEliminar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebSeleccionar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebSeleccionarResponse")]
         adminlte.AXFUsuarioService.AXFUsuarioSet WebSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
@@ -783,6 +817,26 @@ namespace adminlte.AXFUsuarioService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsBloqueado", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebAXFUsuarioEsBloqueadoAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse")]
+        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaRespon" +
+            "se")]
+        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaRespon" +
+            "se")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioClaseUsuarioSeleccionarTodo", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioClaseUsuarioSeleccionarTodoRe" +
             "sponse")]
@@ -859,6 +913,18 @@ namespace adminlte.AXFUsuarioService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsValido", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsValidoResponse")]
         System.Threading.Tasks.Task<bool> WebAXFUsuarioEsValidoAsync(string Usuario, string Clave, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClave", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClaveResponse")]
+        string WebDesencriptarClave(string Clave, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClave", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClaveResponse")]
+        System.Threading.Tasks.Task<string> WebDesencriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClaveResponse")]
+        string WebEncriptarClave(string Clave, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClaveResponse")]
+        System.Threading.Tasks.Task<string> WebEncriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -888,30 +954,6 @@ namespace adminlte.AXFUsuarioService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionar(Usuario, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionarAsync(Usuario, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFUsuarioSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.AXFUsuarioService.AXFUsuarioSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -934,6 +976,14 @@ namespace adminlte.AXFUsuarioService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setAXFUsuario, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setAXFUsuario, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFUsuarioService.AXFUsuarioSet setAXFUsuario, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setAXFUsuario, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.AXFUsuarioService.AXFUsuarioSet WebSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
@@ -982,6 +1032,30 @@ namespace adminlte.AXFUsuarioService {
         
         public System.Threading.Tasks.Task<bool> WebAXFUsuarioEsBloqueadoAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebAXFUsuarioEsBloqueadoAsync(Usuario, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionar(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionar(Usuario, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarAsync(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarAsync(Usuario, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
         
         public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioClaseUsuarioEntity> WebAXFUsuarioClaseUsuarioSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
@@ -1054,6 +1128,22 @@ namespace adminlte.AXFUsuarioService {
         
         public System.Threading.Tasks.Task<bool> WebAXFUsuarioEsValidoAsync(string Usuario, string Clave, string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebAXFUsuarioEsValidoAsync(Usuario, Clave, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public string WebDesencriptarClave(string Clave, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebDesencriptarClave(Clave, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<string> WebDesencriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebDesencriptarClaveAsync(Clave, strAKASesion, strAKASubCompania);
+        }
+        
+        public string WebEncriptarClave(string Clave, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEncriptarClave(Clave, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<string> WebEncriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEncriptarClaveAsync(Clave, strAKASesion, strAKASubCompania);
         }
     }
 }

@@ -7,24 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/AXFWebMenu?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarResponse" />
-  </wsdl:message>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXSubCompania" />
-  </wsdl:message>
-  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXSubCompaniaResponse" />
-  </wsdl:message>
   <wsdl:message name="AXFWebMenuInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -42,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="AXFWebMenuInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="AXFWebMenuInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -79,6 +67,24 @@
   <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebAXFWebMenuEsBloqueadoResponse" />
   </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
   <wsdl:message name="AXFWebMenuInterface_WebAXFWebMenuSeleccionarXUsuarioSubCompania_InputMessage">
     <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXUsuarioSubCompania" />
   </wsdl:message>
@@ -86,18 +92,6 @@
     <wsdl:part name="parameters" element="tns:WebAXFWebMenuSeleccionarXUsuarioSubCompaniaResponse" />
   </wsdl:message>
   <wsdl:portType name="AXFWebMenuInterface">
-    <wsdl:operation name="WebAXFWebMenuSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFWebMenuSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFWebMenuSeleccionarXSubCompania">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebNuevo" message="tns:AXFWebMenuInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebNuevoResponse" message="tns:AXFWebMenuInterface_WebNuevo_OutputMessage" />
@@ -109,6 +103,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebEliminar" message="tns:AXFWebMenuInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebEliminarResponse" message="tns:AXFWebMenuInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalle" message="tns:AXFWebMenuInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalleResponse" message="tns:AXFWebMenuInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebSeleccionar" message="tns:AXFWebMenuInterface_WebSeleccionar_InputMessage" />
@@ -134,6 +132,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuEsBloqueado" message="tns:AXFWebMenuInterface_WebAXFWebMenuEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuEsBloqueadoResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuEsBloqueado_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="WebAXFWebMenuSeleccionarXUsuarioSubCompania">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXUsuarioSubCompania" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXUsuarioSubCompania_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXUsuarioSubCompaniaResponse" message="tns:AXFWebMenuInterface_WebAXFWebMenuSeleccionarXUsuarioSubCompania_OutputMessage" />
@@ -141,33 +151,6 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_AXFWebMenuInterface" type="tns:AXFWebMenuInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebAXFWebMenuSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFWebMenuSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFWebMenuSeleccionarXSubCompania">
-      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -188,6 +171,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -242,6 +234,33 @@
     </wsdl:operation>
     <wsdl:operation name="WebAXFWebMenuEsBloqueado">
       <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFWebMenuSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

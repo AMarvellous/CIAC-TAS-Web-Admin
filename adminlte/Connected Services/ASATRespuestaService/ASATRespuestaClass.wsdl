@@ -7,18 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/ASATRespuesta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarResponse" />
-  </wsdl:message>
   <wsdl:message name="ASATRespuestaInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -36,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="ASATRespuestaInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="ASATRespuestaInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -73,6 +67,18 @@
   <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATRespuestaEsBloqueadoResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarResponse" />
+  </wsdl:message>
   <wsdl:message name="ASATRespuestaInterface_WebGuardarRespuesta_InputMessage">
     <wsdl:part name="parameters" element="tns:WebGuardarRespuesta" />
   </wsdl:message>
@@ -103,15 +109,13 @@
   <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaTiempoRestante_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATRespuestaTiempoRestanteResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaMenorFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaMenorFecha" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaMenorFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaMenorFechaResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATRespuestaInterface">
-    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodoResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASATRespuestaSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevo" message="tns:ASATRespuestaInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevoResponse" message="tns:ASATRespuestaInterface_WebNuevo_OutputMessage" />
@@ -123,6 +127,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminar" message="tns:ASATRespuestaInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminarResponse" message="tns:ASATRespuestaInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminarDetalle" message="tns:ASATRespuestaInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebEliminarDetalleResponse" message="tns:ASATRespuestaInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebSeleccionar" message="tns:ASATRespuestaInterface_WebSeleccionar_InputMessage" />
@@ -148,6 +156,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueado" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsBloqueadoResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaEsBloqueado_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodoResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionar_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="WebGuardarRespuesta">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuesta" message="tns:ASATRespuestaInterface_WebGuardarRespuesta_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuestaResponse" message="tns:ASATRespuestaInterface_WebGuardarRespuesta_OutputMessage" />
@@ -168,27 +184,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestante" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestante_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestante_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaMenorFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFecha" message="tns:ASATRespuestaInterface_WebASATRespuestaMenorFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFechaResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaMenorFecha_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATRespuestaInterface" type="tns:ASATRespuestaInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASATRespuestaSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -209,6 +211,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -270,6 +281,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="WebGuardarRespuesta">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarRespuesta" style="document" />
       <wsdl:input>
@@ -308,6 +337,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebASATRespuestaTiempoRestante">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaMenorFecha">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFecha" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

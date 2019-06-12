@@ -1,0 +1,65 @@
+﻿@model adminlte.ASAConfiguracionService.ASAConfiguracionSet
+
+@{
+    ViewBag.Title = "ASAConfiguracionNuevo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            ASA
+            <small>Configuracion</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">ASAConfiguracion</a></li>
+            <li class="active">Configuracion</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box box-primary">
+            @using (Html.BeginForm())
+            {
+                <div class="box-header with-border">
+                    <h3 class="box-title">CIAC TAS</h3>
+                </div>
+                <!-- /.box-header -->
+
+                <!-- form start -->
+                @*<form role="form">*@
+                <div class="box-body">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        @Html.Label("Grupo")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @*@Html.EditorFor(model => model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })*@
+                            @Html.DropDownListFor(model => model.ltASAConfiguracion[0].Grupo, new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo" , new { @class = "form-control controlar" })
+                            @Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].Grupo, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Siguiente</button>
+                </div>
+                @*</form>*@
+            }
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

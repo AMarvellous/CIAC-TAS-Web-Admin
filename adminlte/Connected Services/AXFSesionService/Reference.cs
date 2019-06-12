@@ -15,6 +15,99 @@ namespace adminlte.AXFSesionService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AXFSesionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class AXFSesionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesionEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensajeEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesion {
+            get {
+                return this.ltAXFSesionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFSesionField, value) != true)) {
+                    this.ltAXFSesionField = value;
+                    this.RaisePropertyChanged("ltAXFSesion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesionEliminado {
+            get {
+                return this.ltAXFSesionEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFSesionEliminadoField, value) != true)) {
+                    this.ltAXFSesionEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFSesionEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensaje {
+            get {
+                return this.ltAXFSesionMensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFSesionMensajeField, value) != true)) {
+                    this.ltAXFSesionMensajeField = value;
+                    this.RaisePropertyChanged("ltAXFSesionMensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensajeEliminado {
+            get {
+                return this.ltAXFSesionMensajeEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFSesionMensajeEliminadoField, value) != true)) {
+                    this.ltAXFSesionMensajeEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFSesionMensajeEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFSesionEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class AXFSesionEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -442,84 +535,6 @@ namespace adminlte.AXFSesionService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    public enum Estado : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Added = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unchanged = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Modified = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Deleted = 3,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AXFSesionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class AXFSesionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensajeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> ltAXFSesion {
-            get {
-                return this.ltAXFSesionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFSesionField, value) != true)) {
-                    this.ltAXFSesionField = value;
-                    this.RaisePropertyChanged("ltAXFSesion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> ltAXFSesionMensaje {
-            get {
-                return this.ltAXFSesionMensajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFSesionMensajeField, value) != true)) {
-                    this.ltAXFSesionMensajeField = value;
-                    this.RaisePropertyChanged("ltAXFSesionMensaje");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFSesionMensajeEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
@@ -645,29 +660,26 @@ namespace adminlte.AXFSesionService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    public enum Estado : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Added = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unchanged = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Modified = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AXFSesionService.AXFSesionInterface")]
     public interface AXFSesionInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompaniaResponse" +
-            "")]
-        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompaniaResponse" +
-            "")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebNuevo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebNuevoResponse")]
         adminlte.AXFSesionService.AXFSesionSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -686,6 +698,12 @@ namespace adminlte.AXFSesionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebSeleccionar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebSeleccionarResponse")]
         adminlte.AXFSesionService.AXFSesionSet WebSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
@@ -722,6 +740,26 @@ namespace adminlte.AXFSesionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueado", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebAXFSesionEsBloqueadoAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodoResponse")]
+        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionar", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompaniaResponse" +
+            "")]
+        System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionSeleccionarXSubCompaniaResponse" +
+            "")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarTodo", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAXFSesionMensajeSeleccionarTodoResponse")]
         System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> WebAXFSesionMensajeSeleccionarTodo(string strAKASesion, string strAKASubCompania);
@@ -797,12 +835,6 @@ namespace adminlte.AXFSesionService {
             "esponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXUsuarioSubCompaniaAsync(string Usuario, string SubCompania);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExterna", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExternaResponse")]
-        long WebEliminarSesionExterna(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExterna", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionExternaResponse")]
-        System.Threading.Tasks.Task<long> WebEliminarSesionExternaAsync(string strAKASesion, string strAKASubCompania);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebEliminarSesionTodoSubCompania", ReplyAction="http://tempuri.org/AXFSesionInterface/WebEliminarSesionTodoSubCompaniaResponse")]
         long WebEliminarSesionTodoSubCompania(string strAKASubCompania);
         
@@ -861,30 +893,6 @@ namespace adminlte.AXFSesionService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionar(Sesion, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionarAsync(Sesion, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFSesionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.AXFSesionService.AXFSesionSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -907,6 +915,14 @@ namespace adminlte.AXFSesionService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setAXFSesion, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setAXFSesion, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFSesionService.AXFSesionSet setAXFSesion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setAXFSesion, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.AXFSesionService.AXFSesionSet WebSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
@@ -955,6 +971,30 @@ namespace adminlte.AXFSesionService {
         
         public System.Threading.Tasks.Task<bool> WebAXFSesionEsBloqueadoAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebAXFSesionEsBloqueadoAsync(Sesion, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionar(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionar(Sesion, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarAsync(string Sesion, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionarAsync(Sesion, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity> WebAXFSesionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFSesionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
         
         public System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionMensajeEntity> WebAXFSesionMensajeSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
@@ -1043,14 +1083,6 @@ namespace adminlte.AXFSesionService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFSesionService.AXFSesionEntity>> WebAXFSesionSeleccionarXUsuarioSubCompaniaAsync(string Usuario, string SubCompania) {
             return base.Channel.WebAXFSesionSeleccionarXUsuarioSubCompaniaAsync(Usuario, SubCompania);
-        }
-        
-        public long WebEliminarSesionExterna(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebEliminarSesionExterna(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<long> WebEliminarSesionExternaAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebEliminarSesionExternaAsync(strAKASesion, strAKASubCompania);
         }
         
         public long WebEliminarSesionTodoSubCompania(string strAKASubCompania) {

@@ -7,24 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/AXFUsuario?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarResponse" />
-  </wsdl:message>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXSubCompania" />
-  </wsdl:message>
-  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXSubCompaniaResponse" />
-  </wsdl:message>
   <wsdl:message name="AXFUsuarioInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -42,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="AXFUsuarioInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="AXFUsuarioInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -78,6 +66,24 @@
   </wsdl:message>
   <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebAXFUsuarioEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXSubCompaniaResponse" />
   </wsdl:message>
   <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioClaseUsuarioSeleccionarTodo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebAXFUsuarioClaseUsuarioSeleccionarTodo" />
@@ -133,19 +139,19 @@
   <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioEsValido_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebAXFUsuarioEsValidoResponse" />
   </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebDesencriptarClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebDesencriptarClave" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebDesencriptarClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebDesencriptarClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebEncriptarClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEncriptarClave" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebEncriptarClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEncriptarClaveResponse" />
+  </wsdl:message>
   <wsdl:portType name="AXFUsuarioInterface">
-    <wsdl:operation name="WebAXFUsuarioSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFUsuarioSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFUsuarioSeleccionarXSubCompania">
-      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebNuevo" message="tns:AXFUsuarioInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebNuevoResponse" message="tns:AXFUsuarioInterface_WebNuevo_OutputMessage" />
@@ -157,6 +163,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEliminar" message="tns:AXFUsuarioInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEliminarResponse" message="tns:AXFUsuarioInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalle" message="tns:AXFUsuarioInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalleResponse" message="tns:AXFUsuarioInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebSeleccionar" message="tns:AXFUsuarioInterface_WebSeleccionar_InputMessage" />
@@ -181,6 +191,18 @@
     <wsdl:operation name="WebAXFUsuarioEsBloqueado">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsBloqueado" message="tns:AXFUsuarioInterface_WebAXFUsuarioEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsBloqueadoResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodoResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompaniaResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXSubCompania_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebAXFUsuarioClaseUsuarioSeleccionarTodo">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioClaseUsuarioSeleccionarTodo" message="tns:AXFUsuarioInterface_WebAXFUsuarioClaseUsuarioSeleccionarTodo_InputMessage" />
@@ -218,36 +240,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsValido" message="tns:AXFUsuarioInterface_WebAXFUsuarioEsValido_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsValidoResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioEsValido_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebDesencriptarClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClave" message="tns:AXFUsuarioInterface_WebDesencriptarClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClaveResponse" message="tns:AXFUsuarioInterface_WebDesencriptarClave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEncriptarClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave" message="tns:AXFUsuarioInterface_WebEncriptarClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClaveResponse" message="tns:AXFUsuarioInterface_WebEncriptarClave_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_AXFUsuarioInterface" type="tns:AXFUsuarioInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebAXFUsuarioSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFUsuarioSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebAXFUsuarioSeleccionarXSubCompania">
-      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -268,6 +271,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -322,6 +334,33 @@
     </wsdl:operation>
     <wsdl:operation name="WebAXFUsuarioEsBloqueado">
       <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXSubCompania" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -403,6 +442,24 @@
     </wsdl:operation>
     <wsdl:operation name="WebAXFUsuarioEsValido">
       <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioEsValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebDesencriptarClave">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebDesencriptarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEncriptarClave">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

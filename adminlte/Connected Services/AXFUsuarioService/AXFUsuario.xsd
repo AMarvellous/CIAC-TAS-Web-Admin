@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AXFUsuarioSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltAXFUsuario" nillable="true" type="tns:ArrayOfAXFUsuarioEntity" />
+      <xs:element minOccurs="0" name="ltAXFUsuarioClaseUsuario" nillable="true" type="tns:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      <xs:element minOccurs="0" name="ltAXFUsuarioClaseUsuarioEliminado" nillable="true" type="tns:ArrayOfAXFUsuarioClaseUsuarioEntity" />
+      <xs:element minOccurs="0" name="ltAXFUsuarioEliminado" nillable="true" type="tns:ArrayOfAXFUsuarioEntity" />
+      <xs:element minOccurs="0" name="ltAXFUsuarioPropiedad" nillable="true" type="tns:ArrayOfAXFUsuarioPropiedadEntity" />
+      <xs:element minOccurs="0" name="ltAXFUsuarioPropiedadEliminado" nillable="true" type="tns:ArrayOfAXFUsuarioPropiedadEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AXFUsuarioSet" nillable="true" type="tns:AXFUsuarioSet" />
   <xs:complexType name="ArrayOfAXFUsuarioEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="AXFUsuarioEntity" nillable="true" type="tns:AXFUsuarioEntity" />
@@ -43,14 +54,6 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
-  <xs:complexType name="AXFUsuarioSet">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ltAXFUsuario" nillable="true" type="tns:ArrayOfAXFUsuarioEntity" />
-      <xs:element minOccurs="0" name="ltAXFUsuarioClaseUsuario" nillable="true" type="tns:ArrayOfAXFUsuarioClaseUsuarioEntity" />
-      <xs:element minOccurs="0" name="ltAXFUsuarioPropiedad" nillable="true" type="tns:ArrayOfAXFUsuarioPropiedadEntity" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AXFUsuarioSet" nillable="true" type="tns:AXFUsuarioSet" />
   <xs:complexType name="ArrayOfAXFUsuarioClaseUsuarioEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="AXFUsuarioClaseUsuarioEntity" nillable="true" type="tns:AXFUsuarioClaseUsuarioEntity" />

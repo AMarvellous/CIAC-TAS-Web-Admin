@@ -7,24 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/ASAConfiguracion?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarXSubCompania" />
-  </wsdl:message>
-  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarXSubCompaniaResponse" />
-  </wsdl:message>
   <wsdl:message name="ASAConfiguracionInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -42,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="ASAConfiguracionInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="ASAConfiguracionInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -79,19 +67,49 @@
   <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASAConfiguracionEsBloqueadoResponse" />
   </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAConfiguracionLineaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASAConfiguracionInterface">
-    <wsdl:operation name="WebASAConfiguracionSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASAConfiguracionSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASAConfiguracionSeleccionarXSubCompania">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompania" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompaniaResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebNuevo" message="tns:ASAConfiguracionInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebNuevoResponse" message="tns:ASAConfiguracionInterface_WebNuevo_OutputMessage" />
@@ -103,6 +121,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminar" message="tns:ASAConfiguracionInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminarResponse" message="tns:ASAConfiguracionInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalle" message="tns:ASAConfiguracionInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalleResponse" message="tns:ASAConfiguracionInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionar" message="tns:ASAConfiguracionInterface_WebSeleccionar_InputMessage" />
@@ -128,36 +150,37 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueado" message="tns:ASAConfiguracionInterface_WebASAConfiguracionEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionEsBloqueado_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompania" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompaniaResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarTodo" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarTodoResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionar" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarXSubCompania" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarXSubCompaniaResponse" message="tns:ASAConfiguracionInterface_WebASAConfiguracionLineaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASAConfiguracionInterface" type="tns:ASAConfiguracionInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebASAConfiguracionSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASAConfiguracionSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASAConfiguracionSeleccionarXSubCompania">
-      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompania" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -178,6 +201,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -232,6 +264,69 @@
     </wsdl:operation>
     <wsdl:operation name="WebASAConfiguracionEsBloqueado">
       <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAConfiguracionLineaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarXSubCompania" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

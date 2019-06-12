@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ASAPreguntaSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltASAPregunta" nillable="true" type="tns:ArrayOfASAPreguntaEntity" />
+      <xs:element minOccurs="0" name="ltASAPreguntaEliminado" nillable="true" type="tns:ArrayOfASAPreguntaEntity" />
+      <xs:element minOccurs="0" name="ltASAPreguntaRespuesta" nillable="true" type="tns:ArrayOfASAPreguntaRespuestaEntity" />
+      <xs:element minOccurs="0" name="ltASAPreguntaRespuestaEliminado" nillable="true" type="tns:ArrayOfASAPreguntaRespuestaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ASAPreguntaSet" nillable="true" type="tns:ASAPreguntaSet" />
   <xs:complexType name="ArrayOfASAPreguntaEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ASAPreguntaEntity" nillable="true" type="tns:ASAPreguntaEntity" />
@@ -14,6 +23,7 @@
       <xs:element minOccurs="0" name="Entero2" type="xs:long" />
       <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GrupoPregunta" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Inhabilitado" type="xs:boolean" />
       <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
       <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
@@ -40,13 +50,6 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
-  <xs:complexType name="ASAPreguntaSet">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ltASAPregunta" nillable="true" type="tns:ArrayOfASAPreguntaEntity" />
-      <xs:element minOccurs="0" name="ltASAPreguntaRespuesta" nillable="true" type="tns:ArrayOfASAPreguntaRespuestaEntity" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ASAPreguntaSet" nillable="true" type="tns:ASAPreguntaSet" />
   <xs:complexType name="ArrayOfASAPreguntaRespuestaEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ASAPreguntaRespuestaEntity" nillable="true" type="tns:ASAPreguntaRespuestaEntity" />

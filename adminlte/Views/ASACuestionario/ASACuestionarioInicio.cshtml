@@ -26,12 +26,12 @@
                 <h3 class="box-title">Cuestionario</h3>
                 <div class="box-tools pull-right">
                     @*<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                            title="Collapse">
-                        <i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fa fa-times"></i>
-                        </button>*@
+                                title="Collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                                <i class="fa fa-times"></i>
+                            </button>*@
                 </div>
             </div>
             <div class="box-body">
@@ -39,6 +39,15 @@
                     <div class="col-xs-12 text-center form-group">
                         @Html.DropDownList("Cuestionario", (SelectList)@ViewBag.ltSelect, "Seleccione el Cuestionario", new { @class = "form-control" })
                     </div>
+
+                    @if(!ViewBag.ExisteASA)
+                    {
+                    <div class="col-xs-12 text-center form-group">
+                        @Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })
+                    </div>
+                    }
+                    
+
                     <div class="col-xs-12 text-center">
                         <button name="inicioCuestionario" type="submit" class="btn btn-default btn-default">Iniciar Cuestionario</button>
                     </div>
@@ -55,15 +64,24 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
 <!-- jQuery 3 -->
 <script src="~/Scripts/adminlte/components/jquery/dist/jquery.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script src="~/Scripts/adminlte/js/adminlte.min.js"></script>
-<script type="text/javascript">
-</script>
+
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+            
+        })
+    </script>
+}
 
 
 

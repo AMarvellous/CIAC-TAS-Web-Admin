@@ -15,6 +15,67 @@ namespace adminlte.AXFWebMenuService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebMenuSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class AXFWebMenuSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenuEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenu {
+            get {
+                return this.ltAXFWebMenuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebMenuField, value) != true)) {
+                    this.ltAXFWebMenuField = value;
+                    this.RaisePropertyChanged("ltAXFWebMenu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenuEliminado {
+            get {
+                return this.ltAXFWebMenuEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebMenuEliminadoField, value) != true)) {
+                    this.ltAXFWebMenuEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFWebMenuEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebMenuEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class AXFWebMenuEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -475,74 +536,9 @@ namespace adminlte.AXFWebMenuService {
         Deleted = 3,
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebMenuSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class AXFWebMenuSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenuField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> ltAXFWebMenu {
-            get {
-                return this.ltAXFWebMenuField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFWebMenuField, value) != true)) {
-                    this.ltAXFWebMenuField = value;
-                    this.RaisePropertyChanged("ltAXFWebMenu");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AXFWebMenuService.AXFWebMenuInterface")]
     public interface AXFWebMenuInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaRespon" +
-            "se")]
-        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaRespon" +
-            "se")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebNuevo", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebNuevoResponse")]
         adminlte.AXFWebMenuService.AXFWebMenuSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -561,6 +557,12 @@ namespace adminlte.AXFWebMenuService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebEliminar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebSeleccionar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebSeleccionarResponse")]
         adminlte.AXFWebMenuService.AXFWebMenuSet WebSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
@@ -597,6 +599,26 @@ namespace adminlte.AXFWebMenuService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuEsBloqueado", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebAXFWebMenuEsBloqueadoAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse")]
+        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionar", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaRespon" +
+            "se")]
+        System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXSubCompaniaRespon" +
+            "se")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXUsuarioSubCompani" +
             "a", ReplyAction="http://tempuri.org/AXFWebMenuInterface/WebAXFWebMenuSeleccionarXUsuarioSubCompani" +
@@ -636,30 +658,6 @@ namespace adminlte.AXFWebMenuService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionar(Producto, SubCompania, Modulo, Grupo, Rotulo, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionarAsync(Producto, SubCompania, Modulo, Grupo, Rotulo, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebMenuSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.AXFWebMenuService.AXFWebMenuSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -682,6 +680,14 @@ namespace adminlte.AXFWebMenuService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setAXFWebMenu, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setAXFWebMenu, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFWebMenuService.AXFWebMenuSet setAXFWebMenu, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setAXFWebMenu, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.AXFWebMenuService.AXFWebMenuSet WebSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
@@ -730,6 +736,30 @@ namespace adminlte.AXFWebMenuService {
         
         public System.Threading.Tasks.Task<bool> WebAXFWebMenuEsBloqueadoAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebAXFWebMenuEsBloqueadoAsync(Producto, SubCompania, Modulo, Grupo, Rotulo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionar(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionar(Producto, SubCompania, Modulo, Grupo, Rotulo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarAsync(string Producto, string SubCompania, string Modulo, string Grupo, string Rotulo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionarAsync(Producto, SubCompania, Modulo, Grupo, Rotulo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity>> WebAXFWebMenuSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebMenuSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
         
         public System.Collections.Generic.List<adminlte.AXFWebMenuService.AXFWebMenuEntity> WebAXFWebMenuSeleccionarXUsuarioSubCompania(string Usuario, string SubCompania, string strAKASesion, string strAKASubCompania) {

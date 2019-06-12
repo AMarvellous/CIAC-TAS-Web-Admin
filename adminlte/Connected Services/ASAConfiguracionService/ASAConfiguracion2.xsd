@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ASAConfiguracionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltASAConfiguracion" nillable="true" type="tns:ArrayOfASAConfiguracionEntity" />
+      <xs:element minOccurs="0" name="ltASAConfiguracionEliminado" nillable="true" type="tns:ArrayOfASAConfiguracionEntity" />
+      <xs:element minOccurs="0" name="ltASAConfiguracionLinea" nillable="true" type="tns:ArrayOfASAConfiguracionLineaEntity" />
+      <xs:element minOccurs="0" name="ltASAConfiguracionLineaEliminado" nillable="true" type="tns:ArrayOfASAConfiguracionLineaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ASAConfiguracionSet" nillable="true" type="tns:ASAConfiguracionSet" />
   <xs:complexType name="ArrayOfASAConfiguracionEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ASAConfiguracionEntity" nillable="true" type="tns:ASAConfiguracionEntity" />
@@ -17,6 +26,7 @@
       <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
       <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
       <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
@@ -25,7 +35,6 @@
       <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Tiempo" type="xs:boolean" />
       <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
       <xs:element minOccurs="0" name="USel" type="xs:boolean" />
@@ -42,10 +51,22 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
-  <xs:complexType name="ASAConfiguracionSet">
+  <xs:complexType name="ArrayOfASAConfiguracionLineaEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ltASAConfiguracion" nillable="true" type="tns:ArrayOfASAConfiguracionEntity" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ASAConfiguracionLineaEntity" nillable="true" type="tns:ASAConfiguracionLineaEntity" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ASAConfiguracionSet" nillable="true" type="tns:ASAConfiguracionSet" />
+  <xs:element name="ArrayOfASAConfiguracionLineaEntity" nillable="true" type="tns:ArrayOfASAConfiguracionLineaEntity" />
+  <xs:complexType name="ASAConfiguracionLineaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadPregunta" type="xs:long" />
+      <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ASAConfiguracionLineaEntity" nillable="true" type="tns:ASAConfiguracionLineaEntity" />
 </xs:schema>

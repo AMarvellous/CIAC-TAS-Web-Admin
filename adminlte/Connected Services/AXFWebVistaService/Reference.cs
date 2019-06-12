@@ -15,6 +15,99 @@ namespace adminlte.AXFWebVistaService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebVistaSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class AXFWebVistaSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVistaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumnaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumnaEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVistaEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVista {
+            get {
+                return this.ltAXFWebVistaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebVistaField, value) != true)) {
+                    this.ltAXFWebVistaField = value;
+                    this.RaisePropertyChanged("ltAXFWebVista");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumna {
+            get {
+                return this.ltAXFWebVistaColumnaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebVistaColumnaField, value) != true)) {
+                    this.ltAXFWebVistaColumnaField = value;
+                    this.RaisePropertyChanged("ltAXFWebVistaColumna");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumnaEliminado {
+            get {
+                return this.ltAXFWebVistaColumnaEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebVistaColumnaEliminadoField, value) != true)) {
+                    this.ltAXFWebVistaColumnaEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFWebVistaColumnaEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVistaEliminado {
+            get {
+                return this.ltAXFWebVistaEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltAXFWebVistaEliminadoField, value) != true)) {
+                    this.ltAXFWebVistaEliminadoField = value;
+                    this.RaisePropertyChanged("ltAXFWebVistaEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebVistaEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class AXFWebVistaEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -522,84 +615,6 @@ namespace adminlte.AXFWebVistaService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    public enum Estado : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Added = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unchanged = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Modified = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Deleted = 3,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebVistaSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class AXFWebVistaSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVistaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumnaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> ltAXFWebVista {
-            get {
-                return this.ltAXFWebVistaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFWebVistaField, value) != true)) {
-                    this.ltAXFWebVistaField = value;
-                    this.RaisePropertyChanged("ltAXFWebVista");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> ltAXFWebVistaColumna {
-            get {
-                return this.ltAXFWebVistaColumnaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltAXFWebVistaColumnaField, value) != true)) {
-                    this.ltAXFWebVistaColumnaField = value;
-                    this.RaisePropertyChanged("ltAXFWebVistaColumna");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AXFWebVistaColumnaEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
@@ -821,29 +836,26 @@ namespace adminlte.AXFWebVistaService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    public enum Estado : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Added = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unchanged = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Modified = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AXFWebVistaService.AXFWebVistaInterface")]
     public interface AXFWebVistaInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompaniaResp" +
-            "onse")]
-        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompaniaResp" +
-            "onse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebNuevo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebNuevoResponse")]
         adminlte.AXFWebVistaService.AXFWebVistaSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -862,6 +874,12 @@ namespace adminlte.AXFWebVistaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebEliminar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebSeleccionar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebSeleccionarResponse")]
         adminlte.AXFWebVistaService.AXFWebVistaSet WebSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
@@ -898,6 +916,26 @@ namespace adminlte.AXFWebVistaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueado", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebAXFWebVistaEsBloqueadoAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodoResponse")]
+        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionar", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompaniaResp" +
+            "onse")]
+        System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompania", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaSeleccionarXSubCompaniaResp" +
+            "onse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarTodo", ReplyAction="http://tempuri.org/AXFWebVistaInterface/WebAXFWebVistaColumnaSeleccionarTodoRespo" +
             "nse")]
@@ -961,30 +999,6 @@ namespace adminlte.AXFWebVistaService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionar(WebVista, WebControlador, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionarAsync(WebVista, WebControlador, SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebAXFWebVistaSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.AXFWebVistaService.AXFWebVistaSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -1007,6 +1021,14 @@ namespace adminlte.AXFWebVistaService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setAXFWebVista, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setAXFWebVista, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.AXFWebVistaService.AXFWebVistaSet setAXFWebVista, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setAXFWebVista, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.AXFWebVistaService.AXFWebVistaSet WebSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
@@ -1055,6 +1077,30 @@ namespace adminlte.AXFWebVistaService {
         
         public System.Threading.Tasks.Task<bool> WebAXFWebVistaEsBloqueadoAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebAXFWebVistaEsBloqueadoAsync(WebVista, WebControlador, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionar(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionar(WebVista, WebControlador, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarAsync(string WebVista, string WebControlador, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionarAsync(WebVista, WebControlador, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity> WebAXFWebVistaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaEntity>> WebAXFWebVistaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFWebVistaSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
         
         public System.Collections.Generic.List<adminlte.AXFWebVistaService.AXFWebVistaColumnaEntity> WebAXFWebVistaColumnaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {

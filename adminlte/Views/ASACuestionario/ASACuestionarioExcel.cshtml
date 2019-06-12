@@ -32,13 +32,19 @@
                     <!-- form start -->
                     <form action="@Url.Action("ASACuestionarioExcel","ASACuestionario")" method="post" role="form" enctype="multipart/form-data">
                         <div class="box-body">
-                            
+
+                            <div class="form-group">
+                                <label for="GrupoPregunta">Grupo</label>
+                                @Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltSelect as System.Collections.IEnumerable), "Seleccione el Grupo", new { @class = "form-control" })
+                                @*<p class="help-block">Seleccione el Grupo</p>*@
+                            </div>
+
                             <div class="form-group">
                                 <label for="exampleInputFile">Entrada de Archivo</label>
-                                <input type="file" name="FileUpload" id="exampleInputFile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"> 
+                                <input type="file" name="FileUpload" id="exampleInputFile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
                                 <p class="help-block">Seleccione el archivo excel de preguntas ASA</p>
                             </div>
-                            
+
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">

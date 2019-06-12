@@ -7,18 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/ASAPregunta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarResponse" />
-  </wsdl:message>
   <wsdl:message name="ASAPreguntaInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -36,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="ASAPreguntaInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="ASAPreguntaInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -73,6 +67,18 @@
   <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASAPreguntaEsBloqueadoResponse" />
   </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASAPreguntaSeleccionarResponse" />
+  </wsdl:message>
   <wsdl:message name="ASAPreguntaInterface_WebASAPreguntaRespuestaSeleccionarTodo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebASAPreguntaRespuestaSeleccionarTodo" />
   </wsdl:message>
@@ -109,15 +115,13 @@
   <wsdl:message name="ASAPreguntaInterface_WebGuardarCuestionarioIni_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebGuardarCuestionarioIniResponse" />
   </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebEliminarTodosXGrupoPregunta_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarTodosXGrupoPregunta" />
+  </wsdl:message>
+  <wsdl:message name="ASAPreguntaInterface_WebEliminarTodosXGrupoPregunta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarTodosXGrupoPreguntaResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASAPreguntaInterface">
-    <wsdl:operation name="WebASAPreguntaSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASAPreguntaSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionar_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebNuevo" message="tns:ASAPreguntaInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebNuevoResponse" message="tns:ASAPreguntaInterface_WebNuevo_OutputMessage" />
@@ -129,6 +133,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminar" message="tns:ASAPreguntaInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarResponse" message="tns:ASAPreguntaInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalle" message="tns:ASAPreguntaInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalleResponse" message="tns:ASAPreguntaInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebSeleccionar" message="tns:ASAPreguntaInterface_WebSeleccionar_InputMessage" />
@@ -154,6 +162,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaEsBloqueado" message="tns:ASAPreguntaInterface_WebASAPreguntaEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaEsBloqueadoResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaEsBloqueado_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebASAPreguntaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASAPreguntaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaSeleccionar_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="WebASAPreguntaRespuestaSeleccionarTodo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaRespuestaSeleccionarTodo" message="tns:ASAPreguntaInterface_WebASAPreguntaRespuestaSeleccionarTodo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaRespuestaSeleccionarTodoResponse" message="tns:ASAPreguntaInterface_WebASAPreguntaRespuestaSeleccionarTodo_OutputMessage" />
@@ -178,27 +194,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIni" message="tns:ASAPreguntaInterface_WebGuardarCuestionarioIni_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIniResponse" message="tns:ASAPreguntaInterface_WebGuardarCuestionarioIni_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebEliminarTodosXGrupoPregunta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPregunta" message="tns:ASAPreguntaInterface_WebEliminarTodosXGrupoPregunta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPreguntaResponse" message="tns:ASAPreguntaInterface_WebEliminarTodosXGrupoPregunta_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASAPreguntaInterface" type="tns:ASAPreguntaInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebASAPreguntaSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASAPreguntaSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -219,6 +221,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -280,6 +291,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="WebASAPreguntaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASAPreguntaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="WebASAPreguntaRespuestaSeleccionarTodo">
       <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaRespuestaSeleccionarTodo" style="document" />
       <wsdl:input>
@@ -327,6 +356,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebGuardarCuestionarioIni">
       <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarTodosXGrupoPregunta">
+      <soap:operation soapAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPregunta" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

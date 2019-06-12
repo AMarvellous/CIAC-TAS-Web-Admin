@@ -7,24 +7,6 @@
       <xsd:import schemaLocation="http://alejandroasus:8901/ASATransaccion?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarTodo_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarTodo" />
-  </wsdl:message>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarTodo_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarTodoResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionar_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionar" />
-  </wsdl:message>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarResponse" />
-  </wsdl:message>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_InputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXSubCompania" />
-  </wsdl:message>
-  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_OutputMessage">
-    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXSubCompaniaResponse" />
-  </wsdl:message>
   <wsdl:message name="ASATransaccionInterface_WebNuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:WebNuevo" />
   </wsdl:message>
@@ -42,6 +24,12 @@
   </wsdl:message>
   <wsdl:message name="ASATransaccionInterface_WebEliminar_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
   </wsdl:message>
   <wsdl:message name="ASATransaccionInterface_WebSeleccionar_InputMessage">
     <wsdl:part name="parameters" element="tns:WebSeleccionar" />
@@ -79,19 +67,25 @@
   <wsdl:message name="ASATransaccionInterface_WebASATransaccionEsBloqueado_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATransaccionEsBloqueadoResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATransaccionInterface">
-    <wsdl:operation name="WebASATransaccionSeleccionarTodo">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarTodo_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarTodo_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASATransaccionSeleccionar">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionar_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="WebASATransaccionSeleccionarXSubCompania">
-      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompania" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompaniaResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebNuevo" message="tns:ASATransaccionInterface_WebNuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebNuevoResponse" message="tns:ASATransaccionInterface_WebNuevo_OutputMessage" />
@@ -103,6 +97,10 @@
     <wsdl:operation name="WebEliminar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebEliminar" message="tns:ASATransaccionInterface_WebEliminar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebEliminarResponse" message="tns:ASATransaccionInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalle" message="tns:ASATransaccionInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalleResponse" message="tns:ASATransaccionInterface_WebEliminarDetalle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebSeleccionar">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebSeleccionar" message="tns:ASATransaccionInterface_WebSeleccionar_InputMessage" />
@@ -128,36 +126,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsBloqueado" message="tns:ASATransaccionInterface_WebASATransaccionEsBloqueado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsBloqueadoResponse" message="tns:ASATransaccionInterface_WebASATransaccionEsBloqueado_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompania" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompaniaResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATransaccionInterface" type="tns:ASATransaccionInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="WebASATransaccionSeleccionarTodo">
-      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASATransaccionSeleccionar">
-      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="WebASATransaccionSeleccionarXSubCompania">
-      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompania" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="WebNuevo">
       <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebNuevo" style="document" />
       <wsdl:input>
@@ -178,6 +161,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEliminar">
       <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -232,6 +224,33 @@
     </wsdl:operation>
     <wsdl:operation name="WebASATransaccionEsBloqueado">
       <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompania" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

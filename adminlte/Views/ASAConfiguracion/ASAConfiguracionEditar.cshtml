@@ -3,6 +3,21 @@
 @{
     ViewBag.Title = "ASAConfiguracionEditar";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    WebGrid grid = new WebGrid(Model.ltASAConfiguracionLinea, // source
+                                null, // columnNames
+                                null, // defaultSort
+                                10,   // rowsPerPage
+                                true, // canPage
+                                true, // canSort
+                                null, // ajaxUpdateContainerId
+                                null, // ajaxUpdateCallback
+                                null, // fieldNamePrefix
+                                null, // pageFieldName
+                                null, // selectionFieldName
+                                null, // sortFieldName
+                                null);// sortDirectionFieldName
+
 }
 
 <!-- Content Wrapper. Contains page content -->
@@ -37,73 +52,59 @@
                     @Html.AntiForgeryToken()
 
                     <div class="form-group">
-                        @Html.Label("Cantidad Preguntas")
+                        @*@Html.Label("Cantidad Preguntas")*@
                         <div class="input-group">
                             <div class="input-group-addon">
-                                <i class="fa fa-phone"></i>
+                                <i class="fa fa-users"> @Html.Label(Model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })</i>
                             </div>
-                            @Html.EditorFor(model => model.ltASAConfiguracion[0].CantidadPregunta, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].CantidadPregunta, "", new { @class = "text-danger" })
+                            
+                            @*@Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].CantidadPregunta, "", new { @class = "text-danger" })*@
                             @*<input type="number" class="form-control">*@
                         </div>
                         <!-- /.input group -->
                     </div>
 
-                    <div class="form-group">
-                        @Html.Label("Fecha")
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            @Html.TextBox("FechaInicial", String.Format("{0:dd/MM/yyyy}", @Model.ltASAConfiguracion[0].FechaIni), new { @class = "form-control pull-right" })
-                            @Html.ValidationMessage("FechaInicial", "", new { @class = "text-danger" })
 
-                            @*<input type="text" class="form-control pull-right" id="datepicker">*@
-                        </div>
-                        <!-- /.input group -->
-                    </div>
+                    <p>
+                        @Html.ActionLink(" ", "ASAConfiguracionLineaNuevo", new { SubCompania = Model.ltASAConfiguracion[0].SubCompania, Grupo = Model.ltASAConfiguracion[0].Grupo }, new { data_modal = "", @class = "glyphicon glyphicon-plus removeUlock", style = "font-size:20px;" })
+                    </p>
+                    <br />
+                    @grid.GetHtml(
+                            tableStyle: "table table-bordered",
+                            headerStyle: "header",
+                            alternatingRowStyle: "alt",
+                            //tableStyle: "gridtable",
+                            //headerStyle: "gridtable-header",
+                            //alternatingRowStyle: "gridtable-alt",
+                            footerStyle: "table-pager-footer",
+                            columns: new[] {
+                                //grid.Column("TipoDoc"),
+                               // grid.Column("SubCompania"),
+                                grid.Column("FechaDoc","Fecha",format: (item) => string.Format("{0:dd/MM/yyyy}", item.FechaDoc)),
+                                grid.Column("CantidadPregunta","Cantidad Preguntas"),
+                                grid.Column("FechaIni", "Hora Inicio",format: (item) => string.Format("{0:hh:mm tt}", item.FechaIni)),
+                                grid.Column("FechaFin","Hora Fin",format: (item) => string.Format("{0:hh:mm tt}", item.FechaFin)),
+                                //grid.Column("Destinatario"),
+                                //grid.Column("ClaseOri"),
+                                //grid.Column("Estado"),
 
 
-                    <div class="bootstrap-timepicker">
-                        <div class="form-group">
-                            @Html.Label("Hora Inicio")
-                            <div class="input-group">
-                                @*<input type="text" class="form-control timepicker">*@
-                                @Html.TextBoxFor(model => model.ltASAConfiguracion[0].FechaIni, Model.ltASAConfiguracion[0].FechaIni.ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture), new { @class = "form-control timepicker" })
-                                @Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].FechaIni, "", new { @class = "text-danger" })
-                                <div class="input-group-addon">
-                                    <i class="fa fa-clock-o"></i>
-                                </div>
-                            </div>
-                            <!-- /.input group -->
-                        </div>
-                        <!-- /.form group -->
-                    </div>
-
-                    <div class="bootstrap-timepicker">
-                        <div class="form-group">
-                            @Html.Label("Hora Fin")
-                            <div class="input-group">
-                                @*<input type="text" class="form-control timepicker">*@
-                                @Html.TextBoxFor(model => model.ltASAConfiguracion[0].FechaFin, Model.ltASAConfiguracion[0].FechaFin.ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture), new { @class = "form-control timepicker" })
-                                @Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].FechaFin, "", new { @class = "text-danger" })
-                                <div class="input-group-addon">
-                                    <i class="fa fa-clock-o"></i>
-                                </div>
-                            </div>
-                            <!-- /.input group -->
-                        </div>
-                        <!-- /.form group -->
-                    </div>
-
+                                grid.Column("",
+                                            header:"Acciones",
+                                            format:@<text>
+        @*@Html.ActionLink(" ", "ASAConfiguracionLineaEditar", new { SubCompania=item.SubCompania, Grupo=item.Grupo, FechaDoc = item.FechaDoc},new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |*@
+        @Html.ActionLink(" ", "ASAConfiguracionLineaEliminar", new { SubCompania=item.SubCompania, Grupo=item.Grupo, FechaDoc = item.FechaDoc},new {data_modal = "", @class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
+                                            </text>
+                                                                                                                                                                                                                                                                                                )
+                                                                                                                                                                                                                                                                             })
 
 
                 </div>
                 <!-- /.box-body -->
 
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" onsubmit="onSubmitClick();">Submit</button>
-                </div>
+                @*<div class="box-footer">
+                        <button type="submit" class="btn btn-primary" onsubmit="onSubmitClick();">Submit</button>
+                    </div>*@
                 @*</form>*@
             }
         </div>
@@ -112,66 +113,79 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding-top:2%;">
+            <div id='myModalContent' style="padding-left:5%;"></div>
+        </div>
+    </div>
+</div>
 
-@section Scripts
-{
-    <script>
-        $(document).ready(function () {
+@*@Scripts.Render("~/Scripts/adminlte/js/modal.js")*@
+<script src="~/Scripts/adminlte/components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/Scripts/adminlte/js/modal.js"></script>
 
-            //Date picker
-            $('#FechaInicial').datepicker({
-                autoclose: true,
-                beforeShowDay: $.noop,
-                calendarWeeks: false,
-                clearBtn: false,
-                daysOfWeekDisabled: [],
-                endDate: Infinity,
-                forceParse: true,
-                format: 'dd/mm/yyyy',
-                keyboardNavigation: true,
-                language: 'es',
-                minViewMode: 0,
-                orientation: "bottom auto",
-                rtl: false,
-                startDate: -Infinity,
-                startView: 2,
-                todayBtn: false,
-                todayHighlight: false,
-                weekStart: 0
+@*@section Scripts
+    {
+        <script>
+            $(document).ready(function () {
+
+                //Date picker
+                $('#FechaInicial').datepicker({
+                    autoclose: true,
+                    beforeShowDay: $.noop,
+                    calendarWeeks: false,
+                    clearBtn: false,
+                    daysOfWeekDisabled: [],
+                    endDate: Infinity,
+                    forceParse: true,
+                    format: 'dd/mm/yyyy',
+                    keyboardNavigation: true,
+                    language: 'es',
+                    minViewMode: 0,
+                    orientation: "bottom auto",
+                    rtl: false,
+                    startDate: -Infinity,
+                    startView: 2,
+                    todayBtn: false,
+                    todayHighlight: false,
+                    weekStart: 0
+
+                })
+
+                //Timepicker
+                $('.timepicker').timepicker({
+                    showInputs: false
+                })
+
+                $("form").on('submit', function (e) {
+                    e.preventDefault();
+                    //var len = $('#username').val().length;
+                    //if (len < 6 && len > 1) {
+                    //    this.submit();
+                    //}
+                    console.log($("#ltASAConfiguracion_0__FechaIni").val())
+                    console.log($("#ltASAConfiguracion_0__FechaFin").val())
+                    let timeFrom = $("#ltASAConfiguracion_0__FechaIni").val(),
+                        timeTo = $("#ltASAConfiguracion_0__FechaFin").val();
+
+                    if (!timeFrom || !timeTo) {
+                        alert('Select time');
+                        return
+                    }
+
+                    if (getTime(timeFrom) >= getTime(timeTo)) {
+                        alert('timeFrom field must not greater than or equal to timeTo Field');
+                    } else {
+                        alert('Time is valid')
+                    }
+
+                });
 
             })
 
-            //Timepicker
-            $('.timepicker').timepicker({
-                showInputs: false
-            })
 
-            $("form").on('submit', function (e) {
-                e.preventDefault();
-                //var len = $('#username').val().length;
-                //if (len < 6 && len > 1) {
-                //    this.submit();
-                //}
-                console.log($("#ltASAConfiguracion_0__FechaIni").val())
-                console.log($("#ltASAConfiguracion_0__FechaFin").val())
-                let timeFrom = $("#ltASAConfiguracion_0__FechaIni").val(),
-                    timeTo = $("#ltASAConfiguracion_0__FechaFin").val();
-
-                if (!timeFrom || !timeTo) {
-                    alert('Select time');
-                    return
-                }
-
-                if (getTime(timeFrom) >= getTime(timeTo)) {
-                    alert('timeFrom field must not greater than or equal to timeTo Field');
-                } else {
-                    alert('Time is valid')
-                }
-
-            });
-
-        })
-
-
-    </script>
-}
+        </script>
+    }*@

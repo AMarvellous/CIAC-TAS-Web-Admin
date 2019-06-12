@@ -15,6 +15,99 @@ namespace adminlte.ASAConfiguracionService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ASAConfiguracionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class ASAConfiguracionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracionEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> ltASAConfiguracionLineaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> ltASAConfiguracionLineaEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracion {
+            get {
+                return this.ltASAConfiguracionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAConfiguracionField, value) != true)) {
+                    this.ltASAConfiguracionField = value;
+                    this.RaisePropertyChanged("ltASAConfiguracion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracionEliminado {
+            get {
+                return this.ltASAConfiguracionEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAConfiguracionEliminadoField, value) != true)) {
+                    this.ltASAConfiguracionEliminadoField = value;
+                    this.RaisePropertyChanged("ltASAConfiguracionEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> ltASAConfiguracionLinea {
+            get {
+                return this.ltASAConfiguracionLineaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAConfiguracionLineaField, value) != true)) {
+                    this.ltASAConfiguracionLineaField = value;
+                    this.RaisePropertyChanged("ltASAConfiguracionLinea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> ltASAConfiguracionLineaEliminado {
+            get {
+                return this.ltASAConfiguracionLineaEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAConfiguracionLineaEliminadoField, value) != true)) {
+                    this.ltASAConfiguracionLineaEliminadoField = value;
+                    this.RaisePropertyChanged("ltASAConfiguracionLineaEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ASAConfiguracionEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class ASAConfiguracionEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -50,6 +143,9 @@ namespace adminlte.ASAConfiguracionService {
         private System.DateTime FechaIniField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GrupoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool Logico1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -72,9 +168,6 @@ namespace adminlte.ASAConfiguracionService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Texto4Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool TiempoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UClaseField;
@@ -216,6 +309,19 @@ namespace adminlte.ASAConfiguracionService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grupo {
+            get {
+                return this.GrupoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GrupoField, value) != true)) {
+                    this.GrupoField = value;
+                    this.RaisePropertyChanged("Grupo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public bool Logico1 {
             get {
                 return this.Logico1Field;
@@ -320,19 +426,6 @@ namespace adminlte.ASAConfiguracionService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Tiempo {
-            get {
-                return this.TiempoField;
-            }
-            set {
-                if ((this.TiempoField.Equals(value) != true)) {
-                    this.TiempoField = value;
-                    this.RaisePropertyChanged("Tiempo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string UClase {
             get {
                 return this.UClaseField;
@@ -394,6 +487,147 @@ namespace adminlte.ASAConfiguracionService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ASAConfiguracionLineaEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class ASAConfiguracionLineaEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long CantidadPreguntaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaDocField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaIniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GrupoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SubCompaniaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private adminlte.ASAConfiguracionService.Estado UEstadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long CantidadPregunta {
+            get {
+                return this.CantidadPreguntaField;
+            }
+            set {
+                if ((this.CantidadPreguntaField.Equals(value) != true)) {
+                    this.CantidadPreguntaField = value;
+                    this.RaisePropertyChanged("CantidadPregunta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaDoc {
+            get {
+                return this.FechaDocField;
+            }
+            set {
+                if ((this.FechaDocField.Equals(value) != true)) {
+                    this.FechaDocField = value;
+                    this.RaisePropertyChanged("FechaDoc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaFin {
+            get {
+                return this.FechaFinField;
+            }
+            set {
+                if ((this.FechaFinField.Equals(value) != true)) {
+                    this.FechaFinField = value;
+                    this.RaisePropertyChanged("FechaFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaIni {
+            get {
+                return this.FechaIniField;
+            }
+            set {
+                if ((this.FechaIniField.Equals(value) != true)) {
+                    this.FechaIniField = value;
+                    this.RaisePropertyChanged("FechaIni");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Grupo {
+            get {
+                return this.GrupoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GrupoField, value) != true)) {
+                    this.GrupoField = value;
+                    this.RaisePropertyChanged("Grupo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SubCompania {
+            get {
+                return this.SubCompaniaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SubCompaniaField, value) != true)) {
+                    this.SubCompaniaField = value;
+                    this.RaisePropertyChanged("SubCompania");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public adminlte.ASAConfiguracionService.Estado UEstado {
+            get {
+                return this.UEstadoField;
+            }
+            set {
+                if ((this.UEstadoField.Equals(value) != true)) {
+                    this.UEstadoField = value;
+                    this.RaisePropertyChanged("UEstado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     public enum Estado : int {
@@ -411,80 +645,9 @@ namespace adminlte.ASAConfiguracionService {
         Deleted = 3,
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ASAConfiguracionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class ASAConfiguracionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> ltASAConfiguracion {
-            get {
-                return this.ltASAConfiguracionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltASAConfiguracionField, value) != true)) {
-                    this.ltASAConfiguracionField = value;
-                    this.RaisePropertyChanged("ltASAConfiguracion");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ASAConfiguracionService.ASAConfiguracionInterface")]
     public interface ASAConfiguracionInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoRe" +
-            "sponse")]
-        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarRespon" +
-            "se")]
-        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionar(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarRespon" +
-            "se")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
-            "mpania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
-            "mpaniaResponse")]
-        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
-            "mpania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
-            "mpaniaResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebNuevo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebNuevoResponse")]
         adminlte.ASAConfiguracionService.ASAConfiguracionSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -504,11 +667,17 @@ namespace adminlte.ASAConfiguracionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionarResponse")]
-        adminlte.ASAConfiguracionService.ASAConfiguracionSet WebSeleccionar(string SubCompania, string strAKASesion, string strAKASubCompania);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionarResponse")]
-        System.Threading.Tasks.Task<adminlte.ASAConfiguracionService.ASAConfiguracionSet> WebSeleccionarAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        adminlte.ASAConfiguracionService.ASAConfiguracionSet WebSeleccionar(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebSeleccionarResponse")]
+        System.Threading.Tasks.Task<adminlte.ASAConfiguracionService.ASAConfiguracionSet> WebSeleccionarAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebRecalcular", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebRecalcularResponse")]
         adminlte.ASAConfiguracionService.ASAConfiguracionSet WebRecalcular(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania);
@@ -517,34 +686,98 @@ namespace adminlte.ASAConfiguracionService {
         System.Threading.Tasks.Task<adminlte.ASAConfiguracionService.ASAConfiguracionSet> WebRecalcularAsync(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionBloquear", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionBloquearResponse")]
-        long WebASAConfiguracionBloquear(string SubCompania, string strAKASesion, string strAKASubCompania);
+        long WebASAConfiguracionBloquear(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionBloquear", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionBloquearResponse")]
-        System.Threading.Tasks.Task<long> WebASAConfiguracionBloquearAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebASAConfiguracionBloquearAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionDesbloquear", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionDesbloquearRespon" +
             "se")]
-        long WebASAConfiguracionDesbloquear(string SubCompania, string strAKASesion, string strAKASubCompania);
+        long WebASAConfiguracionDesbloquear(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionDesbloquear", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionDesbloquearRespon" +
             "se")]
-        System.Threading.Tasks.Task<long> WebASAConfiguracionDesbloquearAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebASAConfiguracionDesbloquearAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoPor", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoPorRes" +
             "ponse")]
-        string WebASAConfiguracionEsBloqueadoPor(string SubCompania, string strAKASesion, string strAKASubCompania);
+        string WebASAConfiguracionEsBloqueadoPor(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoPor", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoPorRes" +
             "ponse")]
-        System.Threading.Tasks.Task<string> WebASAConfiguracionEsBloqueadoPorAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<string> WebASAConfiguracionEsBloqueadoPorAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueado", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoRespon" +
             "se")]
-        bool WebASAConfiguracionEsBloqueado(string SubCompania, string strAKASesion, string strAKASubCompania);
+        bool WebASAConfiguracionEsBloqueado(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueado", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionEsBloqueadoRespon" +
             "se")]
-        System.Threading.Tasks.Task<bool> WebASAConfiguracionEsBloqueadoAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<bool> WebASAConfiguracionEsBloqueadoAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoRe" +
+            "sponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarTodoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarRespon" +
+            "se")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionar(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarRespon" +
+            "se")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
+            "mpania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
+            "mpaniaResponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
+            "mpania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionSeleccionarXSubCo" +
+            "mpaniaResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarT" +
+            "odo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarT" +
+            "odoResponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarT" +
+            "odo", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarT" +
+            "odoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarR" +
+            "esponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionar(string SubCompania, string Grupo, System.DateTime FechaDoc, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionar", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarR" +
+            "esponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarAsync(string SubCompania, string Grupo, System.DateTime FechaDoc, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarK" +
+            "eyASAConfiguracion", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarK" +
+            "eyASAConfiguracionResponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarK" +
+            "eyASAConfiguracion", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarK" +
+            "eyASAConfiguracionResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarX" +
+            "SubCompania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarX" +
+            "SubCompaniaResponse")]
+        System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarX" +
+            "SubCompania", ReplyAction="http://tempuri.org/ASAConfiguracionInterface/WebASAConfiguracionLineaSeleccionarX" +
+            "SubCompaniaResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -574,30 +807,6 @@ namespace adminlte.ASAConfiguracionService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionar(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionar(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionarAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.ASAConfiguracionService.ASAConfiguracionSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -622,12 +831,20 @@ namespace adminlte.ASAConfiguracionService {
             return base.Channel.WebEliminarAsync(setASAConfiguracion, strAKASesion, strAKASubCompania);
         }
         
-        public adminlte.ASAConfiguracionService.ASAConfiguracionSet WebSeleccionar(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebSeleccionar(SubCompania, strAKASesion, strAKASubCompania);
+        public long WebEliminarDetalle(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setASAConfiguracion, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<adminlte.ASAConfiguracionService.ASAConfiguracionSet> WebSeleccionarAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebSeleccionarAsync(SubCompania, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setASAConfiguracion, strAKASesion, strAKASubCompania);
+        }
+        
+        public adminlte.ASAConfiguracionService.ASAConfiguracionSet WebSeleccionar(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebSeleccionar(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<adminlte.ASAConfiguracionService.ASAConfiguracionSet> WebSeleccionarAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebSeleccionarAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.ASAConfiguracionService.ASAConfiguracionSet WebRecalcular(adminlte.ASAConfiguracionService.ASAConfiguracionSet setASAConfiguracion, string strAKASesion, string strAKASubCompania) {
@@ -638,36 +855,92 @@ namespace adminlte.ASAConfiguracionService {
             return base.Channel.WebRecalcularAsync(setASAConfiguracion, strAKASesion, strAKASubCompania);
         }
         
-        public long WebASAConfiguracionBloquear(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionBloquear(SubCompania, strAKASesion, strAKASubCompania);
+        public long WebASAConfiguracionBloquear(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionBloquear(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebASAConfiguracionBloquearAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionBloquearAsync(SubCompania, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<long> WebASAConfiguracionBloquearAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionBloquearAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public long WebASAConfiguracionDesbloquear(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionDesbloquear(SubCompania, strAKASesion, strAKASubCompania);
+        public long WebASAConfiguracionDesbloquear(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionDesbloquear(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebASAConfiguracionDesbloquearAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionDesbloquearAsync(SubCompania, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<long> WebASAConfiguracionDesbloquearAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionDesbloquearAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public string WebASAConfiguracionEsBloqueadoPor(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionEsBloqueadoPor(SubCompania, strAKASesion, strAKASubCompania);
+        public string WebASAConfiguracionEsBloqueadoPor(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionEsBloqueadoPor(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<string> WebASAConfiguracionEsBloqueadoPorAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionEsBloqueadoPorAsync(SubCompania, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<string> WebASAConfiguracionEsBloqueadoPorAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionEsBloqueadoPorAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public bool WebASAConfiguracionEsBloqueado(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionEsBloqueado(SubCompania, strAKASesion, strAKASubCompania);
+        public bool WebASAConfiguracionEsBloqueado(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionEsBloqueado(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<bool> WebASAConfiguracionEsBloqueadoAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAConfiguracionEsBloqueadoAsync(SubCompania, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<bool> WebASAConfiguracionEsBloqueadoAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionEsBloqueadoAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionar(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionar(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionarAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity> WebASAConfiguracionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionEntity>> WebASAConfiguracionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionar(string SubCompania, string Grupo, System.DateTime FechaDoc, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionar(SubCompania, Grupo, FechaDoc, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarAsync(string SubCompania, string Grupo, System.DateTime FechaDoc, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarAsync(SubCompania, Grupo, FechaDoc, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity> WebASAConfiguracionLineaSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity>> WebASAConfiguracionLineaSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAConfiguracionLineaSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
     }
 }

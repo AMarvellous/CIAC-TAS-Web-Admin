@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://alejandroasus:8901/ASAConfiguracion?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
-  <xs:element name="WebASAConfiguracionSeleccionarTodo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebASAConfiguracionSeleccionarTodoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarTodoResult" nillable="true" type="q1:ArrayOfASAConfiguracionEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebASAConfiguracionSeleccionar">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebASAConfiguracionSeleccionarResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarResult" nillable="true" type="q2:ArrayOfASAConfiguracionEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebASAConfiguracionSeleccionarXSubCompania">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebASAConfiguracionSeleccionarXSubCompaniaResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarXSubCompaniaResult" nillable="true" type="q3:ArrayOfASAConfiguracionEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="WebNuevo">
     <xs:complexType>
       <xs:sequence>
@@ -59,14 +12,14 @@
   <xs:element name="WebNuevoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q4:ASAConfiguracionSet" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q1:ASAConfiguracionSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WebGuardar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q5:ASAConfiguracionSet" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q2:ASAConfiguracionSet" />
         <xs:element minOccurs="0" name="EsNuevo" type="xs:boolean" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
@@ -83,7 +36,7 @@
   <xs:element name="WebEliminar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q6:ASAConfiguracionSet" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q3:ASAConfiguracionSet" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -96,10 +49,27 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebEliminarDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q4:ASAConfiguracionSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebEliminarDetalleResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="WebSeleccionar">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -108,14 +78,14 @@
   <xs:element name="WebSeleccionarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q7:ASAConfiguracionSet" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q5:ASAConfiguracionSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WebRecalcular">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q8:ASAConfiguracionSet" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setASAConfiguracion" nillable="true" type="q6:ASAConfiguracionSet" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -124,7 +94,7 @@
   <xs:element name="WebRecalcularResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q9:ASAConfiguracionSet" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q7:ASAConfiguracionSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -132,6 +102,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -148,6 +119,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -164,6 +136,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -180,6 +153,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -189,6 +163,120 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="WebASAConfiguracionEsBloqueadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarTodoResult" nillable="true" type="q8:ArrayOfASAConfiguracionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarResult" nillable="true" type="q9:ArrayOfASAConfiguracionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionSeleccionarXSubCompaniaResult" nillable="true" type="q10:ArrayOfASAConfiguracionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionLineaSeleccionarTodoResult" nillable="true" type="q11:ArrayOfASAConfiguracionLineaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionLineaSeleccionarResult" nillable="true" type="q12:ArrayOfASAConfiguracionLineaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarKeyASAConfiguracion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionLineaSeleccionarKeyASAConfiguracionResult" nillable="true" type="q13:ArrayOfASAConfiguracionLineaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASAConfiguracionLineaSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASAConfiguracionLineaSeleccionarXSubCompaniaResult" nillable="true" type="q14:ArrayOfASAConfiguracionLineaEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

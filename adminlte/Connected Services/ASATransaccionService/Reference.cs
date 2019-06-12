@@ -15,6 +15,67 @@ namespace adminlte.ASATransaccionService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ASATransaccionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class ASATransaccionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccionEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccion {
+            get {
+                return this.ltASATransaccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASATransaccionField, value) != true)) {
+                    this.ltASATransaccionField = value;
+                    this.RaisePropertyChanged("ltASATransaccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccionEliminado {
+            get {
+                return this.ltASATransaccionEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASATransaccionEliminadoField, value) != true)) {
+                    this.ltASATransaccionEliminadoField = value;
+                    this.RaisePropertyChanged("ltASATransaccionEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ASATransaccionEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class ASATransaccionEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -41,6 +102,9 @@ namespace adminlte.ASATransaccionService {
         private string EstudianteCIField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ExamenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime Fecha1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -48,6 +112,9 @@ namespace adminlte.ASATransaccionService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime FechaDocField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GrupoPreguntaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long IntentoField;
@@ -183,6 +250,19 @@ namespace adminlte.ASATransaccionService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Examen {
+            get {
+                return this.ExamenField;
+            }
+            set {
+                if ((this.ExamenField.Equals(value) != true)) {
+                    this.ExamenField = value;
+                    this.RaisePropertyChanged("Examen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime Fecha1 {
             get {
                 return this.Fecha1Field;
@@ -217,6 +297,19 @@ namespace adminlte.ASATransaccionService {
                 if ((this.FechaDocField.Equals(value) != true)) {
                     this.FechaDocField = value;
                     this.RaisePropertyChanged("FechaDoc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GrupoPregunta {
+            get {
+                return this.GrupoPreguntaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GrupoPreguntaField, value) != true)) {
+                    this.GrupoPreguntaField = value;
+                    this.RaisePropertyChanged("GrupoPregunta");
                 }
             }
         }
@@ -443,78 +536,9 @@ namespace adminlte.ASATransaccionService {
         Deleted = 3,
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ASATransaccionSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class ASATransaccionSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> ltASATransaccion {
-            get {
-                return this.ltASATransaccionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltASATransaccionField, value) != true)) {
-                    this.ltASATransaccionField = value;
-                    this.RaisePropertyChanged("ltASATransaccion");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ASATransaccionService.ASATransaccionInterface")]
     public interface ASATransaccionInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoRespon" +
-            "se")]
-        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
-            "ia", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
-            "iaResponse")]
-        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
-            "ia", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
-            "iaResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebNuevo", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebNuevoResponse")]
         adminlte.ASATransaccionService.ASATransaccionSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -533,6 +557,12 @@ namespace adminlte.ASATransaccionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebEliminar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebSeleccionar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebSeleccionarResponse")]
         adminlte.ASATransaccionService.ASATransaccionSet WebSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
@@ -571,6 +601,30 @@ namespace adminlte.ASATransaccionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsBloqueado", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebASATransaccionEsBloqueadoAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoRespon" +
+            "se")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodo", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarTodoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionar", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
+            "ia", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
+            "iaResponse")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
+            "ia", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
+            "iaResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -600,30 +654,6 @@ namespace adminlte.ASATransaccionService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionar(SubCompania, EstudianteCI, Intento, NroPregunta, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionarAsync(SubCompania, EstudianteCI, Intento, NroPregunta, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATransaccionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.ASATransaccionService.ASATransaccionSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -646,6 +676,14 @@ namespace adminlte.ASATransaccionService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setASATransaccion, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setASATransaccion, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASATransaccionService.ASATransaccionSet setASATransaccion, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setASATransaccion, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.ASATransaccionService.ASATransaccionSet WebSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
@@ -694,6 +732,30 @@ namespace adminlte.ASATransaccionService {
         
         public System.Threading.Tasks.Task<bool> WebASATransaccionEsBloqueadoAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASATransaccionEsBloqueadoAsync(SubCompania, EstudianteCI, Intento, NroPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionar(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionar(SubCompania, EstudianteCI, Intento, NroPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarAsync(string SubCompania, string EstudianteCI, long Intento, long NroPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarAsync(SubCompania, EstudianteCI, Intento, NroPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
     }
 }

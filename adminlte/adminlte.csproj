@@ -45,8 +45,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\Dll\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Excel.1.0.0\lib\dotnet\Excel.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -179,6 +187,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ASAGrupoPreguntaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ASAPreguntaService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,9 +227,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TASEstudianteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASGrupoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ASAConfiguracionController.cs" />
     <Compile Include="Controllers\ASACuestionarioController.cs" />
+    <Compile Include="Controllers\AXFUsuarioController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
@@ -241,10 +265,26 @@
     <Content Include="Connected Services\ASAConfiguracionService\adminlte.ASAConfiguracionService.ASAConfiguracionSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ASAConfiguracionService\adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ASAConfiguracionService\ASAConfiguracion.disco" />
     <None Include="Connected Services\ASAConfiguracionService\configuration91.svcinfo" />
     <None Include="Connected Services\ASAConfiguracionService\configuration.svcinfo" />
     <None Include="Connected Services\ASAConfiguracionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ASAGrupoPreguntaService\adminlte.ASAGrupoPreguntaService.ASAGrupoPreguntaEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ASAGrupoPreguntaService\adminlte.ASAGrupoPreguntaService.ASAGrupoPreguntaSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ASAGrupoPreguntaService\ASAGrupoPregunta.disco" />
+    <None Include="Connected Services\ASAGrupoPreguntaService\configuration91.svcinfo" />
+    <None Include="Connected Services\ASAGrupoPreguntaService\configuration.svcinfo" />
+    <None Include="Connected Services\ASAGrupoPreguntaService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -267,6 +307,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ASAConfiguracionService\ASAConfiguracionClass.wsdl" />
+    <None Include="Connected Services\ASAGrupoPreguntaService\ASAGrupoPregunta.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASAGrupoPreguntaService\ASAGrupoPregunta1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASAGrupoPreguntaService\ASAGrupoPregunta2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASAGrupoPreguntaService\ASAGrupoPreguntaClass.wsdl" />
     <None Include="Connected Services\ASAPreguntaService\ASAPregunta.disco" />
     <None Include="Connected Services\ASAPreguntaService\configuration91.svcinfo" />
     <None Include="Connected Services\ASAPreguntaService\configuration.svcinfo" />
@@ -394,6 +444,42 @@
     <None Include="Connected Services\AXFWebVistaService\configuration91.svcinfo" />
     <None Include="Connected Services\AXFWebVistaService\configuration.svcinfo" />
     <None Include="Connected Services\AXFWebVistaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASEstudianteService\adminlte.TASEstudianteService.TASEstudianteEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASEstudianteService\adminlte.TASEstudianteService.TASEstudianteSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASEstudianteService\TASEstudiante.disco" />
+    <None Include="Connected Services\TASEstudianteService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASEstudianteService\configuration.svcinfo" />
+    <None Include="Connected Services\TASEstudianteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASGrupoService\adminlte.TASGrupoService.TASGrupoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASGrupoService\adminlte.TASGrupoService.TASGrupoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASEstudianteService\TASEstudiante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASEstudianteService\TASEstudiante1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASEstudianteService\TASEstudiante2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASEstudianteService\TASEstudianteClass.wsdl" />
+    <None Include="Connected Services\TASGrupoService\TASGrupo.disco" />
+    <None Include="Connected Services\TASGrupoService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASGrupoService\configuration.svcinfo" />
+    <None Include="Connected Services\TASGrupoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -4160,6 +4246,7 @@
     <Content Include="Scripts\adminlte\js\adminlte.js" />
     <Content Include="Scripts\adminlte\js\adminlte.min.js" />
     <Content Include="Scripts\adminlte\js\demo.js" />
+    <Content Include="Scripts\adminlte\js\modal.js" />
     <Content Include="Scripts\adminlte\js\pages\dashboard.js" />
     <Content Include="Scripts\adminlte\js\pages\dashboard2.js" />
     <Content Include="Scripts\adminlte\plugins\bootstrap-slider\bootstrap-slider.js" />
@@ -4337,6 +4424,22 @@
     <Content Include="Views\ASACuestionario\ASACuestionarioGrafica.cshtml" />
     <Content Include="Views\ASACuestionario\ASACuestionarioGraficaEstudiante.cshtml" />
     <Content Include="Views\ASAConfiguracion\ASAConfiguracionEditar.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLista.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionNuevo.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLineaNuevo.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionSuccess.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLineaEliminar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioPregunta.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioListaPregunta.cshtml" />
+    <Content Include="Views\ASAConfiguracion\ASAConfiguracionEliminar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaNuevo.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaEditar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaNuevo.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaEliminar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaEditar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASAPreguntaEliminar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioExamen.cshtml" />
+    <Content Include="Views\AXFUsuario\AXFUsuarioEditar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4391,6 +4494,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AXFWebVistaService\AXFWebVistaClass.wsdl" />
+    <None Include="Connected Services\TASGrupoService\TASGrupo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGrupoService\TASGrupo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGrupoService\TASGrupo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGrupoService\TASGrupoClass.wsdl" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\adminlte\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css.map" />
     <Content Include="Scripts\adminlte\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css.map" />
@@ -4447,6 +4560,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ASAConfiguracionService\" />
+    <WCFMetadataStorage Include="Connected Services\ASAGrupoPreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASAPreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASATransaccionService\" />
     <WCFMetadataStorage Include="Connected Services\ASATRespuestaService\" />
@@ -4454,6 +4568,8 @@
     <WCFMetadataStorage Include="Connected Services\AXFUsuarioService\" />
     <WCFMetadataStorage Include="Connected Services\AXFWebMenuService\" />
     <WCFMetadataStorage Include="Connected Services\AXFWebVistaService\" />
+    <WCFMetadataStorage Include="Connected Services\TASEstudianteService\" />
+    <WCFMetadataStorage Include="Connected Services\TASGrupoService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

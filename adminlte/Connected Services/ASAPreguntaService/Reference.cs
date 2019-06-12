@@ -15,6 +15,99 @@ namespace adminlte.ASAPreguntaService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ASAPreguntaSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    [System.SerializableAttribute()]
+    public partial class ASAPreguntaSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPreguntaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPreguntaEliminadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuestaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuestaEliminadoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta {
+            get {
+                return this.ltASAPreguntaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAPreguntaField, value) != true)) {
+                    this.ltASAPreguntaField = value;
+                    this.RaisePropertyChanged("ltASAPregunta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPreguntaEliminado {
+            get {
+                return this.ltASAPreguntaEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAPreguntaEliminadoField, value) != true)) {
+                    this.ltASAPreguntaEliminadoField = value;
+                    this.RaisePropertyChanged("ltASAPreguntaEliminado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuesta {
+            get {
+                return this.ltASAPreguntaRespuestaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAPreguntaRespuestaField, value) != true)) {
+                    this.ltASAPreguntaRespuestaField = value;
+                    this.RaisePropertyChanged("ltASAPreguntaRespuesta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuestaEliminado {
+            get {
+                return this.ltASAPreguntaRespuestaEliminadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ltASAPreguntaRespuestaEliminadoField, value) != true)) {
+                    this.ltASAPreguntaRespuestaEliminadoField = value;
+                    this.RaisePropertyChanged("ltASAPreguntaRespuestaEliminado");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ASAPreguntaEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
     [System.SerializableAttribute()]
     public partial class ASAPreguntaEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -39,6 +132,9 @@ namespace adminlte.ASAPreguntaService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime Fecha2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GrupoPreguntaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool InhabilitadoField;
@@ -166,6 +262,19 @@ namespace adminlte.ASAPreguntaService {
                 if ((this.Fecha2Field.Equals(value) != true)) {
                     this.Fecha2Field = value;
                     this.RaisePropertyChanged("Fecha2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GrupoPregunta {
+            get {
+                return this.GrupoPreguntaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GrupoPreguntaField, value) != true)) {
+                    this.GrupoPreguntaField = value;
+                    this.RaisePropertyChanged("GrupoPregunta");
                 }
             }
         }
@@ -362,84 +471,6 @@ namespace adminlte.ASAPreguntaService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    public enum Estado : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Added = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unchanged = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Modified = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Deleted = 3,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ASAPreguntaSet", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
-    [System.SerializableAttribute()]
-    public partial class ASAPreguntaSet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPreguntaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuestaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta {
-            get {
-                return this.ltASAPreguntaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltASAPreguntaField, value) != true)) {
-                    this.ltASAPreguntaField = value;
-                    this.RaisePropertyChanged("ltASAPregunta");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> ltASAPreguntaRespuesta {
-            get {
-                return this.ltASAPreguntaRespuestaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ltASAPreguntaRespuestaField, value) != true)) {
-                    this.ltASAPreguntaRespuestaField = value;
-                    this.RaisePropertyChanged("ltASAPreguntaRespuesta");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ASAPreguntaRespuestaEntity", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
@@ -565,21 +596,26 @@ namespace adminlte.ASAPreguntaService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estado", Namespace="http://schemas.datacontract.org/2004/07/WebObjetos")]
+    public enum Estado : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Added = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unchanged = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Modified = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ASAPreguntaService.ASAPreguntaInterface")]
     public interface ASAPreguntaInterface {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionarTodo(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarAsync(long NroPregunta, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebNuevo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebNuevoResponse")]
         adminlte.ASAPreguntaService.ASAPreguntaSet WebNuevo(string strAKASesion, string strAKASubCompania);
@@ -598,6 +634,12 @@ namespace adminlte.ASAPreguntaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebEliminar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarResponse")]
         System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalleResponse")]
+        long WebEliminarDetalle(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalle", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarDetalleResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebSeleccionar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebSeleccionarResponse")]
         adminlte.ASAPreguntaService.ASAPreguntaSet WebSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania);
@@ -634,6 +676,18 @@ namespace adminlte.ASAPreguntaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaEsBloqueado", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaEsBloqueadoResponse")]
         System.Threading.Tasks.Task<bool> WebASAPreguntaEsBloqueadoAsync(long NroPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse")]
+        System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarTodoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse")]
+        System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionar", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaSeleccionarResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarAsync(long NroPregunta, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaRespuestaSeleccionarTodo", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebASAPreguntaRespuestaSeleccionarTodoRes" +
             "ponse")]
@@ -678,10 +732,16 @@ namespace adminlte.ASAPreguntaService {
         System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaSet>> WebASATRespuestaSeleccionarPreguntaXEstudianteAsync(string Estudiante, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIni", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIniResponse")]
-        long WebGuardarCuestionarioIni(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, string Estudiante, string strAKASesion, string strAKASubCompania);
+        long WebGuardarCuestionarioIni(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, bool EsExamen, string Estudiante, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIni", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebGuardarCuestionarioIniResponse")]
-        System.Threading.Tasks.Task<long> WebGuardarCuestionarioIniAsync(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, string Estudiante, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebGuardarCuestionarioIniAsync(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, bool EsExamen, string Estudiante, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPregunta", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPreguntaResponse")]
+        long WebEliminarTodosXGrupoPregunta(string GrupoPregunta, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPregunta", ReplyAction="http://tempuri.org/ASAPreguntaInterface/WebEliminarTodosXGrupoPreguntaResponse")]
+        System.Threading.Tasks.Task<long> WebEliminarTodosXGrupoPreguntaAsync(string GrupoPregunta, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -711,22 +771,6 @@ namespace adminlte.ASAPreguntaService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAPreguntaSeleccionarTodo(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAPreguntaSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAPreguntaSeleccionar(NroPregunta, strAKASesion, strAKASubCompania);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarAsync(long NroPregunta, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASAPreguntaSeleccionarAsync(NroPregunta, strAKASesion, strAKASubCompania);
-        }
-        
         public adminlte.ASAPreguntaService.ASAPreguntaSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
@@ -749,6 +793,14 @@ namespace adminlte.ASAPreguntaService {
         
         public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setASAPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarDetalle(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalle(setASAPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.ASAPreguntaService.ASAPreguntaSet setASAPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarDetalleAsync(setASAPregunta, strAKASesion, strAKASubCompania);
         }
         
         public adminlte.ASAPreguntaService.ASAPreguntaSet WebSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania) {
@@ -799,6 +851,22 @@ namespace adminlte.ASAPreguntaService {
             return base.Channel.WebASAPreguntaEsBloqueadoAsync(NroPregunta, strAKASesion, strAKASubCompania);
         }
         
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAPreguntaSeleccionarTodo(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAPreguntaSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> WebASAPreguntaSeleccionar(long NroPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAPreguntaSeleccionar(NroPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity>> WebASAPreguntaSeleccionarAsync(long NroPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASAPreguntaSeleccionarAsync(NroPregunta, strAKASesion, strAKASubCompania);
+        }
+        
         public System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaRespuestaEntity> WebASAPreguntaRespuestaSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASAPreguntaRespuestaSeleccionarTodo(strAKASesion, strAKASubCompania);
         }
@@ -839,12 +907,20 @@ namespace adminlte.ASAPreguntaService {
             return base.Channel.WebASATRespuestaSeleccionarPreguntaXEstudianteAsync(Estudiante, strAKASesion, strAKASubCompania);
         }
         
-        public long WebGuardarCuestionarioIni(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, string Estudiante, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebGuardarCuestionarioIni(ltASAPregunta, Estudiante, strAKASesion, strAKASubCompania);
+        public long WebGuardarCuestionarioIni(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, bool EsExamen, string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebGuardarCuestionarioIni(ltASAPregunta, EsExamen, Estudiante, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebGuardarCuestionarioIniAsync(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, string Estudiante, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebGuardarCuestionarioIniAsync(ltASAPregunta, Estudiante, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<long> WebGuardarCuestionarioIniAsync(System.Collections.Generic.List<adminlte.ASAPreguntaService.ASAPreguntaEntity> ltASAPregunta, bool EsExamen, string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebGuardarCuestionarioIniAsync(ltASAPregunta, EsExamen, Estudiante, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebEliminarTodosXGrupoPregunta(string GrupoPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarTodosXGrupoPregunta(GrupoPregunta, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebEliminarTodosXGrupoPreguntaAsync(string GrupoPregunta, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebEliminarTodosXGrupoPreguntaAsync(GrupoPregunta, strAKASesion, strAKASubCompania);
         }
     }
 }

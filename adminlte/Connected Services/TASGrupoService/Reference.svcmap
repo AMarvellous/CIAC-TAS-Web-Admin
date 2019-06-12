@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="034452ae-2f54-4096-8ca2-04f16572a814" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASGrupo" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASGrupoClass.wsdl" MetadataType="Wsdl" ID="6780cb72-c771-45e7-95cd-98ce33f219ac" SourceId="1" SourceUrl="http://alejandroasus:8901/TASGrupo?wsdl" />
+    <MetadataFile FileName="TASGrupo.disco" MetadataType="Disco" ID="32a64335-8874-44fd-ab31-e2b630b0e848" SourceId="1" SourceUrl="http://alejandroasus:8901/TASGrupo?disco" />
+    <MetadataFile FileName="TASGrupo.xsd" MetadataType="Schema" ID="d8090699-633c-4ce5-80af-1dfcb4331010" SourceId="1" SourceUrl="http://alejandroasus:8901/TASGrupo?xsd=xsd1" />
+    <MetadataFile FileName="TASGrupo1.xsd" MetadataType="Schema" ID="9acbeeec-7bb0-49c6-89d6-69018b5a128d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASGrupo?xsd=xsd0" />
+    <MetadataFile FileName="TASGrupo2.xsd" MetadataType="Schema" ID="6338041a-042a-4d67-b6cf-95b821297ca0" SourceId="1" SourceUrl="http://alejandroasus:8901/TASGrupo?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

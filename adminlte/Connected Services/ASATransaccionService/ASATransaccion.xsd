@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ASATransaccionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltASATransaccion" nillable="true" type="tns:ArrayOfASATransaccionEntity" />
+      <xs:element minOccurs="0" name="ltASATransaccionEliminado" nillable="true" type="tns:ArrayOfASATransaccionEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ASATransaccionSet" nillable="true" type="tns:ASATransaccionSet" />
   <xs:complexType name="ArrayOfASATransaccionEntity">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ASATransaccionEntity" nillable="true" type="tns:ASATransaccionEntity" />
@@ -14,9 +21,11 @@
       <xs:element minOccurs="0" name="Entero1" type="xs:long" />
       <xs:element minOccurs="0" name="Entero2" type="xs:long" />
       <xs:element minOccurs="0" name="EstudianteCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Examen" type="xs:boolean" />
       <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GrupoPregunta" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Intento" type="xs:long" />
       <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
       <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
@@ -44,10 +53,4 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
-  <xs:complexType name="ASATransaccionSet">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ltASATransaccion" nillable="true" type="tns:ArrayOfASATransaccionEntity" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ASATransaccionSet" nillable="true" type="tns:ASATransaccionSet" />
 </xs:schema>

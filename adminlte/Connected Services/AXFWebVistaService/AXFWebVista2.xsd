@@ -1,55 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://alejandroasus:8901/AXFWebVista?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
-  <xs:element name="WebAXFWebVistaSeleccionarTodo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebAXFWebVistaSeleccionarTodoResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarTodoResult" nillable="true" type="q1:ArrayOfAXFWebVistaEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebAXFWebVistaSeleccionar">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="WebVista" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="WebControlador" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebAXFWebVistaSeleccionarResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarResult" nillable="true" type="q2:ArrayOfAXFWebVistaEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebAXFWebVistaSeleccionarXSubCompania">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="WebAXFWebVistaSeleccionarXSubCompaniaResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarXSubCompaniaResult" nillable="true" type="q3:ArrayOfAXFWebVistaEntity" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="WebNuevo">
     <xs:complexType>
       <xs:sequence>
@@ -61,14 +12,14 @@
   <xs:element name="WebNuevoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q4:AXFWebVistaSet" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebNuevoResult" nillable="true" type="q1:AXFWebVistaSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WebGuardar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q5:AXFWebVistaSet" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q2:AXFWebVistaSet" />
         <xs:element minOccurs="0" name="EsNuevo" type="xs:boolean" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
@@ -85,7 +36,7 @@
   <xs:element name="WebEliminar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q6:AXFWebVistaSet" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q3:AXFWebVistaSet" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -95,6 +46,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="WebEliminarResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q4:AXFWebVistaSet" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebEliminarDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebEliminarDetalleResult" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -112,14 +79,14 @@
   <xs:element name="WebSeleccionarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q7:AXFWebVistaSet" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebSeleccionarResult" nillable="true" type="q5:AXFWebVistaSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="WebRecalcular">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q8:AXFWebVistaSet" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="setAXFWebVista" nillable="true" type="q6:AXFWebVistaSet" />
         <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -128,7 +95,7 @@
   <xs:element name="WebRecalcularResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q9:AXFWebVistaSet" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebRecalcularResult" nillable="true" type="q7:AXFWebVistaSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -204,6 +171,55 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionarTodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionarTodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarTodoResult" nillable="true" type="q8:ArrayOfAXFWebVistaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebVista" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WebControlador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarResult" nillable="true" type="q9:ArrayOfAXFWebVistaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionarXSubCompania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFWebVistaSeleccionarXSubCompaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaSeleccionarXSubCompaniaResult" nillable="true" type="q10:ArrayOfAXFWebVistaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="WebAXFWebVistaColumnaSeleccionarTodo">
     <xs:complexType>
       <xs:sequence>
@@ -215,7 +231,7 @@
   <xs:element name="WebAXFWebVistaColumnaSeleccionarTodoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarTodoResult" nillable="true" type="q10:ArrayOfAXFWebVistaColumnaEntity" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarTodoResult" nillable="true" type="q11:ArrayOfAXFWebVistaColumnaEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -235,7 +251,7 @@
   <xs:element name="WebAXFWebVistaColumnaSeleccionarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarResult" nillable="true" type="q11:ArrayOfAXFWebVistaColumnaEntity" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarResult" nillable="true" type="q12:ArrayOfAXFWebVistaColumnaEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -253,7 +269,7 @@
   <xs:element name="WebAXFWebVistaColumnaSeleccionarKeyAXFWebVistaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarKeyAXFWebVistaResult" nillable="true" type="q12:ArrayOfAXFWebVistaColumnaEntity" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarKeyAXFWebVistaResult" nillable="true" type="q13:ArrayOfAXFWebVistaColumnaEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -269,7 +285,7 @@
   <xs:element name="WebAXFWebVistaColumnaSeleccionarXSubCompaniaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarXSubCompaniaResult" nillable="true" type="q13:ArrayOfAXFWebVistaColumnaEntity" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFWebVistaColumnaSeleccionarXSubCompaniaResult" nillable="true" type="q14:ArrayOfAXFWebVistaColumnaEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
