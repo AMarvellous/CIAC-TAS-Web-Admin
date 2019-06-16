@@ -30,8 +30,8 @@ namespace adminlte.Controllers
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
             AXFSesionInterfaceClient AXFSesion = new AXFSesionInterfaceClient();
             ASAGrupoPreguntaInterfaceClient ASAGrupoPregunta = new ASAGrupoPreguntaInterfaceClient();
-            TASEstudianteSet setTASEstudiante = TASEstudiante.WebSeleccionar((string)Session["SesionSubCompania"],(string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-            if(setTASEstudiante.ltTASEstudiante.Count > 0)
+            TASEstudianteSet setTASEstudiante = TASEstudiante.WebSeleccionar((string)Session["SesionSubCompania"], (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            if (setTASEstudiante.ltTASEstudiante.Count > 0)
             {
                 //si existe el estudiante
                 TASEstudianteEntity etTASEstudiante = setTASEstudiante.ltTASEstudiante.First();
@@ -41,7 +41,7 @@ namespace adminlte.Controllers
                 DateTime dtHoraServidor = AXFSesion.WebObtenerHoraServidor();
                 foreach (var item in setASAConfiguracion.ltASAConfiguracionLinea)
                 {
-                    if(item.FechaDoc.Date == dtHoraServidor.Date)
+                    if (item.FechaDoc.Date == dtHoraServidor.Date)
                     {
                         //si son mismas fechas comparar el rango de las horas
                         if (item.FechaIni.Hour >= dtHoraServidor.Hour && dtHoraServidor.Hour <= item.FechaFin.Hour)
@@ -77,7 +77,7 @@ namespace adminlte.Controllers
                 ViewBag.ltSelect = ltSelectPractica;
                 ViewBag.ExisteASA = false;
             }
-            
+
 
             return View();
         }
@@ -89,7 +89,7 @@ namespace adminlte.Controllers
             {
                 return RedirectToAction(Cuestionario, "ASACuestionario");
             }
-            else if(Cuestionario == "ASACuestionarioEntrada" && GrupoPregunta != null)
+            else if (Cuestionario == "ASACuestionarioEntrada" && GrupoPregunta != null)
             {
                 TempData["GrupoPregunta"] = GrupoPregunta;
                 return RedirectToAction(Cuestionario, "ASACuestionario");
@@ -140,7 +140,7 @@ namespace adminlte.Controllers
                         if (ltASAPregunta.Count >= count)
                         {
                             ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(count).ToList();
-                            var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta,false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                            var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                             if (RespGuardado == 0)
                             {
                                 ltASAPregunta = (from Pregunta in ltASAPregunta
@@ -163,9 +163,9 @@ namespace adminlte.Controllers
 
                 if (ltASAPregunta.Count >= count)
                 {
-                    
+
                     ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(count).ToList();
-                    var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta,false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                    var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                     if (RespGuardado == 0)
                     {
                         ltASAPregunta = (from Pregunta in ltASAPregunta
@@ -397,7 +397,7 @@ namespace adminlte.Controllers
             if (ExisteCuestionarioPrevio)
             {
                 //Obtenemos el datetime del servidor
-                bool Menor= ASATRespuesta.WebASATRespuestaMenorFecha((string)Session["Usuario"], FechaIni,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                bool Menor = ASATRespuesta.WebASATRespuestaMenorFecha((string)Session["Usuario"], FechaIni, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 if (!Menor)
                 {
                     ltsetASAPregunta = ASAPregunta.WebASATRespuestaSeleccionarPreguntaXEstudiante((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
@@ -410,11 +410,11 @@ namespace adminlte.Controllers
                     if (RespCerrado)
                     {
                         List<ASAPreguntaEntity> ltASAPregunta = ASAPregunta.WebASAPreguntaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-                        
+
                         if (ltASAPregunta.Count >= count)
                         {
                             ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(count).ToList();
-                            var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, true,(string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                            var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, true, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                             if (RespGuardado == 0)
                             {
                                 ltASAPregunta = (from Pregunta in ltASAPregunta
@@ -434,12 +434,12 @@ namespace adminlte.Controllers
             else
             {
                 List<ASAPreguntaEntity> ltASAPregunta = ASAPregunta.WebASAPreguntaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-                
+
                 if (ltASAPregunta.Count >= count)
                 {
 
                     ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(count).ToList();
-                    var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta,true, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                    var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, true, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                     if (RespGuardado == 0)
                     {
                         ltASAPregunta = (from Pregunta in ltASAPregunta
@@ -797,8 +797,40 @@ namespace adminlte.Controllers
             }
 
             List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-            var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => g.Intento).ToList();
-            
+
+            //var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => g.Intento).ToList();
+            //var ltASATransaccionQuery = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => new { g.Intento, g.GrupoPregunta }).Select(s => s.ToList()).ToList();
+            ////var ltASATransaccionQuery2 = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => new { Intento = g.Intento, GrupoPregunta = g.GrupoPregunta }).Select(s => new { Intento = s.Key.Intento, GrupoPregunta = s.Key.GrupoPregunta, Correcto = s.Count() }).ToList();
+            //var ltASATransaccionQuery3 = ltASATransaccion
+            //    .Where(x => x.EstudianteCI == Estudiante)
+            //    .GroupBy(g => g.Intento)
+            //    .Select(s =>  new 
+            //    {
+            //        Intento = s.Key,
+            //        GrupoPregunta = s.GroupBy(x => x.GrupoPregunta).Select(s2 => s.ToList())
+            //    }).ToList();
+
+            //var q = from c in ltASATransaccion
+            //        group c by c.Intento into g
+            //        select new { g.Key, Count = g.Count(), SubGroups = from c in g group c by c.GrupoPregunta into g2 select g2 };
+
+            //var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante)
+            //    .GroupBy(g => g.Intento)
+            //    .Select(s => new
+            //    {
+            //        Intento = s.Key,
+            //        GrupoPregunta = s.GroupBy(g => g.GrupoPregunta).Select(sb => new 
+            //        {
+            //            GrupoPregunta = sb.Key,
+            //            Total = sb.Count()
+            //        })
+            //    }).ToList();
+
+            //QUERY PARA EL DETALLE
+            var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante)
+                .GroupBy(g => g.Intento)
+                .Select(s => s.GroupBy(g => g.GrupoPregunta).Select(s2 => s2.ToList()).ToList()).ToList();
+
             ViewBag.ltASATransaccion = ltAgrupada;
 
             return View();
@@ -832,7 +864,7 @@ namespace adminlte.Controllers
         {
             ASAPreguntaInterfaceClient ASAPregunta = new ASAPreguntaInterfaceClient();
             List<ASAPreguntaEntity> ltASAPregunta = ASAPregunta.WebASAPreguntaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-            
+
             return View(ltASAPregunta);
         }
 
@@ -846,7 +878,7 @@ namespace adminlte.Controllers
             List<ASAGrupoPreguntaEntity> ltASAGrupoPregunta = ASAGrupoPregunta.WebASAGrupoPreguntaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
             ViewBag.ltASAGrupoPregunta = ltASAGrupoPregunta.Select(s => s.GrupoPregunta).ToList();
-            
+
             return View(setASAPregunta);
         }
 
@@ -885,7 +917,7 @@ namespace adminlte.Controllers
 
             if (NumError == 0)
             {
-                return RedirectToAction("ASAPreguntaEditar", new {NroPregunta = NroPregunta });
+                return RedirectToAction("ASAPreguntaEditar", new { NroPregunta = NroPregunta });
             }
             else
             {
@@ -1109,6 +1141,15 @@ namespace adminlte.Controllers
                 return PartialView(etASAPreguntaRespuestaOriginal);
             }
 
+        }
+        [HttpGet]
+        public ActionResult ASACuestionarioDetalleTransaccion(string EstudianteCI, long Intento)
+        {
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"],(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            ltASATransaccion = ltASATransaccion.Where(x => x.Intento == Intento && x.EstudianteCI == EstudianteCI).ToList();
+
+            return PartialView(ltASATransaccion);
         }
 
 

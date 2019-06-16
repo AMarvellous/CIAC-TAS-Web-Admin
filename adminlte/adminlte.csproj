@@ -4440,6 +4440,7 @@
     <Content Include="Views\ASACuestionario\ASAPreguntaEliminar.cshtml" />
     <Content Include="Views\ASACuestionario\ASACuestionarioExamen.cshtml" />
     <Content Include="Views\AXFUsuario\AXFUsuarioEditar.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioDetalleTransaccion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
