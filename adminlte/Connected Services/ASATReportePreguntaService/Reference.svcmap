@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="53a5320e-6c89-433f-9db6-0f65b7413710" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASATReportePregunta" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASATReportePregunta.xsd" MetadataType="Schema" ID="567bbcf7-6c62-4853-8ddf-15a805e08112" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd0" />
+    <MetadataFile FileName="ASATReportePregunta1.xsd" MetadataType="Schema" ID="68e37126-730c-4dd7-820e-923e8ceda145" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd1" />
+    <MetadataFile FileName="ASATReportePregunta.disco" MetadataType="Disco" ID="fa34f9f6-4279-43cd-adee-d2dbc9430ba5" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReportePregunta?disco" />
+    <MetadataFile FileName="ASATReportePregunta2.xsd" MetadataType="Schema" ID="f39c6520-5981-40b0-a842-4e4499f663bf" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd2" />
+    <MetadataFile FileName="ASATReportePreguntaClass.wsdl" MetadataType="Wsdl" ID="5c95e6f9-9cdc-4c3c-92dc-ea0a45b2c73f" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReportePregunta?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

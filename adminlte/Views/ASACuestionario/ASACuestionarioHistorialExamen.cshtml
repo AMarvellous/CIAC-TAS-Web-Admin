@@ -1,13 +1,12 @@
-﻿
-@model IEnumerable<adminlte.ASAPreguntaService.ASAPreguntaEntity>
+﻿@model IEnumerable<adminlte.ASATReportePreguntaService.ASATReportePreguntaEntity>
 
 @{
-    ViewBag.Title = "ASAPreguntaLista";
+    ViewBag.Title = "ASACuestionarioHistorialExamen";
     Layout = "~/Views/Shared/_Layout.cshtml";
     WebGrid grid = new WebGrid(Model, // source
                                 null, // columnNames
                                 null, // defaultSort
-                                100,   // rowsPerPage
+                                20,   // rowsPerPage
                                 true, // canPage
                                 true, // canSort
                                 null, // ajaxUpdateContainerId
@@ -25,12 +24,12 @@
     <section class="content-header">
         <h1>
             ASA
-            <small>Preguntas</small>
+            <small>Examen</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">ASAPregunta</a></li>
-            <li class="active">Preguntas</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+            <li><a href="#">Examen Generado</a></li>
+            <li class="active">Historial</li>
         </ol>
     </section>
     <!-- Main content -->
@@ -45,10 +44,6 @@
             <!-- form start -->
             @*<form role="form">*@
             <div class="box-body">
-                <p>
-                    @Html.ActionLink(" ", "ASAPreguntaNuevo", null, new { @class = "glyphicon glyphicon-plus ", style = "font-size:20px;" })
-                </p>
-                <br />
                 @grid.GetHtml(
                         tableStyle: "table table-bordered",
                         headerStyle: "header",
@@ -60,9 +55,9 @@
                         columns: new[] {
                             //grid.Column("TipoDoc"),
                            // grid.Column("SubCompania"),
-                            grid.Column("NroPregunta"),
-                            grid.Column("Pregunta"),
-                            grid.Column("GrupoPregunta"),
+                            grid.Column("Grupo"),
+                            grid.Column("FechaDoc","Fecha y Hora Generada"),
+                            //grid.Column("GrupoPregunta"),
                             //grid.Column("ClaseOri"),
                             //grid.Column("Estado"),
 
@@ -70,11 +65,10 @@
                             grid.Column("",
                                         header:"Acciones",
                                         format:@<text>
-        @Html.ActionLink(" ", "ASAPreguntaEditar", new { NroPregunta=item.NroPregunta },new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |
-        @Html.ActionLink(" ", "ASAPreguntaEliminar", new { NroPregunta=item.NroPregunta},new {@class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
-                                        </text>
-                                                                                                                                                        )
-                                                                                                                              })
+        @Html.ActionLink(" ", "ASACuestionarioHistorialDescargar", new { Grupo=item.Grupo, FechaDoc=item.FechaDoc },new {@class = "glyphicon glyphicon-download-alt",style = "font-size:15px;"})
+                                               </text>
+                                        )
+                                        })
 
 
 
@@ -106,5 +100,3 @@
                 background-color: #f0f0f0;
             }
 </style>
-
-

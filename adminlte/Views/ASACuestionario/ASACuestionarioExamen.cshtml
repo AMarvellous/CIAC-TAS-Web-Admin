@@ -128,6 +128,12 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        if (@detailsitem.ltASAPregunta.First().Texto0 != "")
+                                                        {
+                                                            <div class="col-sm-12">
+                                                                <img style="width: 80%; height: 500px;" src="@Url.Content(String.Format("~//Uploads/Imagenes/ASAPregunta/{0}", @detailsitem.ltASAPregunta.First().Texto0))" />
+                                                            </div>
+                                                        }
                                                     }
                                                 }
 
@@ -173,6 +179,12 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        if (@detailsitem.ltASAPregunta.First().Texto0 != "")
+                                                        {
+                                                            <div class="col-sm-12">
+                                                                <img style="width: 80%; height: 500px;" src="@Url.Content(String.Format("~//Uploads/Imagenes/ASAPregunta/{0}", @detailsitem.ltASAPregunta.First().Texto0))" />
+                                                            </div>
+                                                        }
                                                     }
                                                 }
 
@@ -304,7 +316,7 @@
         if (tiempo <= 0) {
             $("#btnAceptar").click();
         } else {
-            $("div.tiempoRestantediv").find("h3 b").html(tiempo-1)
+            $("div.tiempoRestantediv").find("h3 b").html(tiempo - 1)
         }
     }
 

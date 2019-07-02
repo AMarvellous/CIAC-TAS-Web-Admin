@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ASATReportePreguntaClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/ASATReportePregunta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ASATReportePreguntaInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaBloquear" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATReportePreguntaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebGuardarASATReportePregunta_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarASATReportePregunta" />
+  </wsdl:message>
+  <wsdl:message name="ASATReportePreguntaInterface_WebGuardarASATReportePregunta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarASATReportePreguntaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ASATReportePreguntaInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebNuevo" message="tns:ASATReportePreguntaInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebNuevoResponse" message="tns:ASATReportePreguntaInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebGuardar" message="tns:ASATReportePreguntaInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebGuardarResponse" message="tns:ASATReportePreguntaInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebEliminar" message="tns:ASATReportePreguntaInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebEliminarResponse" message="tns:ASATReportePreguntaInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebEliminarDetalle" message="tns:ASATReportePreguntaInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebEliminarDetalleResponse" message="tns:ASATReportePreguntaInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebSeleccionar" message="tns:ASATReportePreguntaInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebSeleccionarResponse" message="tns:ASATReportePreguntaInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebRecalcular" message="tns:ASATReportePreguntaInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebRecalcularResponse" message="tns:ASATReportePreguntaInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaBloquear" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaBloquearResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaDesbloquear" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaDesbloquearResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueadoPor" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueadoPorResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueado" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueadoResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarTodo" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarTodoResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionar" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarXSubCompania" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarXSubCompaniaResponse" message="tns:ASATReportePreguntaInterface_WebASATReportePreguntaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarASATReportePregunta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebGuardarASATReportePregunta" message="tns:ASATReportePreguntaInterface_WebGuardarASATReportePregunta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATReportePreguntaInterface/WebGuardarASATReportePreguntaResponse" message="tns:ASATReportePreguntaInterface_WebGuardarASATReportePregunta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ASATReportePreguntaInterface" type="tns:ASATReportePreguntaInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaBloquear">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATReportePreguntaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebASATReportePreguntaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarASATReportePregunta">
+      <soap:operation soapAction="http://tempuri.org/ASATReportePreguntaInterface/WebGuardarASATReportePregunta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ASATReportePreguntaClass">
+    <wsdl:port name="BasicHttpBinding_ASATReportePreguntaInterface" binding="tns:BasicHttpBinding_ASATReportePreguntaInterface">
+      <soap:address location="http://alejandroasus:8901/ASATReportePregunta" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

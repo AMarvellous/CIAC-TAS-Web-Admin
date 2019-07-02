@@ -128,11 +128,19 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        if (@detailsitem.ltASAPregunta.First().Texto0 != "")
+                                                        {
+                                                            <div class="item">
+                                                                <img style="width: 300px; height: 300px;" src="@Url.Content(String.Format("~//Uploads/Imagenes/ASAPregunta/{0}", @detailsitem.ltASAPregunta.First().Texto0))" />
+                                                            </div>
+                                                        }
+
                                                     }
                                                 }
 
 
                                             </div>
+
                                         }
                                         else
                                         {
@@ -173,11 +181,16 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        if (@detailsitem.ltASAPregunta.First().Texto0 != "")
+                                                        {
+                                                            <div class="col-sm-12">
+                                                                <img style="width: 80%; height: 500px;" src="@Url.Content(String.Format("~//Uploads/Imagenes/ASAPregunta/{0}", @detailsitem.ltASAPregunta.First().Texto0))" />
+                                                            </div>
+                                                        }
                                                     }
                                                 }
-
-
                                             </div>
+
                                         }
 
                                     }
@@ -239,7 +252,7 @@
             $('ul.pager li:eq(0)').attr("class", "disabled");
         }
 
-        if (number < 100) {
+        if (number < @ViewBag.NumeroPreguntas) {
             $('ul.pager li:eq(101)').attr("onclick", "goTo(" + (number + 1) + ")");
             $('ul.pager li:eq(101)').attr("class", "next");
         } else {
@@ -304,7 +317,7 @@
         if (tiempo <= 0) {
             $("#btnAceptar").click();
         } else {
-            $("div.tiempoRestantediv").find("h3 b").html(tiempo-1)
+            $("div.tiempoRestantediv").find("h3 b").html(tiempo - 1)
         }
     }
 

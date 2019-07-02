@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "ASAConfiguracionGenerarExamen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            ASA
+            <small>Cuestionario</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">ASACuestionario</a></li>
+            <li class="active">GenerarExamen</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box box-primary">
+            
+                <div class="box-header with-border">
+                    <h3 class="box-title">CIAC TAS</h3>
+                </div>
+                <!-- /.box-header -->
+                <form action="@Url.Action("ASACuestionarioGenerarExamen","ASACuestionario")" method="post">
+                    <!-- form start -->
+                    @*<form role="form">*@
+                    <div class="box-body">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            @Html.Label("Numero Preguntas")
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <input id="NumPreguntas" name="NumPreguntas" type="number" value="0" class="form-control" @*data-inputmask='"mask": "999"' data-mask*@>
+                                @Html.ValidationMessage("NumPreguntas", "", new { @class = "text-danger" })
+                                @*<input type="number" class="form-control">*@
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Grupo")
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                @*@Html.EditorFor(model => model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })*@
+                                @Html.DropDownList("Grupo", new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo", new { @class = "form-control controlar" })
+                                @Html.ValidationMessage("Grupo", "", new { @class = "text-danger" })
+                                @*<input type="number" class="form-control">*@
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Generar</button>
+                    </div>
+                </form>
+            
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+

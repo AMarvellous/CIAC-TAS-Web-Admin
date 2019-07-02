@@ -372,11 +372,11 @@ namespace adminlte.ASATRespuestaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorario", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioResponse" +
             "")]
-        bool WebASATRespuestaSiCumpleHorario(string Estudiante, string strAKASesion, string strAKASubCompania);
+        bool WebASATRespuestaSiCumpleHorario(string Estudiante, double Criterio, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorario", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioResponse" +
             "")]
-        System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioAsync(string Estudiante, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioAsync(string Estudiante, double Criterio, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaCerrarCuestionario", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaCerrarCuestionarioRespo" +
             "nse")]
@@ -397,6 +397,36 @@ namespace adminlte.ASATRespuestaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFecha", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFechaResponse")]
         System.Threading.Tasks.Task<bool> WebASATRespuestaMenorFechaAsync(string Estudiante, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamenResponse")]
+        bool WebASATRespuestaEsExamen(string Estudiante, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamenResponse")]
+        System.Threading.Tasks.Task<bool> WebASATRespuestaEsExamenAsync(string Estudiante, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamenRe" +
+            "sponse")]
+        bool WebASATRespuestaSiCumpleHorarioExamen(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamenRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioExamenAsync(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamenRes" +
+            "ponse")]
+        long WebASATRespuestaTiempoRestanteExamen(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamen", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamenRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<long> WebASATRespuestaTiempoRestanteExamenAsync(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolguraResp" +
+            "onse")]
+        bool WebASATRespuestaExamenValidoHolgura(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolguraResp" +
+            "onse")]
+        System.Threading.Tasks.Task<bool> WebASATRespuestaExamenValidoHolguraAsync(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -538,12 +568,12 @@ namespace adminlte.ASATRespuestaService {
             return base.Channel.WebASATRespuestaExisteAsync(Estudiante, strAKASesion, strAKASubCompania);
         }
         
-        public bool WebASATRespuestaSiCumpleHorario(string Estudiante, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATRespuestaSiCumpleHorario(Estudiante, strAKASesion, strAKASubCompania);
+        public bool WebASATRespuestaSiCumpleHorario(string Estudiante, double Criterio, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSiCumpleHorario(Estudiante, Criterio, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioAsync(string Estudiante, string strAKASesion, string strAKASubCompania) {
-            return base.Channel.WebASATRespuestaSiCumpleHorarioAsync(Estudiante, strAKASesion, strAKASubCompania);
+        public System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioAsync(string Estudiante, double Criterio, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSiCumpleHorarioAsync(Estudiante, Criterio, strAKASesion, strAKASubCompania);
         }
         
         public bool WebASATRespuestaCerrarCuestionario(string Estudiante, string strAKASesion, string strAKASubCompania) {
@@ -568,6 +598,38 @@ namespace adminlte.ASATRespuestaService {
         
         public System.Threading.Tasks.Task<bool> WebASATRespuestaMenorFechaAsync(string Estudiante, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASATRespuestaMenorFechaAsync(Estudiante, Fecha, strAKASesion, strAKASubCompania);
+        }
+        
+        public bool WebASATRespuestaEsExamen(string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaEsExamen(Estudiante, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<bool> WebASATRespuestaEsExamenAsync(string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaEsExamenAsync(Estudiante, strAKASesion, strAKASubCompania);
+        }
+        
+        public bool WebASATRespuestaSiCumpleHorarioExamen(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSiCumpleHorarioExamen(Estudiante, TiempoMaximo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<bool> WebASATRespuestaSiCumpleHorarioExamenAsync(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSiCumpleHorarioExamenAsync(Estudiante, TiempoMaximo, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebASATRespuestaTiempoRestanteExamen(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaTiempoRestanteExamen(Estudiante, TiempoMaximo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebASATRespuestaTiempoRestanteExamenAsync(string Estudiante, long TiempoMaximo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaTiempoRestanteExamenAsync(Estudiante, TiempoMaximo, strAKASesion, strAKASubCompania);
+        }
+        
+        public bool WebASATRespuestaExamenValidoHolgura(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaExamenValidoHolgura(Estudiante, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<bool> WebASATRespuestaExamenValidoHolguraAsync(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaExamenValidoHolguraAsync(Estudiante, SubCompania, strAKASesion, strAKASubCompania);
         }
     }
 }

@@ -2,12 +2,12 @@
 @model IEnumerable<adminlte.ASAPreguntaService.ASAPreguntaEntity>
 
 @{
-    ViewBag.Title = "ASAPreguntaLista";
+    ViewBag.Title = "ASAPreguntaBancoPregunta";
     Layout = "~/Views/Shared/_Layout.cshtml";
     WebGrid grid = new WebGrid(Model, // source
                                 null, // columnNames
-                                null, // defaultSort
-                                100,   // rowsPerPage
+                                "NroPregunta", // defaultSort
+                                ViewBag.NumPreguntas,   // rowsPerPage
                                 true, // canPage
                                 true, // canSort
                                 null, // ajaxUpdateContainerId
@@ -45,9 +45,6 @@
             <!-- form start -->
             @*<form role="form">*@
             <div class="box-body">
-                <p>
-                    @Html.ActionLink(" ", "ASAPreguntaNuevo", null, new { @class = "glyphicon glyphicon-plus ", style = "font-size:20px;" })
-                </p>
                 <br />
                 @grid.GetHtml(
                         tableStyle: "table table-bordered",
@@ -62,19 +59,10 @@
                            // grid.Column("SubCompania"),
                             grid.Column("NroPregunta"),
                             grid.Column("Pregunta"),
-                            grid.Column("GrupoPregunta"),
+                            grid.Column("GrupoPregunta")
                             //grid.Column("ClaseOri"),
                             //grid.Column("Estado"),
-
-
-                            grid.Column("",
-                                        header:"Acciones",
-                                        format:@<text>
-        @Html.ActionLink(" ", "ASAPreguntaEditar", new { NroPregunta=item.NroPregunta },new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |
-        @Html.ActionLink(" ", "ASAPreguntaEliminar", new { NroPregunta=item.NroPregunta},new {@class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
-                                        </text>
-                                                                                                                                                        )
-                                                                                                                              })
+                            })
 
 
 
@@ -106,5 +94,3 @@
                 background-color: #f0f0f0;
             }
 </style>
-
-

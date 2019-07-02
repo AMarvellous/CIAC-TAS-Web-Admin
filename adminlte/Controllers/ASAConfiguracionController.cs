@@ -107,10 +107,27 @@ namespace adminlte.Controllers
             long NumError = 0;
             ASAConfiguracionLineaEntity etASAConfiguracionLineaOriginal = etASAConfiguracionLinea;
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
+            bool EsMediaNoche = false;
 
             if (etASAConfiguracionLinea.FechaIni.TimeOfDay >= etASAConfiguracionLinea.FechaFin.TimeOfDay)
             {
-                NumError = 1;
+                if (etASAConfiguracionLinea.FechaFin.TimeOfDay == DateTime.Today.TimeOfDay)
+                {
+                    //significa q es media noche
+                    if (etASAConfiguracionLinea.FechaIni >= etASAConfiguracionLinea.FechaFin.AddDays(1))
+                    {
+                        NumError = 1;
+                    }
+                    else
+                    {
+                        EsMediaNoche = true;
+                    }
+                }
+                else
+                {
+                    NumError = 1;
+                }
+                
             }
 
             if (etASAConfiguracionLinea.CantidadPregunta <= 0)
@@ -124,7 +141,15 @@ namespace adminlte.Controllers
                 ASAConfiguracionSet setASAConfiguracion = ASAConfiguracion.WebSeleccionar(etASAConfiguracionLinea.SubCompania, etASAConfiguracionLinea.Grupo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 etASAConfiguracionLinea.FechaDoc = etASAConfiguracionLinea.FechaDoc.Date + DateTime.Now.TimeOfDay;
                 etASAConfiguracionLinea.FechaIni = etASAConfiguracionLinea.FechaDoc.Date + etASAConfiguracionLinea.FechaIni.TimeOfDay;
-                etASAConfiguracionLinea.FechaFin = etASAConfiguracionLinea.FechaDoc.Date + etASAConfiguracionLinea.FechaFin.TimeOfDay;
+                if (EsMediaNoche)
+                {
+                    etASAConfiguracionLinea.FechaFin = etASAConfiguracionLinea.FechaDoc.AddDays(1).Date + etASAConfiguracionLinea.FechaFin.TimeOfDay;
+                }
+                else
+                {
+                    etASAConfiguracionLinea.FechaFin = etASAConfiguracionLinea.FechaDoc.Date + etASAConfiguracionLinea.FechaFin.TimeOfDay;
+                }
+                
                 etASAConfiguracionLinea.UEstado = ASAConfiguracionService.Estado.Added;
                 setASAConfiguracion.ltASAConfiguracionLinea.Add(etASAConfiguracionLinea);
 

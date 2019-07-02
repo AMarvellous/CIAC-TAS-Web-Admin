@@ -115,6 +115,30 @@
   <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaMenorFecha_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATRespuestaMenorFechaResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsExamen_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsExamen" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaEsExamen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaEsExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSiCumpleHorarioExamen_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSiCumpleHorarioExamen" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSiCumpleHorarioExamen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSiCumpleHorarioExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaTiempoRestanteExamen_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaTiempoRestanteExamen" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaTiempoRestanteExamen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaTiempoRestanteExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaExamenValidoHolgura" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaExamenValidoHolguraResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATRespuestaInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevo" message="tns:ASATRespuestaInterface_WebNuevo_InputMessage" />
@@ -187,6 +211,22 @@
     <wsdl:operation name="WebASATRespuestaMenorFecha">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFecha" message="tns:ASATRespuestaInterface_WebASATRespuestaMenorFecha_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFechaResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaMenorFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsExamen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamen" message="tns:ASATRespuestaInterface_WebASATRespuestaEsExamen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamenResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaEsExamen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSiCumpleHorarioExamen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamen" message="tns:ASATRespuestaInterface_WebASATRespuestaSiCumpleHorarioExamen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamenResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSiCumpleHorarioExamen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaTiempoRestanteExamen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamen" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestanteExamen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamenResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaTiempoRestanteExamen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaExamenValidoHolgura">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura" message="tns:ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolguraResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATRespuestaInterface" type="tns:ASATRespuestaInterface">
@@ -346,6 +386,42 @@
     </wsdl:operation>
     <wsdl:operation name="WebASATRespuestaMenorFecha">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaMenorFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaEsExamen">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaEsExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSiCumpleHorarioExamen">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSiCumpleHorarioExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaTiempoRestanteExamen">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaTiempoRestanteExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaExamenValidoHolgura">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

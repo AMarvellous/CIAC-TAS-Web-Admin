@@ -625,6 +625,12 @@ namespace adminlte.ASATransaccionService {
             "ia", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXSubCompan" +
             "iaResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVez", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVezResponse")]
+        bool WebASATransaccionEsPrimeraVez(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVez", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVezResponse")]
+        System.Threading.Tasks.Task<bool> WebASATransaccionEsPrimeraVezAsync(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -756,6 +762,14 @@ namespace adminlte.ASATransaccionService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASATransaccionSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public bool WebASATransaccionEsPrimeraVez(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionEsPrimeraVez(EstudianteCI, FechaIni, FechaFin, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<bool> WebASATransaccionEsPrimeraVezAsync(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionEsPrimeraVezAsync(EstudianteCI, FechaIni, FechaFin, strAKASesion, strAKASubCompania);
         }
     }
 }

@@ -40,13 +40,36 @@
                         @Html.DropDownList("Cuestionario", (SelectList)@ViewBag.ltSelect, "Seleccione el Cuestionario", new { @class = "form-control" })
                     </div>
 
-                    @if(!ViewBag.ExisteASA)
+                    @if (!ViewBag.ExisteASA)
                     {
-                    <div class="col-xs-12 text-center form-group">
-                        @Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })
-                    </div>
+                        <div class="col-xs-12 text-center form-group">
+                            @Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })
+                        </div>
+                        
+                        <div class="form-group">
+                            @Html.Label("Inicio de Pregunta")
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                @Html.Editor("PreguntaIni", new { htmlAttributes = new { @class = "form-control", type = "number" } })
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Fin de Pregunta")
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                @Html.Editor("PreguntaFin", new { htmlAttributes = new { @class = "form-control", type = "number" } })
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
                     }
-                    
+
 
                     <div class="col-xs-12 text-center">
                         <button name="inicioCuestionario" type="submit" class="btn btn-default btn-default">Iniciar Cuestionario</button>

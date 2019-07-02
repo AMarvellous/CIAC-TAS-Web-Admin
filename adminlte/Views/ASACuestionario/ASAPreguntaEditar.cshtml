@@ -39,13 +39,12 @@
     <section class="content">
         <!-- Default box -->
         <div class="box box-primary">
-            @using (Html.BeginForm())
-            {
+            <form action="@Url.Action("ASAPreguntaEditar","ASACuestionario", new {NroPregunta = Model.ltASAPregunta[0].NroPregunta })" method="post" role="form" enctype="multipart/form-data">
+                
                 <div class="box-header with-border">
                     <h3 class="box-title">CIAC TAS</h3>
                 </div>
                 <!-- /.box-header -->
-
                 <!-- form start -->
                 @*<form role="form">*@
                 <div class="box-body">
@@ -93,6 +92,27 @@
                     </div>
 
 
+
+                    @{
+                        if ((bool)ViewBag.ExisteImagen)
+                        {
+                            <div class="item">
+                                <img style="width: 300px; height: 300px;" src="@Url.Content(String.Format("~//Uploads/Imagenes/ASAPregunta/{0}", (string)ViewBag.PathImagen))" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="form-group">
+                                <label for="exampleInputFile">Entrada de Archivo</label>
+                                <input type="file" name="FileUpload" id="exampleInputFile" accept="image/*">
+                                <p class="help-block">Seleccione el archivo</p>
+                            </div>
+                        }
+
+
+                    }
+                    <br /><br />
+
                     <p>
                         @Html.ActionLink(" ", "ASAPreguntaRespuestaNuevo", new { NroPregunta = Model.ltASAPregunta[0].NroPregunta }, new { data_modal = "", @class = "glyphicon glyphicon-plus removeUlock", style = "font-size:20px;" })
                     </p>
@@ -122,19 +142,19 @@
                     @Html.ActionLink(" ", "ASAPreguntaRespuestaEditar", new { NroPregunta=item.NroPregunta, Opcion=item.Opcion},new {data_modal = "",@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |
                     @Html.ActionLink(" ", "ASAPreguntaRespuestaEliminar", new { NroPregunta=item.NroPregunta, Opcion=item.Opcion},new {data_modal = "", @class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
                                             </text>
-                                                                                                                                                                                                                                                                                                                                                                                                                                    )
-                                                                                                                                                                                                                                                                                                                                                                                                                    })
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
 
 
                 </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                        <button type="submit" class="btn btn-primary" >Aceptar</button>
-                    </div>
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
                 @*</form>*@
-            }
-        </div>
+            </form>
+</div>
         <!-- /.box -->
     </section>
     <!-- /.content -->
