@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a76e060-e89f-44b3-8a5d-763dbf956606" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASModulo" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASModulo.disco" MetadataType="Disco" ID="db81b9f8-a7d7-4c27-b7ad-1d20a0d7a0ee" SourceId="1" SourceUrl="http://alejandroasus:8901/TASModulo?disco" />
+    <MetadataFile FileName="TASModuloClass.wsdl" MetadataType="Wsdl" ID="cb22f8f0-37c3-4b03-af14-e318704ce44c" SourceId="1" SourceUrl="http://alejandroasus:8901/TASModulo?wsdl" />
+    <MetadataFile FileName="TASModulo.xsd" MetadataType="Schema" ID="c6bbbad4-6615-41ca-82e0-7a4b7db1482f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASModulo?xsd=xsd0" />
+    <MetadataFile FileName="TASModulo1.xsd" MetadataType="Schema" ID="396925bf-abea-4e82-88c1-0dc5525b1433" SourceId="1" SourceUrl="http://alejandroasus:8901/TASModulo?xsd=xsd1" />
+    <MetadataFile FileName="TASModulo2.xsd" MetadataType="Schema" ID="e36269d9-e118-4212-92f4-8252f14bbe8e" SourceId="1" SourceUrl="http://alejandroasus:8901/TASModulo?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="31d19ba2-c109-4d13-a89c-e97f630ee68e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASRegistroNotas" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASRegistroNotasClass.wsdl" MetadataType="Wsdl" ID="383f0f70-315f-4a77-8c69-2dd42fdeb7e9" SourceId="1" SourceUrl="http://alejandroasus:8901/TASRegistroNotas?wsdl" />
+    <MetadataFile FileName="TASRegistroNotas.disco" MetadataType="Disco" ID="07d45e9a-a4e4-4034-8bb4-f1f50e6ee00d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASRegistroNotas?disco" />
+    <MetadataFile FileName="TASRegistroNotas.xsd" MetadataType="Schema" ID="1e0c39bf-1db0-4494-ab19-8cc7757663c4" SourceId="1" SourceUrl="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd0" />
+    <MetadataFile FileName="TASRegistroNotas1.xsd" MetadataType="Schema" ID="00296bcd-92f2-45f7-ae98-c5de27659027" SourceId="1" SourceUrl="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd2" />
+    <MetadataFile FileName="TASRegistroNotas2.xsd" MetadataType="Schema" ID="b0ad786e-63a3-46fc-99bf-a019007af2b9" SourceId="1" SourceUrl="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

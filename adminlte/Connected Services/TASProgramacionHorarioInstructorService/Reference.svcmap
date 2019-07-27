@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1f0b39d-0f2a-46e8-b903-1334c660c6d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASProgramacionHorarioInstructor" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASProgramacionHorarioInstructor.xsd" MetadataType="Schema" ID="d5160597-fa4a-442b-8704-a97511b7d230" SourceId="1" SourceUrl="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd2" />
+    <MetadataFile FileName="TASProgramacionHorarioInstructor.disco" MetadataType="Disco" ID="dc76625f-8a3d-48ac-920e-64da46cb8a21" SourceId="1" SourceUrl="http://alejandroasus:8901/TASProgramacionHorarioInstructor?disco" />
+    <MetadataFile FileName="TASProgramacionHorarioInstructor1.xsd" MetadataType="Schema" ID="9b499009-b4ef-41ff-9db6-5eafe12caefb" SourceId="1" SourceUrl="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd1" />
+    <MetadataFile FileName="TASProgramacionHorarioInstructorClass.wsdl" MetadataType="Wsdl" ID="461e000f-e77c-417e-892d-acecfc788805" SourceId="1" SourceUrl="http://alejandroasus:8901/TASProgramacionHorarioInstructor?wsdl" />
+    <MetadataFile FileName="TASProgramacionHorarioInstructor2.xsd" MetadataType="Schema" ID="325e2476-3348-45fb-9982-e8f667ebd2ee" SourceId="1" SourceUrl="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

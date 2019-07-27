@@ -205,6 +205,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ASATReporteExamenEstudianteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ASATReportePreguntaService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,7 +245,57 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TASGestionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\TASGrupoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASMaterialProgramaAnaliticoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASMateriaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASModuloService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASProgramaAnaliticoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASProgramacionHorarioInstructorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASProgramaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASRegistroNotasService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASReporteNotasEstudianteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASTransaccionProgramaAnaliticoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -253,6 +308,11 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TASProgramaAnaliticoController.cs" />
+    <Compile Include="Controllers\TASProgramacionHorarioInstructorController.cs" />
+    <Compile Include="Controllers\TASRegistroNotasController.cs" />
+    <Compile Include="Controllers\TASReporteNotasEstudianteController.cs" />
+    <Compile Include="FileHttpPostedFileBaseClass.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +330,12 @@
       <DependentUpon>ASACuestionarioGenerarExamen.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\ASACuestionario\ASATransaccionReporteEstudiante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ASATransaccionReporteEstudiante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\ASACuestionario\DataSetPregunta.cs">
       <DependentUpon>DataSetPregunta.xsd</DependentUpon>
     </Compile>
@@ -277,6 +343,33 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPregunta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TASProgramaAnalitico\TASProgramaAnaliticoInstructor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TASProgramaAnaliticoInstructor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TASRegistroNotasEstudiante\TASRegistroNotasEstudiante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TASRegistroNotasEstudiante.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -359,12 +452,35 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\ASATReporteExamenEstudianteService\adminlte.ASATReporteExamenEstudianteService.ASATReporteExamenEstudianteEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ASATReporteExamenEstudianteService\adminlte.ASATReporteExamenEstudianteService.ASATReporteExamenEstudianteSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\ASATReporteExamenEstudiante.disco" />
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\configuration91.svcinfo" />
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\configuration.svcinfo" />
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ASATReportePreguntaService\adminlte.ASATReportePreguntaService.ASATReportePreguntaEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ASATReportePreguntaService\adminlte.ASATReportePreguntaService.ASATReportePreguntaSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\ASATReporteExamenEstudiante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\ASATReporteExamenEstudiante1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\ASATReporteExamenEstudiante2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ASATReporteExamenEstudianteService\ASATReporteExamenEstudianteClass.wsdl" />
     <None Include="Connected Services\ASATReportePreguntaService\ASATReportePregunta.disco" />
     <None Include="Connected Services\ASATReportePreguntaService\configuration91.svcinfo" />
     <None Include="Connected Services\ASATReportePreguntaService\configuration.svcinfo" />
@@ -505,6 +621,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\TASGestionService\adminlte.TASGestionService.TASGestionEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASGestionService\adminlte.TASGestionService.TASGestionSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASGestionService\TASGestion.disco" />
+    <None Include="Connected Services\TASGestionService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASGestionService\configuration.svcinfo" />
+    <None Include="Connected Services\TASGestionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\TASGrupoService\adminlte.TASGrupoService.TASGrupoEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -521,10 +650,223 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TASEstudianteService\TASEstudianteClass.wsdl" />
+    <None Include="Connected Services\TASGestionService\TASGestion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGestionService\TASGestion1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGestionService\TASGestion2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASGestionService\TASGestionClass.wsdl" />
     <None Include="Connected Services\TASGrupoService\TASGrupo.disco" />
     <None Include="Connected Services\TASGrupoService\configuration91.svcinfo" />
     <None Include="Connected Services\TASGrupoService\configuration.svcinfo" />
     <None Include="Connected Services\TASGrupoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASMaterialProgramaAnaliticoService\adminlte.TASMaterialProgramaAnaliticoService.TASMaterialProgramaAnaliticoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASMaterialProgramaAnaliticoService\adminlte.TASMaterialProgramaAnaliticoService.TASMaterialProgramaAnaliticoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\TASMaterialProgramaAnalitico.disco" />
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\configuration.svcinfo" />
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASMateriaService\adminlte.TASMateriaService.TASMateriaEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASMateriaService\adminlte.TASMateriaService.TASMateriaSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASMateriaService\TASMateria.disco" />
+    <None Include="Connected Services\TASMateriaService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASMateriaService\configuration.svcinfo" />
+    <None Include="Connected Services\TASMateriaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASModuloService\adminlte.TASModuloService.TASModuloEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASModuloService\adminlte.TASModuloService.TASModuloSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASModuloService\TASModulo.disco" />
+    <None Include="Connected Services\TASModuloService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASModuloService\configuration.svcinfo" />
+    <None Include="Connected Services\TASModuloService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASProgramaAnaliticoService\adminlte.TASProgramaAnaliticoService.TASProgramaAnaliticoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASProgramaAnaliticoService\adminlte.TASProgramaAnaliticoService.TASProgramaAnaliticoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\TASMaterialProgramaAnalitico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\TASMaterialProgramaAnalitico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\TASMaterialProgramaAnalitico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMaterialProgramaAnaliticoService\TASMaterialProgramaAnaliticoClass.wsdl" />
+    <None Include="Connected Services\TASMateriaService\TASMateria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMateriaService\TASMateria1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMateriaService\TASMateria2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASMateriaService\TASMateriaClass.wsdl" />
+    <None Include="Connected Services\TASModuloService\TASModulo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASModuloService\TASModulo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASModuloService\TASModulo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASModuloService\TASModuloClass.wsdl" />
+    <None Include="Connected Services\TASProgramaAnaliticoService\TASProgramaAnalitico.disco" />
+    <None Include="Connected Services\TASProgramaAnaliticoService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASProgramaAnaliticoService\configuration.svcinfo" />
+    <None Include="Connected Services\TASProgramaAnaliticoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASProgramacionHorarioInstructorService\adminlte.TASProgramacionHorarioInstructorService.TASProgramacionHorarioInstructorEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASProgramacionHorarioInstructorService\adminlte.TASProgramacionHorarioInstructorService.TASProgramacionHorarioInstructorLineaEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASProgramacionHorarioInstructorService\adminlte.TASProgramacionHorarioInstructorService.TASProgramacionHorarioInstructorSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\TASProgramacionHorarioInstructor.disco" />
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\configuration.svcinfo" />
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASProgramaService\adminlte.TASProgramaService.TASProgramaEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASProgramaService\adminlte.TASProgramaService.TASProgramaSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASProgramaService\TASPrograma.disco" />
+    <None Include="Connected Services\TASProgramaService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASProgramaService\configuration.svcinfo" />
+    <None Include="Connected Services\TASProgramaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASRegistroNotasService\adminlte.TASRegistroNotasService.TASRegistroNotasEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASRegistroNotasService\adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASRegistroNotasService\adminlte.TASRegistroNotasService.TASRegistroNotasSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASProgramaService\TASPrograma.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaService\TASPrograma1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaService\TASPrograma2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaService\TASProgramaClass.wsdl" />
+    <None Include="Connected Services\TASRegistroNotasService\TASRegistroNotas.disco" />
+    <None Include="Connected Services\TASRegistroNotasService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASRegistroNotasService\configuration.svcinfo" />
+    <None Include="Connected Services\TASRegistroNotasService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASReporteNotasEstudianteService\adminlte.TASReporteNotasEstudianteService.TASReporteNotasEstudianteEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASReporteNotasEstudianteService\adminlte.TASReporteNotasEstudianteService.TASReporteNotasEstudianteSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASReporteNotasEstudianteService\TASReporteNotasEstudiante.disco" />
+    <None Include="Connected Services\TASReporteNotasEstudianteService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASReporteNotasEstudianteService\configuration.svcinfo" />
+    <None Include="Connected Services\TASReporteNotasEstudianteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TASTransaccionProgramaAnaliticoService\adminlte.TASTransaccionProgramaAnaliticoService.TASTransaccionProgramaAnaliticoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASTransaccionProgramaAnaliticoService\adminlte.TASTransaccionProgramaAnaliticoService.TASTransaccionProgramaAnaliticoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASProgramaAnaliticoService\TASProgramaAnalitico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaAnaliticoService\TASProgramaAnalitico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaAnaliticoService\TASProgramaAnalitico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramaAnaliticoService\TASProgramaAnaliticoClass.wsdl" />
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\TASProgramacionHorarioInstructor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\TASProgramacionHorarioInstructor1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\TASProgramacionHorarioInstructor2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASProgramacionHorarioInstructorService\TASProgramacionHorarioInstructorClass.wsdl" />
+    <None Include="Connected Services\TASRegistroNotasService\TASRegistroNotas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASRegistroNotasService\TASRegistroNotas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASRegistroNotasService\TASRegistroNotas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASRegistroNotasService\TASRegistroNotasClass.wsdl" />
+    <None Include="Connected Services\TASReporteNotasEstudianteService\TASReporteNotasEstudiante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASReporteNotasEstudianteService\TASReporteNotasEstudiante1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASReporteNotasEstudianteService\TASReporteNotasEstudiante2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASReporteNotasEstudianteService\TASReporteNotasEstudianteClass.wsdl" />
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnalitico.disco" />
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\configuration.svcinfo" />
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -4490,6 +4832,16 @@
     <Content Include="Reports\ASACuestionario\DataSetPregunta.xsc">
       <DependentUpon>DataSetPregunta.xsd</DependentUpon>
     </Content>
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnalitico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnalitico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnalitico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnaliticoClass.wsdl" />
     <None Include="Reports\ASACuestionario\DataSetPregunta.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -4500,12 +4852,60 @@
     </Content>
     <Content Include="Views\ASACuestionario\ASAPreguntaBancoPregunta.cshtml" />
     <Content Include="Views\ASACuestionario\ASACuestionarioHistorialExamen.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioExamenReporte.cshtml" />
+    <Content Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xsc">
+      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTransaccionReporteEstudiante.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xss">
+      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\TASProgramaAnalitico\TASProgramaAnaliticoGestionar.cshtml" />
+    <Content Include="Views\TASProgramaAnalitico\TASProgramaAnaliticoVisualizar.cshtml" />
+    <Content Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsc">
+      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProgramaAnalitico.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xss">
+      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoLista.cshtml" />
+    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoSubirMaterial.cshtml" />
+    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoDescargarMaterial.cshtml" />
+    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoEditarMaterial.cshtml" />
+    <Content Include="Views\TASProgramacionHorarioInstructor\TASProgramacionHorarioInstructorLista.cshtml" />
+    <Content Include="Views\TASRegistroNotas\TASRegistroNotasLista.cshtml" />
+    <Content Include="Views\TASRegistroNotas\TASRegistroNotasNuevo.cshtml" />
+    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEditar.cshtml" />
+    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEstudianteEditar.cshtml" />
+    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEliminar.cshtml" />
+    <Content Include="Views\TASReporteNotasEstudiante\TASReporteListaEstudiante.cshtml" />
+    <Content Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xsc">
+      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTASRegistroNotasEstudiante.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xss">
+      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\ASAPregunta\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Default\" />
+    <Folder Include="Views\TASRegistroNota\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -4623,6 +5023,7 @@
     <WCFMetadataStorage Include="Connected Services\ASAGrupoPreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASAPreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASATransaccionService\" />
+    <WCFMetadataStorage Include="Connected Services\ASATReporteExamenEstudianteService\" />
     <WCFMetadataStorage Include="Connected Services\ASATReportePreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASATRespuestaService\" />
     <WCFMetadataStorage Include="Connected Services\AXFSesionService\" />
@@ -4630,7 +5031,17 @@
     <WCFMetadataStorage Include="Connected Services\AXFWebMenuService\" />
     <WCFMetadataStorage Include="Connected Services\AXFWebVistaService\" />
     <WCFMetadataStorage Include="Connected Services\TASEstudianteService\" />
+    <WCFMetadataStorage Include="Connected Services\TASGestionService\" />
     <WCFMetadataStorage Include="Connected Services\TASGrupoService\" />
+    <WCFMetadataStorage Include="Connected Services\TASMaterialProgramaAnaliticoService\" />
+    <WCFMetadataStorage Include="Connected Services\TASMateriaService\" />
+    <WCFMetadataStorage Include="Connected Services\TASModuloService\" />
+    <WCFMetadataStorage Include="Connected Services\TASProgramaAnaliticoService\" />
+    <WCFMetadataStorage Include="Connected Services\TASProgramacionHorarioInstructorService\" />
+    <WCFMetadataStorage Include="Connected Services\TASProgramaService\" />
+    <WCFMetadataStorage Include="Connected Services\TASRegistroNotasService\" />
+    <WCFMetadataStorage Include="Connected Services\TASReporteNotasEstudianteService\" />
+    <WCFMetadataStorage Include="Connected Services\TASTransaccionProgramaAnaliticoService\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
@@ -4639,6 +5050,18 @@
     <EmbeddedResource Include="Reports\ASACuestionario\ASACuestionarioGenerarExamen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ASACuestionarioGenerarExamen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ASACuestionario\ASATransaccionReporteEstudiante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ASATransaccionReporteEstudiante.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TASProgramaAnalitico\TASProgramaAnaliticoInstructor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TASProgramaAnaliticoInstructor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TASRegistroNotasEstudiante\TASRegistroNotasEstudiante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TASRegistroNotasEstudiante.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

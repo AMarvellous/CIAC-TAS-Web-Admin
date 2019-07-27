@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="204e4612-ed58-4197-9f63-cd9dc977cc50" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASTransaccionProgramaAnalitico" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASTransaccionProgramaAnalitico.disco" MetadataType="Disco" ID="dcea1472-8f30-4c80-9799-8a60d8ba650f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?disco" />
+    <MetadataFile FileName="TASTransaccionProgramaAnalitico.xsd" MetadataType="Schema" ID="86679f6a-a661-4df9-82fb-5aee42cf421f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd1" />
+    <MetadataFile FileName="TASTransaccionProgramaAnaliticoClass.wsdl" MetadataType="Wsdl" ID="c80fef98-b32b-41cd-baae-5606a68e6e4f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?wsdl" />
+    <MetadataFile FileName="TASTransaccionProgramaAnalitico1.xsd" MetadataType="Schema" ID="d284278c-1855-4e50-9937-5dfb7cb07733" SourceId="1" SourceUrl="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd0" />
+    <MetadataFile FileName="TASTransaccionProgramaAnalitico2.xsd" MetadataType="Schema" ID="59a81170-3648-465d-8fd7-fdde1c3a6a9d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

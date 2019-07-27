@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASReporteNotasEstudianteClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASReporteNotasEstudianteSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASReporteNotasEstudianteInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebNuevo" message="tns:TASReporteNotasEstudianteInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebNuevoResponse" message="tns:TASReporteNotasEstudianteInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebGuardar" message="tns:TASReporteNotasEstudianteInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebGuardarResponse" message="tns:TASReporteNotasEstudianteInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminar" message="tns:TASReporteNotasEstudianteInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminarResponse" message="tns:TASReporteNotasEstudianteInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminarDetalle" message="tns:TASReporteNotasEstudianteInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminarDetalleResponse" message="tns:TASReporteNotasEstudianteInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebSeleccionar" message="tns:TASReporteNotasEstudianteInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebSeleccionarResponse" message="tns:TASReporteNotasEstudianteInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebRecalcular" message="tns:TASReporteNotasEstudianteInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebRecalcularResponse" message="tns:TASReporteNotasEstudianteInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteBloquear" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteBloquearResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteDesbloquear" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteDesbloquearResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueadoPor" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueadoPorResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueado" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueadoResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarTodo" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarTodoResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionar" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarXSubCompania" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASReporteNotasEstudianteInterface_WebTASReporteNotasEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASReporteNotasEstudianteInterface" type="tns:TASReporteNotasEstudianteInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASReporteNotasEstudianteSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASReporteNotasEstudianteInterface/WebTASReporteNotasEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASReporteNotasEstudianteClass">
+    <wsdl:port name="BasicHttpBinding_TASReporteNotasEstudianteInterface" binding="tns:BasicHttpBinding_TASReporteNotasEstudianteInterface">
+      <soap:address location="http://alejandroasus:8901/TASReporteNotasEstudiante" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

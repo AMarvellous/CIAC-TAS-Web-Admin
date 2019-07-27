@@ -2,6 +2,7 @@
 using adminlte.ASAGrupoPreguntaService;
 using adminlte.ASAPreguntaService;
 using adminlte.ASATransaccionService;
+using adminlte.ASATReporteExamenEstudianteService;
 using adminlte.ASATReportePreguntaService;
 using adminlte.ASATRespuestaService;
 using adminlte.AXFSesionService;
@@ -1628,6 +1629,79 @@ namespace adminlte.Controllers
             catch (Exception e)
             {
                 return RedirectToAction("ASACuestionarioHistorialExamen");
+            }
+
+
+        }
+        public ActionResult ASACuestionarioExamenReporte()
+        {
+            ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
+            List<ASAConfiguracionLineaEntity> ltASAConfiguracionLinea = ASAConfiguracion.WebASAConfiguracionLineaSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+
+            return View(ltASAConfiguracionLinea);
+        }
+        public ActionResult ASACuestionarioReporteExamenDescargar(string Grupo, DateTime FechaIni, DateTime FechaFin)
+        {
+            long NumError = 0;
+            string MapPath = "";
+            string FileDownloadName = "";
+            CrystalDecisions.Shared.ExportFormatType ExportFormat = CrystalDecisions.Shared.ExportFormatType.PortableDocFormat;
+            string ContentType = string.Empty;
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+
+            MapPath = "~/Reports/ASACuestionario/ASATransaccionReporteEstudiante.rpt";
+            FileDownloadName = "ReporteExamenASA"+ Grupo + "_" + DateTime.Now + ".pdf";
+            ExportFormat = CrystalDecisions.Shared.ExportFormatType.PortableDocFormat;
+            ContentType = "application/pdf";
+
+
+            try
+            {
+                //MapPath = "~/Reports/CDComanda/CDTTransaccion.rpt";
+                //FileDownloadName = "CDTTransaccion" + DateTime.Now + ".xls";
+
+                ReportDocument report = new ReportDocument();
+                List<ASATReporteExamenEstudianteEntity> ltASATReporteExamenEstudiante = new List<ASATReporteExamenEstudianteEntity>();
+                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                ltASATransaccion = ltASATransaccion.Where(x => x.Texto0 == Grupo && x.Examen == true && x.FechaDoc >= FechaIni && x.FechaDoc <= FechaFin).ToList();
+                ltASATReporteExamenEstudiante = ltASATransaccion
+                    .GroupBy(g => g.EstudianteCI)
+                    .Select(s => new ASATReporteExamenEstudianteEntity {
+                        Grupo = Grupo,
+                        EstudianteCI = s.First().EstudianteCI,
+                        EstudianteNombre = DateTime.Now.ToString(),
+                        Correcto = s.Where(x => x.Correcto == true).Count(),
+                        TotalPreguntas = s.Count(),
+                        Nota = (s.Where(x => x.Correcto == true).Count() * 100) / s.Count()
+                        }).ToList();
+
+                report.Load(Server.MapPath(MapPath));
+                report.SetDataSource(ltASATReporteExamenEstudiante);
+                //report.SetDataSource();
+                Response.Buffer = false;
+                Response.ClearContent();
+                Response.ClearHeaders();
+
+                //Stream stream = report.ExportToStream(CrystalDecisions.Shared.ExportFormatType.ExcelRecord);
+                Stream stream = report.ExportToStream(ExportFormat);
+                stream.Seek(0, SeekOrigin.Begin);
+                //GetDowndoaldFile(stream);
+
+                if (NumError == 0)
+                {
+                    return File(stream, ContentType, FileDownloadName);
+                }
+                else
+                {
+                    return RedirectToAction("ASACuestionarioExamenReporte");
+                }
+
+
+
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("ASACuestionarioExamenReporte");
             }
 
 

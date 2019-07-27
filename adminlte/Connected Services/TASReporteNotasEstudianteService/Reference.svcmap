@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8bae3df2-e770-4dd3-a001-d22190eb67c5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASReporteNotasEstudiante" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASReporteNotasEstudiante.xsd" MetadataType="Schema" ID="cf49d654-2eb6-4fa6-9b6f-ecaa500d26a0" SourceId="1" SourceUrl="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd2" />
+    <MetadataFile FileName="TASReporteNotasEstudiante1.xsd" MetadataType="Schema" ID="085911ba-d601-4bdd-9414-60faf379d87d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd1" />
+    <MetadataFile FileName="TASReporteNotasEstudiante2.xsd" MetadataType="Schema" ID="234494f9-3ca2-4f89-8a14-976b6d845856" SourceId="1" SourceUrl="http://alejandroasus:8901/TASReporteNotasEstudiante?xsd=xsd0" />
+    <MetadataFile FileName="TASReporteNotasEstudiante.disco" MetadataType="Disco" ID="0052c723-91a9-40f9-b370-b2354f3acd2c" SourceId="1" SourceUrl="http://alejandroasus:8901/TASReporteNotasEstudiante?disco" />
+    <MetadataFile FileName="TASReporteNotasEstudianteClass.wsdl" MetadataType="Wsdl" ID="8adfa4ca-baed-45e1-a192-5af1a31f577b" SourceId="1" SourceUrl="http://alejandroasus:8901/TASReporteNotasEstudiante?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

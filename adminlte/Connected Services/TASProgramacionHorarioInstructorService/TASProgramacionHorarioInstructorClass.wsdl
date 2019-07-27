@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASProgramacionHorarioInstructorClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASProgramacionHorarioInstructor?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASProgramacionHorarioInstructorInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebNuevo" message="tns:TASProgramacionHorarioInstructorInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebNuevoResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebGuardar" message="tns:TASProgramacionHorarioInstructorInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebGuardarResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminar" message="tns:TASProgramacionHorarioInstructorInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminarResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminarDetalle" message="tns:TASProgramacionHorarioInstructorInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminarDetalleResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebSeleccionar" message="tns:TASProgramacionHorarioInstructorInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebSeleccionarResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebRecalcular" message="tns:TASProgramacionHorarioInstructorInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebRecalcularResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorBloquear" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorBloquearResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorDesbloquear" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorDesbloquearResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueadoPor" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueadoPorResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueado" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueadoResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarTodo" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarTodoResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionar" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarXSubCompania" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarXSubCompaniaResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarTodo" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarTodoResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionar" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructorResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompaniaResponse" message="tns:TASProgramacionHorarioInstructorInterface_WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASProgramacionHorarioInstructorInterface" type="tns:TASProgramacionHorarioInstructorInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarKeyTASProgramacionHorarioInstructor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASProgramacionHorarioInstructorInterface/WebTASProgramacionHorarioInstructorLineaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASProgramacionHorarioInstructorClass">
+    <wsdl:port name="BasicHttpBinding_TASProgramacionHorarioInstructorInterface" binding="tns:BasicHttpBinding_TASProgramacionHorarioInstructorInterface">
+      <soap:address location="http://alejandroasus:8901/TASProgramacionHorarioInstructor" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

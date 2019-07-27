@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASTransaccionProgramaAnaliticoClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASTransaccionProgramaAnalitico?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASTransaccionProgramaAnaliticoInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebNuevo" message="tns:TASTransaccionProgramaAnaliticoInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebNuevoResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebGuardar" message="tns:TASTransaccionProgramaAnaliticoInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebGuardarResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminar" message="tns:TASTransaccionProgramaAnaliticoInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminarResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminarDetalle" message="tns:TASTransaccionProgramaAnaliticoInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminarDetalleResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebSeleccionar" message="tns:TASTransaccionProgramaAnaliticoInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebSeleccionarResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebRecalcular" message="tns:TASTransaccionProgramaAnaliticoInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebRecalcularResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoBloquear" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoBloquearResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoDesbloquear" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoDesbloquearResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueadoPor" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueadoPorResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueado" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueadoResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarTodo" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarTodoResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionar" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompaniaResponse" message="tns:TASTransaccionProgramaAnaliticoInterface_WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASTransaccionProgramaAnaliticoInterface" type="tns:TASTransaccionProgramaAnaliticoInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASTransaccionProgramaAnaliticoInterface/WebTASTransaccionProgramaAnaliticoSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASTransaccionProgramaAnaliticoClass">
+    <wsdl:port name="BasicHttpBinding_TASTransaccionProgramaAnaliticoInterface" binding="tns:BasicHttpBinding_TASTransaccionProgramaAnaliticoInterface">
+      <soap:address location="http://alejandroasus:8901/TASTransaccionProgramaAnalitico" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

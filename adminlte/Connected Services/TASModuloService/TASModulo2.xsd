@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TASModuloSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltTASModulo" nillable="true" type="tns:ArrayOfTASModuloEntity" />
+      <xs:element minOccurs="0" name="ltTASModuloEliminado" nillable="true" type="tns:ArrayOfTASModuloEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASModuloSet" nillable="true" type="tns:TASModuloSet" />
+  <xs:complexType name="ArrayOfTASModuloEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASModuloEntity" nillable="true" type="tns:TASModuloEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASModuloEntity" nillable="true" type="tns:ArrayOfTASModuloEntity" />
+  <xs:complexType name="TASModuloEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decimal1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Decimal2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entero1" type="xs:long" />
+      <xs:element minOccurs="0" name="Entero2" type="xs:long" />
+      <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="USel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASModuloEntity" nillable="true" type="tns:TASModuloEntity" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Added" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a49ad552-549b-47b9-b166-4d309d406567" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/ASATReporteExamenEstudiante" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ASATReporteExamenEstudiante.xsd" MetadataType="Schema" ID="b1e93867-87fb-4211-acda-268bc784374e" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReporteExamenEstudiante?xsd=xsd2" />
+    <MetadataFile FileName="ASATReporteExamenEstudiante1.xsd" MetadataType="Schema" ID="ec74fade-f772-407b-845d-d4ca3c40ed23" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReporteExamenEstudiante?xsd=xsd1" />
+    <MetadataFile FileName="ASATReporteExamenEstudianteClass.wsdl" MetadataType="Wsdl" ID="e7423421-8613-4219-ad5e-20decd7b7b07" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReporteExamenEstudiante?wsdl" />
+    <MetadataFile FileName="ASATReporteExamenEstudiante2.xsd" MetadataType="Schema" ID="534ee257-03ba-4957-a2f9-2d75c13edbf8" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReporteExamenEstudiante?xsd=xsd0" />
+    <MetadataFile FileName="ASATReporteExamenEstudiante.disco" MetadataType="Disco" ID="9adf5c87-5cee-4d59-8a85-8caa0388da15" SourceId="1" SourceUrl="http://alejandroasus:8901/ASATReporteExamenEstudiante?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASRegistroNotasClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASRegistroNotas?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASRegistroNotasInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotasResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASRegistroNotasInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebNuevo" message="tns:TASRegistroNotasInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebNuevoResponse" message="tns:TASRegistroNotasInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebGuardar" message="tns:TASRegistroNotasInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebGuardarResponse" message="tns:TASRegistroNotasInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebEliminar" message="tns:TASRegistroNotasInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebEliminarResponse" message="tns:TASRegistroNotasInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebEliminarDetalle" message="tns:TASRegistroNotasInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebEliminarDetalleResponse" message="tns:TASRegistroNotasInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebSeleccionar" message="tns:TASRegistroNotasInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebSeleccionarResponse" message="tns:TASRegistroNotasInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebRecalcular" message="tns:TASRegistroNotasInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebRecalcularResponse" message="tns:TASRegistroNotasInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasBloquear" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasBloquearResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasDesbloquear" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasDesbloquearResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueadoPor" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueadoPorResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueado" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueadoResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarTodo" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarTodoResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionar" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarXSubCompania" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarXSubCompaniaResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarTodo" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarTodoResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionar" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotasResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompania" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASRegistroNotasInterface" type="tns:TASRegistroNotasInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarKeyTASRegistroNotas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASRegistroNotasClass">
+    <wsdl:port name="BasicHttpBinding_TASRegistroNotasInterface" binding="tns:BasicHttpBinding_TASRegistroNotasInterface">
+      <soap:address location="http://alejandroasus:8901/TASRegistroNotas" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

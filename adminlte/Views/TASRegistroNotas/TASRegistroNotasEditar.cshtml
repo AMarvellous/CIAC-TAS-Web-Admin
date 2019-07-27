@@ -1,0 +1,114 @@
+﻿@model IEnumerable<adminlte.TASEstudianteService.TASEstudianteEntity>
+
+@{
+    ViewBag.Title = "TASRegistroNotasEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebGrid grid = new WebGrid(Model, // source
+                                null, // columnNames
+                                "Apellido1", // defaultSort
+                                20,   // rowsPerPage
+                                true, // canPage
+                                true, // canSort
+                                null, // ajaxUpdateContainerId
+                                null, // ajaxUpdateCallback
+                                null, // fieldNamePrefix
+                                null, // pageFieldName
+                                null, // selectionFieldName
+                                null, // sortFieldName
+                                null);// sortDirectionFieldName
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            TAS
+            <small>Registro Notas</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Registro Notas</a></li>
+            <li class="active">Estudiantes</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box box-primary">
+
+            <div class="box-header with-border">
+                <h3 class="box-title">CIAC TAS</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            @*<form role="form">*@
+            <div class="box-body">
+
+                @grid.GetHtml(
+                        tableStyle: "table table-bordered",
+                        headerStyle: "header",
+                        alternatingRowStyle: "alt",
+                        //tableStyle: "gridtable",
+                        //headerStyle: "gridtable-header",
+                        //alternatingRowStyle: "gridtable-alt",
+                        footerStyle: "table-pager-footer",
+                        columns: new[] {
+                            //grid.Column("TipoDoc"),
+                           // grid.Column("SubCompania"),
+                            grid.Column("EstudianteCI", "C.I."),
+                            grid.Column("Nombre1", "Primer Nombre"),
+                            grid.Column("Nombre2", "Segundo Nombre"),
+                            grid.Column("Apellido1", "Primer Apellido"),
+                            grid.Column("Apellido2", "Segundo Apellido"),
+
+
+                            grid.Column("",
+                                        header:"Acciones",
+                                        format:@<text>
+        @Html.ActionLink(" ", "TASRegistroNotasEstudianteEditar", new {NombreEstudiante = item.Nombre1 + " " +item.Nombre2 + " "+item.Apellido1 + " "+item.Apellido2,CodigoTASEstudiante = item.EstudianteCI , SubCompania= (string)ViewBag.SubCompania, Programa= (string)ViewBag.Programa,Grupo= (string)ViewBag.Grupo,Materia= (string)ViewBag.Materia,ModuloMateria= (string)ViewBag.ModuloMateria,Gestion= (string)ViewBag.Gestion},new {data_modal = "",@class = "glyphicon glyphicon-edit ",style = "font-size:15px;"})
+                                        </text>
+                                                                                                                        )
+                                                                                                           })
+
+
+
+            </div>
+            <!-- /.box-body -->
+            @*</form>*@
+
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding-top:2%;">
+            <div id='myModalContent' style="padding-left:5%;"></div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/adminlte/components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/Scripts/adminlte/js/modal.js"></script>
+
+<style>
+
+    .table-pager-footer > td {
+        padding-top: 10px;
+    }
+
+        .table-pager-footer > td > a {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 3px 7px;
+        }
+
+            .table-pager-footer > td > a:hover {
+                background-color: #f0f0f0;
+            }
+</style>

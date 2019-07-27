@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0cf245b6-346d-4f2d-86d1-32ab6720db46" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASPrograma" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASPrograma.disco" MetadataType="Disco" ID="81e1b45f-e596-4c47-8267-360bbceca788" SourceId="1" SourceUrl="http://alejandroasus:8901/TASPrograma?disco" />
+    <MetadataFile FileName="TASPrograma.xsd" MetadataType="Schema" ID="cb72f5de-d036-4390-bd21-18fc9c6871f3" SourceId="1" SourceUrl="http://alejandroasus:8901/TASPrograma?xsd=xsd1" />
+    <MetadataFile FileName="TASProgramaClass.wsdl" MetadataType="Wsdl" ID="388d896e-db40-4f57-b6ec-e96a74587636" SourceId="1" SourceUrl="http://alejandroasus:8901/TASPrograma?wsdl" />
+    <MetadataFile FileName="TASPrograma1.xsd" MetadataType="Schema" ID="95163fac-892b-455a-a291-957c214723b3" SourceId="1" SourceUrl="http://alejandroasus:8901/TASPrograma?xsd=xsd0" />
+    <MetadataFile FileName="TASPrograma2.xsd" MetadataType="Schema" ID="0568ceb9-81ea-4d36-937f-9bbf8d2ff2e7" SourceId="1" SourceUrl="http://alejandroasus:8901/TASPrograma?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

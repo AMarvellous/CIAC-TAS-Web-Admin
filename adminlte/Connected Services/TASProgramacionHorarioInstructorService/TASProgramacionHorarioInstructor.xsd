@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TASProgramacionHorarioInstructorSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltTASProgramacionHorarioInstructor" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorEntity" />
+      <xs:element minOccurs="0" name="ltTASProgramacionHorarioInstructorEliminado" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorEntity" />
+      <xs:element minOccurs="0" name="ltTASProgramacionHorarioInstructorLinea" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorLineaEntity" />
+      <xs:element minOccurs="0" name="ltTASProgramacionHorarioInstructorLineaEliminado" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorLineaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASProgramacionHorarioInstructorSet" nillable="true" type="tns:TASProgramacionHorarioInstructorSet" />
+  <xs:complexType name="ArrayOfTASProgramacionHorarioInstructorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASProgramacionHorarioInstructorEntity" nillable="true" type="tns:TASProgramacionHorarioInstructorEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASProgramacionHorarioInstructorEntity" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorEntity" />
+  <xs:complexType name="TASProgramacionHorarioInstructorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decimal1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Decimal2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Entero1" type="xs:long" />
+      <xs:element minOccurs="0" name="Entero2" type="xs:long" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstructorNroLicencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="USel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASProgramacionHorarioInstructorEntity" nillable="true" type="tns:TASProgramacionHorarioInstructorEntity" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Added" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="ArrayOfTASProgramacionHorarioInstructorLineaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASProgramacionHorarioInstructorLineaEntity" nillable="true" type="tns:TASProgramacionHorarioInstructorLineaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASProgramacionHorarioInstructorLineaEntity" nillable="true" type="tns:ArrayOfTASProgramacionHorarioInstructorLineaEntity" />
+  <xs:complexType name="TASProgramacionHorarioInstructorLineaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstructorNroLicencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea" type="xs:long" />
+      <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASProgramacionHorarioInstructorLineaEntity" nillable="true" type="tns:TASProgramacionHorarioInstructorLineaEntity" />
+</xs:schema>
