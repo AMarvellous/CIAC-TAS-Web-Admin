@@ -24,8 +24,9 @@
     <section class="content">
         <!-- Default box -->
         <div class="box box-primary">
+            <div id="msjContainer"></div>
             <form action="@Url.Action("AXFUsuarioEditar","AXFUsuario")" method="post" role="form" enctype="multipart/form-data">
-                
+
                 <div class="box-header with-border">
                     <h3 class="box-title">CIAC TAS</h3>
                 </div>
@@ -133,9 +134,9 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
 
-                </form>
-                
-</div>
+            </form>
+
+        </div>
         <!-- /.box -->
     </section>
     <!-- /.content -->
@@ -157,3 +158,34 @@
 
 
 
+@section scripts
+{
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+    });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
+    </script>
+
+}

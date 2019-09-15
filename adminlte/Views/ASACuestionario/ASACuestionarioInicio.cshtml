@@ -22,16 +22,17 @@
     <section class="content">
         <!-- Default box -->
         <div class="box">
+            <div id="msjContainer"></div>
             <div class="box-header with-border">
                 <h3 class="box-title">Cuestionario</h3>
                 <div class="box-tools pull-right">
                     @*<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                                title="Collapse">
-                            <i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                                <i class="fa fa-times"></i>
-                            </button>*@
+                        title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>*@
                 </div>
             </div>
             <div class="box-body">
@@ -42,10 +43,12 @@
 
                     @if (!ViewBag.ExisteASA)
                     {
-                        <div class="col-xs-12 text-center form-group">
-                            @Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })
-                        </div>
-                        
+                        @Html.Label("Grupos")
+                    <div class="col-xs-12 text-center form-group">
+                        @*@Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })*@
+                        @Html.DropDownList("GrupoPregunta", (SelectList)@ViewBag.ltASAGrupoPregunta, "Seleccione los Grupos", new { @class = "form-control select2", @multiple = "multiple" })
+                    </div>
+
                         <div class="form-group">
                             @Html.Label("Inicio de Pregunta")
                             <div class="input-group">
@@ -98,11 +101,38 @@
 @section Scripts
 {
     <script>
+        //$(document).ready(function () {
+        //    //Initialize Select2 Elements
+        //    $('.select2').select2()
+            
+        //})
+
         $(document).ready(function () {
             //Initialize Select2 Elements
             $('.select2').select2()
-            
-        })
+
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+    });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
     </script>
 }
 

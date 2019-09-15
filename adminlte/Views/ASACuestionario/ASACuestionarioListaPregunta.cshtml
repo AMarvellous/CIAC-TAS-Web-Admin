@@ -42,6 +42,9 @@
                 <h3 class="box-title">CIAC TAS</h3>
             </div>
             <!-- /.box-header -->
+            <div class="col-sm-12">
+                @Html.ActionLink(" ", "ASACuestionarioPregunta", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+            </div>
             <!-- form start -->
             @*<form role="form">*@
             <div class="box-body">
@@ -70,11 +73,11 @@
                             grid.Column("",
                                         header:"Acciones",
                                         format:@<text>
-        @Html.ActionLink(" ", "ASAPreguntaEditar", new { NroPregunta=item.NroPregunta },new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |
-        @Html.ActionLink(" ", "ASAPreguntaEliminar", new { NroPregunta=item.NroPregunta},new {@class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
+            @Html.ActionLink(" ", "ASAPreguntaEditar", new { NroPregunta=item.NroPregunta },new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"}) |
+            @Html.ActionLink(" ", "ASAPreguntaEliminar", new { NroPregunta=item.NroPregunta},new {@class = "glyphicon glyphicon-remove",style = "font-size:15px;"})
                                         </text>
-                                                                                                                                                        )
-                                                                                                                              })
+                                                                                                                                                                                                )
+                                                                                                                                                                       })
 
 
 

@@ -25,10 +25,14 @@
         <div class="box box-primary">
             @using (Html.BeginForm())
             {
+                <div id="msjContainer"></div>
                 <div class="box-header with-border">
                     <h3 class="box-title">CIAC TAS</h3>
                 </div>
                 <!-- /.box-header -->
+                <div class="col-sm-12">
+                    @Html.ActionLink(" ", "ASAConfiguracionLista", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+                </div>
 
                 <!-- form start -->
                 @*<form role="form">*@
@@ -43,7 +47,7 @@
                                 <i class="fa fa-users"></i>
                             </div>
                             @*@Html.EditorFor(model => model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })*@
-                            @Html.DropDownListFor(model => model.ltASAConfiguracion[0].Grupo, new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo" , new { @class = "form-control controlar" })
+                            @Html.DropDownListFor(model => model.ltASAConfiguracion[0].Grupo, new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo", new { @class = "form-control controlar" })
                             @Html.ValidationMessageFor(model => model.ltASAConfiguracion[0].Grupo, "", new { @class = "text-danger" })
                             @*<input type="number" class="form-control">*@
                         </div>
@@ -57,9 +61,45 @@
                 </div>
                 @*</form>*@
             }
+
         </div>
         <!-- /.box -->
     </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
+<!-- jQuery 3 -->
+<script src="~/Scripts/adminlte/components/jquery/dist/jquery.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="~/Scripts/adminlte/js/adminlte.min.js"></script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+    });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
+</script>

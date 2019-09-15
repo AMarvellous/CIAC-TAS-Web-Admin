@@ -16,12 +16,13 @@ namespace adminlte.Controllers
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
             ASAConfiguracionSet setASAConfiguracion = new ASAConfiguracionSet();
             List<ASAConfiguracionEntity> ltASAConfiguracion = ASAConfiguracion.WebASAConfiguracionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            
 
             return View(ltASAConfiguracion);
         }
 
         [HttpGet]
-        public ActionResult ASAConfiguracionNuevo()
+        public ActionResult ASAConfiguracionNuevo(string MensajeError = "")
         {
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
             ASAConfiguracionSet setASAConfiguracion = ASAConfiguracion.WebNuevo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
@@ -31,6 +32,7 @@ namespace adminlte.Controllers
             List<TASGrupoEntity> ltTASGrupo = TASGrupo.WebTASGrupoSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             //ViewBag.ltTASGrupo = ltTASGrupo.Select(s => s.Grupo).ToList();
             ViewBag.ltTASGrupo = ltTASGrupo.Where(ds => !ltASAConfiguracion.Any(db => db.Grupo == ds.Grupo)).Select(s => s.Grupo).ToList();
+            ViewBag.MensajeError = MensajeError;
 
             return View(setASAConfiguracion);
         }
@@ -40,12 +42,14 @@ namespace adminlte.Controllers
         {
             long NumError = 0;
             string Grupo = string.Empty;
+            string MensajeError = string.Empty;
+
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
 
             if (setASAConfiguracion.ltASAConfiguracion != null)
             {
                 ASAConfiguracionEntity etASAConfiguracion = setASAConfiguracion.ltASAConfiguracion.First();
-                if (etASAConfiguracion.Grupo != "")
+                if (etASAConfiguracion.Grupo != null && etASAConfiguracion.Grupo != "")
                 {
                     ASAConfiguracionSet setASAConfiguracionNuevo = ASAConfiguracion.WebNuevo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                     ASAConfiguracionEntity etASAConfiguracionNuevo = setASAConfiguracionNuevo.ltASAConfiguracion.First();
@@ -59,11 +63,13 @@ namespace adminlte.Controllers
                 else
                 {
                     NumError = 1;
+                    MensajeError = "Debe seleccionar un Grupo.";
                 }
             }
             else
             {
                 NumError = 1;
+                MensajeError = "Ocurrio un error al intentar guardar. Intente nuevamente.";
             }
 
             if (NumError == 0)
@@ -72,7 +78,7 @@ namespace adminlte.Controllers
             }
             else
             {
-                return RedirectToAction("ASAConfiguracionLista");
+                return RedirectToAction("ASAConfiguracionNuevo", new { MensajeError = MensajeError });
             }
 
         }
@@ -87,7 +93,7 @@ namespace adminlte.Controllers
             return View(setASAConfiguracion);
         }
 
-        public ActionResult ASAConfiguracionLineaNuevo(string SubCompania, string Grupo)
+        public ActionResult ASAConfiguracionLineaNuevo(string SubCompania, string Grupo, string MensajeError = "" )
         {
             ASAConfiguracionLineaEntity etASAConfiguracionLinea = new ASAConfiguracionLineaEntity();
             etASAConfiguracionLinea.SubCompania = SubCompania;
@@ -98,6 +104,7 @@ namespace adminlte.Controllers
             etASAConfiguracionLinea.FechaFin = DateTime.Today;
             etASAConfiguracionLinea.UEstado = ASAConfiguracionService.Estado.Added;
 
+            ViewBag.MensajeError = MensajeError;
             return PartialView(etASAConfiguracionLinea);
         }
 
@@ -108,6 +115,7 @@ namespace adminlte.Controllers
             ASAConfiguracionLineaEntity etASAConfiguracionLineaOriginal = etASAConfiguracionLinea;
             ASAConfiguracionInterfaceClient ASAConfiguracion = new ASAConfiguracionInterfaceClient();
             bool EsMediaNoche = false;
+            string MensajeError = string.Empty;
 
             if (etASAConfiguracionLinea.FechaIni.TimeOfDay >= etASAConfiguracionLinea.FechaFin.TimeOfDay)
             {
@@ -117,6 +125,7 @@ namespace adminlte.Controllers
                     if (etASAConfiguracionLinea.FechaIni >= etASAConfiguracionLinea.FechaFin.AddDays(1))
                     {
                         NumError = 1;
+                        MensajeError += "";
                     }
                     else
                     {
@@ -126,6 +135,7 @@ namespace adminlte.Controllers
                 else
                 {
                     NumError = 1;
+                    MensajeError += "La fecha inicial es mayor a la fecha final.";
                 }
                 
             }
@@ -133,6 +143,7 @@ namespace adminlte.Controllers
             if (etASAConfiguracionLinea.CantidadPregunta <= 0)
             {
                 NumError = 1;
+                MensajeError += "La Cantidad de Preguntas no puede ser menor a 0.";
             }
 
             if (NumError == 0)
@@ -154,6 +165,10 @@ namespace adminlte.Controllers
                 setASAConfiguracion.ltASAConfiguracionLinea.Add(etASAConfiguracionLinea);
 
                 NumError = ASAConfiguracion.WebGuardar(setASAConfiguracion, false, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                if (NumError != 0)
+                {
+                    MensajeError += "Ocurrio un error al intentar guardar. Intente nuevamente.";
+                }
             }
 
             if (NumError == 0)
@@ -163,6 +178,7 @@ namespace adminlte.Controllers
             }
             else
             {
+                ViewBag.MensajeError = MensajeError;
                 return PartialView(etASAConfiguracionLineaOriginal);
             }
 

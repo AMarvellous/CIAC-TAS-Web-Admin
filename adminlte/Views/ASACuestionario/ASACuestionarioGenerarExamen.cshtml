@@ -22,53 +22,56 @@
     <section class="content">
         <!-- Default box -->
         <div class="box box-primary">
-            
-                <div class="box-header with-border">
-                    <h3 class="box-title">CIAC TAS</h3>
+            <div id="msjContainer"></div>
+            <div class="box-header with-border">
+                <h3 class="box-title">CIAC TAS</h3>
+            </div>
+            <!-- /.box-header -->
+            @*<div class="col-sm-12">
+                @Html.ActionLink(" ", "ASACuestionarioPregunta", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+            </div>*@
+            <form action="@Url.Action("ASACuestionarioGenerarExamen","ASACuestionario")" method="post">
+                <!-- form start -->
+                @*<form role="form">*@
+                <div class="box-body">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        @Html.Label("Numero Preguntas")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <input id="NumPreguntas" name="NumPreguntas" type="number" value="0" class="form-control" @*data-inputmask='"mask": "999"' data-mask*@>
+                            @Html.ValidationMessage("NumPreguntas", "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Grupo")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @*@Html.EditorFor(model => model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })*@
+                            @Html.DropDownList("Grupo", new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo", new { @class = "form-control controlar" })
+                            @Html.ValidationMessage("Grupo", "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+
                 </div>
-                <!-- /.box-header -->
-                <form action="@Url.Action("ASACuestionarioGenerarExamen","ASACuestionario")" method="post">
-                    <!-- form start -->
-                    @*<form role="form">*@
-                    <div class="box-body">
+                <!-- /.box-body -->
 
-                        @Html.AntiForgeryToken()
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Generar</button>
+                </div>
+            </form>
 
-                        <div class="form-group">
-                            @Html.Label("Numero Preguntas")
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-users"></i>
-                                </div>
-                                <input id="NumPreguntas" name="NumPreguntas" type="number" value="0" class="form-control" @*data-inputmask='"mask": "999"' data-mask*@>
-                                @Html.ValidationMessage("NumPreguntas", "", new { @class = "text-danger" })
-                                @*<input type="number" class="form-control">*@
-                            </div>
-                            <!-- /.input group -->
-                        </div>
-
-                        <div class="form-group">
-                            @Html.Label("Grupo")
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-users"></i>
-                                </div>
-                                @*@Html.EditorFor(model => model.ltASAConfiguracion[0].Grupo, new { htmlAttributes = new { @class = "form-control" } })*@
-                                @Html.DropDownList("Grupo", new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Grupo", new { @class = "form-control controlar" })
-                                @Html.ValidationMessage("Grupo", "", new { @class = "text-danger" })
-                                @*<input type="number" class="form-control">*@
-                            </div>
-                            <!-- /.input group -->
-                        </div>
-
-                    </div>
-                    <!-- /.box-body -->
-
-                    <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Generar</button>
-                    </div>
-                </form>
-            
         </div>
         <!-- /.box -->
     </section>
@@ -76,3 +79,35 @@
 </div>
 <!-- /.content-wrapper -->
 
+
+@section scripts
+{
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+    });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
+    </script>
+
+}

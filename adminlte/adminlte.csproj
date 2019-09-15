@@ -935,6 +935,7 @@
     <Content Include="Content\adminlte\img\user6-128x128.jpg" />
     <Content Include="Content\adminlte\img\user7-128x128.jpg" />
     <Content Include="Content\adminlte\img\user8-128x128.jpg" />
+    <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -945,6 +946,7 @@
     <Content Include="Imagenes\Gnome-stock_person_bureau.svg.png" />
     <Content Include="Imagenes\Gnome-stock_person_check2.svg.png" />
     <Content Include="Imagenes\Gnome-stock_person_steward2.svg.png" />
+    <Content Include="Imagenes\Logomediano.png" />
     <Content Include="Scripts\adminlte\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Scripts\adminlte\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Scripts\adminlte\components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -4842,6 +4844,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnaliticoClass.wsdl" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Reports\ASACuestionario\DataSetPregunta.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

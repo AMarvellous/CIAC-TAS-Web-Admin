@@ -11,7 +11,7 @@ namespace adminlte.Controllers
     public class AXFUsuarioController : BaseController
     {
         // GET: AXFUsuario
-        public ActionResult AXFUsuarioEditar()
+        public ActionResult AXFUsuarioEditar(string MensajeError = "")
         {
             AXFUsuarioInterfaceClient AXFUsuario = new AXFUsuarioInterfaceClient();
             AXFUsuarioSet setAXFUsuario = AXFUsuario.WebSeleccionar((string)Session["Usuario"],(string)Session["SesionSubCompania"],(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
@@ -31,6 +31,7 @@ namespace adminlte.Controllers
                 //mostramos el selector de imagenes
                 ViewBag.ExisteImagen = false;
             }
+            ViewBag.MensajeError = MensajeError;
 
             return View(setAXFUsuario);
         }
@@ -39,6 +40,7 @@ namespace adminlte.Controllers
         public ActionResult AXFUsuarioEditar(AXFUsuarioSet setAXFUsuarioForm, HttpPostedFileBase FileUpload)
         {
             long NumError = 0;
+            string MensajeError = string.Empty;
             AXFUsuarioInterfaceClient AXFUsuario = new AXFUsuarioInterfaceClient();
             AXFUsuarioEntity etAXFUsuarioForm = setAXFUsuarioForm.ltAXFUsuario.First();
             if (etAXFUsuarioForm != null)
@@ -113,7 +115,8 @@ namespace adminlte.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Index");
+                MensajeError = "Ocurrio un error al momento de guardar los datos.";
+                return RedirectToAction("AXFUsuarioEditar", "AXFUsuario", new { MensajeError = MensajeError });
             }
         }
     }

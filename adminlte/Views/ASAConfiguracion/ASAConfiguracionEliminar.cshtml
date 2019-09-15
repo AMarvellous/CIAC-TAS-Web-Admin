@@ -44,7 +44,9 @@
                     <h3 class="box-title">CIAC TAS</h3>
                 </div>
                 <!-- /.box-header -->
-
+                <div class="col-sm-12">
+                    @Html.ActionLink(" ", "ASAConfiguracionLista", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+                </div>
                 <!-- form start -->
                 @*<form role="form">*@
                 <div class="box-body">
@@ -66,8 +68,8 @@
 
 
                     @*<p>
-                        @Html.ActionLink(" ", "ASAConfiguracionLineaNuevo", new { SubCompania = Model.ltASAConfiguracion[0].SubCompania, Grupo = Model.ltASAConfiguracion[0].Grupo }, new { data_modal = "", @class = "glyphicon glyphicon-plus removeUlock", style = "font-size:20px;" })
-                    </p>*@
+                    @Html.ActionLink(" ", "ASAConfiguracionLineaNuevo", new { SubCompania = Model.ltASAConfiguracion[0].SubCompania, Grupo = Model.ltASAConfiguracion[0].Grupo }, new { data_modal = "", @class = "glyphicon glyphicon-plus removeUlock", style = "font-size:20px;" })
+                </p>*@
                     <br />
                     @grid.GetHtml(
                             tableStyle: "table table-bordered",
@@ -95,8 +97,8 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                        <button type="submit" class="btn btn-danger" >Eliminar</button>
-                    </div>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
                 @*</form>*@
             }
         </div>
