@@ -151,6 +151,12 @@
   <wsdl:message name="AXFUsuarioInterface_WebEncriptarClave_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebEncriptarClaveResponse" />
   </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXClaseUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXClaseUsuario" />
+  </wsdl:message>
+  <wsdl:message name="AXFUsuarioInterface_WebAXFUsuarioSeleccionarXClaseUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAXFUsuarioSeleccionarXClaseUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="AXFUsuarioInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebNuevo" message="tns:AXFUsuarioInterface_WebNuevo_InputMessage" />
@@ -247,6 +253,10 @@
     <wsdl:operation name="WebEncriptarClave">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave" message="tns:AXFUsuarioInterface_WebEncriptarClave_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClaveResponse" message="tns:AXFUsuarioInterface_WebEncriptarClave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarXClaseUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuario" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXClaseUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuarioResponse" message="tns:AXFUsuarioInterface_WebAXFUsuarioSeleccionarXClaseUsuario_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_AXFUsuarioInterface" type="tns:AXFUsuarioInterface">
@@ -460,6 +470,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebEncriptarClave">
       <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAXFUsuarioSeleccionarXClaseUsuario">
+      <soap:operation soapAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

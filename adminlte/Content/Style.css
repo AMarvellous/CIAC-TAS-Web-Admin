@@ -8,7 +8,7 @@
 .intro {
     width: 100%;
     height: 100%;
-    background: url("../Imagenes/avion.jpeg");
+    /*background: url("../Imagenes/avion.jpeg");*/
     background-size: cover;
     background-repeat: no-repeat;
     display: table;
@@ -48,7 +48,7 @@
     margin-left: 3.5vw;
     margin-top: 6vh;
     padding: 1% 1% 1% 10%;
-    background: url("../Imagenes/avion.jpeg");
+    /*background: url("../Imagenes/avion.jpeg");*/
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 20px;
@@ -63,7 +63,7 @@
     margin-left: 3.5vw;
     margin-top: 6vh;
     padding: 1% 1% 1% 10%;
-    background: url("../Imagenes/avion.jpeg");
+    /*background: url("../Imagenes/avion.jpeg");*/
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 20px;

@@ -18,7 +18,7 @@
                 @Html.Label("Cantidad Preguntas")
                 <div class="input-group">
                     <div class="input-group-addon">
-                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-list-ol"></i>
                     </div>
                     @Html.EditorFor(model => model.CantidadPregunta, new { htmlAttributes = new { @class = "form-control" , disabled = "disabled", @readonly = "readonly" } })
                     @Html.ValidationMessageFor(model => model.CantidadPregunta, "", new { @class = "text-danger" })

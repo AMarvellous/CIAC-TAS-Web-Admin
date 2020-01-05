@@ -925,6 +925,14 @@ namespace adminlte.AXFUsuarioService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClave", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebEncriptarClaveResponse")]
         System.Threading.Tasks.Task<string> WebEncriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuario", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuarioRespo" +
+            "nse")]
+        System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXClaseUsuario(string SubCompania, string ClaseUsuario, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuario", ReplyAction="http://tempuri.org/AXFUsuarioInterface/WebAXFUsuarioSeleccionarXClaseUsuarioRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXClaseUsuarioAsync(string SubCompania, string ClaseUsuario, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1144,6 +1152,14 @@ namespace adminlte.AXFUsuarioService {
         
         public System.Threading.Tasks.Task<string> WebEncriptarClaveAsync(string Clave, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEncriptarClaveAsync(Clave, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity> WebAXFUsuarioSeleccionarXClaseUsuario(string SubCompania, string ClaseUsuario, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarXClaseUsuario(SubCompania, ClaseUsuario, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.AXFUsuarioService.AXFUsuarioEntity>> WebAXFUsuarioSeleccionarXClaseUsuarioAsync(string SubCompania, string ClaseUsuario, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebAXFUsuarioSeleccionarXClaseUsuarioAsync(SubCompania, ClaseUsuario, strAKASesion, strAKASubCompania);
         }
     }
 }

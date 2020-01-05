@@ -427,6 +427,12 @@ namespace adminlte.ASATRespuestaService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolguraResp" +
             "onse")]
         System.Threading.Tasks.Task<bool> WebASATRespuestaExamenValidoHolguraAsync(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisualResponse")]
+        long WebGuardarEstadoVisual(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisualResponse")]
+        System.Threading.Tasks.Task<long> WebGuardarEstadoVisualAsync(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -630,6 +636,14 @@ namespace adminlte.ASATRespuestaService {
         
         public System.Threading.Tasks.Task<bool> WebASATRespuestaExamenValidoHolguraAsync(string Estudiante, string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASATRespuestaExamenValidoHolguraAsync(Estudiante, SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public long WebGuardarEstadoVisual(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebGuardarEstadoVisual(Estudiante, NroPregunta, Color, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<long> WebGuardarEstadoVisualAsync(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebGuardarEstadoVisualAsync(Estudiante, NroPregunta, Color, strAKASesion, strAKASubCompania);
         }
     }
 }

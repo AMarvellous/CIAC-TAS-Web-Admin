@@ -185,6 +185,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Classes\ASATransaccionReporteDetalle.cs" />
+    <Compile Include="Classes\ASATransaccionEstudiante.cs" />
+    <Compile Include="Classes\ASATransaccionReporte.cs" />
+    <Compile Include="Classes\RandomHelper.cs" />
     <Compile Include="Connected Services\ASAConfiguracionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -324,6 +328,12 @@
     <Compile Include="Models\ThumbnailModel.cs" />
     <Compile Include="Models\ThumbnailViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ASACuestionario\ASACuestionarioExamenReporteIndividual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ASACuestionarioExamenReporteIndividual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\ASACuestionario\ASACuestionarioGenerarExamen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -348,6 +358,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -941,6 +956,7 @@
     <Content Include="Global.asax" />
     <Content Include="iconoavion.ico" />
     <Content Include="Iconos\iconoavion.ico" />
+    <Content Include="Imagenes\avion.jpeg" />
     <Content Include="Imagenes\BannerTAS.jpeg" />
     <Content Include="Imagenes\BannerTASMisionVision.jpeg" />
     <Content Include="Imagenes\Gnome-stock_person_bureau.svg.png" />
@@ -4872,6 +4888,17 @@
     <Content Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsc">
       <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
     </Content>
+    <Content Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xsc">
+      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsASACuestionarioExamenReporteIndividual.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xss">
+      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
+    </Content>
     <None Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -4902,6 +4929,10 @@
     <Content Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xss">
       <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\ASACuestionario\ASACuestionarioListaASAEstudiante.cshtml" />
+    <Content Include="Views\ASACuestionario\ASATransaccionReporteDetalle.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioExamenReporteIndividual.cshtml" />
+    <Content Include="Views\ASACuestionario\ASACuestionarioListaASAEstudianteExamen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5050,6 +5081,10 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\ASACuestionario\ASACuestionarioExamenReporteIndividual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ASACuestionarioExamenReporteIndividual.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ASACuestionario\ASACuestionarioGenerarExamen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ASACuestionarioGenerarExamen.cs</LastGenOutput>

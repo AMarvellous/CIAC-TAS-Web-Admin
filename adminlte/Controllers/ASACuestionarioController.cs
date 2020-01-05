@@ -7,6 +7,7 @@ using adminlte.ASATReportePreguntaService;
 using adminlte.ASATRespuestaService;
 using adminlte.AXFSesionService;
 using adminlte.AXFUsuarioService;
+using adminlte.Classes;
 using adminlte.Models;
 using adminlte.TASEstudianteService;
 using adminlte.TASGrupoService;
@@ -26,6 +27,7 @@ namespace adminlte.Controllers
 {
     public class ASACuestionarioController : BaseController
     {
+        
         // GET: ASACuestionario
         public ActionResult ASACuestionarioInicio(string MensajeError = "")
         {
@@ -152,7 +154,8 @@ namespace adminlte.Controllers
                 ViewBag.ExisteASA = false;
                 //Si no existe ASA verificamos si existe formulario anterior para mandarlo directo al formulario de preguntas de examen o practica dependiendo de la hora y si existen respuestas
                 ASATRespuestaInterfaceClient ASATRespuesta = new ASATRespuestaInterfaceClient();
-                double CriterioXPregunta = 0.6;
+                //double CriterioXPregunta = 0.6;
+                double CriterioXPregunta = 1;
                 bool ExisteCuestionarioPrevio = ASATRespuesta.WebASATRespuestaExiste((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 if (ExisteCuestionarioPrevio)
                 {
@@ -160,7 +163,8 @@ namespace adminlte.Controllers
                     if (EsExamen)
                     {
                         //Verificamos si todavia es un examen valido dentro del tiempo establecido, sino cerramos examen
-                        long TiempoMaximo = 60;
+                        //long TiempoMaximo = 60;
+                        long TiempoMaximo = 100;
                         bool ExamenValido = ASATRespuesta.WebASATRespuestaSiCumpleHorarioExamen((string)Session["Usuario"], TiempoMaximo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                         if (ExamenValido)
                         {
@@ -195,6 +199,10 @@ namespace adminlte.Controllers
         public ActionResult ASACuestionarioInicio(string Cuestionario, List<string> GrupoPregunta, int PreguntaIni = 0, int PreguntaFin = 0)
         {
             string MensajeError = string.Empty;
+            string[] gruposASA = { "GENERAL", "AIRFRAME", "POWERPLANT" };
+            int[] rangoASAMax = { 537, 1565, 2571 };
+            int[] rangoASAMin = { 1, 538, 1566 };
+
             if (GrupoPregunta == null)
             {
                 GrupoPregunta = new List<string>();
@@ -204,20 +212,83 @@ namespace adminlte.Controllers
             {
                 return RedirectToAction(Cuestionario, "ASACuestionario");
             }
-            else if (Cuestionario == "ASACuestionarioEntrada" && PreguntaIni <= PreguntaFin)
+            else if (Cuestionario == "ASACuestionarioEntrada" && PreguntaIni <= PreguntaFin && PreguntaIni >= 0 && PreguntaIni <= 2572 && PreguntaFin >= 0 && PreguntaFin <= 2572)
             {
-                Session["GrupoPregunta"] = GrupoPregunta;
-                Session["PreguntaIni"] = PreguntaIni;
-                Session["PreguntaFin"] = PreguntaFin;
-                return RedirectToAction(Cuestionario, "ASACuestionario");
-            }
+                //Verificar que los rangos esten en los grupos establecidos
+                if (GrupoPregunta.Count > 0 && PreguntaIni != 0 && PreguntaFin != 0)
+                {
+                    bool cumpleConGrupos = false;
+                    foreach (var grupo in GrupoPregunta)
+                    {
+                        if (grupo == gruposASA[0])
+                        {
+                            if ((PreguntaIni >= rangoASAMin[0] && PreguntaIni <= rangoASAMax[0]) || (PreguntaFin >= rangoASAMin[0] && PreguntaFin <= rangoASAMax[0]))
+                            {
+                                cumpleConGrupos = true;
+                            }
+                            else
+                            {
+                                cumpleConGrupos = false;
+                                MensajeError += $" El rango de preguntas seleccionado no es aceptado en el grupo {gruposASA[0]} ";
+                                break;
+                            }
+                        }
+                        else if (grupo == gruposASA[1])
+                        {
+                            if ((PreguntaIni >= rangoASAMin[1] && PreguntaIni <= rangoASAMax[1]) || (PreguntaFin >= rangoASAMin[1] && PreguntaFin <= rangoASAMax[1]))
+                            {
+                                cumpleConGrupos = true;
+                            }
+                            else
+                            {
+                                cumpleConGrupos = false;
+                                MensajeError += $" El rango de preguntas seleccionado no es aceptado en el grupo {gruposASA[1]} ";
+                                break;
+                            }
+                        }
+                        else if (grupo == gruposASA[2])
+                        {
+                            if ((PreguntaIni >= rangoASAMin[2] && PreguntaIni <= rangoASAMax[2]) || (PreguntaFin >= rangoASAMin[2] && PreguntaFin <= rangoASAMax[2]))
+                            {
+                                cumpleConGrupos = true;
+                            }
+                            else
+                            {
+                                cumpleConGrupos = false;
+                                MensajeError += $" El rango de preguntas seleccionado no es aceptado en el grupo {gruposASA[2]} ";
+                                break;
+                            }
+                        }
+                    }
+
+                    if (cumpleConGrupos)
+                    {
+                        Session["GrupoPregunta"] = GrupoPregunta;
+                        Session["PreguntaIni"] = PreguntaIni;
+                        Session["PreguntaFin"] = PreguntaFin;
+                        return RedirectToAction(Cuestionario, "ASACuestionario");
+                    }
+                    else
+                    {
+                        return RedirectToAction("ASACuestionarioInicio", "ASACuestionario", new { MensajeError = MensajeError });
+                    }
+                }
+                else
+                {
+                    Session["GrupoPregunta"] = GrupoPregunta;
+                    Session["PreguntaIni"] = PreguntaIni;
+                    Session["PreguntaFin"] = PreguntaFin;
+                    return RedirectToAction(Cuestionario, "ASACuestionario");
+                }
+
+        }
             else
             {
                 if (PreguntaIni > PreguntaFin)
                 {
-                    MensajeError = "La pregunta inicial no puede ser mayor o a la pregunta final. ";
+                    MensajeError = " La pregunta inicial no puede ser mayor o a la pregunta final. ";
                 }
-                MensajeError += "Debe Seleccionar un cuestionario.";
+                MensajeError += " Debe Seleccionar un cuestionario. ";
                 return RedirectToAction("ASACuestionarioInicio", "ASACuestionario",new { MensajeError = MensajeError });
             }
 
@@ -238,7 +309,8 @@ namespace adminlte.Controllers
             Random Random = new Random();
             bool FiltrarPreguntasIniFin = false;
             int NumeroPreguntas = 100;
-            double CriterioXPregunta = 0.6;
+            //double CriterioXPregunta = 0.6;
+            double CriterioXPregunta = 1;
 
             if (PreguntaIni > 0)
             {
@@ -266,10 +338,14 @@ namespace adminlte.Controllers
                 if (SiCumpleHorario)
                 {
                     ltsetASAPregunta = ASAPregunta.WebASATRespuestaSeleccionarPreguntaXEstudiante((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-                    long TiempoMaximo = 60;
+                    //Desordenar preguntas
+                    ltsetASAPregunta.Shuffle();
+
+                    //long TiempoMaximo = 60;
+                    long TiempoMaximo = 100;
                     if (ltsetASAPregunta.Count == 100)
                     {
-                        TiempoMaximo = 60;
+                        TiempoMaximo = 100;
                     }
                     else
                     {
@@ -311,9 +387,9 @@ namespace adminlte.Controllers
                         var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                         if (RespGuardado == 0)
                         {
-                            ltASAPregunta = (from Pregunta in ltASAPregunta
-                                             orderby Pregunta.NroPregunta ascending
-                                             select Pregunta).ToList();
+                            //ltASAPregunta = (from Pregunta in ltASAPregunta
+                            //                 orderby Pregunta.NroPregunta ascending
+                            //                 select Pregunta).ToList();
                             foreach (ASAPreguntaEntity etASAPregunta in ltASAPregunta)
                             {
                                 ltsetASAPregunta.Add(ASAPregunta.WebSeleccionar(etASAPregunta.NroPregunta, (string)Session["Sesion"], (string)Session["SesionSubCompania"]));
@@ -323,7 +399,8 @@ namespace adminlte.Controllers
                             ViewBag.NumeroPreguntas = ltASAPregunta.Count;
                             if (ltASAPregunta.Count == 100)
                             {
-                                ViewBag.TiempoRestante = 60;
+                                //ViewBag.TiempoRestante = 60;
+                                ViewBag.TiempoRestante = 100;
                             }
                             else
                             {
@@ -358,13 +435,14 @@ namespace adminlte.Controllers
 
                 }
 
+                //ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(NumeroPreguntas).ToList();
                 ltASAPregunta = ltASAPregunta.OrderByDescending(x => Random.Next()).Take(NumeroPreguntas).ToList();
                 var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, false, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 if (RespGuardado == 0)
                 {
-                    ltASAPregunta = (from Pregunta in ltASAPregunta
-                                     orderby Pregunta.NroPregunta ascending
-                                     select Pregunta).ToList();
+                    //ltASAPregunta = (from Pregunta in ltASAPregunta
+                    //                 orderby Pregunta.NroPregunta ascending
+                    //                 select Pregunta).ToList();
                     foreach (ASAPreguntaEntity etASAPregunta in ltASAPregunta)
                     {
                         ltsetASAPregunta.Add(ASAPregunta.WebSeleccionar(etASAPregunta.NroPregunta, (string)Session["Sesion"], (string)Session["SesionSubCompania"]));
@@ -374,7 +452,8 @@ namespace adminlte.Controllers
                     ViewBag.NumeroPreguntas = ltASAPregunta.Count;
                     if (ltASAPregunta.Count == 100)
                     {
-                        ViewBag.TiempoRestante = 60;
+                        //ViewBag.TiempoRestante = 60;
+                        ViewBag.TiempoRestante = 100;
                     }
                     else
                     {
@@ -387,6 +466,14 @@ namespace adminlte.Controllers
             }
 
 
+            //Seleccionamos los marcados de Azul o Amarillo
+            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            
+            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase != "").ToList();
+
+            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion != 0).Count();
+            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion == 0).Count();
+            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase == "Amarillo").Count();
 
             // Tab Data
             ThumbnailViewModel model = new ThumbnailViewModel();
@@ -418,7 +505,7 @@ namespace adminlte.Controllers
 
             // batch your List data for tab view i want batch by 2 you can set your value
 
-            var listOfBatches = _detaisllist.Batch(1);
+            var listOfBatches = _detaisllist.Batch(10);
 
             int tabNo = 1;
 
@@ -545,8 +632,19 @@ namespace adminlte.Controllers
 
             }
 
-
-            return Json(new { success = true, url = Url.Action("Index", "Index") });
+            //obtenemos la ultima transaccion que deberia ser esta
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"],(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            ASATransaccionEntity etASATransaccion = ltASATransaccion.OrderByDescending(x => x.FechaDoc).FirstOrDefault();
+            if (etASATransaccion == null)
+            {
+                return Json(new { success = true, url = Url.Action("Index", "Index") });
+            }
+            else
+            {
+                return Json(new { success = true, url = Url.Action("ASACuestionarioGrafica", "ASACuestionario", new { Estudiante = etASATransaccion.EstudianteCI, Intento = etASATransaccion.Intento, EsEstudiante = true }) });
+            }
+            
         }
         [HttpGet]
         public ActionResult ASACuestionarioExamen()
@@ -564,7 +662,7 @@ namespace adminlte.Controllers
             Random Random = new Random();
             bool FiltrarPreguntasIniFin = false;
             int NumeroPreguntas = 100;
-            double CriterioXPregunta = 0.6;
+            double CriterioXPregunta = 1;
             bool ExisteASAConfig = false;
             DateTime dtFechaIniHolgura = DateTime.Today;
             DateTime dtFechaFinHolgura = DateTime.Today;
@@ -616,12 +714,12 @@ namespace adminlte.Controllers
             bool ExisteCuestionarioPrevio = ASATRespuesta.WebASATRespuestaExiste((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             if (ExisteCuestionarioPrevio)
             {                
-                long TiempoMaximo = 60;
+                long TiempoMaximo = 100;
                 bool SiCumpleHorario = ASATRespuesta.WebASATRespuestaSiCumpleHorarioExamen((string)Session["Usuario"], TiempoMaximo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 if (SiCumpleHorario)
                 {
                     ltsetASAPregunta = ASAPregunta.WebASATRespuestaSeleccionarPreguntaXEstudiante((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-
+                    ltsetASAPregunta.Shuffle();
                     ViewBag.NumeroPreguntas = ltsetASAPregunta.Count;
                     ViewBag.TiempoRestante = ASATRespuesta.WebASATRespuestaTiempoRestanteExamen((string)Session["Usuario"], TiempoMaximo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 }
@@ -650,9 +748,9 @@ namespace adminlte.Controllers
                         var RespGuardado = ASAPregunta.WebGuardarCuestionarioIni(ltASAPregunta, true, (string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                         if (RespGuardado == 0)
                         {
-                            ltASAPregunta = (from Pregunta in ltASAPregunta
-                                             orderby Pregunta.NroPregunta ascending
-                                             select Pregunta).ToList();
+                            //ltASAPregunta = (from Pregunta in ltASAPregunta
+                            //                 orderby Pregunta.NroPregunta ascending
+                            //                 select Pregunta).ToList();
                             foreach (ASAPreguntaEntity etASAPregunta in ltASAPregunta)
                             {
                                 ltsetASAPregunta.Add(ASAPregunta.WebSeleccionar(etASAPregunta.NroPregunta, (string)Session["Sesion"], (string)Session["SesionSubCompania"]));
@@ -660,7 +758,7 @@ namespace adminlte.Controllers
 
                             //Calculo en criterio al numero de preguntas
                             ViewBag.NumeroPreguntas = ltASAPregunta.Count;
-                            ViewBag.TiempoRestante = 60;
+                            ViewBag.TiempoRestante = ltASAPregunta.Count * CriterioXPregunta;
                             //double TotalMin = (FechaFin.AddHours(1) - dtHoraServidor).TotalMinutes;
                             //long Minutos = Convert.ToInt64(TotalMin);
                             //if (Minutos > 60)
@@ -685,6 +783,14 @@ namespace adminlte.Controllers
 
             }
 
+            //Seleccionamos los marcados de Azul o Amarillo
+            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+
+            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase != "").ToList();
+
+            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion != 0).Count();
+            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion == 0).Count();
+            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase == "Amarillo").Count();
 
 
             // Tab Data
@@ -717,7 +823,7 @@ namespace adminlte.Controllers
 
             // batch your List data for tab view i want batch by 2 you can set your value
 
-            var listOfBatches = _detaisllist.Batch(1);
+            var listOfBatches = _detaisllist.Batch(10);
 
             int tabNo = 1;
 
@@ -812,7 +918,18 @@ namespace adminlte.Controllers
             }
 
 
-            return Json(new { success = true, url = Url.Action("Index", "Index") });
+            //obtenemos la ultima transaccion que deberia ser esta
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            ASATransaccionEntity etASATransaccion = ltASATransaccion.OrderByDescending(x => x.FechaDoc).FirstOrDefault();
+            if (etASATransaccion == null)
+            {
+                return Json(new { success = true, url = Url.Action("Index", "Index") });
+            }
+            else
+            {
+                return Json(new { success = true, url = Url.Action("ASACuestionarioGrafica", "ASACuestionario", new { Estudiante = etASATransaccion.EstudianteCI, Intento = etASATransaccion.Intento, EsEstudiante = true }) });
+            }
         }
 
         [HttpGet]
@@ -1045,9 +1162,11 @@ namespace adminlte.Controllers
         }
 
         [HttpGet]
-        public ActionResult ASACuestionarioGrafica(string Estudiante = "")
+        public ActionResult ASACuestionarioListaASAEstudiante(bool EsEstudiante = false,string Estudiante="")
         {
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+
             if (Estudiante == "")
             {
                 Estudiante = (string)Session["Usuario"];
@@ -1055,9 +1174,29 @@ namespace adminlte.Controllers
             }
             else
             {
-                ViewBag.EsEstudiante = false;
+                ViewBag.EsEstudiante = EsEstudiante;
             }
 
+            ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).ToList();
+
+            var ltASATransaccionEstudiante = (from item in ltASATransaccion
+                        group item by item.Intento into g
+                        select new ASATransaccionEstudiante {
+                            EstudianteCI = Estudiante,
+                            Intento = g.Key,
+                            Fecha = g.First().FechaDoc,
+                            Examen = g.First().Examen
+                        }).ToList();
+
+            return View(ltASATransaccionEstudiante);
+        }
+
+        [HttpGet]
+        public ActionResult ASACuestionarioGrafica(string Estudiante, long Intento, bool EsEstudiante)
+        {
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            ViewBag.EsEstudiante = EsEstudiante;
+            ViewBag.Estudiante = Estudiante;
             List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
             //var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => g.Intento).ToList();
@@ -1089,7 +1228,7 @@ namespace adminlte.Controllers
             //    }).ToList();
 
             //QUERY PARA EL DETALLE
-            var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante)
+            var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Intento == Intento)
                 .GroupBy(g => g.Intento)
                 .Select(s => s.GroupBy(g => g.GrupoPregunta).Select(s2 => s2.ToList()).ToList()).ToList();
 
@@ -1104,7 +1243,7 @@ namespace adminlte.Controllers
             AXFUsuarioInterfaceClient AXFUsuario = new AXFUsuarioInterfaceClient();
             List<AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuario = AXFUsuario.WebAXFUsuarioClaseUsuarioSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             ltAXFUsuarioClaseUsuario = ltAXFUsuarioClaseUsuario.Where(x => x.ClaseUsuario == "Estudiante").ToList();
-            List<AXFUsuarioEntity> ltAXFUsuario  = AXFUsuario.WebAXFUsuarioSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            //List<AXFUsuarioEntity> ltAXFUsuario  = AXFUsuario.WebAXFUsuarioSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             var ltUsuarios = ltAXFUsuarioClaseUsuario.Select(x => x.Usuario).ToList();
             //var ltAXFUsuarioEstudiante = ltAXFUsuario.Where(x => ltUsuarios.Any(user => user == x.Usuario)).Select();
             ViewBag.ltAXFUsuarioClaseUsuario = ltUsuarios;
@@ -1117,7 +1256,7 @@ namespace adminlte.Controllers
             string MensajeError = string.Empty;
             if (Estudiante != "")
             {
-                return RedirectToAction("ASACuestionarioGrafica", "ASACuestionario", new { Estudiante = Estudiante });
+                return RedirectToAction("ASACuestionarioListaASAEstudiante", "ASACuestionario", new { Estudiante = Estudiante , EsEstudiante = false });
             }
             else
             {
@@ -1494,13 +1633,68 @@ namespace adminlte.Controllers
 
         }
         [HttpGet]
-        public ActionResult ASACuestionarioDetalleTransaccion(string EstudianteCI, long Intento)
+        public ActionResult ASACuestionarioDetalleTransaccion(string EstudianteCI, long Intento, bool EsEstudiante)
         {
+            //Obtener las respuestas de este examne/practica
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
             List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-            ltASATransaccion = ltASATransaccion.Where(x => x.Intento == Intento && x.EstudianteCI == EstudianteCI).ToList();
+            ltASATransaccion = ltASATransaccion.Where(x => x.Intento == Intento && x.EstudianteCI == EstudianteCI && x.Correcto == false).ToList();
+            //Ahora seleccionamos las preguntas de esta transaccion
+            List<ASATransaccionReporte> ltASATransaccionReporte = new List<ASATransaccionReporte>();
+            ASAPreguntaInterfaceClient ASAPregunta = new ASAPreguntaInterfaceClient();
 
-            return PartialView(ltASATransaccion);
+            foreach (ASATransaccionEntity etASATransaccion in ltASATransaccion)
+            {
+                ASAPreguntaSet setASAPregunta = ASAPregunta.WebSeleccionar(etASATransaccion.NroPregunta, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                ASATransaccionReporte etASATransaccionReporte = new ASATransaccionReporte();
+                etASATransaccionReporte.EstudianteCI = etASATransaccion.EstudianteCI;
+                etASATransaccionReporte.Intento = etASATransaccion.Intento;
+                etASATransaccionReporte.NroPregunta = etASATransaccion.NroPregunta;
+                etASATransaccionReporte.Opcion = etASATransaccion.Opcion;
+                etASATransaccionReporte.FechaDoc = etASATransaccion.FechaDoc;
+                etASATransaccionReporte.GrupoPregunta = etASATransaccion.GrupoPregunta;
+                etASATransaccionReporte.Examen = etASATransaccion.Examen;
+
+                etASATransaccionReporte.PreguntaEnunciado = setASAPregunta.ltASAPregunta.First().Pregunta;
+                //List<ASATransaccionReporteDetalle> ltASATransaccionReporteDetalle = new List<ASATransaccionReporteDetalle>();
+                //foreach (ASAPreguntaRespuestaEntity etASAPreguntaRespuesta in setASAPregunta.ltASAPreguntaRespuesta)
+                //{
+                //    ltASATransaccionReporteDetalle.Add(new ASATransaccionReporteDetalle {
+                //        etASAPreguntaRespuesta = etASAPreguntaRespuesta
+                //    });
+                //}
+                //etASATransaccionReporte.ltASATransaccionReporteDetalle = ltASATransaccionReporteDetalle;
+
+                ltASATransaccionReporte.Add(etASATransaccionReporte);
+            }
+
+            ViewBag.EsEstudiante = EsEstudiante;
+            ViewBag.Estudiante = EstudianteCI;
+            ViewBag.Intento = Intento;
+
+            return View(ltASATransaccionReporte);
+        }
+
+        public ActionResult ASATransaccionReporteDetalle(string EstudianteCI, long Intento, long NroPregunta, string OpcionUsuario)
+        {
+            ASAPreguntaInterfaceClient ASAPregunta = new ASAPreguntaInterfaceClient();
+            List<ASATransaccionReporteDetalle> ltASATransaccionReporteDetalle = new List<ASATransaccionReporteDetalle>();
+
+            ASAPreguntaSet setASAPregunta = ASAPregunta.WebSeleccionar(NroPregunta, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            foreach (ASAPreguntaRespuestaEntity etASAPreguntaRespuesta in setASAPregunta.ltASAPreguntaRespuesta)
+            {
+                ltASATransaccionReporteDetalle.Add(new ASATransaccionReporteDetalle
+                {
+                    NroPregunta = etASAPreguntaRespuesta.NroPregunta,
+                    Opcion = etASAPreguntaRespuesta.Opcion,
+                    Respuesta = etASAPreguntaRespuesta.Respuesta,
+                    Correcto = etASAPreguntaRespuesta.Correcto,
+                    TipoPregunta = etASAPreguntaRespuesta.TipoPregunta,
+                    OpcionUsuario = long.Parse(OpcionUsuario)
+                });
+            }            
+
+            return PartialView(ltASATransaccionReporteDetalle);
         }
         [HttpGet]
         public ActionResult ASACuestionarioGenerarExamen(string MensajeError = "")
@@ -1797,5 +1991,170 @@ namespace adminlte.Controllers
             return Nombre;
 
         }
+
+
+        public JsonResult ActualizarEstadoVisualRespuesta(long NroPregunta, string Color)
+        {
+            ASATRespuestaInterfaceClient ASATRespuesta = new ASATRespuestaInterfaceClient();
+            AXFSesionInterfaceClient AXFSesion = new AXFSesionInterfaceClient();
+            long NumError = 0;
+            if (Color != null)
+            {
+                //Guardamos el Color
+                string Estudiante = (string)Session["Usuario"];
+                NumError = ASATRespuesta.WebGuardarEstadoVisual(Estudiante, NroPregunta, Color, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+
+            }
+
+            return Json(new { success = true });
+        }
+
+
+        public ActionResult ASACuestionarioExamenReporteIndividual(string MensajeError = "", long Aux = 0)
+        {
+            AXFUsuarioInterfaceClient AXFUsuario = new AXFUsuarioInterfaceClient();
+            List<AXFUsuarioEntity> ltAXFUsuario = AXFUsuario.WebAXFUsuarioSeleccionarXClaseUsuario((string)Session["SesionSubCompania"], "Estudiante",(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            //ltAXFUsuarioClaseUsuario = ltAXFUsuarioClaseUsuario.Where(x => x.ClaseUsuario == "Estudiante").ToList();
+            //List<AXFUsuarioEntity> ltAXFUsuario  = AXFUsuario.WebAXFUsuarioSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            //var ltUsuarios = ltAXFUsuarioClaseUsuario.Select(x => x.Usuario).ToList();
+            //var ltAXFUsuarioEstudiante = ltAXFUsuario.Where(x => ltUsuarios.Any(user => user == x.Usuario)).Select();
+            ltAXFUsuario = (from s in ltAXFUsuario
+                            select new AXFUsuarioEntity
+                            {
+                                Nombre = s.Nombre + "-" + s.Usuario,
+                                Usuario = s.Usuario
+                            }).ToList();
+
+            ViewBag.ltAXFUsuario = ltAXFUsuario;
+            ViewBag.MensajeError = MensajeError;
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ASACuestionarioExamenReporteIndividual(string Estudiante)
+        {
+            string MensajeError = string.Empty;
+            if (Estudiante != "")
+            {
+                return RedirectToAction("ASACuestionarioListaASAEstudianteExamen", "ASACuestionario", new { Estudiante = Estudiante });
+            }
+            else
+            {
+                MensajeError = "Debe seleccionar un Estudiante";
+                return RedirectToAction("ASACuestionarioExamenReporteIndividual", "ASACuestionario", new { MensajeError = MensajeError });
+            }
+        }
+
+        [HttpGet]
+        public ActionResult ASACuestionarioListaASAEstudianteExamen( string Estudiante = "")
+        {
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+
+            ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).ToList();
+
+            var ltASATransaccionEstudiante = (from item in ltASATransaccion
+                                              where item.Examen = true
+                                              group item by item.Intento into g                                              
+                                              select new ASATransaccionEstudiante
+                                              {
+                                                  EstudianteCI = Estudiante,
+                                                  Intento = g.Key,
+                                                  Fecha = g.First().FechaDoc,
+                                                  Examen = g.First().Examen
+                                              }).ToList();
+
+            return View(ltASATransaccionEstudiante);
+        }
+
+        public ActionResult ASACuestionarioExamenReporteIndividualDescargar(string Estudiante, long Intento)
+        {
+            long NumError = 0;
+            string MapPath = "";
+            string FileDownloadName = "";
+            CrystalDecisions.Shared.ExportFormatType ExportFormat = CrystalDecisions.Shared.ExportFormatType.PortableDocFormat;
+            string ContentType = string.Empty;
+            ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
+
+            MapPath = "~/Reports/ASACuestionario/ASACuestionarioExamenReporteIndividual.rpt";
+            FileDownloadName = "ASAExamen_" + Estudiante + "_" + DateTime.Now + ".pdf";
+            ExportFormat = CrystalDecisions.Shared.ExportFormatType.PortableDocFormat;
+            ContentType = "application/pdf";
+
+
+            try
+            {
+                ReportDocument report = new ReportDocument();
+                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Intento == Intento).ToList();
+                string NombreEstudiante = ObtenerNombreEstudiante(Estudiante);
+                ltASATransaccion = ltASATransaccion.Select(s => { s.Texto1 = NombreEstudiante; return s; }).ToList();
+                //ltASATReporteExamenEstudiante = ltASATransaccion
+                //    .GroupBy(g => g.EstudianteCI)
+                //    .Select(s => new ASATReporteExamenEstudianteEntity
+                //    {
+                //        Grupo = Grupo,
+                //        EstudianteCI = s.First().EstudianteCI,
+                //        EstudianteNombre = ObtenerNombreEstudiante(s.First().EstudianteCI),
+                //        Correcto = s.Where(x => x.Correcto == true).Count(),
+                //        TotalPreguntas = s.Count(),
+                //        Nota = (s.Where(x => x.Correcto == true).Count() * 100) / s.Count(),
+                //        Porcentaje = (s.Where(x => x.Correcto == true).Count() * 100) / s.Count()
+                //    }).ToList();
+
+                report.Load(Server.MapPath(MapPath));
+                report.SetDataSource(ltASATransaccion);
+                //report.SetDataSource();
+                Response.Buffer = false;
+                Response.ClearContent();
+                Response.ClearHeaders();
+
+                //Stream stream = report.ExportToStream(CrystalDecisions.Shared.ExportFormatType.ExcelRecord);
+                Stream stream = report.ExportToStream(ExportFormat);
+                stream.Seek(0, SeekOrigin.Begin);
+                //GetDowndoaldFile(stream);
+
+                if (NumError == 0)
+                {
+                    return File(stream, ContentType, FileDownloadName);
+                }
+                else
+                {
+                    return RedirectToAction("ASACuestionarioExamenReporteIndividual");
+                }
+
+
+
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("ASACuestionarioExamenReporteIndividual");
+            }
+        }
+
+        public JsonResult GetTiempoRestante()
+        {
+            ASATRespuestaInterfaceClient ASATRespuesta = new ASATRespuestaInterfaceClient();
+            AXFSesionInterfaceClient AXFSesion = new AXFSesionInterfaceClient();
+            long TiempoRestante = 0;
+            long TiempoMaximo = 100;
+
+            TiempoRestante = ASATRespuesta.WebASATRespuestaTiempoRestanteExamen((string)Session["Usuario"], TiempoMaximo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            
+            return Json(new { success = true, TiempoRestante = TiempoRestante }, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult GetTiempoRestantePractica(long TiempoMaximo)
+        {
+            ASATRespuestaInterfaceClient ASATRespuesta = new ASATRespuestaInterfaceClient();
+            AXFSesionInterfaceClient AXFSesion = new AXFSesionInterfaceClient();
+            long TiempoRestante = 0;
+            //long TiempoMaximo = 100;
+
+            TiempoRestante = ASATRespuesta.WebASATRespuestaTiempoRestante((string)Session["Usuario"], TiempoMaximo, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            
+            return Json(new { success = true, TiempoRestante = TiempoRestante }, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

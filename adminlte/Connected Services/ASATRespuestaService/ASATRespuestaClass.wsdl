@@ -139,6 +139,12 @@
   <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATRespuestaExamenValidoHolguraResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardarEstadoVisual_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarEstadoVisual" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebGuardarEstadoVisual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarEstadoVisualResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATRespuestaInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevo" message="tns:ASATRespuestaInterface_WebNuevo_InputMessage" />
@@ -227,6 +233,10 @@
     <wsdl:operation name="WebASATRespuestaExamenValidoHolgura">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura" message="tns:ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolguraResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaExamenValidoHolgura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarEstadoVisual">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual" message="tns:ASATRespuestaInterface_WebGuardarEstadoVisual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisualResponse" message="tns:ASATRespuestaInterface_WebGuardarEstadoVisual_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATRespuestaInterface" type="tns:ASATRespuestaInterface">
@@ -422,6 +432,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebASATRespuestaExamenValidoHolgura">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaExamenValidoHolgura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardarEstadoVisual">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

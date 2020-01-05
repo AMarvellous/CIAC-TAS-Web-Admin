@@ -396,4 +396,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarXClaseUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClaseUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebAXFUsuarioSeleccionarXClaseUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebAXFUsuarioSeleccionarXClaseUsuarioResult" nillable="true" type="q19:ArrayOfAXFUsuarioEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

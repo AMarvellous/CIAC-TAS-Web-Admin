@@ -25,15 +25,6 @@
             <div id="msjContainer"></div>
             <div class="box-header with-border">
                 <h3 class="box-title">Cuestionario</h3>
-                <div class="box-tools pull-right">
-                    @*<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                        title="Collapse">
-                    <i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                        <i class="fa fa-times"></i>
-                    </button>*@
-                </div>
             </div>
             <div class="box-body">
                 <form action="@Url.Action("ASACuestionarioInicio","ASACuestionario")" method="post">
@@ -44,10 +35,9 @@
                     @if (!ViewBag.ExisteASA)
                     {
                         @Html.Label("Grupos")
-                    <div class="col-xs-12 text-center form-group">
-                        @*@Html.DropDownList("GrupoPregunta", new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable), new { @class = "form-control select2", @multiple = "multiple", @placeholder = "Seleccione los Grupos" })*@
-                        @Html.DropDownList("GrupoPregunta", (SelectList)@ViewBag.ltASAGrupoPregunta, "Seleccione los Grupos", new { @class = "form-control select2", @multiple = "multiple" })
-                    </div>
+                        <div class="col-xs-12 text-center form-group">                            
+                            @Html.DropDownList("GrupoPregunta", (SelectList)@ViewBag.ltASAGrupoPregunta, "Seleccione los Grupos", new { @class = "form-control select2", @multiple = "multiple" })
+                        </div>
 
                         <div class="form-group">
                             @Html.Label("Inicio de Pregunta")
@@ -71,6 +61,10 @@
                             <!-- /.input group -->
                         </div>
 
+                        <div class="col-xs-12 form-group">
+                            <p class="bg-info">GENERAL 1 - 537 | AIRFRAME 538 - 1565 | POWERPLANT 1566 - 2571</p>
+                        </div>
+
                     }
 
 
@@ -80,22 +74,13 @@
                 </form>
             </div>
             <!-- /.box-body -->
-            <div class="box-footer">
-
-            </div>
-            <!-- /.box-footer-->
+            
         </div>
         <!-- /.box -->
     </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<!-- jQuery 3 -->
-<script src="~/Scripts/adminlte/components/jquery/dist/jquery.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script src="~/Scripts/adminlte/js/adminlte.min.js"></script>
 
 
 @section Scripts
