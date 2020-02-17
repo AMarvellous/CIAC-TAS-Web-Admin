@@ -1,0 +1,9 @@
+[Fecha]: 19/1/2020 20:34:56[Tipo]Exception [Excepcion/Evento]: The view 'TASMaterialDidacticoEditarMaterial' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASMaterialDidactico/TASMaterialDidacticoEditarMaterial.aspx
+~/Views/TASMaterialDidactico/TASMaterialDidacticoEditarMaterial.ascx
+~/Views/Shared/TASMaterialDidacticoEditarMaterial.aspx
+~/Views/Shared/TASMaterialDidacticoEditarMaterial.ascx
+~/Views/TASMaterialDidactico/TASMaterialDidacticoEditarMaterial.cshtml
+~/Views/TASMaterialDidactico/TASMaterialDidacticoEditarMaterial.vbhtml
+~/Views/Shared/TASMaterialDidacticoEditarMaterial.cshtml
+~/Views/Shared/TASMaterialDidacticoEditarMaterial.vbhtml [Clase]: TASMaterialDidactico [Action]: TASMaterialDidacticoEditarMaterial

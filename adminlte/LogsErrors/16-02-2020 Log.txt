@@ -1,0 +1,1 @@
+[Fecha]: 16/2/2020 18:28:15[Tipo]Exception [Excepcion/Evento]: Column "Gestion" does not exist. [Clase]: TASAsistenciaEstudiante [Action]: TASAsistenciaEstudiantePDFLista

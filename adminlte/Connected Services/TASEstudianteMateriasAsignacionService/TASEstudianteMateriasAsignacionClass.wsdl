@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASEstudianteMateriasAsignacionClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteMateriasAsignacionSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASEstudianteMateriasAsignacionInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebNuevo" message="tns:TASEstudianteMateriasAsignacionInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebNuevoResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebGuardar" message="tns:TASEstudianteMateriasAsignacionInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebGuardarResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminar" message="tns:TASEstudianteMateriasAsignacionInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminarResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminarDetalle" message="tns:TASEstudianteMateriasAsignacionInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminarDetalleResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebSeleccionar" message="tns:TASEstudianteMateriasAsignacionInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebSeleccionarResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebRecalcular" message="tns:TASEstudianteMateriasAsignacionInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebRecalcularResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionBloquear" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionBloquearResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionDesbloquear" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionDesbloquearResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueadoPor" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueadoPorResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueado" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueadoResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarTodo" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarTodoResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionar" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarXSubCompaniaResponse" message="tns:TASEstudianteMateriasAsignacionInterface_WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASEstudianteMateriasAsignacionInterface" type="tns:TASEstudianteMateriasAsignacionInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteMateriasAsignacionInterface/WebTASEstudianteMateriasAsignacionSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASEstudianteMateriasAsignacionClass">
+    <wsdl:port name="BasicHttpBinding_TASEstudianteMateriasAsignacionInterface" binding="tns:BasicHttpBinding_TASEstudianteMateriasAsignacionInterface">
+      <soap:address location="http://alejandroasus:8901/TASEstudianteMateriasAsignacion" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

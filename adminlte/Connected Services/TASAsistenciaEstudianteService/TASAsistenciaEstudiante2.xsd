@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TASAsistenciaEstudianteSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudiante" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteEntity" />
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudianteEliminado" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteEntity" />
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudianteFecha" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaEntity" />
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudianteFechaEliminado" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaEntity" />
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudianteFechaLinea" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaLineaEntity" />
+      <xs:element minOccurs="0" name="ltTASAsistenciaEstudianteFechaLineaEliminado" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaLineaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASAsistenciaEstudianteSet" nillable="true" type="tns:TASAsistenciaEstudianteSet" />
+  <xs:complexType name="ArrayOfTASAsistenciaEstudianteEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASAsistenciaEstudianteEntity" nillable="true" type="tns:TASAsistenciaEstudianteEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASAsistenciaEstudianteEntity" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteEntity" />
+  <xs:complexType name="TASAsistenciaEstudianteEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decimal1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Decimal2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Entero1" type="xs:long" />
+      <xs:element minOccurs="0" name="Entero2" type="xs:long" />
+      <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstructorNroLicencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuloMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Programa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="USel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASAsistenciaEstudianteEntity" nillable="true" type="tns:TASAsistenciaEstudianteEntity" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Added" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="ArrayOfTASAsistenciaEstudianteFechaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASAsistenciaEstudianteFechaEntity" nillable="true" type="tns:TASAsistenciaEstudianteFechaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASAsistenciaEstudianteFechaEntity" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaEntity" />
+  <xs:complexType name="TASAsistenciaEstudianteFechaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuloMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotaFecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Programa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASAsistenciaEstudianteFechaEntity" nillable="true" type="tns:TASAsistenciaEstudianteFechaEntity" />
+  <xs:complexType name="ArrayOfTASAsistenciaEstudianteFechaLineaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASAsistenciaEstudianteFechaLineaEntity" nillable="true" type="tns:TASAsistenciaEstudianteFechaLineaEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASAsistenciaEstudianteFechaLineaEntity" nillable="true" type="tns:ArrayOfTASAsistenciaEstudianteFechaLineaEntity" />
+  <xs:complexType name="TASAsistenciaEstudianteFechaLineaEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstudianteCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea" type="xs:long" />
+      <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuloMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstudiante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Programa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoAsistencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASAsistenciaEstudianteFechaLineaEntity" nillable="true" type="tns:TASAsistenciaEstudianteFechaLineaEntity" />
+</xs:schema>

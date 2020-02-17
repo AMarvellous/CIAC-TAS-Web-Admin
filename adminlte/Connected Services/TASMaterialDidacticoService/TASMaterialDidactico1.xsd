@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebObjetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebObjetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TASMaterialDidacticoSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ltTASMaterialDidactico" nillable="true" type="tns:ArrayOfTASMaterialDidacticoEntity" />
+      <xs:element minOccurs="0" name="ltTASMaterialDidacticoEliminado" nillable="true" type="tns:ArrayOfTASMaterialDidacticoEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASMaterialDidacticoSet" nillable="true" type="tns:TASMaterialDidacticoSet" />
+  <xs:complexType name="ArrayOfTASMaterialDidacticoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TASMaterialDidacticoEntity" nillable="true" type="tns:TASMaterialDidacticoEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTASMaterialDidacticoEntity" nillable="true" type="tns:ArrayOfTASMaterialDidacticoEntity" />
+  <xs:complexType name="TASMaterialDidacticoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivo1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo11" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo12" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo13" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo14" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo15" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo16" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo17" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo18" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo19" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo20" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo21" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo22" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo23" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo24" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo25" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo26" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo27" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo28" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo29" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo30" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Archivo9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decimal1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Decimal2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Entero1" type="xs:long" />
+      <xs:element minOccurs="0" name="Entero2" type="xs:long" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaDoc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Gestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstructorNroLicencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuloMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Programa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Texto4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UClase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UEstado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="USel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TASMaterialDidacticoEntity" nillable="true" type="tns:TASMaterialDidacticoEntity" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Added" />
+      <xs:enumeration value="Unchanged" />
+      <xs:enumeration value="Modified" />
+      <xs:enumeration value="Deleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+</xs:schema>

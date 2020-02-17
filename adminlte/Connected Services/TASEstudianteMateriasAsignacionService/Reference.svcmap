@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6567e3d5-c552-4acf-90e4-5669675efa33" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASEstudianteMateriasAsignacion" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASEstudianteMateriasAsignacionClass.wsdl" MetadataType="Wsdl" ID="fcb47029-386d-4015-845e-3efc8f93c55c" SourceId="1" SourceUrl="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?wsdl" />
+    <MetadataFile FileName="TASEstudianteMateriasAsignacion.xsd" MetadataType="Schema" ID="82654c6f-dec1-42f9-844b-a0d15c9dcace" SourceId="1" SourceUrl="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd0" />
+    <MetadataFile FileName="TASEstudianteMateriasAsignacion1.xsd" MetadataType="Schema" ID="13c70fcf-8042-4146-82f0-2197cd11a9c2" SourceId="1" SourceUrl="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd1" />
+    <MetadataFile FileName="TASEstudianteMateriasAsignacion.disco" MetadataType="Disco" ID="bea315b3-c5d3-46e9-82ce-239934417e4d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?disco" />
+    <MetadataFile FileName="TASEstudianteMateriasAsignacion2.xsd" MetadataType="Schema" ID="10285466-d643-478f-8ca2-a51e29ec654b" SourceId="1" SourceUrl="http://alejandroasus:8901/TASEstudianteMateriasAsignacion?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

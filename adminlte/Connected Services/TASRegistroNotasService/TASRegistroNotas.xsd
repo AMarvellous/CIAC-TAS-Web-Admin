@@ -312,4 +312,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteResult" nillable="true" type="q15:ArrayOfTASRegistroNotasEstudianteEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

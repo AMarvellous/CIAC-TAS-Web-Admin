@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TASAsistenciaEstudianteSet" targetNamespace="http://tempuri.org/TASAsistenciaEstudianteSet.xsd" xmlns:mstns="http://tempuri.org/TASAsistenciaEstudianteSet.xsd" xmlns="http://tempuri.org/TASAsistenciaEstudianteSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PROSIANAdministrador2018ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PROSIANAdministrador2018ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PROSIANAdministrador2018ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TASAsistenciaEstudianteSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TASAsistenciaEstudianteSet" msprop:Generator_UserDSName="TASAsistenciaEstudianteSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TASAsistenciaEstudianteFechaLinea" msprop:Generator_TableClassName="TASAsistenciaEstudianteFechaLineaDataTable" msprop:Generator_TableVarName="tableTASAsistenciaEstudianteFechaLinea" msprop:Generator_TablePropName="TASAsistenciaEstudianteFechaLinea" msprop:Generator_RowDeletingName="TASAsistenciaEstudianteFechaLineaRowDeleting" msprop:Generator_RowChangingName="TASAsistenciaEstudianteFechaLineaRowChanging" msprop:Generator_RowEvHandlerName="TASAsistenciaEstudianteFechaLineaRowChangeEventHandler" msprop:Generator_RowDeletedName="TASAsistenciaEstudianteFechaLineaRowDeleted" msprop:Generator_UserTableName="TASAsistenciaEstudianteFechaLinea" msprop:Generator_RowChangedName="TASAsistenciaEstudianteFechaLineaRowChanged" msprop:Generator_RowEvArgName="TASAsistenciaEstudianteFechaLineaRowChangeEvent" msprop:Generator_RowClassName="TASAsistenciaEstudianteFechaLineaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SubCompania" msprop:Generator_ColumnVarNameInTable="columnSubCompania" msprop:Generator_ColumnPropNameInRow="SubCompania" msprop:Generator_ColumnPropNameInTable="SubCompaniaColumn" msprop:Generator_UserColumnName="SubCompania">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Programa" msprop:Generator_ColumnVarNameInTable="columnPrograma" msprop:Generator_ColumnPropNameInRow="Programa" msprop:Generator_ColumnPropNameInTable="ProgramaColumn" msprop:Generator_UserColumnName="Programa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grupo" msprop:Generator_ColumnVarNameInTable="columnGrupo" msprop:Generator_ColumnPropNameInRow="Grupo" msprop:Generator_ColumnPropNameInTable="GrupoColumn" msprop:Generator_UserColumnName="Grupo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Materia" msprop:Generator_ColumnVarNameInTable="columnMateria" msprop:Generator_ColumnPropNameInRow="Materia" msprop:Generator_ColumnPropNameInTable="MateriaColumn" msprop:Generator_UserColumnName="Materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModuloMateria" msprop:Generator_ColumnVarNameInTable="columnModuloMateria" msprop:Generator_ColumnPropNameInRow="ModuloMateria" msprop:Generator_ColumnPropNameInTable="ModuloMateriaColumn" msprop:Generator_UserColumnName="ModuloMateria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="Linea" msprop:Generator_ColumnVarNameInTable="columnLinea" msprop:Generator_ColumnPropNameInRow="Linea" msprop:Generator_ColumnPropNameInTable="LineaColumn" msprop:Generator_UserColumnName="Linea" type="xs:long" />
+              <xs:element name="EstudianteCI" msprop:Generator_ColumnVarNameInTable="columnEstudianteCI" msprop:Generator_ColumnPropNameInRow="EstudianteCI" msprop:Generator_ColumnPropNameInTable="EstudianteCIColumn" msprop:Generator_UserColumnName="EstudianteCI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreEstudiante" msprop:Generator_ColumnVarNameInTable="columnNombreEstudiante" msprop:Generator_ColumnPropNameInRow="NombreEstudiante" msprop:Generator_ColumnPropNameInTable="NombreEstudianteColumn" msprop:Generator_UserColumnName="NombreEstudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoAsistencia" msprop:Generator_ColumnVarNameInTable="columnTipoAsistencia" msprop:Generator_ColumnPropNameInRow="TipoAsistencia" msprop:Generator_ColumnPropNameInTable="TipoAsistenciaColumn" msprop:Generator_UserColumnName="TipoAsistencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nota" msprop:Generator_ColumnVarNameInTable="columnNota" msprop:Generator_ColumnPropNameInRow="Nota" msprop:Generator_ColumnPropNameInTable="NotaColumn" msprop:Generator_UserColumnName="Nota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TASAsistenciaEstudianteFechaLinea" />
+      <xs:field xpath="mstns:SubCompania" />
+      <xs:field xpath="mstns:Programa" />
+      <xs:field xpath="mstns:Grupo" />
+      <xs:field xpath="mstns:Materia" />
+      <xs:field xpath="mstns:ModuloMateria" />
+      <xs:field xpath="mstns:Fecha" />
+      <xs:field xpath="mstns:Linea" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

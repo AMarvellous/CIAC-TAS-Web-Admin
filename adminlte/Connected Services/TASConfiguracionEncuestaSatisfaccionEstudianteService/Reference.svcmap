@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da9cd901-207c-4e58-b948-3ea79fa331d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASConfiguracionEncuestaSatisfaccionEstudiante.disco" MetadataType="Disco" ID="fa319af4-bb77-45c4-be1f-ff3df31f139d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante?disco" />
+    <MetadataFile FileName="TASConfiguracionEncuestaSatisfaccionEstudiante.xsd" MetadataType="Schema" ID="17a77d36-3d94-4115-b00e-94ed70b2da0c" SourceId="1" SourceUrl="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante?xsd=xsd2" />
+    <MetadataFile FileName="TASConfiguracionEncuestaSatisfaccionEstudiante1.xsd" MetadataType="Schema" ID="f3e4f2be-6df7-4721-bba9-d9ac5d81375b" SourceId="1" SourceUrl="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante?xsd=xsd1" />
+    <MetadataFile FileName="TASConfiguracionEncuestaSatisfaccionEstudiante2.xsd" MetadataType="Schema" ID="41681ffa-4f2d-4fd8-aee5-7d619c92aea2" SourceId="1" SourceUrl="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante?xsd=xsd0" />
+    <MetadataFile FileName="TASConfiguracionEncuestaSatisfaccionEstudianteClass.wsdl" MetadataType="Wsdl" ID="41abe72d-aa4d-4094-988f-7bc81d52dc0f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionEstudiante?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -2,6 +2,7 @@
 using adminlte.AXFUsuarioService;
 using adminlte.AXFWebMenuService;
 using adminlte.AXFWebVistaService;
+using adminlte.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -96,7 +97,7 @@ namespace adminlte.Controllers
                 filterContext.RouteData.Values["action"].ToString()));
 
             //Guardamos Excepcion
-            //UtilMesaAyudaClass.GuardarLogExcepcion(filterContext.RouteData.Values["controller"].ToString(), filterContext.RouteData.Values["action"].ToString(), exception.Message, "Exception");
+            HelperLogClass.GuardarLogExcepcion(filterContext.RouteData.Values["controller"].ToString(), filterContext.RouteData.Values["action"].ToString(), exception.Message, "Exception");
             //UtilMesaAyudaClass.GuardarLogExcepcion(filterContext.RouteData.Values["controller"].ToString(), filterContext.RouteData.Values["action"].ToString(), exception.StackTrace, "Exception");
 
             filterContext.Result = Result;

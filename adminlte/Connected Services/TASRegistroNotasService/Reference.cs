@@ -1164,6 +1164,16 @@ namespace adminlte.TASRegistroNotasService {
             "onarXSubCompania", ReplyAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSelecci" +
             "onarXSubCompaniaResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity>> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSelecci" +
+            "onarXSubCompaniaEstudiante", ReplyAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSelecci" +
+            "onarXSubCompaniaEstudianteResponse")]
+        System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante(string SubCompania, string Estudiante, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSelecci" +
+            "onarXSubCompaniaEstudiante", ReplyAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSelecci" +
+            "onarXSubCompaniaEstudianteResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity>> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteAsync(string SubCompania, string Estudiante, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1327,6 +1337,14 @@ namespace adminlte.TASRegistroNotasService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity>> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante(string SubCompania, string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante(SubCompania, Estudiante, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASRegistroNotasService.TASRegistroNotasEstudianteEntity>> WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteAsync(string SubCompania, string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteAsync(SubCompania, Estudiante, strAKASesion, strAKASubCompania);
         }
     }
 }

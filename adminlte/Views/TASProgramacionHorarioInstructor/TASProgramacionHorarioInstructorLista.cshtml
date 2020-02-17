@@ -44,9 +44,9 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
-@Scripts.Render("~/bundles/jquery")
-<script type="text/javascript">
+@*@Scripts.Render("~/bundles/jquery")*@
+@section Scripts {
+    <script type="text/javascript">
 
     @*$(document).ready(function () {
 
@@ -98,7 +98,7 @@
     });*@
 
     $(document).ready(function () {
-        
+
                 var now = new Date();
                 var strDate = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
                 $.ajax({
@@ -140,7 +140,7 @@
                         $('#calendar').fullCalendar('rerenderEvents');
                     }
                 });
-            
+
 
     });
 
@@ -151,4 +151,5 @@
         });
     });
 
-</script>
+    </script>
+}

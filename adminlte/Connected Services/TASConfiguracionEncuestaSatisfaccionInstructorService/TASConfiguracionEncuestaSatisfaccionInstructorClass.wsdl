@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASConfiguracionEncuestaSatisfaccionInstructorClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionInstructor?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionInstructor?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionInstructor?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASConfiguracionEncuestaSatisfaccionInstructorInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNuevo" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNuevoResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGuardar" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGuardarResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminar" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminarResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminarDetalle" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminarDetalleResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSeleccionar" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSeleccionarResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRecalcular" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRecalcularResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorBloquearResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquearResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPorResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaResponse" message="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface_WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASConfiguracionEncuestaSatisfaccionInstructorInterface" type="tns:TASConfiguracionEncuestaSatisfaccionInstructorInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASConfiguracionEncuestaSatisfaccionInstructorClass">
+    <wsdl:port name="BasicHttpBinding_TASConfiguracionEncuestaSatisfaccionInstructorInterface" binding="tns:BasicHttpBinding_TASConfiguracionEncuestaSatisfaccionInstructorInterface">
+      <soap:address location="http://alejandroasus:8901/TASConfiguracionEncuestaSatisfaccionInstructor" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

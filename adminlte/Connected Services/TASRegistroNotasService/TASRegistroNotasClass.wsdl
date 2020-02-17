@@ -109,6 +109,12 @@
   <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaResponse" />
   </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteResponse" />
+  </wsdl:message>
   <wsdl:portType name="TASRegistroNotasInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebNuevo" message="tns:TASRegistroNotasInterface_WebNuevo_InputMessage" />
@@ -177,6 +183,10 @@
     <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompania">
       <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompania" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudianteResponse" message="tns:TASRegistroNotasInterface_WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_TASRegistroNotasInterface" type="tns:TASRegistroNotasInterface">
@@ -327,6 +337,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompania">
       <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante">
+      <soap:operation soapAction="http://tempuri.org/TASRegistroNotasInterface/WebTASRegistroNotasEstudianteSeleccionarXSubCompaniaEstudiante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

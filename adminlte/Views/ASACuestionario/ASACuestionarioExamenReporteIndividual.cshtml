@@ -36,9 +36,14 @@
                 </div>
             </div>
             <div class="box-body">
+                <div class="col-xs-12 text-center form-group">
+                    @Html.DropDownList("ltTASGrupo", new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable), "Seleccione un grupo", new { @class = "form-control", @onchange = "LlenarEstudiantes()" })
+                </div>
+
                 <form action="@Url.Action("ASACuestionarioExamenReporteIndividual","ASACuestionario")" method="post">
                     <div class="col-xs-12 text-center form-group">
-                        @Html.DropDownList("Estudiante", new SelectList(@ViewBag.ltAXFUsuario as System.Collections.IEnumerable, "Usuario", "Nombre"), "Seleccione un estudiante", new { @class = "form-control" })
+                        @*@Html.DropDownList("Estudiante", new SelectList(@ViewBag.ltAXFUsuario as System.Collections.IEnumerable, "Usuario", "Nombre"), "Seleccione un estudiante", new { @class = "form-control" })*@
+                        @Html.DropDownList("Estudiante", null, htmlAttributes: new { @class = "form-control" })
                     </div>
                     <div class="col-xs-12 text-center">
                         <button name="inicioCuestionario" type="submit" class="btn btn-default btn-default">Siguiente</button>
@@ -85,7 +90,28 @@
             $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
         }
 
-    }
+        }
+
+        function LlenarEstudiantes() {
+
+            var Grupo = $('#ltTASGrupo').val();
+            //console.log(CategoryId);
+
+            $.ajax({
+                url: 'ObtenerEstudiantesGrupo',
+                type: "GET",
+                dataType: "JSON",
+                data: { Grupo: Grupo },
+                success: function (response) {
+                    //console.log(response);
+                    $("#Estudiante").html("");
+                    $.each(response.ltTASEstudiante, function (index, value) {
+                        $("#Estudiante").append(
+                            $('<option></option>').val(value.EstudianteCI).html(value.Nombre1 + ' ' + value.Apellido1 + ' - ' + value.EstudianteCI));
+                    });
+                }
+            });
+        }
     </script>
 
 }

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsTASInstructorReporteXMateria" targetNamespace="http://tempuri.org/DsTASInstructorReporteXMateria.xsd" xmlns:mstns="http://tempuri.org/DsTASInstructorReporteXMateria.xsd" xmlns="http://tempuri.org/DsTASInstructorReporteXMateria.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PROSIANAdministrador2018ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PROSIANAdministrador2018ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PROSIANAdministrador2018ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsTASInstructorReporteXMateria" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsTASInstructorReporteXMateria" msprop:Generator_UserDSName="DsTASInstructorReporteXMateria">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TASRegistroNotasEstudiante" msprop:Generator_TableClassName="TASRegistroNotasEstudianteDataTable" msprop:Generator_TableVarName="tableTASRegistroNotasEstudiante" msprop:Generator_TablePropName="TASRegistroNotasEstudiante" msprop:Generator_RowDeletingName="TASRegistroNotasEstudianteRowDeleting" msprop:Generator_RowChangingName="TASRegistroNotasEstudianteRowChanging" msprop:Generator_RowEvHandlerName="TASRegistroNotasEstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="TASRegistroNotasEstudianteRowDeleted" msprop:Generator_UserTableName="TASRegistroNotasEstudiante" msprop:Generator_RowChangedName="TASRegistroNotasEstudianteRowChanged" msprop:Generator_RowEvArgName="TASRegistroNotasEstudianteRowChangeEvent" msprop:Generator_RowClassName="TASRegistroNotasEstudianteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SubCompania" msprop:Generator_ColumnVarNameInTable="columnSubCompania" msprop:Generator_ColumnPropNameInRow="SubCompania" msprop:Generator_ColumnPropNameInTable="SubCompaniaColumn" msprop:Generator_UserColumnName="SubCompania">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Programa" msprop:Generator_ColumnVarNameInTable="columnPrograma" msprop:Generator_ColumnPropNameInRow="Programa" msprop:Generator_ColumnPropNameInTable="ProgramaColumn" msprop:Generator_UserColumnName="Programa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grupo" msprop:Generator_ColumnVarNameInTable="columnGrupo" msprop:Generator_ColumnPropNameInRow="Grupo" msprop:Generator_ColumnPropNameInTable="GrupoColumn" msprop:Generator_UserColumnName="Grupo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Materia" msprop:Generator_ColumnVarNameInTable="columnMateria" msprop:Generator_ColumnPropNameInRow="Materia" msprop:Generator_ColumnPropNameInTable="MateriaColumn" msprop:Generator_UserColumnName="Materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModuloMateria" msprop:Generator_ColumnVarNameInTable="columnModuloMateria" msprop:Generator_ColumnPropNameInRow="ModuloMateria" msprop:Generator_ColumnPropNameInTable="ModuloMateriaColumn" msprop:Generator_UserColumnName="ModuloMateria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gestion" msprop:Generator_ColumnVarNameInTable="columnGestion" msprop:Generator_ColumnPropNameInRow="Gestion" msprop:Generator_ColumnPropNameInTable="GestionColumn" msprop:Generator_UserColumnName="Gestion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoTASEstudiante" msprop:Generator_ColumnVarNameInTable="columnCodigoTASEstudiante" msprop:Generator_ColumnPropNameInRow="CodigoTASEstudiante" msprop:Generator_ColumnPropNameInTable="CodigoTASEstudianteColumn" msprop:Generator_UserColumnName="CodigoTASEstudiante">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreEstudiante" msprop:Generator_ColumnVarNameInTable="columnNombreEstudiante" msprop:Generator_ColumnPropNameInRow="NombreEstudiante" msprop:Generator_ColumnPropNameInTable="NombreEstudianteColumn" msprop:Generator_UserColumnName="NombreEstudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Progreso1P" msprop:Generator_ColumnVarNameInTable="columnProgreso1P" msprop:Generator_ColumnPropNameInRow="Progreso1P" msprop:Generator_ColumnPropNameInTable="Progreso1PColumn" msprop:Generator_UserColumnName="Progreso1P" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Progreso2P" msprop:Generator_ColumnVarNameInTable="columnProgreso2P" msprop:Generator_ColumnPropNameInRow="Progreso2P" msprop:Generator_ColumnPropNameInTable="Progreso2PColumn" msprop:Generator_UserColumnName="Progreso2P" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dominio1D" msprop:Generator_ColumnVarNameInTable="columnDominio1D" msprop:Generator_ColumnPropNameInRow="Dominio1D" msprop:Generator_ColumnPropNameInTable="Dominio1DColumn" msprop:Generator_UserColumnName="Dominio1D" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dominio2D" msprop:Generator_ColumnVarNameInTable="columnDominio2D" msprop:Generator_ColumnPropNameInRow="Dominio2D" msprop:Generator_ColumnPropNameInTable="Dominio2DColumn" msprop:Generator_UserColumnName="Dominio2D" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CalificacionNF" msprop:Generator_ColumnVarNameInTable="columnCalificacionNF" msprop:Generator_ColumnPropNameInRow="CalificacionNF" msprop:Generator_ColumnPropNameInTable="CalificacionNFColumn" msprop:Generator_UserColumnName="CalificacionNF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CalificacionRE" msprop:Generator_ColumnVarNameInTable="columnCalificacionRE" msprop:Generator_ColumnPropNameInRow="CalificacionRE" msprop:Generator_ColumnPropNameInTable="CalificacionREColumn" msprop:Generator_UserColumnName="CalificacionRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AplicaRecuperatorio" msprop:Generator_ColumnVarNameInTable="columnAplicaRecuperatorio" msprop:Generator_ColumnPropNameInRow="AplicaRecuperatorio" msprop:Generator_ColumnPropNameInTable="AplicaRecuperatorioColumn" msprop:Generator_UserColumnName="AplicaRecuperatorio" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NotaLiteral" msprop:Generator_ColumnVarNameInTable="columnNotaLiteral" msprop:Generator_ColumnPropNameInRow="NotaLiteral" msprop:Generator_ColumnPropNameInTable="NotaLiteralColumn" msprop:Generator_UserColumnName="NotaLiteral" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TASRegistroNotasEstudiante" />
+      <xs:field xpath="mstns:SubCompania" />
+      <xs:field xpath="mstns:Programa" />
+      <xs:field xpath="mstns:Grupo" />
+      <xs:field xpath="mstns:Materia" />
+      <xs:field xpath="mstns:ModuloMateria" />
+      <xs:field xpath="mstns:Gestion" />
+      <xs:field xpath="mstns:CodigoTASEstudiante" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

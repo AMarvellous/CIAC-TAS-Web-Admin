@@ -1,0 +1,647 @@
+﻿
+@model adminlte.TASMaterialDidacticoService.TASMaterialDidacticoEntity
+
+@{
+    ViewBag.Title = "TASMaterialDidacticoVisualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            TAS
+            <small>Programa Analitico</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Material Didactico</a></li>
+            <li class="active">Estudiantes</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box box-primary">
+
+            <div class="box-header with-border">
+                <h3 class="box-title">CIAC TAS</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            @*<form role="form">*@
+            <div class="box-body">
+
+                <div class="form-group">
+                    @Html.Label("Grupo")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.Grupo, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.Grupo, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Materia")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.Materia, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.Materia, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("ModuloMateria")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.ModuloMateria, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.ModuloMateria, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+
+
+                @if (Model.Link1 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Link")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBoxFor(model => model.Link1, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Link1, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Link2 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Link")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBoxFor(model => model.Link2, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Link2, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Link3 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Link")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBoxFor(model => model.Link3, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Link3, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Link4 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Link")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBoxFor(model => model.Link4, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Link4, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Link5 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Link")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBoxFor(model => model.Link5, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.Link5, "", new { @class = "text-danger" })
+                            @*<input type="number" class="form-control">*@
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo1 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 1")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo1), Path.GetFileName(Model.Archivo1), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo1 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo2 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 2")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo2), Path.GetFileName(Model.Archivo2), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo2 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo3 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 3")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo3), Path.GetFileName(Model.Archivo3), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo3 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo4 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 4")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo4), Path.GetFileName(Model.Archivo4), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo4 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo5 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 5")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo5), Path.GetFileName(Model.Archivo5), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo5 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo6 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 6")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo6), Path.GetFileName(Model.Archivo6), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo6 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo7 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 7")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo7), Path.GetFileName(Model.Archivo7), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo7 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo8 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 8")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo8), Path.GetFileName(Model.Archivo8), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo8 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo9 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 9")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo9), Path.GetFileName(Model.Archivo9), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo9 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo10 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 10")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo10), Path.GetFileName(Model.Archivo10), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo10 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo11 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 11")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo11), Path.GetFileName(Model.Archivo11), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo11 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo12 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 12")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo12), Path.GetFileName(Model.Archivo12), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo12 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo13 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 13")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo13), Path.GetFileName(Model.Archivo13), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo13 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo14 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 14")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo14), Path.GetFileName(Model.Archivo14), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo14 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo15 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 15")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo15), Path.GetFileName(Model.Archivo15), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo15 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo16 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 16")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo16), Path.GetFileName(Model.Archivo16), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo16 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo17 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 17")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo17), Path.GetFileName(Model.Archivo17), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo17 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo18 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 18")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo18), Path.GetFileName(Model.Archivo18), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo18 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo19 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 19")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo19), Path.GetFileName(Model.Archivo19), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo19 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo20 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 20")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo20), Path.GetFileName(Model.Archivo20), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo20 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo21 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 21")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo21), Path.GetFileName(Model.Archivo21), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo21 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo22 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 22")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo22), Path.GetFileName(Model.Archivo22), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo22 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo23 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 23")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo23), Path.GetFileName(Model.Archivo23), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo23 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo24 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 24")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo24), Path.GetFileName(Model.Archivo24), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo24 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo25 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 25")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo25), Path.GetFileName(Model.Archivo25), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo25 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo26 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 26")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo26), Path.GetFileName(Model.Archivo26), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo26 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo27 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 27")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo27), Path.GetFileName(Model.Archivo27), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo27 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo28 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 28")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo28), Path.GetFileName(Model.Archivo28), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo28 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo29 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 29")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo29), Path.GetFileName(Model.Archivo29), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo29 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+                @if (Model.Archivo30 != "")
+                {
+                    <div class="form-group">
+                        @Html.Label("Archivo Nro 30")
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            @Html.TextBox(Path.GetFileName(Model.Archivo30), Path.GetFileName(Model.Archivo30), new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ActionLink(" ", "TASMaterialDidacticoDescargarArchivo", new { Archivo = Model.Archivo30 }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:28px;" })
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                }
+
+
+            </div>
+            <!-- /.box-body -->
+            @*</form>*@
+
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

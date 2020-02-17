@@ -136,121 +136,122 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-@Scripts.Render("~/bundles/jquery")
-<script type="text/javascript">
+@*@Scripts.Render("~/bundles/jquery")*@
+@section scripts{
 
-    $(document).on('change', '#CantidadProgresos', function (e) {
-        $('#Container').html('');
-        $("div.divCreated").remove();
-        if ($('#CantidadProgresos').val() > 0) {
+    <script type="text/javascript">
 
-            for (i = 0; i < $('#CantidadProgresos').val(); i++)
-            {
-                //Agregar los progresos aca
-                var Row = '<div class="row divCreated">';
-                Row +=      '<div class="col-xs-5">'
-                Row +=        '<input type="text" class="form-control nombreEvaluacion" placeholder="Nombre Progreso">'
-                Row +=      '</div>'
-                Row +=      '<div class="col-xs-5">'
-                Row +=        '<input type="text" class="form-control allownumericwithdecimal porcentajeEvaluacion" placeholder="Porcentaje Progreso">'
-                Row +=      '</div>'
-                Row += '</div>'
+        $(document).on('change', '#CantidadProgresos', function (e) {
+            $('#Container').html('');
+            $("div.divCreated").remove();
+            if ($('#CantidadProgresos').val() > 0) {
 
-                $(".box-body").append(Row);
-                
-            }
-            $(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
-                //this.value = this.value.replace(/[^0-9\.]/g,'');
-                $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
-                if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
-                    event.preventDefault();
+                for (i = 0; i < $('#CantidadProgresos').val(); i++) {
+                    //Agregar los progresos aca
+                    var Row = '<div class="row divCreated">';
+                    Row += '<div class="col-xs-5">'
+                    Row += '<input type="text" class="form-control nombreEvaluacion" placeholder="Nombre Progreso">'
+                    Row += '</div>'
+                    Row += '<div class="col-xs-5">'
+                    Row += '<input type="text" class="form-control allownumericwithdecimal porcentajeEvaluacion" placeholder="Porcentaje Progreso">'
+                    Row += '</div>'
+                    Row += '</div>'
+
+                    $(".box-body").append(Row);
+
                 }
+                $(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
+                    //this.value = this.value.replace(/[^0-9\.]/g,'');
+                    $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
+                    if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                        event.preventDefault();
+                    }
+                });
+            }
+            else {
+
+            }
+
+        })
+
+        $('form').submit(function () {
+
+            if ($('#ltTASRegistroNotas_0__Programa').val() == '') {
+                alert("No se selecciono ningun Programa");
+                return false;
+            }
+
+            if ($('#ltTASRegistroNotas_0__Grupo').val() == '') {
+                alert("No se selecciono ningun Grupo");
+                return false;
+            }
+
+            if ($('#ltTASRegistroNotas_0__Materia').val() == '') {
+                alert("No se selecciono ninguna Materia");
+                return false;
+            }
+
+            if ($('#ltTASRegistroNotas_0__ModuloMateria').val() == '') {
+                alert("No se selecciono ningun Modulo");
+                return false;
+            }
+
+            if ($('#ltTASRegistroNotas_0__Gestion').val() == '') {
+                alert("No se selecciono ninguna Gestion");
+                return false;
+            }
+
+            if ($('#CantidadProgresos').val() == '') {
+                alert("No se selecciono ninguna cantidad de evaluacion de progreso");
+                return false;
+            }
+            $("#ltTASRegistroNotas_0__NumeroProgresos").val($('#CantidadProgresos').val());
+
+            var strConcat = '';
+            $("input.nombreEvaluacion").each(function () {
+
+                strConcat += "*.-Split-.*" + $(this).val();
+                //alert($(this).val())
             });
-        }
-        else
-        {
-            
-        }
+            $("#ltTASRegistroNotas_0__NombreReferenciaProgreso").val(strConcat);
 
-    })
+            var SumPorcentaje = 0;
+            var strPorcentaje = '';
+            $("input.porcentajeEvaluacion").each(function () {
+                strPorcentaje += "*.-Split-.*" + Number($(this).val());
+                SumPorcentaje += Number($(this).val());
+            });
 
-    $('form').submit(function () {
-                
-        if ($('#ltTASRegistroNotas_0__Programa').val() == '')
-        {
-            alert("No se selecciono ningun Programa");
-            return false;
-        }
+            if (SumPorcentaje == 30) {
+                $("#ltTASRegistroNotas_0__PorcentajeIndividualProgreso").val(strPorcentaje);
+            } else {
+                alert('La suma de porcentajes no es 30, la suma actual es:' + SumPorcentaje);
+                return false;
+            }
 
-        if ($('#ltTASRegistroNotas_0__Grupo').val() == '') {
-            alert("No se selecciono ningun Grupo");
-            return false;
-        }
-
-        if ($('#ltTASRegistroNotas_0__Materia').val() == '') {
-            alert("No se selecciono ninguna Materia");
-            return false;
-        }
-
-        if ($('#ltTASRegistroNotas_0__ModuloMateria').val() == '') {
-            alert("No se selecciono ningun Modulo");
-            return false;
-        }
-
-        if ($('#ltTASRegistroNotas_0__Gestion').val() == '') {
-            alert("No se selecciono ninguna Gestion");
-            return false;
-        }
-
-        if ($('#CantidadProgresos').val() == '') {
-            alert("No se selecciono ninguna cantidad de evaluacion de progreso");
-            return false;
-        }
-        $("#ltTASRegistroNotas_0__NumeroProgresos").val($('#CantidadProgresos').val());
-
-        var strConcat = '';
-        $("input.nombreEvaluacion").each(function () {
-            
-            strConcat += "*.-Split-.*" + $(this).val();
-            //alert($(this).val())
-        });
-        $("#ltTASRegistroNotas_0__NombreReferenciaProgreso").val(strConcat);
-
-        var SumPorcentaje = 0;
-        var strPorcentaje = '';
-        $("input.porcentajeEvaluacion").each(function () {
-            strPorcentaje += "*.-Split-.*" + Number($(this).val());
-            SumPorcentaje += Number($(this).val());
+            //// Check if empty of not
+            //if (name === '') {
+            //    alert('Text-field is empty.');
+            //    return false;
+            //}
         });
 
-        if (SumPorcentaje == 30) {
-            $("#ltTASRegistroNotas_0__PorcentajeIndividualProgreso").val(strPorcentaje);
-        } else {
-            alert('La suma de porcentajes no es 30, la suma actual es:' + SumPorcentaje);
-            return false;
-        }
+        //$(document).on('click', 'form button[type=submit]', function (e) {
+        //        var isValid = $(e.target).parents('form').isValid();
+        //        if (!isValid) {
+        //            e.preventDefault(); //prevent the default action
+        //        }
+        //    });
 
-        //// Check if empty of not
-        //if (name === '') {
-        //    alert('Text-field is empty.');
-        //    return false;
-        //}
-    });
+        //$(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
+        //    alert("as")
+        //    //this.value = this.value.replace(/[^0-9\.]/g,'');
+        //    $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
+        //    if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+        //        event.preventDefault();
+        //    }
+        //});
 
-    //$(document).on('click', 'form button[type=submit]', function (e) {
-    //        var isValid = $(e.target).parents('form').isValid();
-    //        if (!isValid) {
-    //            e.preventDefault(); //prevent the default action
-    //        }
-    //    });
+    </script>
 
-    //$(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
-    //    alert("as")
-    //    //this.value = this.value.replace(/[^0-9\.]/g,'');
-    //    $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
-    //    if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
-    //        event.preventDefault();
-    //    }
-    //});
-
-</script>
+}

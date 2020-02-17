@@ -1,0 +1,2 @@
+[Fecha]: 9/2/2020 20:33:25[Tipo]Exception [Excepcion/Evento]: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'Estudiante'. [Clase]: ASACuestionario [Action]: ASACuestionarioGraficaEstudiante
+[Fecha]: 9/2/2020 23:11:20[Tipo]Exception [Excepcion/Evento]: Referencia a objeto no establecida como instancia de un objeto. [Clase]: TASEstudiante [Action]: TASEstudianteNotas

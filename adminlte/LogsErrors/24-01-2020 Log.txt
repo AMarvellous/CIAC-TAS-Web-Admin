@@ -1,0 +1,27 @@
+[Fecha]: 24/1/2020 23:31:46[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudianteRealizado' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml [Clase]: TASInstructorReporte [Action]: TASEstudianteEncuestaSatisfaccionInstructor
+[Fecha]: 24/1/2020 23:31:51[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudianteRealizado' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml [Clase]: TASInstructorReporte [Action]: TASEstudianteEncuestaSatisfaccionInstructor
+[Fecha]: 24/1/2020 23:32:04[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudianteRealizado' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.ascx
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/TASInstructorReporte/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudianteRealizado.vbhtml [Clase]: TASInstructorReporte [Action]: TASEstudianteEncuestaSatisfaccionInstructor

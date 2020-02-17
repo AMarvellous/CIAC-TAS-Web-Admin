@@ -1,0 +1,68 @@
+[Fecha]: 22/1/2020 16:34:31[Tipo]Exception [Excepcion/Evento]: Referencia a objeto no establecida como instancia de un objeto. [Clase]: TASMaterialDidactico [Action]: TASMaterialDidacticoEditarMaterial
+[Fecha]: 22/1/2020 16:35:31[Tipo]Exception [Excepcion/Evento]: Referencia a objeto no establecida como instancia de un objeto. [Clase]: TASMaterialDidactico [Action]: TASMaterialDidacticoEditarMaterial
+[Fecha]: 22/1/2020 18:09:22[Tipo]Exception [Excepcion/Evento]: Referencia a objeto no establecida como instancia de un objeto. [Clase]: TASEstudiante [Action]: TASMaterialDidacticoVisualizar
+[Fecha]: 22/1/2020 23:10:36[Tipo]Exception [Excepcion/Evento]: F:\CIAC TAS\CIAC TAS Web\adminlte\Views\TASEstudiante\TASEstudianteEncuestaSatisfaccionEstudianteEncuestar.cshtml(28): error CS1061: 'TASConfiguracionEncuestaSatisfacionEstudianteEntity' does not contain a definition for 'ltASAPregunta' and no extension method 'ltASAPregunta' accepting a first argument of type 'TASConfiguracionEncuestaSatisfacionEstudianteEntity' could be found (are you missing a using directive or an assembly reference?) [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:16:40[Tipo]Exception [Excepcion/Evento]: F:\CIAC TAS\CIAC TAS Web\adminlte\Views\TASEstudiante\TASEstudianteEncuestaSatisfaccionEstudianteEncuestar.cshtml(28): error CS0841: Cannot use local variable 'ltRespuestas' before it is declared [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:39:31[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:44:12[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:46:29[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:48:08[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:50:15[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:53:37[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante
+[Fecha]: 22/1/2020 23:56:34[Tipo]Exception [Excepcion/Evento]: The view 'TASEstudianteEncuestaSatisfaccionEstudiante' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.aspx
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.ascx
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/TASEstudiante/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.cshtml
+~/Views/Shared/TASEstudianteEncuestaSatisfaccionEstudiante.vbhtml [Clase]: TASEstudiante [Action]: TASEstudianteEncuestaSatisfaccionEstudiante

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="173a96d7-3f0c-4955-ae63-724898f00bdd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASCriterioEvaluacionAlumnoInstructor.xsd" MetadataType="Schema" ID="1da7718d-0209-4e8a-b506-4879579a3760" SourceId="1" SourceUrl="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd1" />
+    <MetadataFile FileName="TASCriterioEvaluacionAlumnoInstructor1.xsd" MetadataType="Schema" ID="107bb116-1b3d-4c77-b979-6a7065f1b834" SourceId="1" SourceUrl="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd0" />
+    <MetadataFile FileName="TASCriterioEvaluacionAlumnoInstructor2.xsd" MetadataType="Schema" ID="8eb27976-9f8e-436a-922c-6a9a8cdc81d3" SourceId="1" SourceUrl="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd2" />
+    <MetadataFile FileName="TASCriterioEvaluacionAlumnoInstructorClass.wsdl" MetadataType="Wsdl" ID="714b40b8-dcd8-4c32-aef0-1b86c69ea9b9" SourceId="1" SourceUrl="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?wsdl" />
+    <MetadataFile FileName="TASCriterioEvaluacionAlumnoInstructor.disco" MetadataType="Disco" ID="c3cd5460-6c8c-43e3-86fc-6f5a0a9ccaff" SourceId="1" SourceUrl="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

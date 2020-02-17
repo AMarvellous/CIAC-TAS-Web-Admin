@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASMaterialDidacticoClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASMaterialDidactico?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASMaterialDidactico?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASMaterialDidactico?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASMaterialDidacticoSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASMaterialDidacticoInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebNuevo" message="tns:TASMaterialDidacticoInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebNuevoResponse" message="tns:TASMaterialDidacticoInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebGuardar" message="tns:TASMaterialDidacticoInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebGuardarResponse" message="tns:TASMaterialDidacticoInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminar" message="tns:TASMaterialDidacticoInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminarResponse" message="tns:TASMaterialDidacticoInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminarDetalle" message="tns:TASMaterialDidacticoInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminarDetalleResponse" message="tns:TASMaterialDidacticoInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebSeleccionar" message="tns:TASMaterialDidacticoInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebSeleccionarResponse" message="tns:TASMaterialDidacticoInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebRecalcular" message="tns:TASMaterialDidacticoInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebRecalcularResponse" message="tns:TASMaterialDidacticoInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoBloquear" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoBloquearResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoDesbloquear" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoDesbloquearResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueadoPor" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueadoPorResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueado" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueadoResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarTodo" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarTodoResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionar" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarXSubCompania" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarXSubCompaniaResponse" message="tns:TASMaterialDidacticoInterface_WebTASMaterialDidacticoSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASMaterialDidacticoInterface" type="tns:TASMaterialDidacticoInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASMaterialDidacticoSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASMaterialDidacticoInterface/WebTASMaterialDidacticoSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASMaterialDidacticoClass">
+    <wsdl:port name="BasicHttpBinding_TASMaterialDidacticoInterface" binding="tns:BasicHttpBinding_TASMaterialDidacticoInterface">
+      <soap:address location="http://alejandroasus:8901/TASMaterialDidactico" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASAsistenciaEstudianteClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASAsistenciaEstudiante?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASAsistenciaEstudiante?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASAsistenciaEstudiante?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASAsistenciaEstudianteInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebNuevo" message="tns:TASAsistenciaEstudianteInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebNuevoResponse" message="tns:TASAsistenciaEstudianteInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebGuardar" message="tns:TASAsistenciaEstudianteInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebGuardarResponse" message="tns:TASAsistenciaEstudianteInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminar" message="tns:TASAsistenciaEstudianteInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminarResponse" message="tns:TASAsistenciaEstudianteInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminarDetalle" message="tns:TASAsistenciaEstudianteInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminarDetalleResponse" message="tns:TASAsistenciaEstudianteInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebSeleccionar" message="tns:TASAsistenciaEstudianteInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebSeleccionarResponse" message="tns:TASAsistenciaEstudianteInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebRecalcular" message="tns:TASAsistenciaEstudianteInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebRecalcularResponse" message="tns:TASAsistenciaEstudianteInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteBloquear" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteBloquearResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteDesbloquear" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteDesbloquearResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueadoPor" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueadoPorResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueado" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueadoResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarTodo" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarTodoResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionar" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarXSubCompania" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarTodo" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarTodoResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionar" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudianteResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarXSubCompaniaResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarTodoResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionar" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFechaResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompaniaResponse" message="tns:TASAsistenciaEstudianteInterface_WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASAsistenciaEstudianteInterface" type="tns:TASAsistenciaEstudianteInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarKeyTASAsistenciaEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudianteFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarKeyTASAsistenciaEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASAsistenciaEstudianteInterface/WebTASAsistenciaEstudianteFechaLineaSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASAsistenciaEstudianteClass">
+    <wsdl:port name="BasicHttpBinding_TASAsistenciaEstudianteInterface" binding="tns:BasicHttpBinding_TASAsistenciaEstudianteInterface">
+      <soap:address location="http://alejandroasus:8901/TASAsistenciaEstudiante" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

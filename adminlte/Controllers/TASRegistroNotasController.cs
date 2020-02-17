@@ -121,7 +121,7 @@ namespace adminlte.Controllers
             return View(ltTASEstudiante);
         }
 
-        public ActionResult TASRegistroNotasEstudianteEditar(string NombreEstudiante, string CodigoTASEstudiante, string SubCompania, string Programa, string Grupo, string Materia, string ModuloMateria, string Gestion)
+        public ActionResult TASRegistroNotasEstudianteEditar(string NombreEstudiante, string CodigoTASEstudiante, string SubCompania, string Programa, string Grupo, string Materia, string ModuloMateria, string Gestion, string MensajeError = "")
         {
             TASRegistroNotasInterfaceClient TASRegistroNotas = new TASRegistroNotasInterfaceClient();
             TASRegistroNotasSet setTASRegistroNotas = TASRegistroNotas.WebSeleccionar(SubCompania,Programa,Grupo,Materia,ModuloMateria,Gestion,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
@@ -161,6 +161,7 @@ namespace adminlte.Controllers
             }
 
             ViewBag.ltTASRegistroNotas = setTASRegistroNotas.ltTASRegistroNotas.First();
+            ViewBag.MensajeError = MensajeError;
 
             return PartialView(etTASRegistroNotasEstudiante);
         }
@@ -215,7 +216,9 @@ namespace adminlte.Controllers
             }
             else
             {
-                return RedirectToAction("TASRegistroNotasLista");
+                ViewBag.ltTASRegistroNotas = setTASRegistroNotas.ltTASRegistroNotas.First();
+                ViewBag.MensajeError = "No se registro correctamente las notas, verifique que los datos esten correctos.";
+                return PartialView(etTASRegistroNotasEstudianteForm);
             }
 
         }

@@ -1,0 +1,1 @@
+[Fecha]: 25/1/2020 12:54:18[Tipo]Exception [Excepcion/Evento]: Referencia a objeto no establecida como instancia de un objeto. [Clase]: TASRegistroNotas [Action]: TASRegistroNotasNuevo

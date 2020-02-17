@@ -70,15 +70,26 @@ namespace adminlte.Controllers
                 if (SesionResp != "")
                 {
                     //Seleccionamos los datos primarios del Usuario para mostrar
-                    List<AXFUsuarioEntity> ltAXFUsuario = AXFUsuario.WebAXFUsuarioSeleccionar(Usuario,SubCompania, SesionResp,SubCompania);
+                    AXFUsuarioSet setAXFUsuario = AXFUsuario.WebSeleccionar(Usuario,SubCompania, SesionResp,SubCompania);
+                    List<AXFUsuarioEntity> ltAXFUsuario = setAXFUsuario.ltAXFUsuario;
                     AXFUsuarioEntity etAXFUsuario = ltAXFUsuario.First();
+                    var BloqueoIngresoCount = setAXFUsuario.ltAXFUsuarioPropiedad.Where(x => x.Propiedad == "BloqueoIngreso" && x.Valor == "Si").Count();
+                    var BajaEstudianteCount = setAXFUsuario.ltAXFUsuarioPropiedad.Where(x => x.Propiedad == "BajaEstudiante" && x.Valor == "Si").Count();
 
                     Session["Nombre"] = etAXFUsuario.Nombre;
                     Session["Sesion"] = SesionResp;
                     Session["Usuario"] = Usuario;
                     Session["SesionSubCompania"] = SubCompania;
 
-                    return RedirectToAction("Index", "Index");
+                    //Checkeamos si este usuario no esta bloqueado
+                    if (BloqueoIngresoCount == 0 && BajaEstudianteCount == 0)
+                    {
+                        return RedirectToAction("Index", "Index");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Login");
+                    }                    
                 }
                 else
                 {

@@ -42,6 +42,25 @@
                 <h3 class="box-title">CIAC TAS</h3>
             </div>
             <!-- /.box-header -->
+
+            <div class="form-group">
+                @Html.Label("Excel Banco Preguntas")
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-file-excel-o"></i>
+                    </div>
+
+                    @*@Html.TextBox("AIRFRAME", null, new { @class = "form-control", @readonly = "readonly" })*@
+                    @Html.ActionLink("Airframe", "ASACuestionarioDescargarBancoPregunta", new { Archivo = "AIRFRAME" }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:18px;" }) | 
+                    @*@Html.TextBox("GENERAL", null, new { @class = "form-control", @readonly = "readonly" })*@
+                    @Html.ActionLink("General", "ASACuestionarioDescargarBancoPregunta", new { Archivo = "GENERAL" }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:18px;" }) | 
+                    @*@Html.TextBox("POWERPLANT", null, new { @class = "form-control", @readonly = "readonly" })*@
+                    @Html.ActionLink("Powerplant", "ASACuestionarioDescargarBancoPregunta", new { Archivo = "POWERPLANT" }, new { @class = "glyphicon glyphicon-download-alt", style = "font-size:18px;" })
+
+                </div>
+                <!-- /.input group -->
+            </div>
+
             <!-- form start -->
             @*<form role="form">*@
             <div class="box-body table-responsive">

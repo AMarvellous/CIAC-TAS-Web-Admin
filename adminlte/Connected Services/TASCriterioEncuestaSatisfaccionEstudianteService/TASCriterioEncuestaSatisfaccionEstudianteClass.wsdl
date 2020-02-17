@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASCriterioEncuestaSatisfaccionEstudianteClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEncuestaSatisfaccionEstudiante?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEncuestaSatisfaccionEstudiante?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEncuestaSatisfaccionEstudiante?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASCriterioEncuestaSatisfaccionEstudianteInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebNuevo" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebNuevoResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebGuardar" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebGuardarResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminar" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminarResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminarDetalle" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminarDetalleResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebSeleccionar" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebSeleccionarResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebRecalcular" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebRecalcularResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteBloquear" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteBloquearResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquearResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPorResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodoResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface_WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASCriterioEncuestaSatisfaccionEstudianteInterface" type="tns:TASCriterioEncuestaSatisfaccionEstudianteInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEncuestaSatisfaccionEstudianteInterface/WebTASCriterioEncuestaSatisfaccionEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASCriterioEncuestaSatisfaccionEstudianteClass">
+    <wsdl:port name="BasicHttpBinding_TASCriterioEncuestaSatisfaccionEstudianteInterface" binding="tns:BasicHttpBinding_TASCriterioEncuestaSatisfaccionEstudianteInterface">
+      <soap:address location="http://alejandroasus:8901/TASCriterioEncuestaSatisfaccionEstudiante" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

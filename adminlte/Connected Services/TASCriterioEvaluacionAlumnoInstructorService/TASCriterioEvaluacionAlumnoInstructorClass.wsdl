@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASCriterioEvaluacionAlumnoInstructorClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASCriterioEvaluacionAlumnoInstructorInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebNuevo" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebNuevoResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebGuardar" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebGuardarResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminar" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminarResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminarDetalle" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminarDetalleResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebSeleccionar" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebSeleccionarResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebRecalcular" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebRecalcularResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorBloquear" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorBloquearResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorDesbloquear" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorDesbloquearResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPorResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodoResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionar" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompaniaResponse" message="tns:TASCriterioEvaluacionAlumnoInstructorInterface_WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASCriterioEvaluacionAlumnoInstructorInterface" type="tns:TASCriterioEvaluacionAlumnoInstructorInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASCriterioEvaluacionAlumnoInstructorInterface/WebTASCriterioEvaluacionAlumnoInstructorSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASCriterioEvaluacionAlumnoInstructorClass">
+    <wsdl:port name="BasicHttpBinding_TASCriterioEvaluacionAlumnoInstructorInterface" binding="tns:BasicHttpBinding_TASCriterioEvaluacionAlumnoInstructorInterface">
+      <soap:address location="http://alejandroasus:8901/TASCriterioEvaluacionAlumnoInstructor" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
