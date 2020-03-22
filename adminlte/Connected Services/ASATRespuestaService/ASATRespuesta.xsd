@@ -384,4 +384,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebASATRespuestaSeleccionarXEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Estudiante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATRespuestaSeleccionarXEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATRespuestaSeleccionarXEstudianteResult" nillable="true" type="q10:ArrayOfASATRespuestaEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

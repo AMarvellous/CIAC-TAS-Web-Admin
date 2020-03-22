@@ -145,6 +145,12 @@
   <wsdl:message name="ASATRespuestaInterface_WebGuardarEstadoVisual_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebGuardarEstadoVisualResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarXEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarXEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="ASATRespuestaInterface_WebASATRespuestaSeleccionarXEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATRespuestaSeleccionarXEstudianteResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATRespuestaInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebNuevo" message="tns:ASATRespuestaInterface_WebNuevo_InputMessage" />
@@ -237,6 +243,10 @@
     <wsdl:operation name="WebGuardarEstadoVisual">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual" message="tns:ASATRespuestaInterface_WebGuardarEstadoVisual_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisualResponse" message="tns:ASATRespuestaInterface_WebGuardarEstadoVisual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionarXEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudiante" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarXEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudianteResponse" message="tns:ASATRespuestaInterface_WebASATRespuestaSeleccionarXEstudiante_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATRespuestaInterface" type="tns:ASATRespuestaInterface">
@@ -441,6 +451,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebGuardarEstadoVisual">
       <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATRespuestaSeleccionarXEstudiante">
+      <soap:operation soapAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudiante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

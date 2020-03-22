@@ -631,6 +631,36 @@ namespace adminlte.ASATransaccionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVez", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVezResponse")]
         System.Threading.Tasks.Task<bool> WebASATransaccionEsPrimeraVezAsync(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "e", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eResponse")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXEstudiante(string SubCompania, string EstudianteCI, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "e", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXEstudianteAsync(string SubCompania, string EstudianteCI, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eIntento", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eIntentoResponse")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXEstudianteIntento(string EstudianteCI, long Intento, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eIntento", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiant" +
+            "eIntentoResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXEstudianteIntentoAsync(string EstudianteCI, long Intento, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoText" +
+            "o0Examen", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoText" +
+            "o0ExamenResponse")]
+        System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXGrupoTexto0Examen(string GrupoTexto0, bool Examen, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoText" +
+            "o0Examen", ReplyAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoText" +
+            "o0ExamenResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXGrupoTexto0ExamenAsync(string GrupoTexto0, bool Examen, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -770,6 +800,30 @@ namespace adminlte.ASATransaccionService {
         
         public System.Threading.Tasks.Task<bool> WebASATransaccionEsPrimeraVezAsync(string EstudianteCI, System.DateTime FechaIni, System.DateTime FechaFin, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebASATransaccionEsPrimeraVezAsync(EstudianteCI, FechaIni, FechaFin, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXEstudiante(string SubCompania, string EstudianteCI, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXEstudiante(SubCompania, EstudianteCI, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXEstudianteAsync(string SubCompania, string EstudianteCI, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXEstudianteAsync(SubCompania, EstudianteCI, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXEstudianteIntento(string EstudianteCI, long Intento, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXEstudianteIntento(EstudianteCI, Intento, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXEstudianteIntentoAsync(string EstudianteCI, long Intento, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXEstudianteIntentoAsync(EstudianteCI, Intento, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity> WebASATransaccionSeleccionarXGrupoTexto0Examen(string GrupoTexto0, bool Examen, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXGrupoTexto0Examen(GrupoTexto0, Examen, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATransaccionService.ASATransaccionEntity>> WebASATransaccionSeleccionarXGrupoTexto0ExamenAsync(string GrupoTexto0, bool Examen, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATransaccionSeleccionarXGrupoTexto0ExamenAsync(GrupoTexto0, Examen, strAKASesion, strAKASubCompania);
         }
     }
 }

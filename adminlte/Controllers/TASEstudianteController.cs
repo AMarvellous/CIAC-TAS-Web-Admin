@@ -1,7 +1,7 @@
 ﻿using adminlte.AXFUsuarioService;
 using adminlte.Classes;
 using adminlte.TASConfiguracionEncuestaAlumnoInstructorService;
-using adminlte.TASConfiguracionEncuestaSatisfaccionEstudianteService;
+using adminlte.TASConfiguracionEncuestaSatisfacEstudService;
 using adminlte.TASCriterioEncuestaSatisfaccionEstudianteService;
 using adminlte.TASCriterioEvaluacionAlumnoInstructorService;
 using adminlte.TASEncuestaAlumnoInstructorService;

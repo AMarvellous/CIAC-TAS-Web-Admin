@@ -91,6 +91,24 @@
   <wsdl:message name="ASATransaccionInterface_WebASATransaccionEsPrimeraVez_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebASATransaccionEsPrimeraVezResponse" />
   </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXEstudianteIntento_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXEstudianteIntento" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXEstudianteIntento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXEstudianteIntentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXGrupoTexto0Examen_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXGrupoTexto0Examen" />
+  </wsdl:message>
+  <wsdl:message name="ASATransaccionInterface_WebASATransaccionSeleccionarXGrupoTexto0Examen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebASATransaccionSeleccionarXGrupoTexto0ExamenResponse" />
+  </wsdl:message>
   <wsdl:portType name="ASATransaccionInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebNuevo" message="tns:ASATransaccionInterface_WebNuevo_InputMessage" />
@@ -147,6 +165,18 @@
     <wsdl:operation name="WebASATransaccionEsPrimeraVez">
       <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVez" message="tns:ASATransaccionInterface_WebASATransaccionEsPrimeraVez_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVezResponse" message="tns:ASATransaccionInterface_WebASATransaccionEsPrimeraVez_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiante" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudianteResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXEstudianteIntento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudianteIntento" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXEstudianteIntento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudianteIntentoResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXEstudianteIntento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXGrupoTexto0Examen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoTexto0Examen" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXGrupoTexto0Examen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoTexto0ExamenResponse" message="tns:ASATransaccionInterface_WebASATransaccionSeleccionarXGrupoTexto0Examen_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ASATransaccionInterface" type="tns:ASATransaccionInterface">
@@ -270,6 +300,33 @@
     </wsdl:operation>
     <wsdl:operation name="WebASATransaccionEsPrimeraVez">
       <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionEsPrimeraVez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXEstudiante">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXEstudianteIntento">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXEstudianteIntento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebASATransaccionSeleccionarXGrupoTexto0Examen">
+      <soap:operation soapAction="http://tempuri.org/ASATransaccionInterface/WebASATransaccionSeleccionarXGrupoTexto0Examen" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -1,5 +1,5 @@
 ﻿using adminlte.Classes;
-using adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService;
+using adminlte.TASConfiguracionEncuestaSatisfacInstrService;
 using adminlte.TASCriterioEvaluacionAlumnoInstructorService;
 using adminlte.TASEncuestaSatisfaccionInstructorService;
 using adminlte.TASEstudianteService;

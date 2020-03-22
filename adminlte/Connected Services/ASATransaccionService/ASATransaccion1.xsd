@@ -244,4 +244,55 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EstudianteCI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATransaccionSeleccionarXEstudianteResult" nillable="true" type="q11:ArrayOfASATransaccionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXEstudianteIntento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EstudianteCI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Intento" type="xs:long" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXEstudianteIntentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATransaccionSeleccionarXEstudianteIntentoResult" nillable="true" type="q12:ArrayOfASATransaccionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXGrupoTexto0Examen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GrupoTexto0" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Examen" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strAKASesion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAKASubCompania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebASATransaccionSeleccionarXGrupoTexto0ExamenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebObjetos" minOccurs="0" name="WebASATransaccionSeleccionarXGrupoTexto0ExamenResult" nillable="true" type="q13:ArrayOfASATransaccionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

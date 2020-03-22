@@ -975,6 +975,14 @@ namespace adminlte.TASEstudianteService {
             "", ReplyAction="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXSubCompania" +
             "Response")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity>> WebTASEstudianteSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupo", ReplyAction="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupoRespon" +
+            "se")]
+        System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity> WebTASEstudianteSeleccionarXGrupo(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupo", ReplyAction="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity>> WebTASEstudianteSeleccionarXGrupoAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1106,6 +1114,14 @@ namespace adminlte.TASEstudianteService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity>> WebTASEstudianteSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASEstudianteSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity> WebTASEstudianteSeleccionarXGrupo(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebTASEstudianteSeleccionarXGrupo(SubCompania, Grupo, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASEstudianteService.TASEstudianteEntity>> WebTASEstudianteSeleccionarXGrupoAsync(string SubCompania, string Grupo, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebTASEstudianteSeleccionarXGrupoAsync(SubCompania, Grupo, strAKASesion, strAKASubCompania);
         }
     }
 }

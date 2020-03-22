@@ -467,13 +467,13 @@ namespace adminlte.Controllers
 
 
             //Seleccionamos los marcados de Azul o Amarillo
-            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarXEstudiante((string)Session["Usuario"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
-            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase != "").ToList();
+            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.UClase != "").ToList();
 
-            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion != 0).Count();
-            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion == 0).Count();
-            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase == "Amarillo").Count();
+            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Opcion != 0).Count();
+            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Opcion == 0).Count();
+            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.UClase == "Amarillo").Count();
 
             // Tab Data
             ThumbnailViewModel model = new ThumbnailViewModel();
@@ -634,7 +634,7 @@ namespace adminlte.Controllers
 
             //obtenemos la ultima transaccion que deberia ser esta
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudiante((string)Session["Usuario"],(string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             ASATransaccionEntity etASATransaccion = ltASATransaccion.OrderByDescending(x => x.FechaDoc).FirstOrDefault();
             if (etASATransaccion == null)
             {
@@ -784,13 +784,13 @@ namespace adminlte.Controllers
             }
 
             //Seleccionamos los marcados de Azul o Amarillo
-            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATRespuestaEntity> ltASATRespuestaMarcados = ASATRespuesta.WebASATRespuestaSeleccionarXEstudiante((string)Session["Usuario"],(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
-            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase != "").ToList();
+            ViewBag.ltASATRespuestaMarcados = ltASATRespuestaMarcados.Where(x => x.UClase != "").ToList();
 
-            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion != 0).Count();
-            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.Opcion == 0).Count();
-            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.Estudiante == (string)Session["Usuario"] && x.UClase == "Amarillo").Count();
+            ViewBag.NumPreguntasRespondidas = ltASATRespuestaMarcados.Where(x => x.Opcion != 0).Count();
+            ViewBag.NumPreguntasNoRespondidas = ltASATRespuestaMarcados.Where(x => x.Opcion == 0).Count();
+            ViewBag.NumPreguntasAdvertencia = ltASATRespuestaMarcados.Where(x => x.UClase == "Amarillo").Count();
 
 
             // Tab Data
@@ -920,7 +920,7 @@ namespace adminlte.Controllers
 
             //obtenemos la ultima transaccion que deberia ser esta
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudiante((string)Session["Usuario"],(string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             ASATransaccionEntity etASATransaccion = ltASATransaccion.OrderByDescending(x => x.FechaDoc).FirstOrDefault();
             if (etASATransaccion == null)
             {
@@ -1165,7 +1165,7 @@ namespace adminlte.Controllers
         public ActionResult ASACuestionarioListaASAEstudiante(bool EsEstudiante = false, string Estudiante = "")
         {
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudiante((string)Session["SesionSubCompania"], Estudiante,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
             if (Estudiante == "")
             {
@@ -1177,7 +1177,7 @@ namespace adminlte.Controllers
                 ViewBag.EsEstudiante = EsEstudiante;
             }
 
-            ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).ToList();
+            //ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).ToList();
 
             var ltASATransaccionEstudiante = (from item in ltASATransaccion
                                               group item by item.Intento into g
@@ -1197,36 +1197,7 @@ namespace adminlte.Controllers
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
             ViewBag.EsEstudiante = EsEstudiante;
             ViewBag.Estudiante = Estudiante;
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-
-            //var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => g.Intento).ToList();
-            //var ltASATransaccionQuery = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => new { g.Intento, g.GrupoPregunta }).Select(s => s.ToList()).ToList();
-            ////var ltASATransaccionQuery2 = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante).GroupBy(g => new { Intento = g.Intento, GrupoPregunta = g.GrupoPregunta }).Select(s => new { Intento = s.Key.Intento, GrupoPregunta = s.Key.GrupoPregunta, Correcto = s.Count() }).ToList();
-            //var ltASATransaccionQuery3 = ltASATransaccion
-            //    .Where(x => x.EstudianteCI == Estudiante)
-            //    .GroupBy(g => g.Intento)
-            //    .Select(s =>  new 
-            //    {
-            //        Intento = s.Key,
-            //        GrupoPregunta = s.GroupBy(x => x.GrupoPregunta).Select(s2 => s.ToList())
-            //    }).ToList();
-
-            //var q = from c in ltASATransaccion
-            //        group c by c.Intento into g
-            //        select new { g.Key, Count = g.Count(), SubGroups = from c in g group c by c.GrupoPregunta into g2 select g2 };
-
-            //var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante)
-            //    .GroupBy(g => g.Intento)
-            //    .Select(s => new
-            //    {
-            //        Intento = s.Key,
-            //        GrupoPregunta = s.GroupBy(g => g.GrupoPregunta).Select(sb => new 
-            //        {
-            //            GrupoPregunta = sb.Key,
-            //            Total = sb.Count()
-            //        })
-            //    }).ToList();
-
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudianteIntento(Estudiante,Intento, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             //QUERY PARA EL DETALLE
             var ltAgrupada = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Intento == Intento)
                 .GroupBy(g => g.Intento)
@@ -1263,8 +1234,8 @@ namespace adminlte.Controllers
         public JsonResult ObtenerEstudiantesGrupo( string Grupo)
         {
             TASEstudianteInterfaceClient TASEstudiante = new TASEstudianteInterfaceClient();
-            List<TASEstudianteEntity> ltTASEstudiante = TASEstudiante.WebTASEstudianteSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-            ltTASEstudiante = ltTASEstudiante.Where(x => x.Grupo == Grupo).ToList();
+            List<TASEstudianteEntity> ltTASEstudiante = TASEstudiante.WebTASEstudianteSeleccionarXGrupo((string)Session["SesionSubCompania"], Grupo,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            //ltTASEstudiante = ltTASEstudiante.Where(x => x.Grupo == Grupo).ToList();
 
             return Json(new { success = true, ltTASEstudiante = ltTASEstudiante }, JsonRequestBehavior.AllowGet);
         }
@@ -1656,7 +1627,7 @@ namespace adminlte.Controllers
         {
             //Obtener las respuestas de este examne/practica
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudianteIntento(EstudianteCI,Intento, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
             ltASATransaccion = ltASATransaccion.Where(x => x.Intento == Intento && x.EstudianteCI == EstudianteCI && x.Correcto == false).ToList();
             //Ahora seleccionamos las preguntas de esta transaccion
             List<ASATransaccionReporte> ltASATransaccionReporte = new List<ASATransaccionReporte>();
@@ -1951,7 +1922,7 @@ namespace adminlte.Controllers
 
                 ReportDocument report = new ReportDocument();
                 List<ASATReporteExamenEstudianteEntity> ltASATReporteExamenEstudiante = new List<ASATReporteExamenEstudianteEntity>();
-                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXGrupoTexto0Examen(Grupo,true,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                 ltASATransaccion = ltASATransaccion.Where(x => x.Texto0 == Grupo && x.Examen == true && x.FechaDoc >= FechaIni && x.FechaDoc <= FechaFin).ToList();
                 ltASATReporteExamenEstudiante = ltASATransaccion
                     .GroupBy(g => g.EstudianteCI)
@@ -2075,7 +2046,7 @@ namespace adminlte.Controllers
         public ActionResult ASACuestionarioListaASAEstudianteExamen(string Estudiante = "")
         {
             ASATransaccionInterfaceClient ASATransaccion = new ASATransaccionInterfaceClient();
-            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXSubCompania((string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+            List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudiante((string)Session["SesionSubCompania"],Estudiante, (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
 
             ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Examen == true ).ToList();
 
@@ -2110,8 +2081,8 @@ namespace adminlte.Controllers
             try
             {
                 ReportDocument report = new ReportDocument();
-                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarTodo((string)Session["Sesion"], (string)Session["SesionSubCompania"]);
-                ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Intento == Intento).ToList();
+                List<ASATransaccionEntity> ltASATransaccion = ASATransaccion.WebASATransaccionSeleccionarXEstudianteIntento(Estudiante,Intento,(string)Session["Sesion"], (string)Session["SesionSubCompania"]);
+                //ltASATransaccion = ltASATransaccion.Where(x => x.EstudianteCI == Estudiante && x.Intento == Intento).ToList();
                 string NombreEstudiante = ObtenerNombreEstudiante(Estudiante);
                 ltASATransaccion = ltASATransaccion.Select(s => { s.Texto1 = NombreEstudiante; return s; }).ToList();
                 //ltASATReporteExamenEstudiante = ltASATransaccion

@@ -261,12 +261,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\Reference.cs">
+    <Compile Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\Reference.cs">
+    <Compile Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -803,29 +803,29 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TASConfiguracionEncuestaAlumnoInstructorService\TASConfiguracionEncuestaAlumnoInstructorClass.wsdl" />
-    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\adminlte.TASConfiguracionEncuestaSatisfaccionEstudianteService.TASConfiguracionEncuestaSatisfaccionEstudianteEntity.datasource">
+    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\adminlte.TASConfiguracionEncuestaSatisfacEstudService.TASConfiguracionEncuestaSatisfaccionEstudianteEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\adminlte.TASConfiguracionEncuestaSatisfaccionEstudianteService.TASConfiguracionEncuestaSatisfaccionEstudianteSet.datasource">
+    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\adminlte.TASConfiguracionEncuestaSatisfacEstudService.TASConfiguracionEncuestaSatisfaccionEstudianteSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\configuration91.svcinfo" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\configuration.svcinfo" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\Reference.svcmap">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\configuration.svcinfo" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\TASConfiguracionEncuestaSatisfaccionEstudiante.disco" />
-    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity.datasource">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\TASConfiguracionEncuestaSatisfaccionEstudiante.disco" />
+    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet.datasource">
+    <Content Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\TASConfiguracionEncuestaSatisfaccionInstructor.disco" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\configuration91.svcinfo" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\configuration.svcinfo" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\Reference.svcmap">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\TASConfiguracionEncuestaSatisfaccionInstructor.disco" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\configuration.svcinfo" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -835,26 +835,26 @@
     <Content Include="Connected Services\TASCriterioEncuestaSatisfaccionEstudianteService\adminlte.TASCriterioEncuestaSatisfaccionEstudianteService.TASCriterioEncuestaSatisfaccionEstudianteSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\TASConfiguracionEncuestaSatisfaccionEstudiante.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\TASConfiguracionEncuestaSatisfaccionEstudiante.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\TASConfiguracionEncuestaSatisfaccionEstudiante1.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\TASConfiguracionEncuestaSatisfaccionEstudiante1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\TASConfiguracionEncuestaSatisfaccionEstudiante2.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\TASConfiguracionEncuestaSatisfaccionEstudiante2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\TASConfiguracionEncuestaSatisfaccionEstudianteClass.wsdl" />
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\TASConfiguracionEncuestaSatisfaccionInstructor.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\TASConfiguracionEncuestaSatisfaccionEstudianteClass.wsdl" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\TASConfiguracionEncuestaSatisfaccionInstructor.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\TASConfiguracionEncuestaSatisfaccionInstructor1.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\TASConfiguracionEncuestaSatisfaccionInstructor1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\TASConfiguracionEncuestaSatisfaccionInstructor2.xsd">
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\TASConfiguracionEncuestaSatisfaccionInstructor2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\TASConfiguracionEncuestaSatisfaccionInstructorClass.wsdl" />
+    <None Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\TASConfiguracionEncuestaSatisfaccionInstructorClass.wsdl" />
     <None Include="Connected Services\TASCriterioEncuestaSatisfaccionEstudianteService\TASCriterioEncuestaSatisfaccionEstudiante.disco" />
     <None Include="Connected Services\TASCriterioEncuestaSatisfaccionEstudianteService\configuration91.svcinfo" />
     <None Include="Connected Services\TASCriterioEncuestaSatisfaccionEstudianteService\configuration.svcinfo" />
@@ -5561,8 +5561,8 @@
     <WCFMetadataStorage Include="Connected Services\AXFWebVistaService\" />
     <WCFMetadataStorage Include="Connected Services\TASAsistenciaEstudianteService\" />
     <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaAlumnoInstructorService\" />
-    <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaSatisfaccionEstudianteService\" />
-    <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaSatisfaccionInstructorService\" />
+    <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\" />
+    <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaSatisfacInstrService\" />
     <WCFMetadataStorage Include="Connected Services\TASCriterioEncuestaSatisfaccionEstudianteService\" />
     <WCFMetadataStorage Include="Connected Services\TASCriterioEncuestaSatisfaccionInstructorService\" />
     <WCFMetadataStorage Include="Connected Services\TASCriterioEvaluacionAlumnoInstructorService\" />

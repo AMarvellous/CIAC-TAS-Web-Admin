@@ -433,6 +433,14 @@ namespace adminlte.ASATRespuestaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisual", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebGuardarEstadoVisualResponse")]
         System.Threading.Tasks.Task<long> WebGuardarEstadoVisualAsync(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudiante", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudianteR" +
+            "esponse")]
+        System.Collections.Generic.List<adminlte.ASATRespuestaService.ASATRespuestaEntity> WebASATRespuestaSeleccionarXEstudiante(string Estudiante, string strAKASesion, string strAKASubCompania);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudiante", ReplyAction="http://tempuri.org/ASATRespuestaInterface/WebASATRespuestaSeleccionarXEstudianteR" +
+            "esponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATRespuestaService.ASATRespuestaEntity>> WebASATRespuestaSeleccionarXEstudianteAsync(string Estudiante, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -644,6 +652,14 @@ namespace adminlte.ASATRespuestaService {
         
         public System.Threading.Tasks.Task<long> WebGuardarEstadoVisualAsync(string Estudiante, long NroPregunta, string Color, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebGuardarEstadoVisualAsync(Estudiante, NroPregunta, Color, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Collections.Generic.List<adminlte.ASATRespuestaService.ASATRespuestaEntity> WebASATRespuestaSeleccionarXEstudiante(string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSeleccionarXEstudiante(Estudiante, strAKASesion, strAKASubCompania);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.ASATRespuestaService.ASATRespuestaEntity>> WebASATRespuestaSeleccionarXEstudianteAsync(string Estudiante, string strAKASesion, string strAKASubCompania) {
+            return base.Channel.WebASATRespuestaSeleccionarXEstudianteAsync(Estudiante, strAKASesion, strAKASubCompania);
         }
     }
 }

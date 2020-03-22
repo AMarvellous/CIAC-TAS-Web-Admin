@@ -85,6 +85,12 @@
   <wsdl:message name="TASEstudianteInterface_WebTASEstudianteSeleccionarXSubCompania_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebTASEstudianteSeleccionarXSubCompaniaResponse" />
   </wsdl:message>
+  <wsdl:message name="TASEstudianteInterface_WebTASEstudianteSeleccionarXGrupo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteSeleccionarXGrupo" />
+  </wsdl:message>
+  <wsdl:message name="TASEstudianteInterface_WebTASEstudianteSeleccionarXGrupo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASEstudianteSeleccionarXGrupoResponse" />
+  </wsdl:message>
   <wsdl:portType name="TASEstudianteInterface">
     <wsdl:operation name="WebNuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteInterface/WebNuevo" message="tns:TASEstudianteInterface_WebNuevo_InputMessage" />
@@ -137,6 +143,10 @@
     <wsdl:operation name="WebTASEstudianteSeleccionarXSubCompania">
       <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXSubCompania" message="tns:TASEstudianteInterface_WebTASEstudianteSeleccionarXSubCompania_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXSubCompaniaResponse" message="tns:TASEstudianteInterface_WebTASEstudianteSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteSeleccionarXGrupo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupo" message="tns:TASEstudianteInterface_WebTASEstudianteSeleccionarXGrupo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupoResponse" message="tns:TASEstudianteInterface_WebTASEstudianteSeleccionarXGrupo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_TASEstudianteInterface" type="tns:TASEstudianteInterface">
@@ -251,6 +261,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebTASEstudianteSeleccionarXSubCompania">
       <soap:operation soapAction="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASEstudianteSeleccionarXGrupo">
+      <soap:operation soapAction="http://tempuri.org/TASEstudianteInterface/WebTASEstudianteSeleccionarXGrupo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

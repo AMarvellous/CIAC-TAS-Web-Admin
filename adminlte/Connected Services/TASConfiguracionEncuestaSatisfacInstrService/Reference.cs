@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
+namespace adminlte.TASConfiguracionEncuestaSatisfacInstrService {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,10 +23,10 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorField;
+        private System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorEliminadoField;
+        private System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorEliminadoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,7 +39,7 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructor {
+        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructor {
             get {
                 return this.ltTASConfiguracionEncuestaSatisfaccionInstructorField;
             }
@@ -52,7 +52,7 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorEliminado {
+        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> ltTASConfiguracionEncuestaSatisfaccionInstructorEliminado {
             get {
                 return this.ltTASConfiguracionEncuestaSatisfaccionInstructorEliminadoField;
             }
@@ -135,7 +135,7 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         private string UClaseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.Estado UEstadoField;
+        private adminlte.TASConfiguracionEncuestaSatisfacInstrService.Estado UEstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool USelField;
@@ -375,7 +375,7 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.Estado UEstado {
+        public adminlte.TASConfiguracionEncuestaSatisfacInstrService.Estado UEstado {
             get {
                 return this.UEstadoField;
             }
@@ -441,69 +441,69 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSat" +
-        "isfaccionInstructorInterface")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccion" +
+        "InstructorInterface")]
     public interface TASConfiguracionEncuestaSatisfaccionInstructorInterface {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNue" +
             "vo", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNue" +
             "voResponse")]
-        adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebNuevo(string strAKASesion, string strAKASubCompania);
+        adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebNuevo(string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNue" +
             "vo", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebNue" +
             "voResponse")]
-        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebNuevoAsync(string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebNuevoAsync(string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGua" +
             "rdar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGua" +
             "rdarResponse")]
-        long WebGuardar(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania);
+        long WebGuardar(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGua" +
             "rdar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebGua" +
             "rdarResponse")]
-        System.Threading.Tasks.Task<long> WebGuardarAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebGuardarAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarResponse")]
-        long WebEliminar(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        long WebEliminar(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarResponse")]
-        System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarDetalle", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarDetalleResponse")]
-        long WebEliminarDetalle(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        long WebEliminarDetalle(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarDetalle", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebEli" +
             "minarDetalleResponse")]
-        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSel" +
             "eccionar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSel" +
             "eccionarResponse")]
-        adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
+        adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSel" +
             "eccionar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebSel" +
             "eccionarResponse")]
-        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRec" +
             "alcular", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRec" +
             "alcularResponse")]
-        adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebRecalcular(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebRecalcular(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRec" +
             "alcular", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebRec" +
             "alcularResponse")]
-        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebRecalcularAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebRecalcularAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorBloquear", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
@@ -548,41 +548,41 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoResponse")]
-        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo(string strAKASesion, string strAKASubCompania);
+        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo(string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarResponse")]
-        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
+        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionar", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaResponse")]
-        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania", ReplyAction="http://tempuri.org/TASConfiguracionEncuestaSatisfaccionInstructorInterface/WebTAS" +
             "ConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface TASConfiguracionEncuestaSatisfaccionInstructorInterfaceChannel : adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorInterface, System.ServiceModel.IClientChannel {
+    public interface TASConfiguracionEncuestaSatisfaccionInstructorInterfaceChannel : adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TASConfiguracionEncuestaSatisfaccionInstructorInterfaceClient : System.ServiceModel.ClientBase<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorInterface>, adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorInterface {
+    public partial class TASConfiguracionEncuestaSatisfaccionInstructorInterfaceClient : System.ServiceModel.ClientBase<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorInterface>, adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorInterface {
         
         public TASConfiguracionEncuestaSatisfaccionInstructorInterfaceClient() {
         }
@@ -603,51 +603,51 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
                 base(binding, remoteAddress) {
         }
         
-        public adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebNuevo(string strAKASesion, string strAKASubCompania) {
+        public adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebNuevo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevo(strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebNuevoAsync(string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebNuevoAsync(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebNuevoAsync(strAKASesion, strAKASubCompania);
         }
         
-        public long WebGuardar(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania) {
+        public long WebGuardar(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebGuardar(setTASConfiguracionEncuestaSatisfaccionInstructor, EsNuevo, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebGuardarAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<long> WebGuardarAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, bool EsNuevo, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebGuardarAsync(setTASConfiguracionEncuestaSatisfaccionInstructor, EsNuevo, strAKASesion, strAKASubCompania);
         }
         
-        public long WebEliminar(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public long WebEliminar(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminar(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<long> WebEliminarAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarAsync(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
-        public long WebEliminarDetalle(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public long WebEliminarDetalle(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarDetalle(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<long> WebEliminarDetalleAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebEliminarDetalleAsync(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
-        public adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
+        public adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebSeleccionar(SubCompania, InstructorLic, Fecha, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebSeleccionarAsync(SubCompania, InstructorLic, Fecha, strAKASesion, strAKASubCompania);
         }
         
-        public adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebRecalcular(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet WebRecalcular(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebRecalcular(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebRecalcularAsync(adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet> WebRecalcularAsync(adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorSet setTASConfiguracionEncuestaSatisfaccionInstructor, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebRecalcularAsync(setTASConfiguracionEncuestaSatisfaccionInstructor, strAKASesion, strAKASubCompania);
         }
         
@@ -683,27 +683,27 @@ namespace adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorEsBloqueadoAsync(SubCompania, InstructorLic, Fecha, strAKASesion, strAKASubCompania);
         }
         
-        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
+        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodo(strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoAsync(string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarTodoAsync(strAKASesion, strAKASubCompania);
         }
         
-        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
+        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionar(SubCompania, InstructorLic, Fecha, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarAsync(string SubCompania, string InstructorLic, System.DateTime Fecha, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarAsync(SubCompania, InstructorLic, Fecha, strAKASesion, strAKASubCompania);
         }
         
-        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
+        public System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania(string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompania(SubCompania, strAKASesion, strAKASubCompania);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfaccionInstructorService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<adminlte.TASConfiguracionEncuestaSatisfacInstrService.TASConfiguracionEncuestaSatisfaccionInstructorEntity>> WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaAsync(string SubCompania, string strAKASesion, string strAKASubCompania) {
             return base.Channel.WebTASConfiguracionEncuestaSatisfaccionInstructorSeleccionarXSubCompaniaAsync(SubCompania, strAKASesion, strAKASubCompania);
         }
     }
