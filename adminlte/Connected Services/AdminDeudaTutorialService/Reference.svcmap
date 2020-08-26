@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1edd74c-4b9f-4d72-b3a7-b8012d3bc1d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminDeudaTutorial" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminDeudaTutorial.xsd" MetadataType="Schema" ID="92b5180f-fb12-4473-91c5-594d465ec6f7" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd2" />
+    <MetadataFile FileName="AdminDeudaTutorial.disco" MetadataType="Disco" ID="ba8d157f-7819-4cb1-b3ac-9d11efb5336e" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTutorial?disco" />
+    <MetadataFile FileName="AdminDeudaTutorial1.xsd" MetadataType="Schema" ID="5df7f1c8-c084-4f75-a15a-9f7d4ed4d193" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd0" />
+    <MetadataFile FileName="AdminDeudaTutorial2.xsd" MetadataType="Schema" ID="9af25066-c149-4129-aaff-abeb7ba47187" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd1" />
+    <MetadataFile FileName="AdminDeudaTutorialClass.wsdl" MetadataType="Wsdl" ID="9ab441c6-b6a1-4668-9e05-99d14fde4347" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTutorial?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

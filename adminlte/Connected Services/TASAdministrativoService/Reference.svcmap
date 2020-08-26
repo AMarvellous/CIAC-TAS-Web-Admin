@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c8450c7c-5607-4db5-a95d-d560f2c8b47f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/TASAdministrativo" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASAdministrativo.xsd" MetadataType="Schema" ID="a3a6b13f-413e-4b5f-aa2c-19f0cd61d80f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASAdministrativo?xsd=xsd2" />
+    <MetadataFile FileName="TASAdministrativo1.xsd" MetadataType="Schema" ID="275a7b15-876b-414f-9861-7986c0f32a8f" SourceId="1" SourceUrl="http://alejandroasus:8901/TASAdministrativo?xsd=xsd0" />
+    <MetadataFile FileName="TASAdministrativo2.xsd" MetadataType="Schema" ID="72bd7c3e-04f1-4be8-8026-e7450a688cbc" SourceId="1" SourceUrl="http://alejandroasus:8901/TASAdministrativo?xsd=xsd1" />
+    <MetadataFile FileName="TASAdministrativo.disco" MetadataType="Disco" ID="322a2423-57ab-4f91-b230-22c67c3ef283" SourceId="1" SourceUrl="http://alejandroasus:8901/TASAdministrativo?disco" />
+    <MetadataFile FileName="TASAdministrativoClass.wsdl" MetadataType="Wsdl" ID="828f6107-dcc2-4c14-9cb9-626566842fbe" SourceId="1" SourceUrl="http://alejandroasus:8901/TASAdministrativo?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

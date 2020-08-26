@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminCodigoTASClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminCodigoTAS?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminCodigoTAS?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminCodigoTAS?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminCodigoTASInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminCodigoTASSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminCodigoTASInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebNuevo" message="tns:AdminCodigoTASInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebNuevoResponse" message="tns:AdminCodigoTASInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebGuardar" message="tns:AdminCodigoTASInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebGuardarResponse" message="tns:AdminCodigoTASInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebEliminar" message="tns:AdminCodigoTASInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebEliminarResponse" message="tns:AdminCodigoTASInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebEliminarDetalle" message="tns:AdminCodigoTASInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebEliminarDetalleResponse" message="tns:AdminCodigoTASInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebSeleccionar" message="tns:AdminCodigoTASInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebSeleccionarResponse" message="tns:AdminCodigoTASInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebRecalcular" message="tns:AdminCodigoTASInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebRecalcularResponse" message="tns:AdminCodigoTASInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASBloquear" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASBloquearResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASDesbloquear" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASDesbloquearResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueadoPor" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueadoPorResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueado" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueadoResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarTodo" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarTodoResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionar" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarXSubCompania" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarXSubCompaniaResponse" message="tns:AdminCodigoTASInterface_WebAdminCodigoTASSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminCodigoTASInterface" type="tns:AdminCodigoTASInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminCodigoTASSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminCodigoTASInterface/WebAdminCodigoTASSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminCodigoTASClass">
+    <wsdl:port name="BasicHttpBinding_AdminCodigoTASInterface" binding="tns:BasicHttpBinding_AdminCodigoTASInterface">
+      <soap:address location="http://alejandroasus:8901/AdminCodigoTAS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

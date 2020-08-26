@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cba386ae-f468-4931-89da-7fe1a2e3a2be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/TASInstructor" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TASInstructor.disco" MetadataType="Disco" ID="d123839f-8415-4605-8ea6-84ef4564b551" SourceId="1" SourceUrl="http://alejandroasus:8901/TASInstructor?disco" />
+    <MetadataFile FileName="TASInstructorClass.wsdl" MetadataType="Wsdl" ID="3fa343ec-eca9-413c-afd0-eba1152a1336" SourceId="1" SourceUrl="http://alejandroasus:8901/TASInstructor?wsdl" />
+    <MetadataFile FileName="TASInstructor.xsd" MetadataType="Schema" ID="8aa0c3d2-dd18-42b4-9d40-e50af758281d" SourceId="1" SourceUrl="http://alejandroasus:8901/TASInstructor?xsd=xsd1" />
+    <MetadataFile FileName="TASInstructor1.xsd" MetadataType="Schema" ID="ceb0e0f3-56f8-4a6f-a232-c1a7a370af74" SourceId="1" SourceUrl="http://alejandroasus:8901/TASInstructor?xsd=xsd2" />
+    <MetadataFile FileName="TASInstructor2.xsd" MetadataType="Schema" ID="262f0aec-ae2b-415d-ab14-ae9b48a28ce6" SourceId="1" SourceUrl="http://alejandroasus:8901/TASInstructor?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

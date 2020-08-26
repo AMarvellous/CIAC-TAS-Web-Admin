@@ -122,6 +122,12 @@
   <wsdl:message name="AXFSesionInterface_WebAccesoValido_OutputMessage">
     <wsdl:part name="parameters" element="tns:WebAccesoValidoResponse" />
   </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValidoAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValidoAdmin" />
+  </wsdl:message>
+  <wsdl:message name="AXFSesionInterface_WebAccesoValidoAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAccesoValidoAdminResponse" />
+  </wsdl:message>
   <wsdl:message name="AXFSesionInterface_WebAccesoValidoEjecucion_InputMessage">
     <wsdl:part name="parameters" element="tns:WebAccesoValidoEjecucion" />
   </wsdl:message>
@@ -258,6 +264,10 @@
     <wsdl:operation name="WebAccesoValido">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValido" message="tns:AXFSesionInterface_WebAccesoValido_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoResponse" message="tns:AXFSesionInterface_WebAccesoValido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValidoAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdmin" message="tns:AXFSesionInterface_WebAccesoValidoAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdminResponse" message="tns:AXFSesionInterface_WebAccesoValidoAdmin_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="WebAccesoValidoEjecucion">
       <wsdl:input wsaw:Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucion" message="tns:AXFSesionInterface_WebAccesoValidoEjecucion_InputMessage" />
@@ -466,6 +476,15 @@
     </wsdl:operation>
     <wsdl:operation name="WebAccesoValido">
       <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAccesoValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAccesoValidoAdmin">
+      <soap:operation soapAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdmin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

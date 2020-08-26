@@ -801,6 +801,12 @@ namespace adminlte.AXFSesionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAccesoValido", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoResponse")]
         System.Threading.Tasks.Task<string> WebAccesoValidoAsync(string Usuario, string Clave, string SubCompania, string Producto);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdmin", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdminResponse")]
+        string WebAccesoValidoAdmin(string Usuario, string Clave, string SubCompania, string Producto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdmin", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoAdminResponse")]
+        System.Threading.Tasks.Task<string> WebAccesoValidoAdminAsync(string Usuario, string Clave, string SubCompania, string Producto);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucion", ReplyAction="http://tempuri.org/AXFSesionInterface/WebAccesoValidoEjecucionResponse")]
         long WebAccesoValidoEjecucion(string strAKASesion, string strAKASubCompania);
         
@@ -1043,6 +1049,14 @@ namespace adminlte.AXFSesionService {
         
         public System.Threading.Tasks.Task<string> WebAccesoValidoAsync(string Usuario, string Clave, string SubCompania, string Producto) {
             return base.Channel.WebAccesoValidoAsync(Usuario, Clave, SubCompania, Producto);
+        }
+        
+        public string WebAccesoValidoAdmin(string Usuario, string Clave, string SubCompania, string Producto) {
+            return base.Channel.WebAccesoValidoAdmin(Usuario, Clave, SubCompania, Producto);
+        }
+        
+        public System.Threading.Tasks.Task<string> WebAccesoValidoAdminAsync(string Usuario, string Clave, string SubCompania, string Producto) {
+            return base.Channel.WebAccesoValidoAdminAsync(Usuario, Clave, SubCompania, Producto);
         }
         
         public long WebAccesoValidoEjecucion(string strAKASesion, string strAKASubCompania) {

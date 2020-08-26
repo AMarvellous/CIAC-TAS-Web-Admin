@@ -1,0 +1,145 @@
+﻿
+@model adminlte.AdminPlanPagoService.AdminPlanPagoDetalleEntity
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Admin-Plan de Pago-Editar</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="box-body">
+        <div id="msjContainerDetalle"></div>
+        @Html.HiddenFor(model => model.Linea, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+
+        <div class="form-group">
+            @Html.Label("Mensualidad")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-book"></i>
+                </div>
+                @Html.DropDownListFor(model => model.Mensualidad, new SelectList(@ViewBag.ltAdminCatalogoMensualidad as System.Collections.IEnumerable), "Seleccione una Mensualidad", new { @class = "form-control" })
+                @*@Html.EditorFor(model => model.Texto, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.Mensualidad, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Fecha Limite")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar-o"></i>
+                </div>
+                @Html.TextBox("FechaLimite", String.Format("{0:dd/MM/yyyy}", @Model.FechaLimite), new { @class = "form-control pull-right" })
+                @*@Html.EditorFor(model => model.FechaPago, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.FechaLimite, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Monto Sugerido")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-usd"></i>
+                </div>
+                @Html.EditorFor(model => model.MontoSugerido, new { htmlAttributes = new { @class = "form-control allownumericwithdecimal" } })
+                @Html.ValidationMessageFor(model => model.MontoSugerido, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+                <span class="input-group-addon">,00</span>
+            </div>
+
+            <!-- /.input group -->
+        </div>
+
+    </div>
+
+        <div class="modal-footer">
+            <span id="progress" class="text-center" style="display: none;">
+
+                Wait..
+            </span>
+
+            <input class="btn btn-primary" type="submit" value="Aceptar" />
+            <button class="btn btn-warning" data-dismiss="modal" style="">
+                Cerrar
+            </button>
+        </div>
+
+    </div>
+}
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/lib")*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+            var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null) {
+            if (MensajeError != "") {
+                muestraMesanje(3, MensajeError);
+            }
+        }
+
+        $(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+            $(this).val($(this).val().replace(/[^0-9\,]/g, ''));
+            if ((event.which != 44 || $(this).val().indexOf(',') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+
+        //Date picker
+        $('#FechaLimite').datepicker({
+            autoclose: true,
+            beforeShowDay: $.noop,
+            calendarWeeks: false,
+            clearBtn: false,
+            daysOfWeekDisabled: [],
+            endDate: Infinity,
+            forceParse: true,
+            format: 'dd/mm/yyyy',
+            keyboardNavigation: true,
+            language: 'es',
+            minViewMode: 0,
+            orientation: "bottom auto",
+            rtl: false,
+            startDate: -Infinity,
+            startView: 2,
+            todayBtn: false,
+            todayHighlight: false,
+            weekStart: 0
+
+        })
+
+        function muestraMesanje(tipo, msj) {
+
+            $("#msjContainerDetalle").html('');
+
+            if (tipo == 1) {
+                $("#msjContainerDetalle").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+            } else if (tipo == 2) {
+                $("#msjContainerDetalle").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+            } else if (tipo == 3) {
+                $("#msjContainerDetalle").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+            }
+
+        }
+
+        })
+
+
+</script>
+
+<style>
+    .form-horizontal .form-group {
+        margin-right: 0 !important;
+    }
+</style>

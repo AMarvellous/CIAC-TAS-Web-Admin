@@ -1,0 +1,192 @@
+﻿
+@model adminlte.TASProgramacionHorarioInstructorService.TASProgramacionHorarioInstructorLineaEntity
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Admin-Programacion Instructor-Nuevo</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="box-body">
+            <div id="msjContainer"></div>
+
+            <div class="form-group">
+                @Html.Label("Materia")
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    @*@Html.TextBoxFor(model => model.ltTASEstudiante[0].Materia, new { @class = "form-control" })*@
+                    @Html.DropDownListFor(model => model.Materia, new SelectList(@ViewBag.ltTASMateria as System.Collections.IEnumerable, Model.Materia), "Materia", new { @class = "form-control controlar" })
+                    @Html.ValidationMessageFor(model => model.Materia, "", new { @class = "text-danger" })
+                    @*<input type="number" class="form-control">*@
+                </div>
+                <!-- /.input group -->
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Grupo")
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-archive"></i>
+                    </div>
+                    @*@Html.TextBoxFor(model => model.ltTASEstudiante[0].Materia, new { @class = "form-control" })*@
+                    @Html.DropDownListFor(model => model.Grupo, new SelectList(@ViewBag.ltTASGrupo as System.Collections.IEnumerable, Model.Grupo), "Grupo", new { @class = "form-control controlar" })
+                    @Html.ValidationMessageFor(model => model.Grupo, "", new { @class = "text-danger" })
+                    @*<input type="number" class="form-control">*@
+                </div>
+                <!-- /.input group -->
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Fecha")
+                <div class="input-group date">
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    @Html.TextBox("FechaDoc", String.Format("{0:dd/MM/yyyy}", Model.FechaInicio), new { @class = "form-control pull-right" })
+                    @Html.ValidationMessage("FechaDoc", "", new { @class = "text-danger" })
+
+                    @*<input type="text" class="form-control pull-right" id="datepicker">*@
+                </div>
+                <!-- /.input group -->
+            </div>
+
+
+            <div class="bootstrap-timepicker">
+                <div class="form-group">
+                    @Html.Label("Hora Inicio")
+                    <div class="input-group">
+                        @*<input type="text" class="form-control timepicker">*@
+                        @Html.TextBoxFor(model => model.FechaInicio, Model.FechaInicio.ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture), new { @class = "form-control timepicker" })
+                        @Html.ValidationMessageFor(model => model.FechaInicio, "", new { @class = "text-danger" })
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                    </div>
+                    <!-- /.input group -->
+                </div>
+                <!-- /.form group -->
+            </div>
+
+            <div class="bootstrap-timepicker">
+                <div class="form-group">
+                    @Html.Label("Hora Fin")
+                    <div class="input-group">
+                        @*<input type="text" class="form-control timepicker">*@
+                        @Html.TextBoxFor(model => model.FechaFin, Model.FechaFin.ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture), new { @class = "form-control timepicker" })
+                        @Html.ValidationMessageFor(model => model.FechaFin, "", new { @class = "text-danger" })
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                    </div>
+                    <!-- /.input group -->
+                </div>
+                <!-- /.form group -->
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Aula")
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-dot-circle-o"></i>
+                    </div>
+                    @Html.TextBoxFor(model => model.Aula, new { @class = "form-control" })
+                    @*@Html.DropDownListFor(model => model.ltTASMateria[0].Observacion, new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable, Model.ltASAPregunta[0].GrupoPregunta), "GrupoPregunta", new { @class = "form-control controlar" })*@
+                    @Html.ValidationMessageFor(model => model.Aula, "", new { @class = "text-danger" })
+                    @*<input type="number" class="form-control">*@
+                </div>
+                <!-- /.input group -->
+            </div>
+
+            @*<div class="col-xs-12 form-group">
+                    <p class="bg-info">12:00 PM = Primera Hora del Dia </p>
+                    <p class="bg-info">12:00 AM = Ultima Hora del Dia </p>
+                </div>*@
+
+        </div>
+
+        <div class="modal-footer">
+            <span id="progress" class="text-center" style="display: none;">
+
+                Wait..
+            </span>
+
+            <input class="btn btn-primary" type="submit" value="Aceptar" />
+            <button class="btn btn-warning" data-dismiss="modal" style="">
+                Cerrar
+            </button>
+        </div>
+
+    </div>
+}
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/lib")*@
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            var MensajeError = '@ViewBag.MensajeError';
+                if (MensajeError != null ) {
+                    if (MensajeError != "") {
+                        muestraMesanje(3,MensajeError);
+                    }
+                }
+
+            //alert($('#FechaDoc').val());
+            //Date picker
+            $('#FechaDoc').datepicker({
+                autoclose: true,
+                beforeShowDay: $.noop,
+                calendarWeeks: false,
+                clearBtn: false,
+                daysOfWeekDisabled: [],
+                endDate: Infinity,
+                forceParse: true,
+                format: 'dd/mm/yyyy',
+                keyboardNavigation: true,
+                language: 'es',
+                minViewMode: 0,
+                orientation: "bottom auto",
+                rtl: false,
+                startDate: -Infinity,
+                startView: 2,
+                todayBtn: false,
+                todayHighlight: false,
+                weekStart: 0
+
+            })
+
+            //Timepicker
+            $('.timepicker').timepicker({
+                showInputs: false
+            })
+        })
+
+
+        function muestraMesanje(tipo, msj) {
+
+            $("#msjContainer").html('');
+
+            if (tipo == 1) {
+                $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+            } else if (tipo == 2) {
+                $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+            } else if (tipo == 3) {
+                $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+            }
+
+    }
+</script>
+
+<style>
+    .form-horizontal .form-group {
+        margin-right: 0 !important;
+    }
+</style>

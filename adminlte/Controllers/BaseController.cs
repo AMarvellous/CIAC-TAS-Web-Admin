@@ -50,7 +50,7 @@ namespace adminlte.Controllers
                         
                     }
                     //var lt = ltAXFWebMenuLic.OrderBy(x => x.Orden).ToList();
-                    ViewBag.ltAXFWebMenu = ltAXFWebMenuLic.OrderBy(x => x.Orden).ToList();
+                    ViewBag.ltAXFWebMenu = new List<AXFWebMenuEntity>();
 
                     List<AXFUsuarioClaseUsuarioEntity> ltAXFUsuarioClaseUsuario = AXFUsuario.WebAXFUsuarioClaseUsuarioSeleccionarKeyAXFUsuario((string)Session["Usuario"], (string)Session["SesionSubCompania"], (string)Session["Sesion"], (string)Session["SesionSubCompania"]);
                     foreach (AXFUsuarioClaseUsuarioEntity etAXFUsuarioClaseUsuario in ltAXFUsuarioClaseUsuario)
@@ -59,7 +59,9 @@ namespace adminlte.Controllers
                         if (etAXFUsuarioClaseUsuario.ClaseUsuario == "Administrador")
                         {
                             ViewBag.Ruta = "~/Imagenes/Gnome-stock_person_steward2.svg.png";
-                        }else if (etAXFUsuarioClaseUsuario.ClaseUsuario == "Estudiante")
+                            ViewBag.ltAXFWebMenu = ltAXFWebMenuLic.Where(x => x.Texto0 == "SuperAdmin").OrderBy(x => x.Orden).ToList();
+                        }
+                        else if (etAXFUsuarioClaseUsuario.ClaseUsuario == "Estudiante")
                         {
                             ViewBag.Ruta = "~/Imagenes/Gnome-stock_person_check2.svg.png";
                         }

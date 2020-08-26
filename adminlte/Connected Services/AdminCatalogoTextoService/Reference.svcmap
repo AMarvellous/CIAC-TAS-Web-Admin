@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c097b6da-5364-4387-99b2-56c7ca3ef896" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminCatalogoTexto" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminCatalogoTexto.xsd" MetadataType="Schema" ID="16090e2e-fa07-412b-b71f-12e66cf9dd41" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminCatalogoTexto?xsd=xsd1" />
+    <MetadataFile FileName="AdminCatalogoTexto.disco" MetadataType="Disco" ID="3c9a9881-f0a5-4ca3-aef6-cdc7fd278953" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminCatalogoTexto?disco" />
+    <MetadataFile FileName="AdminCatalogoTexto1.xsd" MetadataType="Schema" ID="98930a5d-4f55-44dc-abda-f2d293c8d180" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminCatalogoTexto?xsd=xsd2" />
+    <MetadataFile FileName="AdminCatalogoTexto2.xsd" MetadataType="Schema" ID="6c9cf437-5ec1-4bac-a5eb-4ffa023f0fb1" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminCatalogoTexto?xsd=xsd0" />
+    <MetadataFile FileName="AdminCatalogoTextoClass.wsdl" MetadataType="Wsdl" ID="f91fd7af-d0ec-4184-8c2a-006eb8cbb196" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminCatalogoTexto?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

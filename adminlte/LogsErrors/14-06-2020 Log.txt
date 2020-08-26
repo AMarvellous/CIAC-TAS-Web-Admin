@@ -1,0 +1,2 @@
+[Fecha]: 14/6/2020 02:47:06[Tipo]Exception [Excepcion/Evento]: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'Estudiante'. [Clase]: AdminMensualidad [Action]: AdminMensualidadGestion
+[Fecha]: 14/6/2020 16:38:41[Tipo]Exception [Excepcion/Evento]: No se puede convertir el tipo 'bool' a 'string'. [Clase]: AdminMensualidad [Action]: AdminMensualidadGestionEstudiante

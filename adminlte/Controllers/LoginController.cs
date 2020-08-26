@@ -65,7 +65,7 @@ namespace adminlte.Controllers
                     }
                 }
 
-                SesionResp = AXFSesion.WebAccesoValido(Usuario, Password, SubCompania, "CIACTAS PRODUCTO");
+                SesionResp = AXFSesion.WebAccesoValidoAdmin(Usuario, Password, SubCompania, "CIACTAS PRODUCTO");
 
                 if (SesionResp != "")
                 {

@@ -1,0 +1,4 @@
+[Fecha]: 16/8/2020 18:30:22[Tipo]Exception [Excepcion/Evento]: El valor no puede ser nulo.
+Nombre del parámetro: items [Clase]: AdminPlanPago [Action]: AdminPlanPagoDetalleEditar
+[Fecha]: 16/8/2020 18:38:08[Tipo]Exception [Excepcion/Evento]: El valor no puede ser nulo.
+Nombre del parámetro: source [Clase]: AdminPlanPago [Action]: AdminPlanPagoEditar

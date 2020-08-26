@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminDeudaTutorialClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTutorial?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleExiste" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTutorialDetalleExisteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminDeudaTutorialInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebNuevo" message="tns:AdminDeudaTutorialInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebNuevoResponse" message="tns:AdminDeudaTutorialInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebGuardar" message="tns:AdminDeudaTutorialInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebGuardarResponse" message="tns:AdminDeudaTutorialInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminar" message="tns:AdminDeudaTutorialInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminarResponse" message="tns:AdminDeudaTutorialInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminarDetalle" message="tns:AdminDeudaTutorialInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminarDetalleResponse" message="tns:AdminDeudaTutorialInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebSeleccionar" message="tns:AdminDeudaTutorialInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebSeleccionarResponse" message="tns:AdminDeudaTutorialInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebRecalcular" message="tns:AdminDeudaTutorialInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebRecalcularResponse" message="tns:AdminDeudaTutorialInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialBloquear" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialBloquearResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDesbloquear" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDesbloquearResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueadoPor" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueadoPorResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueado" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueadoResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarTodo" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarTodoResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionar" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarXSubCompania" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarXSubCompaniaResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarTodo" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarTodoResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionar" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorialResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarXSubCompania" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarXSubCompaniaResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleExiste" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleExisteResponse" message="tns:AdminDeudaTutorialInterface_WebAdminDeudaTutorialDetalleExiste_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminDeudaTutorialInterface" type="tns:AdminDeudaTutorialInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarKeyAdminDeudaTutorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTutorialDetalleExiste">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTutorialInterface/WebAdminDeudaTutorialDetalleExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminDeudaTutorialClass">
+    <wsdl:port name="BasicHttpBinding_AdminDeudaTutorialInterface" binding="tns:BasicHttpBinding_AdminDeudaTutorialInterface">
+      <soap:address location="http://alejandroasus:8901/AdminDeudaTutorial" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

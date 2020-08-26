@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminMultasClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMultas?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMultas?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMultas?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminMultasInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarKeyAdminMultas_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarKeyAdminMultas" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarKeyAdminMultas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarKeyAdminMultasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminMultasInterface_WebAdminMultasDetalleSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMultasDetalleSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminMultasInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebNuevo" message="tns:AdminMultasInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebNuevoResponse" message="tns:AdminMultasInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebGuardar" message="tns:AdminMultasInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebGuardarResponse" message="tns:AdminMultasInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebEliminar" message="tns:AdminMultasInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebEliminarResponse" message="tns:AdminMultasInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebEliminarDetalle" message="tns:AdminMultasInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebEliminarDetalleResponse" message="tns:AdminMultasInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebSeleccionar" message="tns:AdminMultasInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebSeleccionarResponse" message="tns:AdminMultasInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebRecalcular" message="tns:AdminMultasInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebRecalcularResponse" message="tns:AdminMultasInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasBloquear" message="tns:AdminMultasInterface_WebAdminMultasBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasBloquearResponse" message="tns:AdminMultasInterface_WebAdminMultasBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDesbloquear" message="tns:AdminMultasInterface_WebAdminMultasDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDesbloquearResponse" message="tns:AdminMultasInterface_WebAdminMultasDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueadoPor" message="tns:AdminMultasInterface_WebAdminMultasEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueadoPorResponse" message="tns:AdminMultasInterface_WebAdminMultasEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueado" message="tns:AdminMultasInterface_WebAdminMultasEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueadoResponse" message="tns:AdminMultasInterface_WebAdminMultasEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarTodo" message="tns:AdminMultasInterface_WebAdminMultasSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarTodoResponse" message="tns:AdminMultasInterface_WebAdminMultasSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionar" message="tns:AdminMultasInterface_WebAdminMultasSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarResponse" message="tns:AdminMultasInterface_WebAdminMultasSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarXSubCompania" message="tns:AdminMultasInterface_WebAdminMultasSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarXSubCompaniaResponse" message="tns:AdminMultasInterface_WebAdminMultasSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarTodo" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarTodoResponse" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionar" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarResponse" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarKeyAdminMultas">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarKeyAdminMultas" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarKeyAdminMultas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarKeyAdminMultasResponse" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarKeyAdminMultas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarXSubCompania" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarXSubCompaniaResponse" message="tns:AdminMultasInterface_WebAdminMultasDetalleSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminMultasInterface" type="tns:AdminMultasInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarKeyAdminMultas">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarKeyAdminMultas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMultasDetalleSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminMultasInterface/WebAdminMultasDetalleSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminMultasClass">
+    <wsdl:port name="BasicHttpBinding_AdminMultasInterface" binding="tns:BasicHttpBinding_AdminMultasInterface">
+      <soap:address location="http://alejandroasus:8901/AdminMultas" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

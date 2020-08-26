@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="73c52a15-4143-4576-85fd-4cf1571b594e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminMultas" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminMultasClass.wsdl" MetadataType="Wsdl" ID="6156921c-6fd5-4949-9247-a87ca446c87a" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMultas?wsdl" />
+    <MetadataFile FileName="AdminMultas.xsd" MetadataType="Schema" ID="f16bfa69-a3e4-4e22-89e9-05cd8f482fc3" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMultas?xsd=xsd2" />
+    <MetadataFile FileName="AdminMultas1.xsd" MetadataType="Schema" ID="a10b9827-3ed4-480d-8858-142f5e27ee31" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMultas?xsd=xsd1" />
+    <MetadataFile FileName="AdminMultas.disco" MetadataType="Disco" ID="d719fddb-4103-4a38-879d-1f1ae80cb7a7" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMultas?disco" />
+    <MetadataFile FileName="AdminMultas2.xsd" MetadataType="Schema" ID="a929bec6-ff79-48b1-97ec-3498bc3a862d" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMultas?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminPlanPagoClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminPlanPago?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminPlanPago?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminPlanPago?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminPlanPagoInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleExisteMensualidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleExisteMensualidad" />
+  </wsdl:message>
+  <wsdl:message name="AdminPlanPagoInterface_WebAdminPlanPagoDetalleExisteMensualidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminPlanPagoDetalleExisteMensualidadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminPlanPagoInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebNuevo" message="tns:AdminPlanPagoInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebNuevoResponse" message="tns:AdminPlanPagoInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebGuardar" message="tns:AdminPlanPagoInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebGuardarResponse" message="tns:AdminPlanPagoInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebEliminar" message="tns:AdminPlanPagoInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebEliminarResponse" message="tns:AdminPlanPagoInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebEliminarDetalle" message="tns:AdminPlanPagoInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebEliminarDetalleResponse" message="tns:AdminPlanPagoInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebSeleccionar" message="tns:AdminPlanPagoInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebSeleccionarResponse" message="tns:AdminPlanPagoInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebRecalcular" message="tns:AdminPlanPagoInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebRecalcularResponse" message="tns:AdminPlanPagoInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoBloquear" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoBloquearResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDesbloquear" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDesbloquearResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueadoPor" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueadoPorResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueado" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueadoResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarTodo" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarTodoResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionar" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarXSubCompania" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarXSubCompaniaResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarTodo" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarTodoResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionar" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPagoResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarXSubCompania" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarXSubCompaniaResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleExisteMensualidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleExisteMensualidad" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleExisteMensualidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleExisteMensualidadResponse" message="tns:AdminPlanPagoInterface_WebAdminPlanPagoDetalleExisteMensualidad_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminPlanPagoInterface" type="tns:AdminPlanPagoInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarKeyAdminPlanPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminPlanPagoDetalleExisteMensualidad">
+      <soap:operation soapAction="http://tempuri.org/AdminPlanPagoInterface/WebAdminPlanPagoDetalleExisteMensualidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminPlanPagoClass">
+    <wsdl:port name="BasicHttpBinding_AdminPlanPagoInterface" binding="tns:BasicHttpBinding_AdminPlanPagoInterface">
+      <soap:address location="http://alejandroasus:8901/AdminPlanPago" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

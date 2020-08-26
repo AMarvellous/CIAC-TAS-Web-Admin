@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="11657abb-9550-4510-be81-692fbce6d6c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminDeudaTexto" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminDeudaTexto.xsd" MetadataType="Schema" ID="08d0339b-72cd-4d60-b24c-bf869a05d118" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd0" />
+    <MetadataFile FileName="AdminDeudaTextoClass.wsdl" MetadataType="Wsdl" ID="4569aa46-303c-431a-ba04-4018b305f987" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTexto?wsdl" />
+    <MetadataFile FileName="AdminDeudaTexto1.xsd" MetadataType="Schema" ID="29b54aef-40f4-41f8-81f7-d04680914e69" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd1" />
+    <MetadataFile FileName="AdminDeudaTexto.disco" MetadataType="Disco" ID="0e2c97d6-12b8-491f-8803-4ac1ed0d93a5" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTexto?disco" />
+    <MetadataFile FileName="AdminDeudaTexto2.xsd" MetadataType="Schema" ID="ccda3ace-25d6-4744-90d7-a660faff1ac1" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

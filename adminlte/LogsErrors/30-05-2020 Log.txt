@@ -1,0 +1,3 @@
+[Fecha]: 30/5/2020 21:56:12[Tipo]Exception [Excepcion/Evento]: The model item passed into the dictionary is of type '<>f__AnonymousType7`2[adminlte.AdminMensualidadService.AdminMensualidadDetalleEntity,System.String]', but this dictionary requires a model item of type 'adminlte.AdminMensualidadService.AdminMensualidadDetalleEntity'. [Clase]: AdminMensualidad [Action]: AdminMensualidadDetalleNuevo
+[Fecha]: 30/5/2020 22:47:42[Tipo]Exception [Excepcion/Evento]: El valor no puede ser nulo.
+Nombre del parámetro: items [Clase]: AdminMensualidad [Action]: AdminMensualidadDetalleNuevo

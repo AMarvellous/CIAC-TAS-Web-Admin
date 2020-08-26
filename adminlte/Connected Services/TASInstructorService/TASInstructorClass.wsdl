@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TASInstructorClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASInstructor?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASInstructor?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/TASInstructor?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TASInstructorInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorBloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="TASInstructorInterface_WebTASInstructorSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebTASInstructorSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TASInstructorInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebNuevo" message="tns:TASInstructorInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebNuevoResponse" message="tns:TASInstructorInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebGuardar" message="tns:TASInstructorInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebGuardarResponse" message="tns:TASInstructorInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebEliminar" message="tns:TASInstructorInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebEliminarResponse" message="tns:TASInstructorInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebEliminarDetalle" message="tns:TASInstructorInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebEliminarDetalleResponse" message="tns:TASInstructorInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebSeleccionar" message="tns:TASInstructorInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebSeleccionarResponse" message="tns:TASInstructorInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebRecalcular" message="tns:TASInstructorInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebRecalcularResponse" message="tns:TASInstructorInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorBloquear" message="tns:TASInstructorInterface_WebTASInstructorBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorBloquearResponse" message="tns:TASInstructorInterface_WebTASInstructorBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorDesbloquear" message="tns:TASInstructorInterface_WebTASInstructorDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorDesbloquearResponse" message="tns:TASInstructorInterface_WebTASInstructorDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueadoPor" message="tns:TASInstructorInterface_WebTASInstructorEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueadoPorResponse" message="tns:TASInstructorInterface_WebTASInstructorEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueado" message="tns:TASInstructorInterface_WebTASInstructorEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueadoResponse" message="tns:TASInstructorInterface_WebTASInstructorEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarTodo" message="tns:TASInstructorInterface_WebTASInstructorSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarTodoResponse" message="tns:TASInstructorInterface_WebTASInstructorSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionar" message="tns:TASInstructorInterface_WebTASInstructorSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarResponse" message="tns:TASInstructorInterface_WebTASInstructorSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarXSubCompania" message="tns:TASInstructorInterface_WebTASInstructorSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarXSubCompaniaResponse" message="tns:TASInstructorInterface_WebTASInstructorSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_TASInstructorInterface" type="tns:TASInstructorInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorBloquear">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebTASInstructorSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/TASInstructorInterface/WebTASInstructorSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TASInstructorClass">
+    <wsdl:port name="BasicHttpBinding_TASInstructorInterface" binding="tns:BasicHttpBinding_TASInstructorInterface">
+      <soap:address location="http://alejandroasus:8901/TASInstructor" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

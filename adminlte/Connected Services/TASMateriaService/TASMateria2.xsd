@@ -25,6 +25,7 @@
       <xs:element minOccurs="0" name="Logico1" type="xs:boolean" />
       <xs:element minOccurs="0" name="Logico2" type="xs:boolean" />
       <xs:element minOccurs="0" name="Materia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SubCompania" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Texto0" nillable="true" type="xs:string" />

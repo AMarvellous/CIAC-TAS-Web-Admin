@@ -1,0 +1,2 @@
+[Fecha]: 20/7/2020 22:12:30[Tipo]Exception [Excepcion/Evento]: Column "MontoSugerido" does not exist. [Clase]: AdminCatalogoTexto [Action]: AdminCatalogoTextoLista
+[Fecha]: 20/7/2020 22:12:38[Tipo]Exception [Excepcion/Evento]: Column "MontoSugerido" does not exist. [Clase]: AdminCatalogoTexto [Action]: AdminCatalogoTextoLista

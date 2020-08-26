@@ -114,6 +114,9 @@ namespace adminlte.TASMateriaService {
         private string MateriaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ObservacionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -282,6 +285,19 @@ namespace adminlte.TASMateriaService {
                 if ((object.ReferenceEquals(this.MateriaField, value) != true)) {
                     this.MateriaField = value;
                     this.RaisePropertyChanged("Materia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Modulo {
+            get {
+                return this.ModuloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModuloField, value) != true)) {
+                    this.ModuloField = value;
+                    this.RaisePropertyChanged("Modulo");
                 }
             }
         }

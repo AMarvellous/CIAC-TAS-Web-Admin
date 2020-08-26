@@ -185,17 +185,60 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Classes\ASATransaccionReporteDetalle.cs" />
-    <Compile Include="Classes\ASATransaccionEstudiante.cs" />
-    <Compile Include="Classes\ASATransaccionReporte.cs" />
+    <Compile Include="Classes\AdminCatalogoTextoHelper.cs" />
     <Compile Include="Classes\ExcelExportHelper.cs" />
-    <Compile Include="Classes\GradoSatisfaccionClass.cs" />
     <Compile Include="Classes\HelperLogClass.cs" />
     <Compile Include="Classes\RandomHelper.cs" />
-    <Compile Include="Classes\TASCertificadoCalificacionesClass.cs" />
-    <Compile Include="Classes\TASEncuestaAlumnoInstructorDetalle.cs" />
-    <Compile Include="Classes\TASEncuestaSatisfaccionEstudianteDetalle.cs" />
-    <Compile Include="Classes\TASEncuestaSatisfaccionInstructorDetalle.cs" />
+    <Compile Include="Connected Services\AdminAsignacionReglasPlanPagoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminCatalogoMensualidadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminCatalogoTextoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminCodigoTASService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminDeudaTextoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminDeudaTutorialService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminMensualidadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminMultasService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminPlanPagoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminReglasPlanPagoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ASAConfiguracionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +290,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\AXFWebVistaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TASAdministrativoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -321,6 +369,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TASInstructorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\TASMaterialDidacticoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -372,151 +425,249 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ASAConfiguracionController.cs" />
-    <Compile Include="Controllers\ASACuestionarioController.cs" />
+    <Compile Include="Controllers\AdminAsignacionReglasPlanPagoController.cs" />
+    <Compile Include="Controllers\AdminCatalogoMensualidadController.cs" />
+    <Compile Include="Controllers\AdminCatalogoTextoController.cs" />
+    <Compile Include="Controllers\AdminDeudaTextoController.cs" />
+    <Compile Include="Controllers\AdminDeudaTutorialController.cs" />
+    <Compile Include="Controllers\AdminMensualidadController.cs" />
+    <Compile Include="Controllers\AdminMultasController.cs" />
+    <Compile Include="Controllers\AdminPlanPagoController.cs" />
+    <Compile Include="Controllers\AdminReglasPlanPagoController.cs" />
     <Compile Include="Controllers\AXFUsuarioController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\TASAsistenciaEstudianteController.cs" />
+    <Compile Include="Controllers\TASAdministrativoController.cs" />
     <Compile Include="Controllers\TASEstudianteController.cs" />
-    <Compile Include="Controllers\TASEstudianteReporteController.cs" />
-    <Compile Include="Controllers\TASInstructorReporteController.cs" />
-    <Compile Include="Controllers\TASMaterialDidacticoController.cs" />
-    <Compile Include="Controllers\TASProgramaAnaliticoController.cs" />
-    <Compile Include="Controllers\TASProgramacionHorarioInstructorController.cs" />
-    <Compile Include="Controllers\TASRegistroNotasController.cs" />
-    <Compile Include="Controllers\TASReporteEstudianteController.cs" />
-    <Compile Include="Controllers\TASReporteNotasEstudianteController.cs" />
+    <Compile Include="Controllers\TASGestionController.cs" />
+    <Compile Include="Controllers\TASGrupoController.cs" />
+    <Compile Include="Controllers\TASInstructorController.cs" />
+    <Compile Include="Controllers\TASMateriaController.cs" />
+    <Compile Include="Controllers\TASModuloController.cs" />
+    <Compile Include="Controllers\TASProgramaController.cs" />
     <Compile Include="FileHttpPostedFileBaseClass.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HTMLHelperExtensions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EstudianteModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ThumbHelper.cs" />
     <Compile Include="Models\ThumbnailModel.cs" />
     <Compile Include="Models\ThumbnailViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\ASACuestionario\ASACuestionarioExamenReporteIndividual.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ASACuestionarioExamenReporteIndividual.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\ASACuestionarioGenerarExamen.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ASACuestionarioGenerarExamen.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\ASATransaccionReporteEstudiante.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ASATransaccionReporteEstudiante.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\DataSetPregunta.cs">
-      <DependentUpon>DataSetPregunta.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\DataSetPregunta.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetPregunta.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteDs.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASAsistenciaEstudianteDs.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteReporte.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASAsistenciaEstudianteReporte.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificacionesDs.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASEstudianteCalificacionesDs.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificaionesReporte.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASEstudianteCalificaionesReporte.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASEstudianteLista\TASEstudianteListaDs.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASEstudianteListaDs.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASEstudianteLista\TASEstudianteListaReporte.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASEstudianteListaReporte.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASInstructorReporte\DsTASInstructorReporteXMateria.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DsTASInstructorReporteXMateria.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASInstructorReporte\TASInstructorReporteXMateria.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASInstructorReporteXMateria.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASProgramaAnalitico\TASProgramaAnaliticoInstructor.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASProgramaAnaliticoInstructor.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASRegistroNotasEstudiante\TASRegistroNotasEstudiante.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASRegistroNotasEstudiante.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TASReporteEstudiante\DsTASReporteMateriasFaltantes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DsTASReporteMateriasFaltantes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TASReporteEstudiante\TASReporteMateriasFaltantes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TASReporteMateriasFaltantes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\AdminAsignacionReglasPlanPago.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\AdminAsignacionReglasPlanPago1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\AdminAsignacionReglasPlanPago2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\AdminAsignacionReglasPlanPagoClass.wsdl" />
+    <Content Include="Connected Services\AdminAsignacionReglasPlanPagoService\adminlte.AdminAsignacionReglasPlanPagoService.AdminAsignacionReglasPlanPagoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminAsignacionReglasPlanPagoService\adminlte.AdminAsignacionReglasPlanPagoService.AdminAsignacionReglasPlanPagoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\AdminCatalogoMensualidad.disco" />
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\AdminAsignacionReglasPlanPago.disco" />
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminAsignacionReglasPlanPagoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminCatalogoMensualidadService\adminlte.AdminCatalogoMensualidadService.AdminCatalogoMensualidadEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminCatalogoMensualidadService\adminlte.AdminCatalogoMensualidadService.AdminCatalogoMensualidadSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminCatalogoMensualidadService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminCatalogoMensualidadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AdminCatalogoTextoService\AdminCatalogoTexto.disco" />
+    <Content Include="Connected Services\AdminCatalogoTextoService\adminlte.AdminCatalogoTextoService.AdminCatalogoTextoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminCatalogoTextoService\adminlte.AdminCatalogoTextoService.AdminCatalogoTextoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminCatalogoTextoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminCatalogoTextoService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminCatalogoTextoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AdminCodigoTASService\AdminCodigoTAS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCodigoTASService\AdminCodigoTAS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCodigoTASService\AdminCodigoTAS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCodigoTASService\AdminCodigoTASClass.wsdl" />
+    <Content Include="Connected Services\AdminCodigoTASService\adminlte.AdminCodigoTASService.AdminCodigoTASEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminCodigoTASService\adminlte.AdminCodigoTASService.AdminCodigoTASSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminDeudaTextoService\AdminDeudaTexto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTextoService\AdminDeudaTexto1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTextoService\AdminDeudaTexto2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTextoService\AdminDeudaTextoClass.wsdl" />
+    <None Include="Connected Services\AdminCodigoTASService\AdminCodigoTAS.disco" />
+    <None Include="Connected Services\AdminCodigoTASService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminCodigoTASService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminCodigoTASService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminDeudaTextoService\adminlte.AdminDeudaTextoService.AdminDeudaTextoDetalleEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminDeudaTextoService\adminlte.AdminDeudaTextoService.AdminDeudaTextoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminDeudaTextoService\adminlte.AdminDeudaTextoService.AdminDeudaTextoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminDeudaTutorialService\AdminDeudaTutorial.disco" />
+    <None Include="Connected Services\AdminDeudaTextoService\AdminDeudaTexto.disco" />
+    <None Include="Connected Services\AdminDeudaTextoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminDeudaTextoService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminDeudaTextoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminDeudaTutorialService\adminlte.AdminDeudaTutorialService.AdminDeudaTutorialDetalleEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminDeudaTutorialService\adminlte.AdminDeudaTutorialService.AdminDeudaTutorialEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminDeudaTutorialService\adminlte.AdminDeudaTutorialService.AdminDeudaTutorialSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminDeudaTutorialService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminDeudaTutorialService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminDeudaTutorialService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminMensualidadService\adminlte.AdminMensualidadService.AdminMensualidadDetalleEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminMensualidadService\adminlte.AdminMensualidadService.AdminMensualidadEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminMensualidadService\adminlte.AdminMensualidadService.AdminMensualidadSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\AdminCatalogoMensualidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\AdminCatalogoMensualidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\AdminCatalogoMensualidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoMensualidadService\AdminCatalogoMensualidadClass.wsdl" />
+    <None Include="Connected Services\AdminCatalogoTextoService\AdminCatalogoTexto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoTextoService\AdminCatalogoTexto1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoTextoService\AdminCatalogoTexto2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminCatalogoTextoService\AdminCatalogoTextoClass.wsdl" />
+    <None Include="Connected Services\AdminDeudaTutorialService\AdminDeudaTutorial.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTutorialService\AdminDeudaTutorial1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTutorialService\AdminDeudaTutorial2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminDeudaTutorialService\AdminDeudaTutorialClass.wsdl" />
+    <None Include="Connected Services\AdminMensualidadService\AdminMensualidad.disco" />
+    <None Include="Connected Services\AdminMensualidadService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminMensualidadService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminMensualidadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminMultasService\adminlte.AdminMultasService.AdminMultasDetalleEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminMultasService\adminlte.AdminMultasService.AdminMultasEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminMultasService\adminlte.AdminMultasService.AdminMultasSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminMultasService\AdminMultas.disco" />
+    <None Include="Connected Services\AdminMultasService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminMultasService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminMultasService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminPlanPagoService\adminlte.AdminPlanPagoService.AdminPlanPagoDetalleEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminPlanPagoService\adminlte.AdminPlanPagoService.AdminPlanPagoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminPlanPagoService\adminlte.AdminPlanPagoService.AdminPlanPagoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminPlanPagoService\AdminPlanPago.disco" />
+    <None Include="Connected Services\AdminPlanPagoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminPlanPagoService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminPlanPagoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AdminReglasPlanPagoService\adminlte.AdminReglasPlanPagoService.AdminReglasPlanPagoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdminReglasPlanPagoService\adminlte.AdminReglasPlanPagoService.AdminReglasPlanPagoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdminReglasPlanPagoService\AdminReglasPlanPago.disco" />
+    <None Include="Connected Services\AdminReglasPlanPagoService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdminReglasPlanPagoService\configuration.svcinfo" />
+    <None Include="Connected Services\AdminReglasPlanPagoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\ASAConfiguracionService\adminlte.ASAConfiguracionService.ASAConfiguracionEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -526,6 +677,46 @@
     <Content Include="Connected Services\ASAConfiguracionService\adminlte.ASAConfiguracionService.ASAConfiguracionLineaEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\AdminMensualidadService\AdminMensualidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMensualidadService\AdminMensualidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMensualidadService\AdminMensualidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMensualidadService\AdminMensualidadClass.wsdl" />
+    <None Include="Connected Services\AdminMultasService\AdminMultas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMultasService\AdminMultas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMultasService\AdminMultas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminMultasService\AdminMultasClass.wsdl" />
+    <None Include="Connected Services\AdminPlanPagoService\AdminPlanPago.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminPlanPagoService\AdminPlanPago1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminPlanPagoService\AdminPlanPago2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminPlanPagoService\AdminPlanPagoClass.wsdl" />
+    <None Include="Connected Services\AdminReglasPlanPagoService\AdminReglasPlanPago.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminReglasPlanPagoService\AdminReglasPlanPago1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminReglasPlanPagoService\AdminReglasPlanPago2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminReglasPlanPagoService\AdminReglasPlanPagoClass.wsdl" />
     <None Include="Connected Services\ASAConfiguracionService\ASAConfiguracion.disco" />
     <None Include="Connected Services\ASAConfiguracionService\configuration91.svcinfo" />
     <None Include="Connected Services\ASAConfiguracionService\configuration.svcinfo" />
@@ -751,6 +942,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\TASAdministrativoService\adminlte.TASAdministrativoService.TASAdministrativoEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASAdministrativoService\adminlte.TASAdministrativoService.TASAdministrativoSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASAdministrativoService\TASAdministrativo.disco" />
+    <None Include="Connected Services\TASAdministrativoService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASAdministrativoService\configuration.svcinfo" />
+    <None Include="Connected Services\TASAdministrativoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\TASAsistenciaEstudianteService\adminlte.TASAsistenciaEstudianteService.TASAsistenciaEstudianteEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -763,6 +967,16 @@
     <Content Include="Connected Services\TASAsistenciaEstudianteService\adminlte.TASAsistenciaEstudianteService.TASAsistenciaEstudianteSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\TASAdministrativoService\TASAdministrativo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASAdministrativoService\TASAdministrativo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASAdministrativoService\TASAdministrativo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASAdministrativoService\TASAdministrativoClass.wsdl" />
     <None Include="Connected Services\TASAsistenciaEstudianteService\TASAsistenciaEstudiante.disco" />
     <None Include="Connected Services\TASAsistenciaEstudianteService\configuration91.svcinfo" />
     <None Include="Connected Services\TASAsistenciaEstudianteService\configuration.svcinfo" />
@@ -1078,12 +1292,35 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\TASInstructorService\adminlte.TASInstructorService.TASInstructorEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TASInstructorService\adminlte.TASInstructorService.TASInstructorSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TASInstructorService\TASInstructor.disco" />
+    <None Include="Connected Services\TASInstructorService\configuration91.svcinfo" />
+    <None Include="Connected Services\TASInstructorService\configuration.svcinfo" />
+    <None Include="Connected Services\TASInstructorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\TASMaterialDidacticoService\adminlte.TASMaterialDidacticoService.TASMaterialDidacticoEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\TASMaterialDidacticoService\adminlte.TASMaterialDidacticoService.TASMaterialDidacticoSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\TASInstructorService\TASInstructor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASInstructorService\TASInstructor1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASInstructorService\TASInstructor2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TASInstructorService\TASInstructorClass.wsdl" />
     <None Include="Connected Services\TASMaterialDidacticoService\TASMaterialDidactico.disco" />
     <None Include="Connected Services\TASMaterialDidacticoService\configuration91.svcinfo" />
     <None Include="Connected Services\TASMaterialDidacticoService\configuration.svcinfo" />
@@ -1375,6 +1612,7 @@
     <Content Include="Global.asax" />
     <Content Include="iconoavion.ico" />
     <Content Include="Iconos\iconoavion.ico" />
+    <Content Include="Imagenes\Aviation.jpg" />
     <Content Include="Imagenes\avion.jpeg" />
     <Content Include="Imagenes\BannerTAS.jpeg" />
     <Content Include="Imagenes\BannerTASMisionVision.jpeg" />
@@ -5243,32 +5481,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioEntrada.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioExcel.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioGrafica.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioGraficaEstudiante.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionEditar.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLista.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionNuevo.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLineaNuevo.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionSuccess.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionLineaEliminar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioPregunta.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioListaPregunta.cshtml" />
-    <Content Include="Views\ASAConfiguracion\ASAConfiguracionEliminar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaNuevo.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaEditar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaNuevo.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaEliminar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaRespuestaEditar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASAPreguntaEliminar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioExamen.cshtml" />
     <Content Include="Views\AXFUsuario\AXFUsuarioEditar.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioDetalleTransaccion.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioGenerarExamen.cshtml" />
-    <Content Include="Reports\ASACuestionario\DataSetPregunta.xsc">
-      <DependentUpon>DataSetPregunta.xsd</DependentUpon>
-    </Content>
     <None Include="Connected Services\TASTransaccionProgramaAnaliticoService\TASTransaccionProgramaAnalitico.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -5283,158 +5496,88 @@
     <Content Include="Documents\GENERAL.xlsx" />
     <Content Include="Documents\POWERPLANT.xlsx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
-    <None Include="Reports\ASACuestionario\DataSetPregunta.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetPregunta.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\ASACuestionario\DataSetPregunta.xss">
-      <DependentUpon>DataSetPregunta.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\ASACuestionario\ASAPreguntaBancoPregunta.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioHistorialExamen.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioExamenReporte.cshtml" />
-    <Content Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xsc">
-      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTransaccionReporteEstudiante.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\ASACuestionario\DataSetTransaccionReporteEstudiante.xss">
-      <DependentUpon>DataSetTransaccionReporteEstudiante.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\TASProgramaAnalitico\TASProgramaAnaliticoGestionar.cshtml" />
-    <Content Include="Views\TASProgramaAnalitico\TASProgramaAnaliticoVisualizar.cshtml" />
-    <Content Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsc">
-      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
-    </Content>
-    <Content Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xsc">
-      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsASACuestionarioExamenReporteIndividual.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\ASACuestionario\DsASACuestionarioExamenReporteIndividual.xss">
-      <DependentUpon>DsASACuestionarioExamenReporteIndividual.xsd</DependentUpon>
-    </Content>
-    <Content Include="Reports\TASInstructorReporte\DsTASInstructorReporteXMateria.xsc">
-      <DependentUpon>DsTASInstructorReporteXMateria.xsd</DependentUpon>
-    </Content>
-    <Content Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteDs.xsc">
-      <DependentUpon>TASAsistenciaEstudianteDs.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteDs.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TASAsistenciaEstudianteDs.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteDs.xss">
-      <DependentUpon>TASAsistenciaEstudianteDs.xsd</DependentUpon>
-    </Content>
-    <Content Include="Reports\TASEstudianteLista\TASEstudianteListaDs.xsc">
-      <DependentUpon>TASEstudianteListaDs.xsd</DependentUpon>
-    </Content>
-    <Content Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificacionesDs.xsc">
-      <DependentUpon>TASEstudianteCalificacionesDs.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificacionesDs.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TASEstudianteCalificacionesDs.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificacionesDs.xss">
-      <DependentUpon>TASEstudianteCalificacionesDs.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASEstudianteLista\TASEstudianteListaDs.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TASEstudianteListaDs.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASEstudianteLista\TASEstudianteListaDs.xss">
-      <DependentUpon>TASEstudianteListaDs.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASInstructorReporte\DsTASInstructorReporteXMateria.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsTASInstructorReporteXMateria.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASInstructorReporte\DsTASInstructorReporteXMateria.xss">
-      <DependentUpon>DsTASInstructorReporteXMateria.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetProgramaAnalitico.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASProgramaAnalitico\DataSetProgramaAnalitico.xss">
-      <DependentUpon>DataSetProgramaAnalitico.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoLista.cshtml" />
-    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoSubirMaterial.cshtml" />
-    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoDescargarMaterial.cshtml" />
-    <Content Include="Views\TASProgramaAnalitico\TASMaterialProgramaAnaliticoEditarMaterial.cshtml" />
-    <Content Include="Views\TASProgramacionHorarioInstructor\TASProgramacionHorarioInstructorLista.cshtml" />
-    <Content Include="Views\TASRegistroNotas\TASRegistroNotasLista.cshtml" />
-    <Content Include="Views\TASRegistroNotas\TASRegistroNotasNuevo.cshtml" />
-    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEditar.cshtml" />
-    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEstudianteEditar.cshtml" />
-    <Content Include="Views\TASRegistroNotas\TASRegistroNotasEliminar.cshtml" />
-    <Content Include="Views\TASReporteNotasEstudiante\TASReporteListaEstudiante.cshtml" />
-    <Content Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xsc">
-      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTASRegistroNotasEstudiante.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASRegistroNotasEstudiante\DataSetTASRegistroNotasEstudiante.xss">
-      <DependentUpon>DataSetTASRegistroNotasEstudiante.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\ASACuestionario\ASACuestionarioListaASAEstudiante.cshtml" />
-    <Content Include="Views\ASACuestionario\ASATransaccionReporteDetalle.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioExamenReporteIndividual.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioListaASAEstudianteExamen.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteNotas.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteNotasGrilla.cshtml" />
-    <Content Include="Views\TASMaterialDidactico\TASMaterialDidacticoLista.cshtml" />
-    <Content Include="Views\TASMaterialDidactico\TASMaterialDidacticoEditarMaterial.cshtml" />
-    <Content Include="Views\TASInstructorReporte\TASInstructorReporteXMateria.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteMaterialDidactico.cshtml" />
-    <Content Include="Views\TASEstudiante\TASMaterialDidacticoVisualizar.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteEncuestaSatisfaccionEstudianteEncuestar.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteEncuestaSatisfaccionEstudianteRealizado.cshtml" />
-    <Content Include="Views\TASEstudiante\TASEstudianteEncuestaAlumnoInstructorEncuestar.cshtml" />
-    <Content Include="Views\TASInstructorReporte\TASInstructorEncuestaInstructorEncuestar.cshtml" />
-    <Content Include="Views\TASInstructorReporte\TASInstructorEncuestaSatisfaccionInstructorRealizado.cshtml" />
-    <Content Include="Reports\TASReporteEstudiante\DsTASReporteMateriasFaltantes.xsc">
-      <DependentUpon>DsTASReporteMateriasFaltantes.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TASReporteEstudiante\DsTASReporteMateriasFaltantes.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsTASReporteMateriasFaltantes.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TASReporteEstudiante\DsTASReporteMateriasFaltantes.xss">
-      <DependentUpon>DsTASReporteMateriasFaltantes.xsd</DependentUpon>
-    </Content>
-    <Content Include="Views\TASEstudiante\TASBloqueoEstudiante.cshtml" />
-    <Content Include="Views\TASAsistenciaEstudiante\TASAsistenciaEstudiantePDF.cshtml" />
-    <Content Include="Views\TASAsistenciaEstudiante\TASAsistenciaEstudiantePDFLista.cshtml" />
-    <Content Include="Views\TASEstudianteReporte\TASEstudianteListaActual.cshtml" />
-    <Content Include="Views\TASEstudianteReporte\TASEstudianteCertificadoCalificaciones.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadLista.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadEditar.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadDetalleNuevo.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadDetalleEliminar.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadDetalleEditar.cshtml" />
+    <Content Include="Views\AdminCatalogoMensualidad\AdminCatalogoMensualidadLista.cshtml" />
+    <Content Include="Views\AdminCatalogoMensualidad\AdminCatalogoMensualidadNuevo.cshtml" />
+    <Content Include="Views\AdminCatalogoTexto\AdminCatalogoTextoLista.cshtml" />
+    <Content Include="Views\AdminCatalogoTexto\AdminCatalogoTextoNuevo.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialLista.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialEditar.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialDetalleNuevo.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialDetalleEliminar.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialDetalleEditar.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoLista.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoEditar.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoDetalleNuevo.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoDetalleEliminar.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoDetalleEditar.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasLista.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasEditar.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasDetalleNuevo.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasDetalleEliminar.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasDetalleEditar.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadGestion.cshtml" />
+    <Content Include="Views\AdminMensualidad\AdminMensualidadGestionEstudiante.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoGestion.cshtml" />
+    <Content Include="Views\AdminDeudaTexto\AdminDeudaTextoGestionEstudiante.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialGestion.cshtml" />
+    <Content Include="Views\AdminDeudaTutorial\AdminDeudaTutorialGestionEstudiante.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasGestion.cshtml" />
+    <Content Include="Views\AdminMultas\AdminMultasGestionEstudiante.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteLista.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteNuevo.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteEditar.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteAsignacionMaterias.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteAsignacionMateriasEstudiante.cshtml" />
+    <Content Include="Views\TASEstudiante\TASEstudianteAsignacionMateriasEstudianteNuevo.cshtml" />
+    <Content Include="Views\TASInstructor\TASInstructorNuevo.cshtml" />
+    <Content Include="Views\TASInstructor\TASInstructorLista.cshtml" />
+    <Content Include="Views\TASInstructor\TASInstructorEditar.cshtml" />
+    <Content Include="Views\TASAdministrativo\TASAdministrativoLista.cshtml" />
+    <Content Include="Views\TASAdministrativo\TASAdministrativoNuevo.cshtml" />
+    <Content Include="Views\TASAdministrativo\TASAdministrativoEditar.cshtml" />
+    <Content Include="Views\TASPrograma\TASProgramaEditar.cshtml" />
+    <Content Include="Views\TASPrograma\TASProgramaNuevo.cshtml" />
+    <Content Include="Views\TASPrograma\TASProgramaLista.cshtml" />
+    <Content Include="Views\TASMateria\TASMateriaLista.cshtml" />
+    <Content Include="Views\TASMateria\TASMateriaNuevo.cshtml" />
+    <Content Include="Views\TASMateria\TASMateriaEditar.cshtml" />
+    <Content Include="Views\TASGrupo\TASGrupoEditar.cshtml" />
+    <Content Include="Views\TASGrupo\TASGrupoNuevo.cshtml" />
+    <Content Include="Views\TASGrupo\TASGrupoLista.cshtml" />
+    <Content Include="Views\TASGestion\TASGestionEditar.cshtml" />
+    <Content Include="Views\TASGestion\TASGestionNuevo.cshtml" />
+    <Content Include="Views\TASGestion\TASGestionLista.cshtml" />
+    <Content Include="Views\TASModulo\TASModuloEditar.cshtml" />
+    <Content Include="Views\TASModulo\TASModuloNuevo.cshtml" />
+    <Content Include="Views\TASModulo\TASModuloLista.cshtml" />
+    <Content Include="Views\TASInstructor\TASProgramacionHorarioInstructorLista.cshtml" />
+    <Content Include="Views\TASInstructor\TASProgramacionHorarioInstructorEditar.cshtml" />
+    <Content Include="Views\TASInstructor\TASProgramacionHorarioInstructorLineaNuevo.cshtml" />
+    <Content Include="Views\TASInstructor\TASProgramacionHorarioInstructorLineaEditar.cshtml" />
+    <Content Include="Views\AdminCatalogoTexto\AdminCatalogoTextoEditar.cshtml" />
+    <Content Include="Views\AdminPlanPago\AdminPlanPagoLista.cshtml" />
+    <Content Include="Views\AdminPlanPago\AdminPlanPagoEditar.cshtml" />
+    <Content Include="Views\AdminPlanPago\AdminPlanPagoDetalleNuevo.cshtml" />
+    <Content Include="Views\AdminPlanPago\AdminPlanPagoDetalleEliminar.cshtml" />
+    <Content Include="Views\AdminPlanPago\AdminPlanPagoDetalleEditar.cshtml" />
+    <Content Include="Views\AdminReglasPlanPago\AdminReglasPlanPagoLista.cshtml" />
+    <Content Include="Views\AdminReglasPlanPago\AdminReglasPlanPagoNuevo.cshtml" />
+    <Content Include="Views\AdminReglasPlanPago\AdminReglasPlanPagoEditar.cshtml" />
+    <Content Include="Views\AdminAsignacionReglasPlanPago\AdminAsignacionReglasPlanPagoLista.cshtml" />
+    <Content Include="Views\AdminAsignacionReglasPlanPago\AdminReglasPlanPagoEditar.cshtml" />
+    <Content Include="Views\AdminAsignacionReglasPlanPago\AdminReglasPlanPagoAsignacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Reports\TASEstudiante\" />
     <Folder Include="Views\ASAPregunta\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\TASRegistroNota\" />
-    <Folder Include="Views\TASReporteEstudiante\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -5542,12 +5685,21 @@
     <Content Include="README.md" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Index\Index.cshtml" />
-    <Content Include="Views\ASACuestionario\ASACuestionarioInicio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AdminAsignacionReglasPlanPagoService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminCatalogoMensualidadService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminCatalogoTextoService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminCodigoTASService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminDeudaTextoService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminDeudaTutorialService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminMensualidadService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminMultasService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminPlanPagoService\" />
+    <WCFMetadataStorage Include="Connected Services\AdminReglasPlanPagoService\" />
     <WCFMetadataStorage Include="Connected Services\ASAConfiguracionService\" />
     <WCFMetadataStorage Include="Connected Services\ASAGrupoPreguntaService\" />
     <WCFMetadataStorage Include="Connected Services\ASAPreguntaService\" />
@@ -5559,6 +5711,7 @@
     <WCFMetadataStorage Include="Connected Services\AXFUsuarioService\" />
     <WCFMetadataStorage Include="Connected Services\AXFWebMenuService\" />
     <WCFMetadataStorage Include="Connected Services\AXFWebVistaService\" />
+    <WCFMetadataStorage Include="Connected Services\TASAdministrativoService\" />
     <WCFMetadataStorage Include="Connected Services\TASAsistenciaEstudianteService\" />
     <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaAlumnoInstructorService\" />
     <WCFMetadataStorage Include="Connected Services\TASConfiguracionEncuestaSatisfacEstudService\" />
@@ -5573,6 +5726,7 @@
     <WCFMetadataStorage Include="Connected Services\TASEstudianteService\" />
     <WCFMetadataStorage Include="Connected Services\TASGestionService\" />
     <WCFMetadataStorage Include="Connected Services\TASGrupoService\" />
+    <WCFMetadataStorage Include="Connected Services\TASInstructorService\" />
     <WCFMetadataStorage Include="Connected Services\TASMaterialDidacticoService\" />
     <WCFMetadataStorage Include="Connected Services\TASMaterialProgramaAnaliticoService\" />
     <WCFMetadataStorage Include="Connected Services\TASMateriaService\" />
@@ -5586,48 +5740,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Reports\ASACuestionario\ASACuestionarioExamenReporteIndividual.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ASACuestionarioExamenReporteIndividual.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ASACuestionario\ASACuestionarioGenerarExamen.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ASACuestionarioGenerarExamen.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ASACuestionario\ASATransaccionReporteEstudiante.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ASATransaccionReporteEstudiante.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASAsistenciaEstudiante\TASAsistenciaEstudianteReporte.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASAsistenciaEstudianteReporte.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASEstudianteCalificaciones\TASEstudianteCalificaionesReporte.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASEstudianteCalificaionesReporte.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASEstudianteLista\TASEstudianteListaReporte.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASEstudianteListaReporte.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASInstructorReporte\TASInstructorReporteXMateria.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASInstructorReporteXMateria.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASProgramaAnalitico\TASProgramaAnaliticoInstructor.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASProgramaAnaliticoInstructor.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASRegistroNotasEstudiante\TASRegistroNotasEstudiante.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASRegistroNotasEstudiante.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TASReporteEstudiante\TASReporteMateriasFaltantes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TASReporteMateriasFaltantes.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

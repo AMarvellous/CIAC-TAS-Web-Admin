@@ -1,0 +1,135 @@
+﻿
+@model adminlte.AdminMensualidadService.AdminMensualidadDetalleEntity
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Admin-Mensualidad-Eliminar</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="box-body">
+        <div id="msjContainerDetalle"></div>
+        <div class="form-group">
+            @Html.Label("Mensualidad")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-money"></i>
+                </div>
+                @Html.EditorFor(model => model.Mensualidad, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Mensualidad, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Monto")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-usd"></i>
+                </div>
+                @Html.EditorFor(model => model.Monto, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Monto, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+
+        <div class="form-group">
+            @Html.Label("Numero Factura")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-bank"></i>
+                </div>
+                @Html.EditorFor(model => model.NumeroFactura, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.NumeroFactura, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Fecha de Pago")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar-o"></i>
+                </div>
+                @Html.EditorFor(model => model.FechaPago, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.FechaPago, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Concepto")
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-comment-o"></i>
+                </div>
+                @Html.EditorFor(model => model.Concepto, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Concepto, "", new { @class = "text-danger" })
+                @*<input type="number" class="form-control">*@
+            </div>
+            <!-- /.input group -->
+        </div>
+
+
+
+    </div>
+
+        <div class="modal-footer">
+            <span id="progress" class="text-center" style="display: none;">
+
+                Wait..
+            </span>
+
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+            <button class="btn btn-warning" data-dismiss="modal" style="">
+                Cerrar
+            </button>
+        </div>
+
+    </div>
+}
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/lib")*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null) {
+            if (MensajeError != "") {
+                muestraMesanje(3, MensajeError);
+            }
+        }
+
+        function muestraMesanje(tipo, msj) {
+
+            $("#msjContainerDetalle").html('');
+
+            if (tipo == 1) {
+                $("#msjContainerDetalle").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+            } else if (tipo == 2) {
+                $("#msjContainerDetalle").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+            } else if (tipo == 3) {
+                $("#msjContainerDetalle").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+            }
+
+        }
+
+        })
+</script>
+
+<style>
+    .form-horizontal .form-group {
+        margin-right: 0 !important;
+    }
+</style>

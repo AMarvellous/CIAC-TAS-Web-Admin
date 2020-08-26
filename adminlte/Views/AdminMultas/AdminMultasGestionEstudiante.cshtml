@@ -1,0 +1,179 @@
+﻿@model List<adminlte.AdminMultasService.AdminMultasDetalleEntity>
+
+
+@{
+    ViewBag.Title = "AdminMultasGestionEstudiante";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //WebGrid grid = new WebGrid(Model, // source
+    //                            null, // columnNames
+    //                            null, // defaultSort
+    //                            50,   // rowsPerPage
+    //                            true, // canPage
+    //                            true, // canSort
+    //                            null, // ajaxUpdateContainerId
+    //                            null, // ajaxUpdateCallback
+    //                            null, // fieldNamePrefix
+    //                            null, // pageFieldName
+    //                            null, // selectionFieldName
+    //                            null, // sortFieldName
+    //                            null);// sortDirectionFieldName
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Admin
+            <small>Pagar Otras Multas</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Admin</a></li>
+            <li class="active">Pagar Otras Multas</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content table-responsive">
+        <!-- Default box -->
+        <div class="box box-primary">
+            <div id="msjContainer"></div>
+            <div class="box-header with-border">
+                <h3 class="box-title">CIAC TAS</h3>
+            </div>
+            <!-- /.box-header -->
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @*<form action="@Url.Action("AdminMultasGestionEstudiante","AdminMultas", new {ltAdminMultasDetalle = Model })" method="post" role="form">*@
+
+                <div class="col-sm-12">
+                    @Html.ActionLink(" ", "AdminMultasGestion", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+                </div>
+
+                <div class="form-group">
+                    @*@Html.Label("Cantidad Preguntas")*@
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-users"> @Html.Label((string)ViewBag.EstudianteCI, new { htmlAttributes = new { @class = "form-control" } })</i>
+                        </div>
+
+                        @*@Html.ValidationMessageFor(model => model.ltASAPregunta[0].CantidadPregunta, "", new { @class = "text-danger" })*@
+                        @*<input type="number" class="form-control">*@
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                @*<div class="box-body">
+                                        <br />
+                                        @grid.GetHtml(
+                                                tableStyle: "table table-bordered",
+                                                headerStyle: "header",
+                                                alternatingRowStyle: "alt",
+                                                //tableStyle: "gridtable",
+                                                //headerStyle: "gridtable-header",
+                                                //alternatingRowStyle: "gridtable-alt",
+                                                footerStyle: "table-pager-footer",
+                                                columns: new[] {
+                                                    //grid.Column("TipoDoc"),
+                                                   // grid.Column("SubCompania"),
+                                                    grid.Column("Mensualidad"),
+                                                    grid.Column("Monto"),
+                                                    grid.Column(columnName: "Pagado", header: "Pagar?", format: @<text>@Html.CheckBoxFor(model => model.First().Pagado)</text>)
+                    })
+                                    </div>*@
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="header">
+                            <th scope="col">
+                                <a href="/AdminMultas/AdminMultasGestionEstudiante?Estudiante=@ViewBag.EstudianteCI&amp;sort=Mensualidad&amp;sortdir=ASC">Concepto</a>
+                            </th>
+                            <th scope="col">
+                                <a href="/AdminMultas/AdminMultasGestionEstudiante?Estudiante=@ViewBag.EstudianteCI&amp;sort=Monto&amp;sortdir=ASC">Monto</a>
+                            </th>
+                            <th scope="col">
+                                <a href="/AdminMultas/AdminMultasGestionEstudiante?Estudiante=@ViewBag.EstudianteCI&amp;sort=Pagado&amp;sortdir=ASC">Pagar?</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (var i = 0; i < Model.Count(); i++)
+                        {
+                            <tr>
+                                <td>@Html.Label(Model[i].Concepto, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })</td>
+                                <td>@Html.Label(Model[i].Monto.ToString(), new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })</td>
+                                <td>@Html.CheckBoxFor(model => model[i].Pagado, new { htmlAttributes = new { @class = "form-control" } })</td>
+                                @Html.HiddenFor(model => model[i].Pagado)
+                                @Html.HiddenFor(model => model[i].Linea)
+                                @Html.HiddenFor(model => model[i].Monto)
+                                @Html.HiddenFor(model => model[i].EstudianteCI)
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+
+            }
+            @*</form>*@
+
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+@section scripts
+{
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+    });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
+    </script>
+
+}
+
+<style>
+
+    .table-pager-footer > td {
+        padding-top: 10px;
+    }
+
+        .table-pager-footer > td > a {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 3px 7px;
+        }
+
+            .table-pager-footer > td > a:hover {
+                background-color: #f0f0f0;
+            }
+</style>

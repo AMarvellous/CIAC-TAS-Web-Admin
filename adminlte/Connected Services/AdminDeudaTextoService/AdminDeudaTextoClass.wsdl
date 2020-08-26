@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminDeudaTextoClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminDeudaTexto?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminDeudaTextoInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTextoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleExiste" />
+  </wsdl:message>
+  <wsdl:message name="AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminDeudaTextoDetalleExisteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminDeudaTextoInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebNuevo" message="tns:AdminDeudaTextoInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebNuevoResponse" message="tns:AdminDeudaTextoInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebGuardar" message="tns:AdminDeudaTextoInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebGuardarResponse" message="tns:AdminDeudaTextoInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebEliminar" message="tns:AdminDeudaTextoInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebEliminarResponse" message="tns:AdminDeudaTextoInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebEliminarDetalle" message="tns:AdminDeudaTextoInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebEliminarDetalleResponse" message="tns:AdminDeudaTextoInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebSeleccionar" message="tns:AdminDeudaTextoInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebSeleccionarResponse" message="tns:AdminDeudaTextoInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebRecalcular" message="tns:AdminDeudaTextoInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebRecalcularResponse" message="tns:AdminDeudaTextoInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoBloquear" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoBloquearResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDesbloquear" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDesbloquearResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueadoPor" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueadoPorResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueado" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueadoResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarTodo" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarTodoResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionar" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarXSubCompania" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarXSubCompaniaResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarTodo" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarTodoResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionar" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTextoResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarXSubCompania" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarXSubCompaniaResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleExiste" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleExisteResponse" message="tns:AdminDeudaTextoInterface_WebAdminDeudaTextoDetalleExiste_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminDeudaTextoInterface" type="tns:AdminDeudaTextoInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarKeyAdminDeudaTexto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminDeudaTextoDetalleExiste">
+      <soap:operation soapAction="http://tempuri.org/AdminDeudaTextoInterface/WebAdminDeudaTextoDetalleExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminDeudaTextoClass">
+    <wsdl:port name="BasicHttpBinding_AdminDeudaTextoInterface" binding="tns:BasicHttpBinding_AdminDeudaTextoInterface">
+      <soap:address location="http://alejandroasus:8901/AdminDeudaTexto" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

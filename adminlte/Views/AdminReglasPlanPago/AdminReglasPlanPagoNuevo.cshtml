@@ -1,0 +1,174 @@
+﻿
+@model adminlte.AdminReglasPlanPagoService.AdminReglasPlanPagoSet
+
+@{
+    ViewBag.Title = "AdminReglasPlanPagoNuevo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Admin
+            <small>Reglas de Multa</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Admin</a></li>
+            <li class="active">Reglas de Multa</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="box box-primary">
+            <div id="msjContainer"></div>
+            <form action="@Url.Action("AdminReglasPlanPagoNuevo","AdminReglasPlanPago")" method="post" role="form">
+
+                <div class="box-header with-border">
+                    <h3 class="box-title">CIAC TAS</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="col-sm-12">
+                    @Html.ActionLink(" ", "AdminReglasPlanPagoLista", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+                </div>
+                <!-- form start -->
+                @*<form role="form">*@
+            <div class="box-body table-responsive">
+
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.Label("Nombre de la Regla")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        @Html.TextBoxFor(model => model.ltAdminReglasPlanPago[0].NombreRegla, new { @class = "form-control" })
+                        @*@Html.DropDownListFor(model => model.ltAdminReglasPlanPago[0].Observacion, new SelectList(@ViewBag.ltASAGrupoPregunta as System.Collections.IEnumerable, Model.ltASAPregunta[0].GrupoPregunta), "GrupoPregunta", new { @class = "form-control controlar" })*@
+                        @Html.ValidationMessageFor(model => model.ltAdminReglasPlanPago[0].NombreRegla, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Dia de Inicio")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-usd"></i>
+                        </div>
+                        @Html.EditorFor(model => model.ltAdminReglasPlanPago[0].DiaIni, new { htmlAttributes = new { @class = "form-control allownumericwithoutdecimal" } })
+                        @Html.ValidationMessageFor(model => model.ltAdminReglasPlanPago[0].DiaFin, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Dia de Fin")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-usd"></i>
+                        </div>
+                        @Html.EditorFor(model => model.ltAdminReglasPlanPago[0].DiaFin, new { htmlAttributes = new { @class = "form-control allownumericwithoutdecimal" } })
+                        @Html.ValidationMessageFor(model => model.ltAdminReglasPlanPago[0].DiaFin, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                    </div>
+
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Monto Multa")
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-usd"></i>
+                        </div>
+                        @Html.EditorFor(model => model.ltAdminReglasPlanPago[0].MontoMulta, new { htmlAttributes = new { @class = "form-control allownumericwithdecimal" } })
+                        @Html.ValidationMessageFor(model => model.ltAdminReglasPlanPago[0].MontoMulta, "", new { @class = "text-danger" })
+                        @*<input type="number" class="form-control">*@
+                        <span class="input-group-addon">,00</span>
+                    </div>
+
+                    <!-- /.input group -->
+                </div>
+
+            </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+                @*</form>*@
+            </form>
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding-top:2%;">
+            <div id='myModalContent' style="padding-left:5%;"></div>
+        </div>
+    </div>
+</div>
+
+@*@Scripts.Render("~/Scripts/adminlte/js/modal.js")*@
+<script src="~/Scripts/adminlte/components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/Scripts/adminlte/js/modal.js"></script>
+
+@section scripts
+{
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+        var MensajeError = '@ViewBag.MensajeError';
+        if (MensajeError != null ) {
+            if (MensajeError != "") {
+                muestraMesanje(3,MensajeError);
+            }
+        }
+
+     });
+
+        $(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+            $(this).val($(this).val().replace(/[^0-9\,]/g, ''));
+            if ((event.which != 44 || $(this).val().indexOf(',') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+
+        $(".allownumericwithoutdecimal").on("keypress keyup blur", function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+            $(this).val($(this).val().replace(/[^0-9]/g, ''));
+            if ((event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+
+    function muestraMesanje(tipo, msj) {
+
+        $("#msjContainer").html('');
+
+        if (tipo == 1) {
+            $("#msjContainer").append('<div class="alert alert-success alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<strong>Operacion realizada exitosamente.</strong>&nbsp;' + msj + '</div>')
+        } else if (tipo == 2) {
+            $("#msjContainer").append('<div class="alert alert-danger alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<strong>Error:</strong>' + msj + '</div>')
+        } else if (tipo == 3) {
+            $("#msjContainer").append('<div class="alert alert-warning alert-dismissable fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;<strong>Atencion:&nbsp;</strong>' + msj + '</div>')
+        }
+
+    }
+    </script>
+
+}

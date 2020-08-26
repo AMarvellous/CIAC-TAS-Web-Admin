@@ -1,0 +1,2 @@
+[Fecha]: 19/6/2020 00:08:23[Tipo]Exception [Excepcion/Evento]: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'InstruccionPrevia'. [Clase]: TASEstudiante [Action]: TASEstudianteEditar
+[Fecha]: 19/6/2020 00:11:27[Tipo]Exception [Excepcion/Evento]: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'InstruccionPrevia'. [Clase]: TASEstudiante [Action]: TASEstudianteEditar

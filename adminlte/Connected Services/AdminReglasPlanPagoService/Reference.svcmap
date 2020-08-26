@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ee3a7ebd-33d3-40f2-afde-217e6d4a77ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminReglasPlanPago" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminReglasPlanPago.xsd" MetadataType="Schema" ID="3df7a427-6fb6-471f-84e9-0b8eff36d09d" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminReglasPlanPago?xsd=xsd1" />
+    <MetadataFile FileName="AdminReglasPlanPago1.xsd" MetadataType="Schema" ID="4715826c-071d-4743-9489-9731df4df541" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminReglasPlanPago?xsd=xsd2" />
+    <MetadataFile FileName="AdminReglasPlanPago.disco" MetadataType="Disco" ID="7dd7e363-6a15-432a-b4fa-470c3b7c2368" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminReglasPlanPago?disco" />
+    <MetadataFile FileName="AdminReglasPlanPagoClass.wsdl" MetadataType="Wsdl" ID="6e6173cf-34c4-44fb-899c-30a1b6e17c63" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminReglasPlanPago?wsdl" />
+    <MetadataFile FileName="AdminReglasPlanPago2.xsd" MetadataType="Schema" ID="78bd61be-23bc-4c52-840a-9c5c445c9003" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminReglasPlanPago?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

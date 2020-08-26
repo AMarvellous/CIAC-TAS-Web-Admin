@@ -1,0 +1,104 @@
+﻿
+@model IEnumerable<adminlte.TASProgramaService.TASProgramaEntity>
+
+@{
+    ViewBag.Title = "TASProgramaLista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebGrid grid = new WebGrid(Model, // source
+                                null, // columnNames
+                                null, // defaultSort
+                                50,   // rowsPerPage
+                                true, // canPage
+                                true, // canSort
+                                null, // ajaxUpdateContainerId
+                                null, // ajaxUpdateCallback
+                                null, // fieldNamePrefix
+                                null, // pageFieldName
+                                null, // selectionFieldName
+                                null, // sortFieldName
+                                null);// sortDirectionFieldName
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Admin
+            <small>Programa</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Admin</a></li>
+            <li class="active">Programa</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content table-responsive">
+        <!-- Default box -->
+        <div class="box box-primary">
+
+            <div class="box-header with-border">
+                <h3 class="box-title">CIAC TAS</h3>
+            </div>
+            <!-- /.box-header -->
+            @*<div class="col-sm-12">
+                    @Html.ActionLink(" ", "ASACuestionarioPregunta", null, new { @class = "glyphicon glyphicon-circle-arrow-left ", style = "font-size:28px;" })
+                </div>*@
+            <!-- form start -->
+            @*<form role="form">*@
+            <div class="box-body">
+                <p>
+                    @Html.ActionLink(" ", "TASProgramaNuevo", null, new { @class = "glyphicon glyphicon-plus ", style = "font-size:20px;" })
+                </p>
+                <br />
+                @grid.GetHtml(
+                        tableStyle: "table table-bordered",
+                        headerStyle: "header",
+                        alternatingRowStyle: "alt",
+                        //tableStyle: "gridtable",
+                        //headerStyle: "gridtable-header",
+                        //alternatingRowStyle: "gridtable-alt",
+                        footerStyle: "table-pager-footer",
+                        columns: new[] {
+                            //grid.Column("TipoDoc"),
+                           // grid.Column("SubCompania"),
+                            grid.Column("Programa"),
+                            //grid.Column("Estado"),
+
+
+                            grid.Column("",
+                                        header:"Acciones",
+                                        format:@<text>
+        @Html.ActionLink(" ", "TASProgramaEditar", new {SubCompania = item.SubCompania, Programa=item.Programa },new {@class = "glyphicon glyphicon-edit",style = "font-size:15px;"})
+                                        </text>
+)
+})
+            </div>
+            <!-- /.box-body -->
+            @*</form>*@
+
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<style>
+
+    .table-pager-footer > td {
+        padding-top: 10px;
+    }
+
+        .table-pager-footer > td > a {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 3px 7px;
+        }
+
+            .table-pager-footer > td > a:hover {
+                background-color: #f0f0f0;
+            }
+</style>

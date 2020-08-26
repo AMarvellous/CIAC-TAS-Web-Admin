@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminMensualidadClass" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMensualidad?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMensualidad?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://alejandroasus:8901/AdminMensualidad?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebObjetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AdminMensualidadInterface_WebNuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebNuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebNuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebGuardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebGuardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebGuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebEliminarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebEliminarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebEliminarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebRecalcular_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcular" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebRecalcular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebRecalcularResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadBloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadBloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadBloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadBloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDesbloquear_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDesbloquear" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDesbloquear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDesbloquearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadEsBloqueadoPor_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadEsBloqueadoPor" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadEsBloqueadoPor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadEsBloqueadoPorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadEsBloqueado_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadEsBloqueado" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadEsBloqueado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadEsBloqueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarTodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarTodo" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarTodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarTodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionar" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarXSubCompania_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarXSubCompania" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarXSubCompania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleSeleccionarXSubCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleExiste" />
+  </wsdl:message>
+  <wsdl:message name="AdminMensualidadInterface_WebAdminMensualidadDetalleExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebAdminMensualidadDetalleExisteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AdminMensualidadInterface">
+    <wsdl:operation name="WebNuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebNuevo" message="tns:AdminMensualidadInterface_WebNuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebNuevoResponse" message="tns:AdminMensualidadInterface_WebNuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebGuardar" message="tns:AdminMensualidadInterface_WebGuardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebGuardarResponse" message="tns:AdminMensualidadInterface_WebGuardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebEliminar" message="tns:AdminMensualidadInterface_WebEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebEliminarResponse" message="tns:AdminMensualidadInterface_WebEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebEliminarDetalle" message="tns:AdminMensualidadInterface_WebEliminarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebEliminarDetalleResponse" message="tns:AdminMensualidadInterface_WebEliminarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebSeleccionar" message="tns:AdminMensualidadInterface_WebSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebSeleccionarResponse" message="tns:AdminMensualidadInterface_WebSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebRecalcular" message="tns:AdminMensualidadInterface_WebRecalcular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebRecalcularResponse" message="tns:AdminMensualidadInterface_WebRecalcular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadBloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadBloquear" message="tns:AdminMensualidadInterface_WebAdminMensualidadBloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadBloquearResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadBloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDesbloquear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDesbloquear" message="tns:AdminMensualidadInterface_WebAdminMensualidadDesbloquear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDesbloquearResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDesbloquear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadEsBloqueadoPor">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueadoPor" message="tns:AdminMensualidadInterface_WebAdminMensualidadEsBloqueadoPor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueadoPorResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadEsBloqueadoPor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadEsBloqueado">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueado" message="tns:AdminMensualidadInterface_WebAdminMensualidadEsBloqueado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueadoResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadEsBloqueado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarTodo" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarTodoResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionar" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarXSubCompania" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarXSubCompaniaResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarTodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarTodo" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarTodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarTodoResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarTodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionar" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidadResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarXSubCompania">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarXSubCompania" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarXSubCompania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarXSubCompaniaResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleSeleccionarXSubCompania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleExiste" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleExisteResponse" message="tns:AdminMensualidadInterface_WebAdminMensualidadDetalleExiste_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AdminMensualidadInterface" type="tns:AdminMensualidadInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebNuevo">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebNuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGuardar">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebGuardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminar">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebEliminarDetalle">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebEliminarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebRecalcular">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebRecalcular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadBloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadBloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDesbloquear">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDesbloquear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadEsBloqueadoPor">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueadoPor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadEsBloqueado">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadEsBloqueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarTodo">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionar">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarKeyAdminMensualidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleSeleccionarXSubCompania">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleSeleccionarXSubCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebAdminMensualidadDetalleExiste">
+      <soap:operation soapAction="http://tempuri.org/AdminMensualidadInterface/WebAdminMensualidadDetalleExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminMensualidadClass">
+    <wsdl:port name="BasicHttpBinding_AdminMensualidadInterface" binding="tns:BasicHttpBinding_AdminMensualidadInterface">
+      <soap:address location="http://alejandroasus:8901/AdminMensualidad" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2 @@
+[Fecha]: 24/8/2020 22:27:21[Tipo]Exception [Excepcion/Evento]: Encountered end tag "div" with no matching start tag.  Are your start/end tags properly balanced?
+ [Clase]: TASEstudiante [Action]: TASEstudianteEditar

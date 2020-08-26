@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65e01e29-ed84-44fb-a754-39b0247bd02c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AlejandroASUS:8901/AdminMensualidad" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminMensualidad.xsd" MetadataType="Schema" ID="b76801a2-4e54-4799-8f7c-1b731139e35b" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMensualidad?xsd=xsd2" />
+    <MetadataFile FileName="AdminMensualidad1.xsd" MetadataType="Schema" ID="5f2653f5-74e4-49bd-acb9-0428ee2fa01d" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMensualidad?xsd=xsd1" />
+    <MetadataFile FileName="AdminMensualidad2.xsd" MetadataType="Schema" ID="8e56cb08-7b4b-43c6-91e0-ef0178b2621d" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMensualidad?xsd=xsd0" />
+    <MetadataFile FileName="AdminMensualidadClass.wsdl" MetadataType="Wsdl" ID="ef79b92a-2e40-40b7-ac55-c4015a158b5c" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMensualidad?wsdl" />
+    <MetadataFile FileName="AdminMensualidad.disco" MetadataType="Disco" ID="39423060-8680-4f56-a0eb-98fc4a8405df" SourceId="1" SourceUrl="http://alejandroasus:8901/AdminMensualidad?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
